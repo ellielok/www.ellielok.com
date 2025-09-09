@@ -11,10 +11,10 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:flex-row gap-4 my-15 mx-10">
+    <div className="flex flex-col md:flex-row gap-4 mx-10 ">
       {/* Left Column  */}
 
-      <div className="flex-1 sticky border">
+      <div className="flex-2 h-fit pt-10 md:top-0 md:h-screen md:sticky top-10 self-start  border">
         <div className="border">Ellie Lok</div>
         <a
           href="/cv/ellie-cv.pdf"
@@ -30,19 +30,21 @@ export default function Home() {
           clean and engaging web experiences.
         </div>
 
-        <div>
+        <div className='flex flex-wrap gap-3 md:flex-col md:absolute md:inset-x-0 md:bottom-0 m-5 border'>
           <a href="https://github.com/ellielok" target="_blank" rel="blog">
             <FaGithub size={28} />
           </a>
           <a href="https://linkedin.com/in/ellielok" target="_blank" rel="blog">
             <FaLinkedin size={28} />
           </a>
+          
+          
         </div>
       </div>
 
       {/* Right Column */}
 
-      <div className="flex-2 border">
+      <div className="flex-3 my-10 border">
         <div>Resume</div>
         <div>Education Placeholder</div>
         <div className="border">Work Experience Placeholder</div>
