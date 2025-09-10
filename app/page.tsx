@@ -15,8 +15,10 @@ import {
 export default function Home() {
   return (
     <div className="flex flex-col md:flex-row gap-4 mx-10 ">
-      {/* Left Column  */}
+      {/* Left Space */}
+      <div className=" hidden md:block flex-1 border"></div>
 
+      {/* Left Column  */}
       <div className="flex-2 h-fit pt-10 md:top-0 md:h-screen md:sticky top-10 self-start  border">
         <div className="border">Ellie Lok</div>
         <a
@@ -67,7 +69,10 @@ export default function Home() {
           responsive, user-friendly web applications and eager to learn new
           technologies in a collaborative environment.
         </div>
-        <div id="education" className="sticky top-0 bg-black border py-5 md:hidden">
+        <div
+          id="education"
+          className="sticky top-0 bg-black border py-5 md:hidden"
+        >
           Education Placeholder
         </div>
         <div className="m-2 border">
@@ -79,7 +84,10 @@ export default function Home() {
         </div>
 
         {/* PROJECT Section */}
-        <div id="project" className="sticky top-0 bg-black border py-5 md:hidden">
+        <div
+          id="project"
+          className="sticky top-0 bg-black border py-5 md:hidden"
+        >
           Experience & Project
         </div>
         <ProjectCard
@@ -125,6 +133,9 @@ export default function Home() {
 
         <Footer></Footer>
       </div>
+
+      {/* Right Space */}
+      <div className=" hidden md:block flex-1 border"></div>
     </div>
   );
 }
