@@ -15,8 +15,10 @@ import {
 export default function Home() {
   return (
     <div className="flex flex-col md:flex-row gap-4 mx-10 ">
-      {/* Left Column  */}
+      {/* Left Space */}
+      <div className=" hidden md:block flex-1 border"></div>
 
+      {/* Left Column  */}
       <div className="flex-2 h-fit pt-10 md:top-0 md:h-screen md:sticky top-10 self-start  border">
         <div className="border">Ellie Lok</div>
         <a
@@ -52,19 +54,42 @@ export default function Home() {
           </a>
         </div>
         {/* TOC Menu */}
-        <Menu/>
+        <Menu />
       </div>
 
       {/* Right Column */}
 
       <div className="flex-3 my-10 border scroll-smooth">
-        <div id="about" className="border py-5">About Me</div>
-        <div className="border">A placeholder for my introductino</div>
-        <div id="education" className="border py-5">Education Placeholder</div>
-        <div className="border">A placeholder for my Education</div>
+        <div id="about" className="sticky top-0 bg-black border py-5 md:hidden">
+          About Me
+        </div>
+        <div className="m-2 border">
+          Junior Frontend Developer with hands-on experience in React,
+          TypeScript, and modern CSS frameworks. Passionate about building
+          responsive, user-friendly web applications and eager to learn new
+          technologies in a collaborative environment.
+        </div>
+        <div
+          id="education"
+          className="sticky top-0 bg-black border py-5 md:hidden"
+        >
+          Education Placeholder
+        </div>
+        <div className="m-2 border">
+          Master of Information Technology GPA: 3.5 (Distinction) Monash
+          University, Clayton, VIC Graduation: November 2025 Relevant
+          Coursework: Algorithms & Programming Foundations in Python, Internet
+          Applications Development, Software Engineering, Cloud Computing &
+          Security, Mobile & Distributed Computing Systems
+        </div>
 
         {/* PROJECT Section */}
-        <div id="project" className="border py-5">Experience & Project</div>
+        <div
+          id="project"
+          className="sticky top-0 bg-black border py-5 md:hidden"
+        >
+          Experience & Project
+        </div>
         <ProjectCard
           timeRange="Jul 2025 - Present"
           position="Teaching Associate (TA)"
@@ -99,13 +124,18 @@ export default function Home() {
         ></ProjectCard>
 
         {/* WRITING Section */}
-        <div id="more" className="border py-5">Writing</div>
+        <div id="more" className="border py-5">
+          Writing
+        </div>
         <WritingCard></WritingCard>
         <WritingCard></WritingCard>
         <WritingCard></WritingCard>
 
         <Footer></Footer>
       </div>
+
+      {/* Right Space */}
+      <div className=" hidden md:block flex-1 border"></div>
     </div>
   );
 }
