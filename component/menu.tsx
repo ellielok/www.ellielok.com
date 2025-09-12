@@ -1,7 +1,6 @@
 export default function Menu() {
   const items = [
     { label: 'About', href: '#about' },
-    { label: 'Education', href: '#education' },
     { label: 'Project', href: '#project' },
     { label: 'More', href: '#more' },
   ];

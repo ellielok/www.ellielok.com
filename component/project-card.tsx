@@ -15,7 +15,7 @@ export default function ProjectCard({
     description,
     skills
 }: ProjectCardProps){
-    return(<div className="flex m-2 flex-row ">
+    return(<div className="flex m-2 flex-row my-10">
           <div className="basis-1/4 border">{timeRange}</div>
           <div className='basis-3/3 border'>
             <div>{project}</div>

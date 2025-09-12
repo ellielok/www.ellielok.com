@@ -60,22 +60,16 @@ export default function Home() {
       {/* Right Column */}
 
       <div className="flex-3 my-10 border scroll-smooth">
-        <div id="about" className="sticky top-0 bg-black border py-5 md:hidden">
+        <div id="about" className="sticky top-0  bg-white border py-5 md:hidden">
           About Me
         </div>
-        <div className="m-2 border">
+        <div className="m-2 mb-15 border">
           Junior Frontend Developer with hands-on experience in React,
           TypeScript, and modern CSS frameworks. Passionate about building
           responsive, user-friendly web applications and eager to learn new
           technologies in a collaborative environment.
         </div>
-        <div
-          id="education"
-          className="sticky top-0 bg-black border py-5 md:hidden"
-        >
-          Education Placeholder
-        </div>
-        <div className="m-2 border">
+        <div className="m-2 mb-15 border">
           Master of Information Technology GPA: 3.5 (Distinction) Monash
           University, Clayton, VIC Graduation: November 2025 Relevant
           Coursework: Algorithms & Programming Foundations in Python, Internet
@@ -86,7 +80,7 @@ export default function Home() {
         {/* PROJECT Section */}
         <div
           id="project"
-          className="sticky top-0 bg-black border py-5 md:hidden"
+          className="sticky top-0 bg-white border py-5 md:hidden"
         >
           Experience & Project
         </div>
@@ -124,7 +118,7 @@ export default function Home() {
         ></ProjectCard>
 
         {/* WRITING Section */}
-        <div id="more" className="border py-5">
+        <div id="more" className="border py-5 mb-10">
           Writing
         </div>
         <WritingCard></WritingCard>
