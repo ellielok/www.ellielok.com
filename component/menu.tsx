@@ -6,11 +6,11 @@ export default function Menu() {
   ];
 
   return (
-    <div className="hidden lg:block mt-20 border">
+    <div className="hidden lg:block mt-20 ">
       <ul className="">
         {items.map((item) => (
           <li key={item.href}>
-            <a href={item.href} className="block px-2 py-1 font-semibold rounded hover:bg-gray-900 border">
+            <a href={item.href} className="block px-2 py-1 font-semibold rounded hover:bg-gray-900 ">
               {item.label}
             </a>
           </li>
