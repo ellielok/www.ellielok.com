@@ -69,8 +69,8 @@ export default function Home() {
 
       {/* Right Column */}
 
-      <div className="flex-3 scroll-smooth pt-25">
-        <div id="about-content" className="sticky top-0  py-5 lg:hidden font-bold bg-black text-white/90">
+      <div className="flex-3 scroll-smooth lg:py-25">
+        <div id="about-content" className="sticky top-0 py-5 lg:hidden font-bold bg-black text-white/90">
           About Me
         </div>
         <div className="m-2 mb-15 ">
