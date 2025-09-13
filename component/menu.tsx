@@ -6,7 +6,7 @@ export default function Menu() {
   ];
 
   return (
-    <div className="hidden md:block mt-20 border">
+    <div className="hidden lg:block mt-20 border">
       <ul className="">
         {items.map((item) => (
           <li key={item.href}>

@@ -14,12 +14,14 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:flex-row gap-4 mx-10 ">
+    <div className="flex flex-col lg:flex-row gap-4 mx-10 ">
       {/* Left Space */}
       <div className=" hidden lg:block flex-1 border"></div>
 
       {/* Left Column  */}
-      <div className="flex-2 h-fit pt-10 md:top-0 md:h-screen md:sticky top-10 self-start border">
+      <div className="flex-2 h-fit  my-10
+                      lg:top-0 lg:h-screen lg:sticky 
+                      top-10 self-start border">
         <h1 className="border text-2xl font-bold text-white/95 sm:text-3xl md:text-4xl lg:text-5xl ">Ellie Lok</h1>
         <h2 className="border mt-5 mb-5 font-semibold  text-white/95 text-base md:text-xl">Junior Developer</h2>
         <a
@@ -46,7 +48,10 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="flex flex-wrap gap-3 md:flex-col md:absolute md:inset-x-0 md:bottom-0 m-5 border">
+        <div className="flex flex-wrap gap-3 
+                        mt-5
+                        lg:flex-col lg:absolute lg:inset-x-0 lg:bottom-0 lg:px-5 
+                        border">
           <a href="https://github.com/ellielok" target="_blank" rel="blog">
             <FaGithub size={28} />
           </a>
@@ -61,7 +66,7 @@ export default function Home() {
       {/* Right Column */}
 
       <div className="flex-3 my-10 border scroll-smooth">
-        <div id="about" className="sticky top-0  bg-black border py-5 md:hidden font-bold text-white/90">
+        <div id="about" className="sticky top-0 border py-5 lg:hidden font-bold bg-black text-white/90">
           About Me
         </div>
         <div className="m-2 mb-15 border">
@@ -81,7 +86,7 @@ export default function Home() {
         {/* PROJECT Section */}
         <div
           id="project"
-          className="sticky top-0 bg-black border py-5 md:hidden font-bold text-white/0"
+          className="sticky top-0 border py-5 lg:hidden font-bold bg-black text-white/90"
         >
           Experience & Project
         </div>
