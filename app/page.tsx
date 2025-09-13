@@ -14,14 +14,18 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-col lg:flex-row gap-4 mx-10 ">
+    <div className="flex flex-col 
+                    px-8 py-20
+                    lg:flex-row lg:px-0 lg:py-0
+                    gap-3">
       {/* Left Space */}
       <div className=" hidden lg:block flex-1 "></div>
 
       {/* Left Column  */}
-      <div className="flex-2 h-fit  my-10
+      <div className="flex-2 h-fit  
                       lg:top-0 lg:h-screen lg:sticky 
-                      top-10 self-start ">
+                      top-10 self-start 
+                      lg:pt-25">
         <h1 className=" text-2xl font-bold text-white/95 sm:text-3xl md:text-4xl lg:text-5xl ">Ellie Lok</h1>
         <h2 className=" mt-5 mb-5 font-semibold  text-white/95 text-base md:text-xl">Junior Developer</h2>
         <a
@@ -50,7 +54,7 @@ export default function Home() {
 
         <div className="flex flex-wrap gap-3 
                         mt-5
-                        lg:flex-col lg:absolute lg:inset-x-0 lg:bottom-0 lg:px-5 
+                        lg:flex-col lg:absolute lg:inset-x-0 lg:bottom-0 lg:px-5 lg:py-15 
                         ">
           <a href="https://github.com/ellielok" target="_blank" rel="blog">
             <FaGithub size={28} />
@@ -65,7 +69,7 @@ export default function Home() {
 
       {/* Right Column */}
 
-      <div className="flex-3 my-10  scroll-smooth">
+      <div className="flex-3 scroll-smooth pt-25">
         <div id="about-content" className="sticky top-0  py-5 lg:hidden font-bold bg-black text-white/90">
           About Me
         </div>

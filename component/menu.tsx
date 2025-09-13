@@ -65,12 +65,12 @@ export default function Menu() {
 
   return (
     <div className="hidden lg:block mt-20">
-      <ul className="space-y-2">
+      <ul className="space-y-1">
         {items.map((item) => (
           <li key={item.href}>
             <a 
               href={item.href} 
-              className={`block px-3 py-2 font-semibold rounded-lg transition-all duration-300 ${
+              className={`block px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
                 activeId === item.displayId
                   ? "bg-slate-800/70 text-white shadow-lg"
                   : "text-white/60 hover:bg-white/10 hover:text-white/90"
