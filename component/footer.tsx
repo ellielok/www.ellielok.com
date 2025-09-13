@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <div className="border">
+        <div className="">
         <div>
             Built from Melbourne with ❤️
         </div>
