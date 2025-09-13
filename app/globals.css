@@ -34,5 +34,5 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
   /* Transparent effect for all the text */
-  @apply text-white/80
+  @apply text-white/75
 }
