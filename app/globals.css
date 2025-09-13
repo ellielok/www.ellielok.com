@@ -25,7 +25,7 @@
 /* Debugging utility to visualize element border, boundaries */
 @layer utilities {
   .debug * {
-    @apply border border-black;
+    @apply border border-white;
   }
 }
 
