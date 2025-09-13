@@ -16,11 +16,12 @@ export default function Home() {
   return (
     <div className="flex flex-col md:flex-row gap-4 mx-10 ">
       {/* Left Space */}
-      <div className=" hidden md:block flex-1 border"></div>
+      <div className=" hidden lg:block flex-1 border"></div>
 
       {/* Left Column  */}
-      <div className="flex-2 h-fit pt-10 md:top-0 md:h-screen md:sticky top-10 self-start  border">
-        <div className="border">Ellie Lok</div>
+      <div className="flex-2 h-fit pt-10 md:top-0 md:h-screen md:sticky top-10 self-start border">
+        <h1 className="border text-2xl font-bold text-white/95 sm:text-3xl md:text-4xl lg:text-5xl ">Ellie Lok</h1>
+        <h2 className="border mt-5 mb-5 font-semibold  text-white/95 text-base md:text-xl">Junior Developer</h2>
         <a
           href="/cv/ellie-cv.pdf"
           target="_blank"
@@ -60,7 +61,7 @@ export default function Home() {
       {/* Right Column */}
 
       <div className="flex-3 my-10 border scroll-smooth">
-        <div id="about" className="sticky top-0  bg-white border py-5 md:hidden">
+        <div id="about" className="sticky top-0  bg-black border py-5 md:hidden font-bold text-white/90">
           About Me
         </div>
         <div className="m-2 mb-15 border">
@@ -80,13 +81,14 @@ export default function Home() {
         {/* PROJECT Section */}
         <div
           id="project"
-          className="sticky top-0 bg-white border py-5 md:hidden"
+          className="sticky top-0 bg-black border py-5 md:hidden font-bold text-white/0"
         >
           Experience & Project
         </div>
         <ProjectCard
           timeRange="Jul 2025 - Present"
-          position="Teaching Associate (TA)"
+          project="Teaching Associate (TA)" 
+          position='Advanced Database'
           company="Monash University"
           description="Facilitated postgraduate lab sessions by guiding practical exercises in database technologies (StarSchema, PostGIS, SQL queries) using tools such as DBeaver, SQL*Plus, and PostgreSQL."
           skills="React, Next.js, TypeScript, CSS"
@@ -118,7 +120,7 @@ export default function Home() {
         ></ProjectCard>
 
         {/* WRITING Section */}
-        <div id="more" className="border py-5 mb-10">
+        <div id="more" className="border py-5 mb-10 font-bold text-white/90">
           Writing
         </div>
         <WritingCard></WritingCard>
@@ -129,7 +131,7 @@ export default function Home() {
       </div>
 
       {/* Right Space */}
-      <div className=" hidden md:block flex-1 border"></div>
+      <div className=" hidden lg:block flex-1 border"></div>
     </div>
   );
 }

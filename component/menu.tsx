@@ -10,7 +10,7 @@ export default function Menu() {
       <ul className="">
         {items.map((item) => (
           <li key={item.href}>
-            <a href={item.href} className="block px-2 py-1 rounded hover:bg-gray-900 border">
+            <a href={item.href} className="block px-2 py-1 font-semibold rounded hover:bg-gray-900 border">
               {item.label}
             </a>
           </li>

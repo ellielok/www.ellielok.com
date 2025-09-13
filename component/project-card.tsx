@@ -1,9 +1,9 @@
 interface ProjectCardProps {
-    timeRange: string;
+    timeRange?: string;
     project?: string;
-    position: string;
-    company: string;
-    description: string;
+    position?: string;
+    company?: string;
+    description?: string;
     skills?: string|React.ReactNode;
 }
 
@@ -16,12 +16,12 @@ export default function ProjectCard({
     skills
 }: ProjectCardProps){
     return(<div className="flex m-2 flex-row my-10">
-          <div className="basis-1/4 border">{timeRange}</div>
+          <div className="basis-1/4 text-sm font-semibold border">{timeRange}</div>
           <div className='basis-3/3 border'>
-            <div>{project}</div>
-            <div> {position}, {company} </div>
-            <div> {description} </div>
-            <div> {skills} </div>
+            <div className="font-bold text-white/590">{project}</div>
+            <div className="font-semibold"> {position}, {company} </div>
+            <div className="font-base"> {description} </div>
+            {skills && <div className="font-base">Skills: {skills}</div>}
           </div>
         </div>);
 }
