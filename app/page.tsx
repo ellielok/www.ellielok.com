@@ -66,7 +66,7 @@ export default function Home() {
       {/* Right Column */}
 
       <div className="flex-3 my-10  scroll-smooth">
-        <div id="about" className="sticky top-0  py-5 lg:hidden font-bold bg-black text-white/90">
+        <div id="about-content" className="sticky top-0  py-5 lg:hidden font-bold bg-black text-white/90">
           About Me
         </div>
         <div className="m-2 mb-15 ">
@@ -85,28 +85,37 @@ export default function Home() {
 
         {/* PROJECT Section */}
         <div
-          id="project"
+          id="project-content"
           className="sticky top-0  py-5 lg:hidden font-bold bg-black text-white/90"
         >
           Experience & Project
         </div>
-        <ProjectCard
-          timeRange="Jul 2025 - Present"
-          project="Teaching Associate (TA)" 
-          position='Advanced Database'
-          company="Monash University"
-          description="Facilitated postgraduate lab sessions by guiding practical exercises in database technologies (StarSchema, PostGIS, SQL queries) using tools such as DBeaver, SQL*Plus, and PostgreSQL."
-          skills="React, Next.js, TypeScript, CSS"
-        ></ProjectCard>
+        <div className='space-y-15'>
+          <ProjectCard
+            timeRange="Jul 2025 - Present"
+            project="Teaching Associate (TA)" 
+            position='Advanced Database'
+            company="Monash University"
+            description="Facilitated postgraduate lab sessions by guiding practical exercises in database technologies (StarSchema, PostGIS, SQL queries) using tools such as DBeaver, SQL*Plus, and PostgreSQL."
+            skills="React, Next.js, TypeScript, CSS"
+          ></ProjectCard>
 
-        <ProjectCard
-          timeRange="Mar 2025 - Jun 2025"
-          project="BIRDTAG, AI-POWERED BIRD IDENTIFICATION WEB APP"
-          position="LED AWS INFRASTRUCTURE DESIGN AND DEPLOYMENT"
-          company="Monash University"
-          description="Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications). Connected AI model for bird classification through serverless architecture; generated prediction thumbnails and metadata."
-        ></ProjectCard>
+          <ProjectCard
+            timeRange="Mar 2025 - Jun 2025"
+            project="BIRDTAG, AI-POWERED BIRD IDENTIFICATION WEB APP"
+            position="LED AWS INFRASTRUCTURE DESIGN AND DEPLOYMENT"
+            company="Monash University"
+            description="Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications). Connected AI model for bird classification through serverless architecture; generated prediction thumbnails and metadata."
+          ></ProjectCard>
 
+          <ProjectCard
+            timeRange="Sep 2024 - Nov 2024"
+            project="VOLUNTRACK, VOLUNTEER MANAGEMENT ANDROID APP"
+            position="LED AWS INFRASTRUCTURE DESIGN AND DEPLOYMENT"
+            company="Monash University"
+            description=" Spearheaded the development of a full-featured mobile app using Jetpack Compose for managing volunteer events, schedules, and organization info. Built real-time dashboard with Firebase Firestore to track progress and user engagement. Integrated Google Calendar API for event synchronization and reminder notifications."
+          ></ProjectCard>
+                  {/* To be deleted */}
         <ProjectCard
           timeRange="Sep 2024 - Nov 2024"
           project="VOLUNTRACK, VOLUNTEER MANAGEMENT ANDROID APP"
@@ -114,23 +123,19 @@ export default function Home() {
           company="Monash University"
           description=" Spearheaded the development of a full-featured mobile app using Jetpack Compose for managing volunteer events, schedules, and organization info. Built real-time dashboard with Firebase Firestore to track progress and user engagement. Integrated Google Calendar API for event synchronization and reminder notifications."
         ></ProjectCard>
+        </div>
 
-        {/* To be deleted */}
-        <ProjectCard
-          timeRange="Sep 2024 - Nov 2024"
-          project="VOLUNTRACK, VOLUNTEER MANAGEMENT ANDROID APP"
-          position="LED AWS INFRASTRUCTURE DESIGN AND DEPLOYMENT"
-          company="Monash University"
-          description=" Spearheaded the development of a full-featured mobile app using Jetpack Compose for managing volunteer events, schedules, and organization info. Built real-time dashboard with Firebase Firestore to track progress and user engagement. Integrated Google Calendar API for event synchronization and reminder notifications."
-        ></ProjectCard>
+
 
         {/* WRITING Section */}
         <div id="more" className=" py-5 mb-10 font-bold text-white/90">
           Writing
         </div>
-        <WritingCard></WritingCard>
-        <WritingCard></WritingCard>
-        <WritingCard></WritingCard>
+        <div id="more-content">
+          <WritingCard></WritingCard>
+          <WritingCard></WritingCard>
+          <WritingCard></WritingCard>
+        </div>
 
         <Footer></Footer>
       </div>
