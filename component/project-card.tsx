@@ -15,13 +15,13 @@ export default function ProjectCard({
     description,
     skills
 }: ProjectCardProps){
-    return(<div className="flex m-2 flex-row my-10">
-          <div className="basis-1/4 text-sm font-semibold ">{timeRange}</div>
-          <div className='px-5 basis-3/3 '>
-            <div className="font-bold text-white/590">{project}</div>
-            <div className="font-semibold"> {position}, {company} </div>
+    return(<div className="md:flex m-2 flex-row my-10">
+          <div className="basis-1/4 text-sm font-semibold">{timeRange}</div>
+          <div className='md:px-5 basis-3/3'>
+            <div className="font-bold text-white/590 ">{project}</div>
+            <div className="font-semibold pb-6"> {position}, {company} </div>
             <div className="font-base"> {description} </div>
-            {skills && <div className="font-base">Skills: {skills}</div>}
+            {skills && <div className="font-base py-2">Skills: {skills}</div>}
           </div>
         </div>);
 }
