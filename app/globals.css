@@ -36,3 +36,8 @@ body {
   /* Transparent effect for all the text */
   @apply text-white/75
 }
+
+/* Custom font sizes */
+@theme {
+  --text-tiny: 0.825rem; 
+}
