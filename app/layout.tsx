@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Particles } from "@/components/ui/shadcn-io/particles";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,6 +24,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased`}
       >
+        <Particles
+      className="fixed inset-0 -z-10"
+      quantity={120}
+      ease={80}
+      color="#ffffff"
+      refresh
+    />
         {children}
       </body>
     </html>

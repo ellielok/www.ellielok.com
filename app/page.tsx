@@ -1,4 +1,3 @@
-import { Particles } from "@/components/ui/shadcn-io/particles";
 import { ReactNode } from 'react';
 import Footer from '@/component/footer';
 import hl from '@/utils/highLight';
@@ -7,31 +6,22 @@ import { LeftColumn } from "@/component/left-column";
 
 export default function Home() {
   return (
+    
     <div
       className="flex flex-col 
                     px-8 py-20
                     lg:flex-row lg:px-0 lg:py-0
                     gap-3"
     >
-
-
-      <Particles
-        className="absolute inset-0"
-        quantity={100}
-        ease={80}
-        color="#ffffff"
-        refresh
-      />
+      
 
       {/* Left Space */}
       <div className=" hidden lg:block lg:flex-1 "></div>
 
       {/* Left Column  */}
       <LeftColumn></LeftColumn>
- 
 
       {/* Right Column */}
-
       <div className="flex-3 scroll-smooth lg:py-25">
         <div>
           <div
@@ -75,6 +65,7 @@ export default function Home() {
 
       {/* Right Space */}
       <div className=" hidden lg:block flex-1 "></div>
+      
     </div>
   );
 }
