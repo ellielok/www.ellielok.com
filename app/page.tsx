@@ -25,7 +25,7 @@ export default function Home() {
       <div className="flex-3 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
         <div>
           <div
-            className="sticky top-0 py-5 lg:hidden font-bold 
+            className="top-0 py-5 lg:hidden font-bold 
              text-white/90 "
           >
             About Me
@@ -42,7 +42,7 @@ export default function Home() {
           </div>
           
           <div
-            className="sticky top-0  py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90"
+            className="top-0  py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90"
           >
             Experience
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
             Projects
           </div>
           <div
-            className="sticky top-0 py-5 lg:hidden font-bold text-white/90"
+            className="top-0 py-5 lg:hidden font-bold text-white/90"
           >
             Projects
           </div>

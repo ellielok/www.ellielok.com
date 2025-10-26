@@ -85,7 +85,9 @@ export default function Menu() {
                   }
                 }
               }}
-              className={`block px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${
+              className={`block px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-300 
+                hover:text-[#93f5fa]
+                ${
                 activeId === item.displayId
                   ? 'bg-slate-800/70 text-white shadow-lg'
                   : 'text-white/60'
