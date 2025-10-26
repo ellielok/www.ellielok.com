@@ -17,7 +17,7 @@ export function Intro() {
               {hl('Melbourne, Australia')}.
             </div>
             <div className="m-2 mb-10 ">
-              Previously, I worked as a Senior Advertising Specialist at{' '}
+              Previously, I worked as a {hl('Senior Advertising Specialist')} at{' '}
               {hl('Fastlane')}, where I gained deep experience in digital
               marketing and user analytics. This background helps me design
               products that are both data-informed and user-centered. Outside of

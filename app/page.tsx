@@ -16,17 +16,18 @@ export default function Home() {
       
 
       {/* Left Space */}
-      <div className=" hidden lg:block lg:flex-1 "></div>
+      <div className=" hidden lg:block xl:flex-1 "></div>
 
       {/* Left Column  */}
       <LeftColumn></LeftColumn>
 
       {/* Right Column */}
-      <div className="flex-3 scroll-smooth lg:py-25">
+      <div className="flex-3 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
         <div>
           <div
             id="about-content"
-            className="sticky top-0 py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90"
+            className="sticky top-0 py-5 lg:hidden font-bold 
+            oklch(0.1882 0.0765 293.16) text-white/90"
           >
             About Me
           </div>
@@ -64,7 +65,7 @@ export default function Home() {
       </div>
 
       {/* Right Space */}
-      <div className=" hidden lg:block flex-1 "></div>
+      <div className=" hidden xl:block flex-1 "></div>
       
     </div>
   );

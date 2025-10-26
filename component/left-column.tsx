@@ -1,4 +1,5 @@
 import Menu from '@/component/menu';
+import hl from '@/utils/highLight';
 import {
   FaGithub,
   FaLinkedin,
@@ -13,7 +14,8 @@ export function LeftColumn() {
         className="flex-2 h-fit  
                       lg:top-0 lg:h-screen lg:sticky 
                       top-10 self-start 
-                      lg:pt-25"
+                      lg:pt-25
+                      lg:px-10 xl:px-0"
       >
         <h1 className=" text-2xl font-bold text-white/95 sm:text-3xl md:text-4xl lg:text-5xl ">
           Ellie Lok
@@ -30,9 +32,8 @@ export function LeftColumn() {
           View Full Résumé
         </a>
         <div className="">
-          Graduated from Monash MIT, I am on my journey to becoming a frontend
-          engineer. I love working with React, Next.js, and TypeScript to create
-          clean and engaging web experiences.
+          On my journey to becoming a frontend
+          engineer.
         </div>
         <div>
           Feel free to{' '}
@@ -41,7 +42,7 @@ export function LeftColumn() {
             target="_blank"
             className="underline-offset-2 hover:underline"
           >
-            send email and Say Hello
+            {hl('send email and Say Hello')}
           </a>
         </div>
 
