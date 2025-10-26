@@ -16,7 +16,7 @@ export default function Home() {
       
 
       {/* Left Space */}
-      <div className=" hidden lg:block xl:flex-1 "></div>
+      <div className="hidden lg:block xl:flex-1"></div>
 
       {/* Left Column  */}
       <LeftColumn></LeftColumn>
@@ -25,31 +25,28 @@ export default function Home() {
       <div className="flex-3 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
         <div>
           <div
-            id="about-content"
             className="sticky top-0 py-5 lg:hidden font-bold 
-             text-white/90"
+             text-white/90 "
           >
             About Me
           </div>
-
-          <div className="">
             <Intro></Intro>
-          </div>
         </div>
 
         {/* PROJECT Section */}
         <div>
-          <div id="more" className="hidden py-5 mb-10 font-bold text-white/90">
+          <div 
+          id="experience"
+          className="hidden py-5 mb-10 lg:block font-bold text-white/90">
             Experience
           </div>
           
           <div
-            id="project-content"
             className="sticky top-0  py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90"
           >
             Experience
           </div>
-          <div id="ex-more" className=" py-5 mb-10">
+          <div className=" py-5 mb-10">
             <ProjectSection></ProjectSection>
             
           </div>
@@ -57,18 +54,15 @@ export default function Home() {
 
         {/* WRITING Section */}
         <div>
-          <div id="more" className="hidden py-5 mb-10 font-bold text-white/90">
+          <div id="project" className="hidden py-5 mb-10 lg:block font-bold text-white/90">
             Projects
           </div>
           <div
-            id="project-content"
-            className="sticky top-0  py-5 lg:hidden font-bold text-white/90"
+            className="sticky top-0 py-5 lg:hidden font-bold text-white/90"
           >
             Projects
           </div>
-          <div id="more-content">
             <WritingSection></WritingSection>
-          </div>
         </div>
 
         <Footer></Footer>
