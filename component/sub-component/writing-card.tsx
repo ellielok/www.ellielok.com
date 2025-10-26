@@ -10,9 +10,11 @@ export default function WritingCard({
   description,
 }: WritingCardProps) {
   return (
-    <div className="grid grid-flow-col grid-rows-5 m-2 my-10 gap-6">
+    <div className="grid grid-flow-col grid-rows-5 gap-6 p-6
+                    group
+                    hover:bg-gradient-to-b hover:from-white/5 hover:via-white/3 hover:to-white/0">
       <div className="row-span-5 text-tiny/6 font-semibold">{timeRange}</div>
-      <div className="col-span-2 font-bold text-white/90 ">{projectName}</div>
+      <div className="col-span-2 font-bold text-white/90 group-hover:text-[#93f5fa] transition-colors duration-100">{projectName}</div>
       <div className="col-span-2 row-span-4">{description}</div>
     </div>
   );

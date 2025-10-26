@@ -35,18 +35,13 @@ export default function Home() {
 
         {/* PROJECT Section */}
         <div>
-          <div 
-          id="experience"
-          className="hidden py-5 mb-10 lg:block font-bold text-white/90">
-            Experience
-          </div>
           
           <div
             className="top-0  py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90"
           >
             Experience
           </div>
-          <div className=" py-5 mb-10">
+          <div id="experience" className="py-5 mb-10">
             <ProjectSection></ProjectSection>
             
           </div>

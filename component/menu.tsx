@@ -89,7 +89,7 @@ export default function Menu() {
                 hover:text-[#93f5fa]
                 ${
                 activeId === item.displayId
-                  ? 'bg-slate-800/70 text-white shadow-lg'
+                  ? 'text-white/100 hover:backdrop-blur-xl bg-gradient-to-r from-white/10 via-white/5 to-white/0'
                   : 'text-white/60'
               }`}
             >

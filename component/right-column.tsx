@@ -30,7 +30,7 @@ export function Intro() {
 
 export function ProjectSection() {
     return (
-    <div>
+    <div className=''>
     <ProjectCard
                   timeRange="Jul 2025 - Present"
                   project="Teaching Associate (TA)"
