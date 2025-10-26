@@ -22,15 +22,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} font-sans antialiased`}
+        className={`${inter.variable} font-sans antialiased
+        bg-gradient-to-br
+        from-[oklch(0.1441_0.0604_287.71)] via-[oklch(0.144_0.1631_283.1)] to-[oklch(0.1441_0.0604_287.71)]
+        `}
       >
         <Particles
       className="fixed inset-0 -z-10"
       quantity={120}
-      ease={60}
-      staticity={30}
+      ease={10}
+      staticity={100}
       color="#F29EFA"
-      size={1.2}
+      size={2.0}
+      vx={0.2}
+      vy={0.2}
       refresh
     />
         {children}

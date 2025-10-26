@@ -26,7 +26,7 @@ export default function Home() {
         <div>
           <div
             id="about-content"
-            className="sticky top-0 py-5 lg:hidden font-bold bg-black text-white/90"
+            className="sticky top-0 py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90"
           >
             About Me
           </div>
@@ -40,7 +40,7 @@ export default function Home() {
         <div>
           <div
             id="project-content"
-            className="sticky top-0  py-5 lg:hidden font-bold bg-black text-white/90"
+            className="sticky top-0  py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90"
           >
             Experience
           </div>

@@ -22,7 +22,7 @@ export function Intro() {
               marketing and user analytics. This background helps me design
               products that are both data-informed and user-centered. Outside of
               coding, I enjoy traveling, hiking, and exploring virtual worlds
-              from Summoner\'s Rift to Hyrule.
+              from Summoner's Rift to Hyrule.
             </div>
         </div>
     );
