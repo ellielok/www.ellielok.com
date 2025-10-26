@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 export default function Menu() {
   const items = [
     { label: 'About', href: '#about-content', displayId: 'about' },
-    { label: 'Project', href: '#project-content', displayId: 'project' },
-    { label: 'More', href: '#more-content', displayId: 'more' },
+    { label: 'Experience', href: '#project-content', displayId: 'project' },
+    { label: 'Project', href: '#more-content', displayId: 'more' },
   ];
 
   const [activeId, setActiveId] = useState("");
