@@ -36,10 +36,10 @@ export default function RootLayout({
           fixed inset-0 -z-10
           hidden md:block
           h-1/"
-          quantity={120}
+          quantity={60}
           ease={10}
           staticity={100}
-          color="#CAB885"
+          color="E57C3D"
           size={2.0}
           vx={0.2}
           vy={0.2}
