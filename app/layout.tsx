@@ -38,12 +38,33 @@ export default function RootLayout({
           quantity={120}
           ease={10}
           staticity={100}
-          color="#E05520"
+          color="#CAB885"
           size={2.0}
           vx={0.2}
           vy={0.2}
           refresh
         />
+
+
+        <Image
+          src="/halloween-moon-light.png"
+          alt="Halloween background"
+          width={600}
+          height={600}
+          className="
+            fixed left-1/8 bottom-[0%] 
+            translate-y-0
+            hidden sm:hidden lg:block
+            w-auto h-1/2
+            opacity-100
+            pointer-events-none select-none
+            object-contain
+            -z-20
+          "
+        />
+
+
+
         <Image
           src="/halloween-bg.png"
           alt="Halloween background"
@@ -53,7 +74,7 @@ export default function RootLayout({
             fixed bottom-0 left-0 translate-y-1
             hidden sm:hidden lg:block
             h-1/2 w-auto
-            opacity-90
+            opacity-85
             pointer-events-none select-none
             object-contain
             -z-10
@@ -69,7 +90,7 @@ export default function RootLayout({
             fixed bottom-0 left-0 top-[63%]
             hidden sm:hidden lg:block
             h-1/2 w-auto
-            opacity-90
+            opacity-100
             pointer-events-none select-none
             object-contain
             -z-15
@@ -92,14 +113,31 @@ export default function RootLayout({
           "
         />
 
-        <Image
+        {/* <Image
           src="/halloween-cat.png"
           alt="Halloween background"
           width={600}
           height={600}
           className="
-            fixed right-2 bottom-[0%] 
+            fixed right-12 bottom-[0%] 
             translate-y-2
+            hidden sm:hidden lg:block
+            w-1/20 h-auto
+            opacity-100
+            pointer-events-none select-none
+            object-contain
+            -z-20
+          "
+        /> */}
+
+        <Image
+          src="/halloween-light.png"
+          alt="Halloween background"
+          width={600}
+          height={600}
+          className="
+            fixed right-2 top-[0%] 
+            translate-y-0
             hidden sm:hidden lg:block
             w-1/10 h-auto
             opacity-100
