@@ -4,8 +4,8 @@ import WritingCard from '@/component/sub-component/writing-card';
 
 export function Intro() {
   return (
-    <div>
-      <div className="m-2 mb-10">
+    <div className="text-base leading-7 space-y-10">
+      <div className="">
         I am an aspiring full-stack developer skilled in React, TypeScript, and
         modern CSS frameworks. I am passionate about creating responsive and
         user-friendly web applications that combine thoughtful design with solid
@@ -13,7 +13,7 @@ export function Intro() {
         Master of Information Technology at Monash University and plan to reside
         in {hl('Melbourne, Australia')}.
       </div>
-      <div className="m-2 mb-10 ">
+      <div className=" ">
         Previously, I worked as a {hl('Senior Advertising Specialist')} at{' '}
         {hl('Fastlane')}, where I gained deep experience in digital marketing
         and user analytics. This background helps me design products that are
@@ -27,7 +27,7 @@ export function Intro() {
 
 export function ProjectSection() {
   return (
-    <div className="">
+    <div className="space-y-6">
       <ProjectCard
         timeRange="Jul 2025 - Present"
         project="Teaching Associate (TA)"
@@ -50,7 +50,7 @@ export function ProjectSection() {
 
 export function WritingSection() {
   return (
-    <div>
+    <div className="space-y-6">
       <WritingCard
         projectName="TIPSYTRACK, ALCOHOL HARM-REDUCTION WEB APP"
         timeRange="Jul - Oct 2025"
