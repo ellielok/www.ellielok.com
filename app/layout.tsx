@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Particles } from '@/components/ui/shadcn-io/particles';
 import Image from 'next/image';
-import HalloweenIconToggle from '@/components/HalloweenIconToggle'; 
+import HalloweenIconToggle from '@/components/HalloweenIconToggle';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased
         bg-gradient-to-br
-        from-[#030205] via-[#392842] to-[#1E1421]
+        from-[#030205] via-[#2e1e37] to-[#13072B]
         bg-fixed
     min-h-screen
         `}
