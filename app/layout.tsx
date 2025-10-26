@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Particles } from '@/components/ui/shadcn-io/particles';
 import Image from 'next/image';
+import HalloweenIconToggle from '@/components/HalloweenIconToggle'; 
 
 const inter = Inter({
   variable: '--font-inter',
@@ -45,6 +46,7 @@ export default function RootLayout({
           refresh
         />
 
+        
 
         <Image
           src="/halloween-moon-light.png"
@@ -130,7 +132,7 @@ export default function RootLayout({
           "
         /> */}
 
-        <Image
+        {/* <Image
           src="/halloween-light.png"
           alt="Halloween background"
           width={600}
@@ -145,7 +147,11 @@ export default function RootLayout({
             object-contain
             -z-20
           "
-        />
+        /> */}
+
+
+        <HalloweenIconToggle />
+
 
         {children}
       </body>
