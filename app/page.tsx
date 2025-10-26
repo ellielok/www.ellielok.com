@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { Particles } from "@/components/ui/shadcn-io/particles";
 import { ReactNode } from 'react';
 import ProjectCard from '@/component/project-card';
 import Footer from '@/component/footer';
@@ -21,6 +21,16 @@ export default function Home() {
                     lg:flex-row lg:px-0 lg:py-0
                     gap-3"
     >
+
+
+      <Particles
+        className="absolute inset-0"
+        quantity={100}
+        ease={80}
+        color="#ffffff"
+        refresh
+      />
+
       {/* Left Space */}
       <div className=" hidden lg:block lg:flex-1 "></div>
 
@@ -91,12 +101,22 @@ export default function Home() {
 
           <div className="">
             <div className="m-2 mb-10">
-              I am an aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. I am passionate about creating responsive and user-friendly web applications that combine thoughtful design with solid engineering for performance and accessibility. I am about to complete my Master of Information Technology at Monash University and plan to reside in {hl("Melbourne, Australia")}.
+              I am an aspiring full-stack developer skilled in React,
+              TypeScript, and modern CSS frameworks. I am passionate about
+              creating responsive and user-friendly web applications that
+              combine thoughtful design with solid engineering for performance
+              and accessibility. I am about to complete my Master of Information
+              Technology at Monash University and plan to reside in{' '}
+              {hl('Melbourne, Australia')}.
             </div>
             <div className="m-2 mb-10 ">
-              Previously, I worked as a Senior Advertising Specialist at {hl("Fastlane")}, where I gained deep experience in digital marketing and user analytics. This background helps me design products that are both data-informed and user-centered. Outside of coding, I enjoy traveling, hiking, and exploring virtual worlds from Summoner’s Rift to Hyrule.
+              Previously, I worked as a Senior Advertising Specialist at{' '}
+              {hl('Fastlane')}, where I gained deep experience in digital
+              marketing and user analytics. This background helps me design
+              products that are both data-informed and user-centered. Outside of
+              coding, I enjoy traveling, hiking, and exploring virtual worlds
+              from Summoner’s Rift to Hyrule.
             </div>
-
           </div>
         </div>
 
