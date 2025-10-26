@@ -23,7 +23,7 @@ export default function Home() {
       <LeftColumn></LeftColumn>
 
       {/* Right Column */}
-      <div className="space-y-10 flex-3 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
+      <div className="space-y-10 flex-4 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
         <div>
           <div
             className="top-0 py-5 lg:hidden font-bold 

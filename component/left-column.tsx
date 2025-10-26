@@ -11,7 +11,7 @@ import {
 export function LeftColumn() {
   return (
     <div
-      className="flex-2 h-fit  
+      className="flex-3 h-fit  
                       lg:top-0 lg:h-screen lg:sticky 
                       top-10 self-start 
                       lg:pt-25
@@ -43,7 +43,7 @@ export function LeftColumn() {
         </a>
       </div>
 
-      <div
+      {/* <div
         className="flex flex-wrap gap-3 
                         mt-5
                         lg:flex-col lg:absolute lg:inset-x-0 lg:bottom-0 lg:px-5 lg:py-15 
@@ -65,7 +65,9 @@ export function LeftColumn() {
         >
           <FaLinkedin size={28} />
         </a>
-      </div>
+      </div> */}
+
+
       {/* TOC Menu */}
       <Menu />
     </div>
