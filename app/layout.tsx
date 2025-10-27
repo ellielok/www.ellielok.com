@@ -4,6 +4,7 @@ import './globals.css';
 import { Particles } from '@/components/ui/shadcn-io/particles';
 import Image from 'next/image';
 import HalloweenIconToggle from '@/components/HalloweenIconToggle';
+import Header from '@/component/header';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -31,6 +32,7 @@ export default function RootLayout({
     min-h-screen
         `}
       >
+        <Header></Header> 
         <Particles
           className="
           fixed inset-0 -z-10

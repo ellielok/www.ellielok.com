@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Header from '@/component/header';
 import Footer from '@/component/footer';
 import hl from '@/utils/highLight';
 import {
@@ -10,6 +11,7 @@ import { LeftColumn } from '@/component/left-column';
 
 export default function Home() {
   return (
+    <div>
     <div
       className="flex flex-col 
                     px-8 py-20
@@ -63,6 +65,7 @@ export default function Home() {
 
       {/* Right Space */}
       <div className=" hidden xl:block flex-1 "></div>
+    </div>
     </div>
   );
 }
