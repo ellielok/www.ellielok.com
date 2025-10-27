@@ -5,7 +5,7 @@ export default function Menu() {
   const items = [
     { label: 'About', href: '#about', displayId: 'about' },
     { label: 'Experience', href: '#experience', displayId: 'experience' },
-    { label: 'Project', href: '#project', displayId: 'project' },
+    { label: 'Projects', href: '#project', displayId: 'project' },
   ];
 
   const [activeId, setActiveId] = useState('');
