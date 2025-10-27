@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <div className="">
         <div>
-            Built from Melbourne with ❤️
+            Built from Melbourne
         </div>
         <div>
             Craft with React, Next.js, Tailwind CSS. Deploy with Vercel view source code on Github.
