@@ -65,7 +65,7 @@ export default function Menu() {
   }, [activeId]);
 
   return (
-    <div className="hidden lg:block mt-20">
+    <div className="hidden lg:block mt-10">
       <ul className="space-y-1">
         {items.map((item) => (
           <li key={item.href}>

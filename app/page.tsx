@@ -12,8 +12,6 @@ import { LeftColumn } from '@/component/left-column';
 export default function Home() {
   return (
     <div>
-      <Header></Header> 
-    
     <div
       className="flex flex-col 
                     px-8 py-20

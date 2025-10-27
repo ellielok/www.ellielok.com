@@ -9,13 +9,13 @@ export default function HalloweenIconToggle() {
   const [offsetY, setOffsetY] = useState(0);
   
   useEffect(() => {
-  const handleScroll = () => setOffsetY(Math.min(window.scrollY * 0.3, 72));
+  const handleScroll = () => setOffsetY(Math.min(window.scrollY * 0.3, 132));
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
 
   return (
-    <div className="hidden xl:fixed right-6 top-4 xl:right-10 xl:top-6 xl:flex xl:flex-col xl:items-center z-20">
+    <div className="hidden xl:fixed right-6 top-4 xl:right-10 xl:top-6 xl:flex xl:flex-col xl:items-center z-25">
       <motion.div
   whileTap={{ y: 8, scale: 0.95 }}
   animate={{ y: offsetY }}
