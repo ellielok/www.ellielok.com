@@ -50,6 +50,10 @@ export default function RootLayout({
 
         
 
+        {/* REVIEW: Group these images into a <HalloweenBackground> component. Put the <HalloweenBackground> component into the components/HalloweenBackground.tsx file.
+        
+         Why? It would be easier to manage it and address the "z-level" height in the future development.
+        */}
         <Image
           src="/halloween-moon-light.png"
           alt="Halloween background"

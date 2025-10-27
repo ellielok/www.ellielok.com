@@ -38,6 +38,7 @@ export function ProjectSection() {
       company: "Monash University",
       description:
         "Facilitated postgraduate lab sessions by guiding practical exercises in database technologies (StarSchema, PostGIS, SQL queries) using tools such as DBeaver, SQL*Plus, and PostgreSQL.",
+      // REVIEW: Why list frontend skills like React instead of Database skills in a TA role?
       skills: "React, Next.js, TypeScript, CSS",
     },
     {
