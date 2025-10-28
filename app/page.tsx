@@ -1,12 +1,8 @@
 import { ReactNode } from 'react';
 import Header from '@/component/header';
-import Footer from '@/component/footer';
+
 import hl from '@/utils/highLight';
-import {
-  Intro,
-  ProjectSection,
-  WritingSection,
-} from '@/component/right-column';
+import RightColumn from '@/component/right-column';
 import { LeftColumn } from '@/component/left-column';
 
 export default function Home() {
@@ -73,64 +69,8 @@ export default function Home() {
       <LeftColumn></LeftColumn>
 
       {/* Right Column */}
-      {/* REVIEW: You already have a <LeftColumn> standalone component. So it's better to also abstract this <div> into a standalone component called <RightColumn>. */}
-      <div className="space-y-10 flex-4 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
-        <div>
-          <div
-            className="top-0 py-5 lg:hidden font-bold 
-             text-white/90 "
-          >
-            About Me
-          </div>
-          <Intro></Intro>
-        </div>
-
-        {/* PROJECT Section */}
-        <div>
-          <div className="top-0  py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90">
-            Experience
-          </div>
-          <div id="experience" className="py-5">
-            <ProjectSection></ProjectSection>
-          </div>
-        </div>
-
-        {/* WRITING Section */}
-        <div>
-          <div
-            id="project"
-            className="hidden mb-10 lg:block font-bold text-white/90"
-          >
-            Projects
-          </div>
-          <div className="top-0 py-5 lg:hidden font-bold text-white/90">
-            Projects
-          </div>
-          {/* 
-          
-          REVIEW:
-          
-          You wrote two "projects" <div> elements above. One is only visible on desktop, 
-          the other is only visible on mobile. These two <div> elements have the same 
-          content with a little difference in margin. 
-          
-          You can archive the same effect by using only one <div>, like this:
-
-          <div
-            id="project"
-            className="py-5 lg:py-0 lg:mb-10 font-bold text-white/90"
-          >
-            Projects
-          </div>
-          
-          */}
-
-          <WritingSection></WritingSection>
-        </div>
-
-        <Footer></Footer>
-      </div>
-
+      <RightColumn></RightColumn>
+      
       {/* Right Space */}
       <div className=" hidden xl:block flex-1 "></div>
     </div>

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Particles } from '@/components/ui/shadcn-io/particles';
-import Image from 'next/image';
 import HalloweenIconToggle from '@/components/HalloweenIconToggle';
 import Header from '@/component/header';
+import Background  from '@/component/background';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -48,113 +48,7 @@ export default function RootLayout({
           refresh
         />
 
-        
-
-        {/* REVIEW: Group these images into a <HalloweenBackground> component. Put the <HalloweenBackground> component into the components/HalloweenBackground.tsx file.
-        
-         Why? It would be easier to manage it and address the "z-level" height in the future development.
-        */}
-        <Image
-          src="/halloween-moon-light.png"
-          alt="Halloween background"
-          width={600}
-          height={600}
-          className="
-            fixed left-1/8 bottom-[0%] 
-            translate-y-0
-            hidden sm:hidden lg:block
-            w-auto h-1/2
-            opacity-100
-            pointer-events-none select-none
-            object-contain
-            -z-20
-          "
-        />
-
-
-
-        <Image
-          src="/halloween-bg.png"
-          alt="Halloween background"
-          width={600}
-          height={600}
-          className="
-            fixed bottom-0 left-0 translate-y-1
-            hidden sm:hidden lg:block
-            h-1/2 w-auto
-            opacity-85
-            pointer-events-none select-none
-            object-contain
-            -z-10
-          "
-        />
-
-        <Image
-          src="/halloween-mount.png"
-          alt="Halloween background"
-          width={600}
-          height={600}
-          className="
-            fixed bottom-0 left-0 top-[63%]
-            hidden sm:hidden lg:block
-            h-1/2 w-auto
-            opacity-100
-            pointer-events-none select-none
-            object-contain
-            -z-15
-          "
-        />
-
-        <Image
-          src="/halloween-witch.png"
-          alt="Halloween background"
-          width={600}
-          height={600}
-          className="
-            fixed left-1/4 bottom-[5%]
-            hidden sm:hidden lg:block
-            h-1/2 w-auto
-            opacity-100
-            pointer-events-none select-none
-            object-contain
-            z-1
-          "
-        />
-
-        {/* <Image
-          src="/halloween-cat.png"
-          alt="Halloween background"
-          width={600}
-          height={600}
-          className="
-            fixed right-12 bottom-[0%] 
-            translate-y-2
-            hidden sm:hidden lg:block
-            w-1/20 h-auto
-            opacity-100
-            pointer-events-none select-none
-            object-contain
-            -z-20
-          "
-        /> */}
-
-        {/* <Image
-          src="/halloween-light.png"
-          alt="Halloween background"
-          width={600}
-          height={600}
-          className="
-            fixed right-2 top-[0%] 
-            translate-y-0
-            hidden sm:hidden lg:block
-            w-1/10 h-auto
-            opacity-100
-            pointer-events-none select-none
-            object-contain
-            -z-20
-          "
-        /> */}
-
+        <Background />
 
         <HalloweenIconToggle />
 

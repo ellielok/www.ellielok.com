@@ -3,6 +3,7 @@ import hl from '@/utils/highLight';
 import { useState } from "react";
 import ProjectCard from './sub-component/project-card';
 import WritingCard from '@/component/sub-component/writing-card';
+import Footer from '@/component/footer';
 
 export function Intro() {
   return (
@@ -37,9 +38,8 @@ export function ProjectSection() {
       position: "Advanced Database",
       company: "Monash University",
       description:
-        "Facilitated postgraduate lab sessions by guiding practical exercises in database technologies (StarSchema, PostGIS, SQL queries) using tools such as DBeaver, SQL*Plus, and PostgreSQL.",
-      // REVIEW: Why list frontend skills like React instead of Database skills in a TA role?
-      skills: "React, Next.js, TypeScript, CSS",
+        "Facilitated postgraduate lab sessions by guiding practical exercises in database technologies (StarSchema, PostGIS, SQL queries).",
+      skills: "DBeaver, PostGIS, PostgreSQL, Docker",
     },
     {
       timeRange: "Aug 2022 - Jan 2024",
@@ -109,4 +109,44 @@ export function WritingSection() {
       ))}
     </div>
   );
+}
+
+
+
+export default function RightColumn() {
+  return (
+    <div className="space-y-10 flex-4 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
+        <div>
+          <div
+            className="top-0 py-5 lg:hidden font-bold 
+             text-white/90 "
+          >
+            About Me
+          </div>
+          <Intro></Intro>
+        </div>
+
+        {/* PROJECT Section */}
+        <div>
+          <div className="top-0  py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90">
+            Experience
+          </div>
+          <div id="experience" className="py-5">
+            <ProjectSection></ProjectSection>
+          </div>
+        </div>
+
+        {/* WRITING Section */}
+        <div>
+          <div className="top-0 lg:hidden font-bold text-white/90">
+            Projects
+          </div>
+          <div id="project">
+          <WritingSection ></WritingSection>
+          </div>
+        </div>
+
+        <Footer></Footer>
+      </div>
+  )
 }
