@@ -30,11 +30,11 @@ export default function WritingCard({
           <span>
           {projectName}
           </span>
-          <a
+          <span
             className=" items-center gap-1 group-hover:gap-2 mr-2 group-hover:translate-x-0.5"
           >
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </span>
         </div>
         <div>{description}</div>
         </a>

@@ -4,7 +4,7 @@ import './globals.css';
 import { Particles } from '@/components/ui/shadcn-io/particles';
 import HalloweenIconToggle from '@/components/HalloweenIconToggle';
 import Header from '@/component/header';
-import Background  from '@/component/background';
+import BackgroundWrapper from '@/component/BackgroundWrapper';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -48,7 +48,7 @@ export default function RootLayout({
           refresh
         />
 
-        <Background />
+        <BackgroundWrapper />
 
         <HalloweenIconToggle />
 
