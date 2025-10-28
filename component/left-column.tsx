@@ -8,6 +8,7 @@ import {
   FaGoodreads,
 } from 'react-icons/fa';
 
+
 export function LeftColumn() {
   return (
     <div
@@ -21,16 +22,9 @@ export function LeftColumn() {
         Ellie Lok
       </h1>
       <h2 className=" mt-5 mb-5 font-semibold  text-white/95 text-base md:text-xl">
-        Junior Developer
+        Aspiring Full-stack Developer
       </h2>
-      <a
-        href="/cv/ellie-cv.pdf"
-        target="_blank"
-        rel="noreferrer"
-        className="underline-offset-2 hover:underline"
-      >
-        View Full Résumé
-      </a>
+      
       <div className="">On my journey to becoming a frontend engineer.</div>
       <div>
         Feel free to{' '}

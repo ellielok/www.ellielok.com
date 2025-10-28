@@ -1,7 +1,4 @@
 import { ReactNode } from 'react';
-import Header from '@/component/header';
-
-import hl from '@/utils/highLight';
 import RightColumn from '@/component/right-column';
 import { LeftColumn } from '@/component/left-column';
 
