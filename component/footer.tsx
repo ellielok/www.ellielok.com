@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <div className="">
+        <div className="mx-20 mt-35">
         <div>
             Built from Melbourne
         </div>
@@ -8,7 +8,7 @@ export default function Footer() {
             Craft with React, Next.js, Tailwind CSS. Deploy with Vercel view source code on Github.
         </div>
         <div>
-        &copy; 2025 Ellie Lok. All rights reserved.
+        &copy; 2025 Ellie Lok. 
         </div>
         </div>
     );

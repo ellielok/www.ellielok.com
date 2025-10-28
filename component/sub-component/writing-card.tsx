@@ -14,7 +14,7 @@ export default function WritingCard({
   href
 }: WritingCardProps) {
   return (
-    <div
+    <div 
       className="grid grid-cols-[1fr_4fr] gap-6 p-6 
                     group
                     hover:bg-gradient-to-b hover:from-white/5 hover:via-white/3 hover:to-white/0"

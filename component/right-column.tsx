@@ -140,7 +140,7 @@ export default function RightColumn() {
 
         {/* PROJECT Section */}
         <div>
-          <div className="top-0  py-5 lg:hidden font-bold oklch(0.1882 0.0765 293.16) text-white/90">
+          <div className="top-0  py-5 lg:hidden font-bold text-white/90">
             Experience
           </div>
           <div id="experience" className="py-5">
@@ -150,7 +150,7 @@ export default function RightColumn() {
 
         {/* WRITING Section */}
         <div>
-          <div className="top-0 lg:hidden font-bold text-white/90">
+          <div className="top-0 py-5 font-bold text-white/90">
             Projects
           </div>
           <div id="project">
