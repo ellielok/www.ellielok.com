@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-
 export default function HalloweenIconToggle() {
   const [showIcons, setShowIcons] = useState(true);
   const [offsetY, setOffsetY] = useState(0);
@@ -18,9 +17,9 @@ export default function HalloweenIconToggle() {
   return (
     <div className="hidden xl:fixed right-6 top-4 xl:right-10 xl:top-6 xl:flex xl:flex-col xl:items-center z-25">
       <motion.div
-  whileTap={{ y: 5, scale: 0.99 }}
+  whileTap={{ y: 8, scale: 0.95 }}
   animate={{ y: offsetY }}
-  transition={{ type: 'spring', stiffness: 150, damping: 10 }}
+  transition={{ type: 'spring', stiffness: 300, damping: 8 }}
   onClick={() => {
     if (window.scrollY === 0) {
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
@@ -38,9 +37,7 @@ export default function HalloweenIconToggle() {
           alt="Halloween light"
           width={120}
           height={120}
-          className="w-7/10 2xl:w-10/10 h-auto -translate-y-55 translate-x-20 2xl:translate-x-0
-          2xl:-translate-y-75
-          pointer-events-auto"
+          className="w-auto h-auto -translate-y-55 pointer-events-auto"
         />
       </motion.div>
 
