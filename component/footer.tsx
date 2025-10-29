@@ -1,14 +1,14 @@
 export default function Footer() {
     return (
-        <div className="mx-20 mt-35">
+        <div className="">
         <div>
-            👻 Halloween Edition. Made for the spooky season.
+            Built from Melbourne
         </div>
         <div>
-            Crafted with React, Next.js & Tailwind CSS. Hosted on Vercel.
+            Craft with React, Next.js, Tailwind CSS. Deploy with Vercel view source code on Github.
         </div>
         <div>
-        &copy; 2025 Ellie Lok. 
+        &copy; 2025 Ellie Lok. All rights reserved.
         </div>
         </div>
     );
