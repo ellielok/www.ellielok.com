@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
+
 export default function HalloweenIconToggle() {
   const [showIcons, setShowIcons] = useState(true);
   const [offsetY, setOffsetY] = useState(0);

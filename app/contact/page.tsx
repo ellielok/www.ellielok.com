@@ -3,6 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, Mail, Github, Linkedin, Briefcase, Sprout } from 'lucide-react';
+import hl from '@/utils/highLight';
 
 export default function IntroSection() {
   return (
@@ -27,17 +28,17 @@ export default function IntroSection() {
         </div>
 
         <p className=" text-white/90 leading-relaxed max-w-2xl">
-          Aspiring full-stack developer passionate about building responsive,
-          human-centered web experiences. Skilled in React, TypeScript, and
-          cloud-based systems, I love finding the balance between aesthetics and
+          I love finding the balance between aesthetics and
           performance - crafting interfaces that not only look good but also
           feel intuitive and fast.
         </p>
 
         <p className="text-white/90 leading-relaxed max-w-2xl">
-          Currently completing a Master of Information Technology at Monash
-          University (Melbourne), with hands-on experience in full-stack web
-          development, and database design.
+          This portfolio was built in a pretty short time, so there are still plenty of bugs and things to polish, such as accessibility, loading transitions, and image optimization. I am also planning to add a more business-style light mode. 
+        </p>
+
+        <p className="text-white/90 leading-relaxed max-w-2xl">
+          I hope this {hl('Halloween edition')} brings you a bit of fun! If you have any suggestions, I'd love to hear from you. 🎃
         </p>
 
         {/* 位置信息与状态 */}
