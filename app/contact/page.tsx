@@ -8,7 +8,7 @@ export default function IntroSection() {
   return (
     <section className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 px-6 sm:px-10 max-w-screen-xl mx-auto">
       {/* 左侧文本区域 */}
-      <div className="flex-1 text-left space-y-6">
+      <div className="flex-2 text-left space-y-6">
         <h1 className="text-5xl font-bold text-white/70 tracking-tight">
           Hi, I’m <span className="">Ellie Lok</span>
         </h1>
@@ -47,8 +47,8 @@ export default function IntroSection() {
             <span className='font-semibold text-white/85'>Melbourne, Australia</span>
           </div>
 
-          <div className="flex items-center gap-3 ">
-            <Sprout className="w-6 h-6 min-w-[1.5rem] animate-pulse" />
+          <div className="flex items-center gap-3">
+            <Sprout className="w-6 h-6 min-w-[1.5rem]" />
             
             <span className='font-semibold text-white/85'>Open to new opportunities</span>
           </div>
