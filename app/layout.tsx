@@ -4,7 +4,7 @@ import './globals.css';
 import { Particles } from '@/components/ui/shadcn-io/particles';
 import HalloweenIconToggle from '@/components/HalloweenIconToggle';
 import Header from '@/component/header';
-import BackgroundWrapper from '@/component/backgroundWrapper';
+import BackgroundWrapper from '@/component/background-Wrapper';
 import FooterWrapper from '@/component/env-footerWrapper';
 
 const inter = Inter({
