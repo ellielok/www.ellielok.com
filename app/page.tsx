@@ -4,7 +4,7 @@ import { LeftColumn } from '@/component/left-column';
 
 export default function Home() {
   return (
-    <div className="w-full px-10">
+    <div className="w-full px-10 py-25 lg:py-0">
       <div className="flex flex-col lg:flex-row mx-auto max-w-screen-xl gap-3">
 
 
