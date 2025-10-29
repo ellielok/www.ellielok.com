@@ -23,8 +23,8 @@ export default function Background() {
       />
 
       <Image
-        src="/halloween-bg.png"
-        alt="Halloween background"
+        src="/halloween-bg-min.png"
+        alt="background"
         width={600}
         height={600}
         className="
@@ -38,7 +38,7 @@ export default function Background() {
           "
       />
 
-      <Image
+      {/* <Image
         src="/halloween-mount.png"
         alt="Halloween background"
         width={600}
@@ -52,7 +52,7 @@ export default function Background() {
             object-contain
             -z-15
           "
-      />
+      /> */}
 
       <Image
         src="/halloween-witch.png"
