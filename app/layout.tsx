@@ -70,7 +70,7 @@ export default function RootLayout({
 
 
         <Image
-          src="/halloween-bg.png"
+          src="/halloween-bg-min.png"
           alt="Halloween background"
           width={600}
           height={600}
@@ -85,7 +85,7 @@ export default function RootLayout({
           "
         />
 
-        <Image
+        {/* <Image
           src="/halloween-mount.png"
           alt="Halloween background"
           width={600}
@@ -99,7 +99,7 @@ export default function RootLayout({
             object-contain
             -z-15
           "
-        />
+        /> */}
 
         <Image
           src="/halloween-witch.png"
