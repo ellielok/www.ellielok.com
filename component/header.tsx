@@ -32,7 +32,7 @@ export default function FloatingMenu() {
 
   return (
     <nav
-      className={`fixed left-0 w-full h-15 backdrop-blur- items-center text-gray-400 text-sm font-medium
+      className={`fixed left-0 w-full h-15 backdrop-blur-lg items-center text-gray-400 text-sm font-medium
         flex justify-center space-x-6 py-3 transition-transform duration-500
         ${isVisible ? "translate-y-0" : "-translate-y-full"}  z-20`}
     >
