@@ -17,8 +17,10 @@ export default function WritingCard({
   screenshot,
 }: WritingCardProps) {
   return (
+    <div>
+      <a href={href} target="_self" rel="ellielok_home">
     <div
-      className="grid grid-cols-[1fr_4fr] gap-6 p-6 
+      className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-6 p-6 
                     group
                     hover:bg-gradient-to-b hover:from-white/5 hover:via-white/3 hover:to-white/0"
     >
@@ -35,7 +37,7 @@ export default function WritingCard({
         </div>
       </div>
       <div>
-        <a href={href} target="_self" rel="ellielok_home">
+        
           <div
             className="w-full flex gap-1 justify-between items-center pb-2
                         font-bold text-white/90 
@@ -47,8 +49,10 @@ export default function WritingCard({
             </span>
           </div>
           <div>{description}</div>
-        </a>
+        
       </div>
+    </div>
+    </a>
     </div>
   );
 }
