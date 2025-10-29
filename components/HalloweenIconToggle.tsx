@@ -37,7 +37,9 @@ export default function HalloweenIconToggle() {
           alt="Halloween light"
           width={120}
           height={120}
-          className="w-auto h-auto -translate-y-55 pointer-events-auto"
+          className="w-7/10 2xl:w-10/10 h-auto -translate-y-40 translate-x-20 2xl:translate-x-0
+          2xl:-translate-y-50
+          pointer-events-auto"
         />
       </motion.div>
 

@@ -52,6 +52,8 @@ function PageSection({
         reverse ? 'lg:flex-row-reverse' : ''
       } items-center gap-10 mb-20`}
     >
+
+      
       {/* 文本区 */}
       <div className="flex-1 space-y-3 text-white">
         <h3 className="text-2xl font-semibold text-[#93f5fa]">{name}</h3>
@@ -81,25 +83,46 @@ export default function ProductDetailsPage() {
       name: 'Dashboard',
       description:
         'Shows weekly alcohol intake, progress toward goals, and motivational messages to help maintain healthy habits.',
-      screenshot: '/images/tipsytrack-dashboard.png',
+      screenshot: '/projects/tipsy/home.png',
     },
     {
       name: 'Drink Scanner',
       description:
         'Utilizes Google Vision API to scan drink labels, identify alcohol content, and calculate standard drinks automatically.',
-      screenshot: '/images/tipsytrack-scanner.png',
+      screenshot: '/projects/tipsy/scanner.png',
     },
     {
       name: 'Progress Tracker',
       description:
         'Gamified experience with “Swap to Zero” challenges, progress milestones, and visual rewards to encourage positive change.',
-      screenshot: '/images/tipsytrack-progress.png',
+      screenshot: '/projects/tipsy/tracker.png',
+    },
+    {
+      name: 'Progress Tracker',
+      description:
+        'Gamified experience with “Swap to Zero” challenges, progress milestones, and visual rewards to encourage positive change.',
+      screenshot: '/projects/tipsy/tracker.png',
+    },
+    {
+      name: 'Progress Tracker',
+      description:
+        'Gamified experience with “Swap to Zero” challenges, progress milestones, and visual rewards to encourage positive change.',
+      screenshot: '/projects/tipsy/list-widget.png',
     },
   ];
 
   return (
     <div className="w-full px-6 sm:px-10 py-30 max-w-screen-xl mx-auto">
-      
+      {/* Back Button */}
+      <div className="mb-10 font-semi">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-gray-300 hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          Back
+        </Link>
+      </div>
 
       {/* 产品信息 */}
       <ProductHeader />
@@ -116,16 +139,7 @@ export default function ProductDetailsPage() {
           />
         ))}
       </div>
-      {/* Back Button */}
-      <div className="mb-10 font-semi">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-gray-300 hover:text-[#93f5fa] transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5" />
-          Back
-        </Link>
-      </div>
+      
     </div>
   );
 }

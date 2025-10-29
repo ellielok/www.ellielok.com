@@ -25,7 +25,7 @@ export function LeftColumn() {
         Aspiring Full-stack Developer
       </h2>
       
-      <div className="">On my journey to becoming a frontend engineer.</div>
+      <div className="">On my journey to becoming a excellent engineer.</div>
       <div>
         Feel free to{' '}
         <a
