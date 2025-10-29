@@ -1,24 +1,131 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
+
+// ✅ 顶部产品信息
+function ProductHeader() {
+  const product = {
+    appName: 'TipsyTrack',
+    description:
+      'A web application designed to promote alcohol harm reduction by helping adults track and understand their drinking habits.',
+    stack: 'Next.js (App Router), TypeScript, Tailwind CSS, Neon Postgres, Vercel',
+    skills: 'Frontend development, RESTful APIs, Cloud deployment, UI/UX design',
+  };
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
+    <div className="text-white text-left max-w-3xl space-y-6 mb-16">
+      <h1 className="text-4xl font-bold tracking-tight">{product.appName}</h1>
+      <p className="text-gray-300 text-base leading-relaxed">{product.description}</p>
 
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row"> 
+      <div className="text-left space-y-3">
+        <div>
+          <h2 className="text-lg font-semibold text-[#93f5fa]">Tech Stack</h2>
+          <p className="text-gray-300">{product.stack}</p>
         </div>
-      </main>
 
+        <div>
+          <h2 className="text-lg font-semibold text-[#93f5fa]">Key Skills</h2>
+          <p className="text-gray-300">{product.skills}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ✅ 单个页面展示区（左右交替）
+function PageSection({
+  name,
+  description,
+  screenshot,
+  reverse = false,
+}: {
+  name: string;
+  description: string;
+  screenshot: string;
+  reverse?: boolean;
+}) {
+  return (
+    <div
+      className={`flex flex-col lg:flex-row ${
+        reverse ? 'lg:flex-row-reverse' : ''
+      } items-center gap-10 mb-20`}
+    >
+      {/* 文本区 */}
+      <div className="flex-1 space-y-3 text-white">
+        <h3 className="text-2xl font-semibold text-[#93f5fa]">{name}</h3>
+        <p className="text-gray-300 text-base leading-relaxed">{description}</p>
+      </div>
+
+      {/* 图片区 */}
+      <div className="flex-1 w-full">
+        <div className="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+          <Image
+            src={screenshot}
+            alt={`${name} screenshot`}
+            width={900}
+            height={500}
+            className="object-cover w-full"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ✅ 主页面布局
+export default function ProductDetailsPage() {
+  const pages = [
+    {
+      name: 'Dashboard',
+      description:
+        'Shows weekly alcohol intake, progress toward goals, and motivational messages to help maintain healthy habits.',
+      screenshot: '/images/tipsytrack-dashboard.png',
+    },
+    {
+      name: 'Drink Scanner',
+      description:
+        'Utilizes Google Vision API to scan drink labels, identify alcohol content, and calculate standard drinks automatically.',
+      screenshot: '/images/tipsytrack-scanner.png',
+    },
+    {
+      name: 'Progress Tracker',
+      description:
+        'Gamified experience with “Swap to Zero” challenges, progress milestones, and visual rewards to encourage positive change.',
+      screenshot: '/images/tipsytrack-progress.png',
+    },
+  ];
+
+  return (
+    <div className="w-full px-6 sm:px-10 py-30 max-w-screen-xl mx-auto">
+      
+
+      {/* 产品信息 */}
+      <ProductHeader />
+
+      {/* 页面展示区 */}
+      <div className="space-y-20">
+        {pages.map((page, i) => (
+          <PageSection
+            key={i}
+            name={page.name}
+            description={page.description}
+            screenshot={page.screenshot}
+            reverse={i % 2 === 1} // 偶数行反转
+          />
+        ))}
+      </div>
+      {/* Back Button */}
+      <div className="mb-10 font-semi">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-gray-300 hover:text-[#93f5fa] transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          Back
+        </Link>
+      </div>
     </div>
   );
 }
