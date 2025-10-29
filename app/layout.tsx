@@ -4,8 +4,8 @@ import './globals.css';
 import { Particles } from '@/components/ui/shadcn-io/particles';
 import HalloweenIconToggle from '@/components/HalloweenIconToggle';
 import Header from '@/component/header';
-import BackgroundWrapper from '@/component/backgroundwrapper';
-import FooterWrapper from '@/component/env-footerWrapper';
+import BackgroundWrapper from '@/component/background-wrapper';
+import FooterWrapper from '@/component/env-footer-wrapper';
 
 const inter = Inter({
   variable: '--font-inter',
