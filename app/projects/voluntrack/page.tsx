@@ -1,5 +1,6 @@
 'use client';
-
+import Tag from '@/component/sub-component/tag';
+import { Code2, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
@@ -13,25 +14,41 @@ function ProductHeader() {
     stack:
       'Kotlin, Jetpack Compose, Firebase, SendGrid, MVVM Architecture, Material Design 3',
     skills:
-      'Mobile UI design, real-time data synchronization, authentication, cloud messaging, RESTful API integration, data visualization',
+      'Mobile UI design, Real-time data synchronization, Authentication, Cloud messaging, RESTful API integration, Data visualization',
   };
+  const skillList =
+    typeof product.skills === 'string'
+      ? product.skills.split(',').map((s) => s.trim())
+      : product.skills;
 
   return (
-    <div className="text-white text-left max-w-3xl space-y-6 mb-16">
+    <div className="text-white text-left max-w-3xl space-y-8 mb-16">
       <h1 className="text-4xl font-bold tracking-tight">{product.appName}</h1>
       <p className="text-gray-300 text-base leading-relaxed">
         {product.description}
       </p>
 
-      <div className="text-left space-y-3">
+      <div className="text-left space-y-8">
         <div>
-          <h2 className="text-lg font-semibold text-[#93f5fa]">Tech Stack</h2>
+          <h2 className="text-lg font-semibold flex items-center gap-2">
+            <Code2 className="w-5 h-5" />
+            Tech Stack
+          </h2>
           <p className="text-gray-300">{product.stack}</p>
         </div>
 
+        
+
         <div>
-          <h2 className="text-lg font-semibold text-[#93f5fa]">Key Skills</h2>
-          <p className="text-gray-300">{product.skills}</p>
+          <h2 className="text-lg font-semibold flex items-center gap-2"><Sparkles className="w-5 h-5" />Key Skills</h2>
+          {/* Skills tags */}
+          {skillList && Array.isArray(skillList) && (
+            <div className="flex flex-wrap gap-2 pt-3">
+              {skillList.map((skill, i) => (
+                <Tag key={i} label={skill} />
+              ))}
+            </div>
+          )}{' '}
         </div>
       </div>
     </div>
@@ -58,7 +75,7 @@ function PageSection({
     >
       {/* 文本区 */}
       <div className="flex-1 space-y-3 text-white">
-        <h3 className="text-2xl font-semibold text-[#93f5fa]">{name}</h3>
+        <h3 className="text-2xl font-semibold ">{name}</h3>
         <p className="text-gray-300 text-base leading-relaxed">{description}</p>
       </div>
 
@@ -84,43 +101,41 @@ function PageSection({
 export default function ProductDetailsPage() {
   const pages = [
     {
-      name: 'Volunteer Dashboard',
+      name: 'Smart Volunteer Management',
       description:
-        'The home dashboard provides a clear overview of volunteer progress, hours logged, and recent activities, powered by Firebase Realtime Database.',
-      screenshots: [
-        '/projects/volun/dashboard.png',
-        '/projects/volun/progress.png',
-      ],
-    },
-    {
-      name: 'Activity Management',
-      description:
-        'Organizers can create, assign, and monitor volunteering activities in real-time. Volunteers can track their assigned tasks and mark progress directly from the app.',
+        'VolunTrack is an Android application built with Kotlin and Jetpack Compose. It integrates third-party login and calendar access to recommend suitable volunteer opportunities for each user.',
       screenshots: [
         '/projects/volun/wel.png',
         '/projects/volun/signup.png',
         '/projects/volun/cal.png',
       ],
     },
+
     {
-      name: 'Summary Cards',
+      name: 'Event Discovery and Management',
       description:
-        'The summary cards dynamically display statistics such as total hours, completed events, and volunteer rankings with Compose animation effects.',
-      screenshots: [
-        '/projects/volun/profile.png',
-        '/projects/volun/dashboard.png',
-        '/projects/volun/progress.png',
-      ],
-    },
-    {
-      name: 'Organization Info',
-      description:
-        'A dedicated section displaying partner organizations, upcoming events, and volunteer contacts. Integrated with Firebase Firestore for real-time updates.',
+        'Connects to open data source APIs to help users explore volunteer opportunities from verified organizations. Users can search by category, and view detailed event information.',
       screenshots: [
         '/projects/volun/event-cus.png',
         '/projects/volun/search.png',
         '/projects/volun/details.png',
       ],
+    },
+
+    {
+      name: 'Dashboard and Profile',
+      description:
+        'VolunTrack provides volunteers with a personalized dashboard to track their participation, set goals, and monitor progress across activity categories. ',
+      screenshots: [
+        '/projects/volun/dashboard.png',
+        '/projects/volun/progress.png',
+      ],
+    },
+    {
+      name: 'Dashboard and Profile',
+      description:
+        'VolunTrack provides volunteers with a personalized dashboard to track their participation, set goals, and monitor progress across activity categories. Users can view their volunteer history, update personal details, and visualize achievements through interactive charts and progress indicators.',
+      screenshots: ['/projects/volun/profile.png', '/projects/volun/dark.png'],
     },
   ];
 
@@ -130,7 +145,7 @@ export default function ProductDetailsPage() {
       <div className="mb-10 font-semi">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-gray-300 hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5"
+          className="inline-flex items-center gap-2  border-2 border-white/40 hover:border-[#93f5fa]/60 px-2 py-1 rounded-xl text-gray-300 hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5 font-semibold"
         >
           <ArrowLeft className="w-5 h-5" />
           Back
@@ -138,6 +153,7 @@ export default function ProductDetailsPage() {
       </div>
 
       {/* 顶部信息 */}
+      <div className='mx-10'>
       <ProductHeader />
 
       {/* 页面展示区 */}
@@ -151,6 +167,7 @@ export default function ProductDetailsPage() {
             reverse={i % 2 === 1}
           />
         ))}
+      </div>
       </div>
     </div>
   );

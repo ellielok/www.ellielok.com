@@ -41,7 +41,7 @@ export default function ProjectCard({
           {position}, {company}{' '}
         </div>
         <div className="font-base"> {description} </div>
-         {/* Skills tags */}
+        {/* Skills tags */}
         {skillList && Array.isArray(skillList) && (
           <div className="flex flex-wrap gap-2 pt-3">
             {skillList.map((skill, i) => (
@@ -49,7 +49,6 @@ export default function ProjectCard({
             ))}
           </div>
         )}
-        
       </div>
     </div>
   );

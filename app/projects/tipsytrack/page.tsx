@@ -1,8 +1,10 @@
 'use client';
+import Tag from '@/component/sub-component/tag';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Code2, Sparkles } from 'lucide-react';
 
 // ✅ 顶部产品信息
 function ProductHeader() {
@@ -10,24 +12,43 @@ function ProductHeader() {
     appName: 'TipsyTrack',
     description:
       'A web application designed to promote alcohol harm reduction by helping adults track and understand their drinking habits.',
-    stack: 'Next.js (App Router), TypeScript, Tailwind CSS, Neon Postgres, Vercel',
-    skills: 'Frontend development, RESTful APIs, Cloud deployment, UI/UX design',
+    stack: 'Next.js, TypeScript, Tailwind CSS, Neon Postgres, Vercel',
+    skills:
+      'Frontend development, RESTful APIs, Cloud deployment, Local Storage',
   };
+  const skillList =
+    typeof product.skills === 'string'
+      ? product.skills.split(',').map((s) => s.trim())
+      : product.skills;
 
   return (
-    <div className="text-white text-left max-w-3xl space-y-6 mb-16">
+    <div className="text-white text-left max-w-3xl space-y-8 mb-16">
       <h1 className="text-4xl font-bold tracking-tight">{product.appName}</h1>
-      <p className="text-gray-300 text-base leading-relaxed">{product.description}</p>
+      <p className="text-gray-300 text-base leading-relaxed">
+        {product.description}
+      </p>
 
-      <div className="text-left space-y-3">
+      <div className="text-left space-y-8">
         <div>
-          <h2 className="text-lg font-semibold text-[#93f5fa]">Tech Stack</h2>
+          <h2 className="text-lg font-semibold flex items-center gap-2">
+            <Code2 className="w-5 h-5" />
+            Tech Stack
+          </h2>
           <p className="text-gray-300">{product.stack}</p>
         </div>
 
+        
+
         <div>
-          <h2 className="text-lg font-semibold text-[#93f5fa]">Key Skills</h2>
-          <p className="text-gray-300">{product.skills}</p>
+          <h2 className="text-lg font-semibold flex items-center gap-2"><Sparkles className="w-5 h-5" />Key Skills</h2>
+          {/* Skills tags */}
+          {skillList && Array.isArray(skillList) && (
+            <div className="flex flex-wrap gap-2 pt-3">
+              {skillList.map((skill, i) => (
+                <Tag key={i} label={skill} />
+              ))}
+            </div>
+          )}{' '}
         </div>
       </div>
     </div>
@@ -52,11 +73,9 @@ function PageSection({
         reverse ? 'lg:flex-row-reverse' : ''
       } items-center gap-10 mb-20`}
     >
-
-      
       {/* 文本区 */}
       <div className="flex-1 space-y-3 text-white">
-        <h3 className="text-2xl font-semibold text-[#93f5fa]">{name}</h3>
+        <h3 className="text-2xl font-semibold ">{name}</h3>
         <p className="text-gray-300 text-base leading-relaxed">{description}</p>
       </div>
 
@@ -80,33 +99,33 @@ function PageSection({
 export default function ProductDetailsPage() {
   const pages = [
     {
-      name: 'Dashboard',
+      name: 'Monash IE Expo Winner',
       description:
-        'Shows weekly alcohol intake, progress toward goals, and motivational messages to help maintain healthy habits.',
-      screenshot: '/projects/tipsy/home.png',
+        'Awarded Best Project at the Monash Postgraduate Industry Experience Expo, TipsyTrack is a personal alcohol tracking web app that empowers users to monitor their drinking habits, visualize behavioral patterns through interactive data insights, and set personalized health goals.',
+      screenshot: '/projects/tipsy/te11.png',
     },
     {
       name: 'Drink Scanner',
       description:
-        'Utilizes Google Vision API to scan drink labels, identify alcohol content, and calculate standard drinks automatically.',
+        'Allows users to upload or capture an image of any alcohol product to instantly retrieve details using AI-powered image recognition, ensuring quick results while keeping all photos private and off-server.',
       screenshot: '/projects/tipsy/scanner.png',
     },
     {
-      name: 'Progress Tracker',
+      name: 'Drink Calculator',
       description:
-        'Gamified experience with “Swap to Zero” challenges, progress milestones, and visual rewards to encourage positive change.',
-      screenshot: '/projects/tipsy/tracker.png',
+        'A step-by-step calculator that helps users estimate standard drinks and blood alcohol concentration (BAC). The intuitive interface makes it simple to log and understand their alcohol intake.',
+      screenshot: '/projects/tipsy/cal.png',
     },
     {
       name: 'Progress Tracker',
       description:
-        'Gamified experience with “Swap to Zero” challenges, progress milestones, and visual rewards to encourage positive change.',
+        'Visualizes drinking habits through an interactive calendar and progress dashboard, helping users track standard drinks, spending, and calorie intake while promoting healthier consumption patterns.',
       screenshot: '/projects/tipsy/tracker.png',
     },
     {
-      name: 'Progress Tracker',
+      name: 'Live Tracking & My Drinks List',
       description:
-        'Gamified experience with “Swap to Zero” challenges, progress milestones, and visual rewards to encourage positive change.',
+        'Displays all saved beverages with detailed information such as volume, alcohol content, and sugar levels. Includes a live tracker that calculates standard drinks, estimates blood alcohol concentration (BAC), and predicts recovery time for real-time awareness.',
       screenshot: '/projects/tipsy/list-widget.png',
     },
   ];
@@ -117,7 +136,7 @@ export default function ProductDetailsPage() {
       <div className="mb-10 font-semi">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-gray-300 hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5"
+          className="inline-flex items-center gap-2  border-2 border-white/40 hover:border-[#93f5fa]/60 px-2 py-1 rounded-xl text-gray-300 hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5 font-semibold"
         >
           <ArrowLeft className="w-5 h-5" />
           Back
@@ -125,7 +144,9 @@ export default function ProductDetailsPage() {
       </div>
 
       {/* 产品信息 */}
+      <div className='mx-5'>
       <ProductHeader />
+      
 
       {/* 页面展示区 */}
       <div className="space-y-20">
@@ -139,7 +160,7 @@ export default function ProductDetailsPage() {
           />
         ))}
       </div>
-      
+      </div>
     </div>
   );
 }

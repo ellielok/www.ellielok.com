@@ -1,8 +1,10 @@
 'use client';
+import Tag from '@/component/sub-component/tag';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Code2, Sparkles } from 'lucide-react';
 
 // ✅ 顶部产品信息
 function ProductHeader() {
@@ -10,28 +12,49 @@ function ProductHeader() {
     appName: 'BirdTag',
     description:
       'An AI-powered bird identification web application that automatically recognizes bird species from uploaded photos using a fully serverless AWS architecture. The platform integrates intelligent tagging, DynamoDB data management, and real-time notification services.',
-    stack: 'AWS Lambda, API Gateway, S3, DynamoDB, SNS, Cognito, Python, React, Tailwind CSS',
+    stack:
+      'AWS Lambda, API Gateway, S3, DynamoDB, Amplify, Cognito, Python, React',
     skills:
-      'Serverless architecture, image recognition, data synchronization, user authentication, cloud automation, full-stack development',
+      'Serverless architecture, Image recognition, Data synchronization, User authentication, Cloud automation, Full-stack development',
   };
+  const skillList =
+    typeof product.skills === 'string'
+      ? product.skills.split(',').map((s) => s.trim())
+      : product.skills;
 
   return (
-    <div className="text-white text-left max-w-3xl space-y-6 mb-16">
+    <div className="text-white text-left max-w-3xl space-y-8 mb-16">
       <h1 className="text-4xl font-bold tracking-tight">{product.appName}</h1>
-      <p className="text-gray-300 text-base leading-relaxed">{product.description}</p>
+      <p className="text-gray-300 text-base leading-relaxed">
+        {product.description}
+      </p>
 
-      <div className="text-left space-y-3">
+      <div className="text-left space-y-8">
         <div>
-          <h2 className="text-lg font-semibold text-[#93f5fa]">Tech Stack</h2>
+          <h2 className="text-lg font-semibold flex items-center gap-2">
+            <Code2 className="w-5 h-5" />
+            Tech Stack
+          </h2>
           <p className="text-gray-300">{product.stack}</p>
         </div>
+        
+        
 
         <div>
-          <h2 className="text-lg font-semibold text-[#93f5fa]">Key Skills</h2>
-          <p className="text-gray-300">{product.skills}</p>
-        </div>
-      </div>
+          <h2 className="text-lg font-semibold flex items-center gap-2"><Sparkles className="w-5 h-5" />Key Skills</h2>
 
+          
+          {/* Skills tags */}
+          {skillList && Array.isArray(skillList) && (
+            <div className="flex flex-wrap gap-2 pt-3">
+              {skillList.map((skill, i) => (
+                <Tag key={i} label={skill} />
+              ))}
+            </div>
+          )}{' '}
+        </div>
+        
+      </div>
     </div>
   );
 }
@@ -57,7 +80,7 @@ function PageSection({
     >
       {/* 文本区 */}
       <div className="flex-1 space-y-3 text-white">
-        <h3 className="text-2xl font-semibold text-[#93f5fa]">{name}</h3>
+        <h3 className="text-2xl font-semibold ">{name}</h3>
         <p className="text-gray-300 text-base leading-relaxed">{description}</p>
       </div>
 
@@ -79,7 +102,6 @@ function PageSection({
   );
 }
 
-
 // ✅ 主页面布局
 export default function ProductDetailsPage() {
   const pages = [
@@ -87,51 +109,38 @@ export default function ProductDetailsPage() {
       name: 'User Access & Authentication',
       description:
         'Users can sign up or log in securely using Amazon Cognito. BirdTag supports both traditional email registration (username, email, password) and Google account login for convenience.',
-      screenshots: [
-        '/projects/bird/signup.png',
-      ],
+      screenshots: ['/projects/bird/signup.png'],
     },
     {
       name: 'Upload Media Files',
       description:
         'Once logged in, users can navigate to the upload page and select bird photos or videos. Upon upload, the files are stored in S3, automatically triggering the AI detection pipeline. Metadata and recognition results are written to DynamoDB for persistence.',
-      screenshots: [
-        '/projects/bird/upload.png',
-        
-      ],
+      screenshots: ['/projects/bird/upload.png'],
     },
     {
       name: 'Search & Explore Files',
       description:
         'Users can search their uploaded files by species name or tag. The system fetches matching entries from DynamoDB and displays thumbnails; clicking a thumbnail reveals the original image in full resolution.',
-      screenshots: [
-        '/projects/bird/search.png',
-      ],
+      screenshots: ['/projects/bird/search.png'],
     },
-    
+
     {
       name: 'Modify & Manage Tags',
       description:
         'Each recognized file record includes editable tags. Users can update or add new tags directly from the interface to refine identification or improve dataset quality.',
-      screenshots: [
-        '/projects/bird/tags.png',
-      ],
+      screenshots: ['/projects/bird/tags.png'],
     },
     {
       name: 'Delete & Bulk Operations',
       description:
         'BirdTag allows users to delete single or multiple files at once. The bulk delete function includes checkbox selection and batch removal through DynamoDB and S3 synchronization.',
-      screenshots: [
-        '/projects/bird/delete.png',
-      ],
+      screenshots: ['/projects/bird/delete.png'],
     },
     {
       name: 'Bird Tag Subscriptions & Notifications',
       description:
         'Users can subscribe to specific bird tags (e.g., "crow" or "parrot"). When new files matching those tags are uploaded, the system automatically sends notifications via AWS SNS to subscribed users.',
-      screenshots: [
-        '/projects/bird/subscribe.png',
-      ],
+      screenshots: ['/projects/bird/subscribe.png'],
     },
   ];
 
@@ -141,7 +150,7 @@ export default function ProductDetailsPage() {
       <div className="mb-10 font-semi">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-gray-300 hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5"
+          className="inline-flex items-center gap-2  border-2 border-white/40 hover:border-[#93f5fa]/60 px-2 py-1 rounded-xl text-gray-300 hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5 font-semibold"
         >
           <ArrowLeft className="w-5 h-5" />
           Back
@@ -149,6 +158,7 @@ export default function ProductDetailsPage() {
       </div>
 
       {/* 顶部信息 */}
+      <div className='mx-10'>
       <ProductHeader />
 
       {/* 页面展示区 */}
@@ -162,6 +172,7 @@ export default function ProductDetailsPage() {
             reverse={i % 2 === 1}
           />
         ))}
+      </div>
       </div>
     </div>
   );
