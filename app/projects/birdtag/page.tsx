@@ -32,16 +32,6 @@ function ProductHeader() {
         </div>
       </div>
 
-      <div className="pt-4">
-        <Link
-          href="https://main.d3ahre2si21odj.amplifyapp.com"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block mt-4 px-5 py-2 bg-[#93f5fa]/10 border border-[#93f5fa]/40 text-[#93f5fa] rounded-xl font-medium hover:bg-[#93f5fa]/20 transition-colors"
-        >
-          Open Application →
-        </Link>
-      </div>
     </div>
   );
 }

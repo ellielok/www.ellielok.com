@@ -9,7 +9,7 @@ export default function IntroSection() {
     <section className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 px-6 sm:px-10 max-w-screen-xl mx-auto">
       {/* 左侧文本区域 */}
       <div className="flex-2 text-left space-y-6">
-        <h1 className="text-5xl font-bold text-white/70 tracking-tight">
+        <h1 className="text-5xl font-bold text-white/90 tracking-tight">
           Hi, I’m <span className="">Ellie Lok</span>
         </h1>
 
@@ -18,7 +18,7 @@ export default function IntroSection() {
             href="/cv/ellie-cv.pdf"
             target="_blank"
             rel="ellielok"
-            className="inline-flex gap-1 items-center font-semibold text-white/85
+            className="inline-flex gap-1 items-center font-semibold text-white/100
           hover:text-[#93f5fa] transition-colors duration-300 group border-2 border-white/50 hover:border-[#93f5fa] rounded-lg px-3 py-1 animate-pulse"
           >
             View Full Résumé{' '}
@@ -26,7 +26,7 @@ export default function IntroSection() {
           </a>
         </div>
 
-        <p className=" text-white/70 leading-relaxed max-w-2xl">
+        <p className=" text-white/90 leading-relaxed max-w-2xl">
           Aspiring full-stack developer passionate about building responsive,
           human-centered web experiences. Skilled in React, TypeScript, and
           cloud-based systems, I love finding the balance between aesthetics and
@@ -34,7 +34,7 @@ export default function IntroSection() {
           feel intuitive and fast.
         </p>
 
-        <p className="text-white/70 leading-relaxed max-w-2xl">
+        <p className="text-white/90 leading-relaxed max-w-2xl">
           Currently completing a Master of Information Technology at Monash
           University (Melbourne), with hands-on experience in full-stack web
           development, and database design.
