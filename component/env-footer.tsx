@@ -90,16 +90,16 @@ export default function EnvFooter() {
           <p className="font-semibold mb-1">Projects</p>
           <div className="space-y-2">
             
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="projects/kickstart">KickStart Soccer</a></p>
+            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="/projects/kickstart">KickStart Soccer</a></p>
             
             
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="projects/tipsytrack">TipsyTrack</a></p>
+            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="/projects/tipsytrack">TipsyTrack</a></p>
             
             
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="projects/birdtag">BirdTag</a></p>
+            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="/projects/birdtag">BirdTag</a></p>
             
             
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="projects/voluntrack">VolunTrack</a></p>
+            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="/projects/voluntrack">VolunTrack</a></p>
             
           </div>
         </div>

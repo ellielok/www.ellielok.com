@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 
 export default function FloatingMenu() {
-  const headerItems = [{label:"Portfolio", href:"/"},{label:"Contact", href:"Contact"},];
+  const headerItems = [{label:"Portfolio", href:"/"},{label:"Contact", href:"/contact"},];
 
 
   const [isVisible, setIsVisible] = useState(true);
