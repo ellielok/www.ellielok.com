@@ -4,7 +4,7 @@ import Tag from '@/component/sub-component/tag';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { Code2, Sparkles } from 'lucide-react';
+import { Code2, Sparkles, Package } from 'lucide-react';
 
 // ✅ 顶部产品信息
 function ProductHeader() {
@@ -22,37 +22,52 @@ function ProductHeader() {
       : product.skills;
 
   return (
-    <div className="text-white text-left max-w-3xl space-y-8 mb-16">
-      <h1 className="text-4xl font-bold tracking-tight">{product.appName}</h1>
-      <p className="text-gray-300 text-base leading-relaxed">
-        {product.description}
-      </p>
-
-      <div className="text-left space-y-8">
-        <div>
-          <h2 className="text-lg font-semibold flex items-center gap-2">
-            <Code2 className="w-5 h-5" />
-            Tech Stack
-          </h2>
-          <p className="text-gray-300">{product.stack}</p>
+      <div className="flex flex-col md:flex-row text-white text-left  space-y-8 mb-16">
+        <div className="md:w-8/10 space-y-6 max-w-3xl">
+        <h1 className="text-4xl font-bold tracking-tight">{product.appName}</h1>
+        <p className="text-gray-300 text-base leading-relaxed">
+          {product.description}
+        </p>
+  
+        <div className="text-left space-y-8">
+          <div>
+            <h2 className="text-lg font-semibold flex items-center gap-2">
+              <Code2 className="w-5 h-5" />
+              Tech Stack
+            </h2>
+            <p className="text-gray-300">{product.stack}</p>
+          </div>
+  
+          <div>
+            <h2 className="text-lg font-semibold flex items-center gap-2">
+              <Sparkles className="w-5 h-5" />
+              Key Skills
+            </h2>
+            {/* Skills tags */}
+            {skillList && Array.isArray(skillList) && (
+              <div className="flex flex-wrap gap-2 pt-3">
+                {skillList.map((skill, i) => (
+                  <Tag key={i} label={skill} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-
-        
-
-        <div>
-          <h2 className="text-lg font-semibold flex items-center gap-2"><Sparkles className="w-5 h-5" />Key Skills</h2>
-          {/* Skills tags */}
-          {skillList && Array.isArray(skillList) && (
-            <div className="flex flex-wrap gap-2 pt-3">
-              {skillList.map((skill, i) => (
-                <Tag key={i} label={skill} />
-              ))}
-            </div>
-          )}{' '}
+        </div>
+  
+        <div className="md:w-2/10 mt-8 md:mt-0 flex items-center justify-center mx-10">
+        <div className="w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/30 shadow-lg ">
+            <Image
+              src='/projects/tipsy/tipsy-thumbnail.png'
+              alt="Image of the project"
+              width={800}
+              height={450}
+              className="object-cover [object-position:70%_10%]"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
 }
 
 // ✅ 单个页面展示区（左右交替）
@@ -131,7 +146,7 @@ export default function ProductDetailsPage() {
   ];
 
   return (
-    <div className="w-full px-6 sm:px-10 py-30 max-w-screen-xl mx-auto">
+    <div className="w-full px-6 sm:px-10 pt-20 max-w-screen-xl mx-auto">
       {/* Back Button */}
       <div className="mb-10 font-semi">
         <Link
@@ -146,7 +161,15 @@ export default function ProductDetailsPage() {
       {/* 产品信息 */}
       <div className='mx-5'>
       <ProductHeader />
-      
+              {/* 分割线 */}
+        <div className="flex items-center justify-center my-20">
+          <div className="flex-grow h-px bg-gradient-to-r from-transparent via-white/30 to-white/50" />
+          <span className="flex items-center gap-2 px-6 text-lg font-semibold">
+            <Package className="w-5 h-5" />
+            Product Introduction
+          </span>
+          <div className="flex-grow h-px bg-gradient-to-r from-white/50 via-white/30 to-transparent" />
+        </div>
 
       {/* 页面展示区 */}
       <div className="space-y-20">

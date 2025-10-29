@@ -27,7 +27,7 @@ export default function WritingCard({
         <div className="my-8 w-full aspect-[16/9] overflow-hidden rounded-xl">
         <Image
           src={screenshot}
-          alt="Ellie Lok Graduation"
+          alt="Image of the project"
           width={400}
           height={200}
           className="object-cover [object-position:70%_10%]"
