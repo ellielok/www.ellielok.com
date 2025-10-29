@@ -1,24 +1,101 @@
-import Image from "next/image";
+'use client';
+import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { MapPin, Mail, Github, Linkedin, Briefcase, Sprout } from 'lucide-react';
+import hl from '@/utils/highLight';
 
-export default function Home() {
+export default function IntroSection() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
+    <section className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 px-6 sm:px-10 max-w-screen-xl mx-auto">
+      {/* 左侧文本区域 */}
+      <div className="flex-2 text-left space-y-6">
+        <h1 className="text-5xl font-bold text-white/90 tracking-tight">
+          Hi, I’m <span className="">Ellie Lok</span>
+        </h1>
 
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row"> 
+        <div className="flex items-center gap-5 pt-4 ">
+          <a
+            href="/cv/ellie-cv.pdf"
+            target="_blank"
+            rel="ellielok"
+            className="inline-flex gap-1 items-center font-semibold text-white/100
+          hover:text-[#93f5fa] transition-colors duration-300 group border-2 border-white/50 hover:border-[#93f5fa] rounded-lg px-3 py-1 animate-pulse"
+          >
+            View Full Résumé{' '}
+            <ExternalLink className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </a>
         </div>
-      </main>
 
-    </div>
+        <p className=" text-white/90 leading-relaxed max-w-2xl">
+          I love finding the balance between aesthetics and
+          performance - crafting interfaces that not only look good but also
+          feel intuitive and fast.
+        </p>
+
+        <p className="text-white/90 leading-relaxed max-w-2xl">
+          This portfolio was built in a pretty short time, so there are still plenty of bugs and things to polish, such as accessibility, loading transitions, and image optimization. I am also planning to add a more business-style light mode. 
+        </p>
+
+        <p className="text-white/90 leading-relaxed max-w-2xl">
+          I hope this {hl('Halloween edition')} brings you a bit of fun! If you have any suggestions, I'd love to hear from you. 🎃
+        </p>
+
+        {/* 位置信息与状态 */}
+        <div className="space-y-4 text-white">
+          <div className="flex items-center gap-3 ">
+            <MapPin className="w-6 h-6 min-w-[1.5rem]" />
+            <span className='font-semibold text-white/85'>Melbourne, Australia</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <Sprout className="w-6 h-6 min-w-[1.5rem]" />
+            
+            <span className='font-semibold text-white/85'>Open to new opportunities</span>
+          </div>
+        </div>
+
+        {/* 按钮与社交链接 */}
+        <div className="flex items-center gap-5 pt-4">
+          <div className="flex items-center gap-4 text-white/90">
+            <Link
+              href="https://github.com/ellielok"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github className="w-6 h-6 hover:text-[#93f5fa] transition-colors" />
+            </Link>
+            <Link
+              href="https://linkedin.com/in/ellielok"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin className="w-6 h-6 hover:text-[#93f5fa] transition-colors" />
+            </Link>
+            <Link
+              href="mailto:ellielo2021@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Mail className="w-6 h-6 hover:text-[#93f5fa] transition-colors" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* 右侧照片区域 */}
+      <div className="flex-1 flex justify-center lg:justify-center">
+        {/* 主图 */}
+        <div className="relative rounded-full overflow-hidden w-60 h-60 ">
+          <Image
+            src="/profile/ellie.png"
+            alt="Ellie Lok Graduation"
+            width={400}
+            height={400}
+            className="object-cover [object-position:70%_10%] w-full h-full"
+          />
+        </div>
+      </div>
+    </section>
   );
 }

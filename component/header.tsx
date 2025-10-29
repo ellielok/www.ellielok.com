@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 
 export default function FloatingMenu() {
-  const headerItems = [{label:"Portfolio", href:"/"}, {label:"Behind the Design", href:"design"},{label:"Contact", href:"Contact"},];
+  const headerItems = [{label:"Portfolio", href:"/"},{label:"Contact", href:"/contact"},];
 
 
   const [isVisible, setIsVisible] = useState(true);
@@ -16,11 +16,11 @@ export default function FloatingMenu() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Hide when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsVisible(false);
-      }  if (currentScrollY <= 50) {
+      // Show when scrolling up
+      if (currentScrollY <= 50) {
         setIsVisible(true);
+      } else {
+        setIsVisible(false);
       }
 
       setLastScrollY(currentScrollY);
@@ -32,7 +32,7 @@ export default function FloatingMenu() {
 
   return (
     <nav
-      className={`fixed top-1 left-0 w-full backdrop-blur-sm text-gray-400 text-sm font-medium
+      className={`fixed left-0 w-full h-15 backdrop-blur-lg items-center text-gray-400 text-sm font-medium
         flex justify-center space-x-6 py-3 transition-transform duration-500
         ${isVisible ? "translate-y-0" : "-translate-y-full"}  z-20`}
     >
