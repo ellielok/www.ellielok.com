@@ -7,7 +7,7 @@ import hl from '@/utils/highLight';
 
 export default function IntroSection() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 px-6 sm:px-10 max-w-screen-xl mx-auto">
+    <section className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 px-6 md:px-10 max-w-screen-xl mx-auto">
       {/* 左侧文本区域 */}
       <div className="flex-2 text-left space-y-6">
         <h1 className="text-5xl font-bold text-white/90 tracking-tight">

@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <div className="mx-20 mt-35">
+        <div className="md:mx-20 md:mt-35">
         <div>
             👻 Halloween Edition. Made for the spooky season.
         </div>
