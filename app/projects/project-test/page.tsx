@@ -5,48 +5,41 @@ import ProductDetailsPage from '@/component/project-details';
 export default function Page() {
   return (
     <ProductDetailsPage
-      appName="BirdTag"
-      description="An AI-powered bird identification web application that automatically recognizes bird species from uploaded photos using a fully serverless AWS architecture. The platform integrates intelligent tagging, DynamoDB data management, and real-time notification services."
-      stack="AWS Lambda, API Gateway, S3, DynamoDB, Amplify, Cognito, Python, React"
-      skills="Serverless architecture, Image recognition, Data synchronization, User authentication, Cloud automation, Full-stack development"
-      thumbnail="/projects/bird/bird-thumbnail.png"
+      appName="TipsyTrack"
+      description="A web application designed to promote alcohol harm reduction by helping adults track and understand their drinking habits."
+      stack="Next.js, TypeScript, Tailwind CSS, Neon Postgres, Vercel"
+      skills="Frontend development, RESTful APIs, Cloud deployment, Local Storage"
+      thumbnail="/projects/tipsy/tipsy-thumbnail.png"
       pages={[
     {
-      name: 'User Access & Authentication',
+      name: 'Monash IE Expo Winner',
       description:
-        'Users can sign up or log in securely using Amazon Cognito. BirdTag supports both traditional email registration (username, email, password) and Google account login for convenience.',
-      screenshot: '/projects/bird/signup.png',
+        'Awarded Best Project at the Monash Postgraduate Industry Experience Expo, TipsyTrack is a personal alcohol tracking web app that empowers users to monitor their drinking habits, visualize behavioral patterns through interactive data insights, and set personalized health goals.',
+      screenshot: '/projects/tipsy/te11.png',
     },
     {
-      name: 'Upload Media Files',
+      name: 'Drink Scanner',
       description:
-        'Once logged in, users can navigate to the upload page and select bird photos or videos. Upon upload, the files are stored in S3, automatically triggering the AI detection pipeline. Metadata and recognition results are written to DynamoDB for persistence.',
-      screenshot: '/projects/bird/upload.png',
+        'Allows users to upload or capture an image of any alcohol product to instantly retrieve details using AI-powered image recognition, ensuring quick results while keeping all photos private and off-server.',
+      screenshot: '/projects/tipsy/scanner.png',
     },
     {
-      name: 'Search & Explore Files',
+      name: 'Drink Calculator',
       description:
-        'Users can search their uploaded files by species name or tag. The system fetches matching entries from DynamoDB and displays thumbnails; clicking a thumbnail reveals the original image in full resolution.',
-      screenshot: '/projects/bird/search.png',
-    },
-
-    {
-      name: 'Modify & Manage Tags',
-      description:
-        'Each recognized file record includes editable tags. Users can update or add new tags directly from the interface to refine identification or improve dataset quality.',
-      screenshot: '/projects/bird/tags.png',
+        'A step-by-step calculator that helps users estimate standard drinks and blood alcohol concentration (BAC). The intuitive interface makes it simple to log and understand their alcohol intake.',
+      screenshot: '/projects/tipsy/cal.png',
     },
     {
-      name: 'Delete & Bulk Operations',
+      name: 'Progress Tracker',
       description:
-        'BirdTag allows users to delete single or multiple files at once. The bulk delete function includes checkbox selection and batch removal through DynamoDB and S3 synchronization.',
-      screenshot: '/projects/bird/delete.png',
+        'Visualizes drinking habits through an interactive calendar and progress dashboard, helping users track standard drinks, spending, and calorie intake while promoting healthier consumption patterns.',
+      screenshot: '/projects/tipsy/tracker.png',
     },
     {
-      name: 'Bird Tag Subscriptions & Notifications',
+      name: 'Live Tracking & My Drinks List',
       description:
-        'Users can subscribe to specific bird tags (e.g., "crow" or "parrot"). When new files matching those tags are uploaded, the system automatically sends notifications via AWS SNS to subscribed users.',
-      screenshot: '/projects/bird/subscribe.png',
+        'Displays all saved beverages with detailed information such as volume, alcohol content, and sugar levels. Includes a live tracker that calculates standard drinks, estimates blood alcohol concentration (BAC), and predicts recovery time for real-time awareness.',
+      screenshot: '/projects/tipsy/list-widget.png',
     },
   ]}
     />
