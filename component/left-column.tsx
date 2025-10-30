@@ -32,7 +32,7 @@ export function LeftColumn() {
           target="_blank"
           className="underline-offset-2 hover:underline"
         >
-          {hl('send email and say hello')}
+          {hl('send email and say hello!')}
         </a>
       </div>
 
