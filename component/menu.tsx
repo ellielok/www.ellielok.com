@@ -74,7 +74,7 @@ export default function Menu() {
               onClick={(e) => {
                 // Prevent default anchor click, change to smooth scroll effect
                 e.preventDefault();
-                
+
                 // if about, scroll to top, else scroll to section
                 if (item.displayId === 'about') {
                   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -88,10 +88,10 @@ export default function Menu() {
               className={`block px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-300 
                 hover:text-[#93f5fa]
                 ${
-                activeId === item.displayId
-                  ? 'text-white/100 hover:backdrop-blur-xl bg-gradient-to-r from-white/10 via-white/5 to-white/0'
-                  : 'text-white/60'
-              }`}
+                  activeId === item.displayId
+                    ? 'text-white/100 hover:backdrop-blur-xl bg-gradient-to-r from-white/10 via-white/5 to-white/0'
+                    : 'text-white/60'
+                }`}
             >
               {item.label}
             </a>

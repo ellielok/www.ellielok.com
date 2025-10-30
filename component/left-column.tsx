@@ -8,7 +8,6 @@ import {
   FaGoodreads,
 } from 'react-icons/fa';
 
-
 export function LeftColumn() {
   return (
     <div
@@ -24,7 +23,7 @@ export function LeftColumn() {
       <h2 className=" mt-5 mb-5 font-semibold  text-white/95 text-base md:text-xl">
         Aspiring Full-stack Developer
       </h2>
-      
+
       <div className="">On my journey to becoming a excellent engineer.</div>
       <div>
         Feel free to{' '}
@@ -60,7 +59,6 @@ export function LeftColumn() {
           <FaLinkedin size={28} />
         </a>
       </div> */}
-
 
       {/* TOC Menu */}
       <Menu />

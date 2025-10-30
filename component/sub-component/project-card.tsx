@@ -23,7 +23,7 @@ export default function ProjectCard({
       : skills;
   return (
     <div
-      className="md:flex flex-row gap-6 p-6
+      className="md:flex flex-row gap-6 px-3 py-3 md:p-6
                           transition-all duration-300
                           group
                           hover:bg-gradient-to-b hover:from-white/5 hover:via-white/3 hover:to-white/0

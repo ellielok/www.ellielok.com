@@ -49,7 +49,8 @@ export function ProjectSection() {
       company: 'Fastlane',
       description:
         'Managed and optimised multi-channel digital advertising campaigns across Google, Meta, and programmatic platforms. Ensured alignment with overall brand strategy, conducted performance analytics, and improved ROI through A/B testing and audience segmentation.',
-      skills: 'Google Ads, Meta Ads, Google Analytics, Programmatic, Figma, Data Studio',
+      skills:
+        'Google Ads, Meta Ads, Google Analytics, Programmatic, Figma, Data Studio',
     },
   ];
 
@@ -110,14 +111,14 @@ export function WritingSection() {
       projectName: 'BIRDTAG, AI-POWERED BIRD IDENTIFICATION WEB APP',
       timeRange: 'Sep - Nov 2024',
       description:
-        'Spearheaded the development of a full-featured mobile app using Jetpack Compose for managing volunteer events, schedules, and organization info. Built real-time dashboard with Firebase Firestore to track progress and user engagement. Integrated Google Calendar API for event synchronization and reminder notifications.',
+        'Spearheaded the development of a full-featured mobile app using Jetpack Compose for managing volunteer events, schedules, and organization info. Built real-time dashboard with Firebase Firestore to track progress and user engagement.',
       href: '/projects/birdtag',
       screenshot: '/projects/bird/bird-thumbnail.png',
     },
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-3 md:space-y-6">
       {writings.map((p, i) => (
         <div
           key={i}
