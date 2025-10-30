@@ -157,7 +157,7 @@ export default function ProductDetailsPage() {
   ];
 
   return (
-    <div className="w-full px-6 sm:px-10 pt-20 max-w-screen-xl mx-auto">
+    <div className="w-full px-3 md:px-10 pt-20 max-w-screen-xl mx-auto">
       {/* 返回按钮 */}
       <div className="mb-10 font-semi">
         <Link

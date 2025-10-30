@@ -6,27 +6,29 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Code2, Sparkles, Package } from 'lucide-react';
 
+interface ProjectProps {
+  appName?: string;
+  description?: string;
+  stack?: string;
+  skills?: string;
+}
+
 // ✅ 顶部产品信息
-function ProductHeader() {
-  const product = {
-    appName: 'TipsyTrack',
-    description:
-      'A web application designed to promote alcohol harm reduction by helping adults track and understand their drinking habits.',
-    stack: 'Next.js, TypeScript, Tailwind CSS, Neon Postgres, Vercel',
-    skills:
-      'Frontend development, RESTful APIs, Cloud deployment, Local Storage',
-  };
+function ProductHeader({appName,
+  description,
+  stack,
+  skills,}:ProjectProps) {
   const skillList =
-    typeof product.skills === 'string'
-      ? product.skills.split(',').map((s) => s.trim())
-      : product.skills;
+    typeof skills === 'string'
+      ? skills.split(',').map((s) => s.trim())
+      : skills;
 
   return (
       <div className="flex flex-col md:flex-row text-white text-left  space-y-8 mb-16">
         <div className="md:w-8/10 space-y-6 max-w-3xl">
-        <h1 className="text-4xl font-bold tracking-tight">{product.appName}</h1>
+        <h1 className="text-4xl font-bold tracking-tight">{appName}</h1>
         <p className="text-gray-300 text-base leading-relaxed">
-          {product.description}
+          {description}
         </p>
   
         <div className="text-left space-y-8">
@@ -35,7 +37,7 @@ function ProductHeader() {
               <Code2 className="w-5 h-5" />
               Tech Stack
             </h2>
-            <p className="text-gray-300">{product.stack}</p>
+            <p className="text-gray-300">{stack}</p>
           </div>
   
           <div>
@@ -110,40 +112,18 @@ function PageSection({
   );
 }
 
+interface PageItem {
+  name: string;
+  description: string;
+  screenshot: string;
+}
+
+interface ProjectShowcaseProps {
+    pages: PageItem[];
+}
+
 // ✅ 主页面布局
-export default function ProductDetailsPage() {
-  const pages = [
-    {
-      name: 'Monash IE Expo Winner',
-      description:
-        'Awarded Best Project at the Monash Postgraduate Industry Experience Expo, TipsyTrack is a personal alcohol tracking web app that empowers users to monitor their drinking habits, visualize behavioral patterns through interactive data insights, and set personalized health goals.',
-      screenshot: '/projects/tipsy/te11.png',
-    },
-    {
-      name: 'Drink Scanner',
-      description:
-        'Allows users to upload or capture an image of any alcohol product to instantly retrieve details using AI-powered image recognition, ensuring quick results while keeping all photos private and off-server.',
-      screenshot: '/projects/tipsy/scanner.png',
-    },
-    {
-      name: 'Drink Calculator',
-      description:
-        'A step-by-step calculator that helps users estimate standard drinks and blood alcohol concentration (BAC). The intuitive interface makes it simple to log and understand their alcohol intake.',
-      screenshot: '/projects/tipsy/cal.png',
-    },
-    {
-      name: 'Progress Tracker',
-      description:
-        'Visualizes drinking habits through an interactive calendar and progress dashboard, helping users track standard drinks, spending, and calorie intake while promoting healthier consumption patterns.',
-      screenshot: '/projects/tipsy/tracker.png',
-    },
-    {
-      name: 'Live Tracking & My Drinks List',
-      description:
-        'Displays all saved beverages with detailed information such as volume, alcohol content, and sugar levels. Includes a live tracker that calculates standard drinks, estimates blood alcohol concentration (BAC), and predicts recovery time for real-time awareness.',
-      screenshot: '/projects/tipsy/list-widget.png',
-    },
-  ];
+export default function ProductDetailsPage({pages}:ProjectShowcaseProps) { 
 
   return (
     <div className="w-full px-3 md:px-10 pt-20 max-w-screen-xl mx-auto">
