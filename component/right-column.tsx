@@ -111,7 +111,7 @@ export function WritingSection() {
       projectName: 'BIRDTAG, AI-POWERED BIRD IDENTIFICATION WEB APP',
       timeRange: 'Sep - Nov 2024',
       description:
-        'Spearheaded the development of a full-featured mobile app using Jetpack Compose for managing volunteer events, schedules, and organization info. Built real-time dashboard with Firebase Firestore to track progress and user engagement.',
+        'Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications. The platform was fully built and deployed on AWS using a serverless architecture for scalability and cost efficiency.',
       href: '/projects/birdtag',
       screenshot: '/projects/bird/bird-thumbnail.png',
     },
@@ -143,7 +143,7 @@ export function WritingSection() {
 
 export default function RightColumn() {
   return (
-    <div className="space-y-10 flex-4 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
+    <div className="space-y-10 flex-5 scroll-smooth lg:py-25 lg:px-10 xl:px-0">
       <div>
         <div
           className="top-0 py-5 lg:hidden font-bold 
