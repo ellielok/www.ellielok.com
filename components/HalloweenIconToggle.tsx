@@ -16,7 +16,7 @@ export default function HalloweenIconToggle() {
 }, []);
 
   return (
-    <div className="hidden xl:fixed right-6 top-4 xl:right-10 xl:top-6 xl:flex xl:flex-col xl:items-center z-25">
+    <div className="hidden md:fixed right-6 top-4 md:right-10 md:top-6 md:flex md:flex-col md:items-center z-25">
       <motion.div
   whileTap={{ y: 5, scale: 0.99 }}
   animate={{ y: offsetY }}
@@ -38,7 +38,8 @@ export default function HalloweenIconToggle() {
           alt="Halloween light"
           width={120}
           height={120}
-          className="w-7/10 2xl:w-10/10 h-auto -translate-y-55 translate-x-20 2xl:translate-x-0
+          className="w-7/10 2xl:w-10/10 h-auto md:-translate-y-55 md:translate-x-20 
+          2xl:translate-x-0
           2xl:-translate-y-75
           pointer-events-auto"
         />
