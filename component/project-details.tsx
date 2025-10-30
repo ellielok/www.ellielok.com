@@ -11,26 +11,35 @@ interface ProjectProps {
   description?: string;
   stack?: string;
   skills?: string;
+  thumbnail?:string;
 }
 
+interface PageItem {
+  name: string;
+  description: string;
+  screenshot: string | string[];
+}
+
+interface ProjectShowcaseProps {
+  pages: PageItem[];
+}
+
+// ✅ 合并类型
+type ProductDetailsProps = ProjectProps & ProjectShowcaseProps;
+
 // ✅ 顶部产品信息
-function ProductHeader({appName,
-  description,
-  stack,
-  skills,}:ProjectProps) {
+function ProductHeader({ appName, description, stack, skills, thumbnail }: ProjectProps) {
   const skillList =
     typeof skills === 'string'
       ? skills.split(',').map((s) => s.trim())
       : skills;
 
   return (
-      <div className="flex flex-col md:flex-row text-white text-left  space-y-8 mb-16">
-        <div className="md:w-8/10 space-y-6 max-w-3xl">
+    <div className="flex flex-col md:flex-row text-white text-left  space-y-8 mb-16">
+      <div className="md:w-8/10 space-y-6 max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight">{appName}</h1>
-        <p className="text-gray-300 text-base leading-relaxed">
-          {description}
-        </p>
-  
+        <p className="text-gray-300 text-base leading-relaxed">{description}</p>
+
         <div className="text-left space-y-8">
           <div>
             <h2 className="text-lg font-semibold flex items-center gap-2">
@@ -39,7 +48,7 @@ function ProductHeader({appName,
             </h2>
             <p className="text-gray-300">{stack}</p>
           </div>
-  
+
           <div>
             <h2 className="text-lg font-semibold flex items-center gap-2">
               <Sparkles className="w-5 h-5" />
@@ -55,21 +64,21 @@ function ProductHeader({appName,
             )}
           </div>
         </div>
-        </div>
-  
-        <div className="md:w-2/10 mt-8 md:mt-0 flex items-center justify-center mx-10">
+      </div>
+
+      <div className="md:w-2/10 mt-8 md:mt-0 flex items-center justify-center mx-10">
         <div className="w-full aspect-[16/9] overflow-hidden rounded-xl border border-white/30 shadow-lg ">
-            <Image
-              src='/projects/tipsy/tipsy-thumbnail.png'
-              alt="Image of the project"
-              width={800}
-              height={450}
-              className="object-cover [object-position:70%_10%]"
-            />
-          </div>
+          <Image
+            src={thumbnail}
+            alt="Image of the project"
+            width={800}
+            height={450}
+            className="object-cover [object-position:70%_10%]"
+          />
         </div>
       </div>
-    );
+    </div>
+  );
 }
 
 // ✅ 单个页面展示区（左右交替）
@@ -81,7 +90,7 @@ function PageSection({
 }: {
   name: string;
   description: string;
-  screenshot: string;
+  screenshot: string | string[];
   reverse?: boolean;
 }) {
   return (
@@ -98,33 +107,53 @@ function PageSection({
 
       {/* 图片区 */}
       <div className="flex-1 w-full">
-        <div className="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-          <Image
-            src={screenshot}
-            alt={`${name} screenshot`}
-            width={900}
-            height={500}
-            className="object-cover w-full"
-          />
-        </div>
+        {/* 判断 screenshot 是数组还是单张 */}
+        {Array.isArray(screenshot) ? (
+          // ✅ 多张图片：使用 grid
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
+            {screenshot.map((src, i) => (
+              <div
+                key={i}
+                className="rounded-xl overflow-hidden border border-white/10 shadow-lg"
+              >
+                <Image
+                  src={src}
+                  alt={`${name} screenshot ${i + 1}`}
+                  width={500}
+                  height={300}
+                  className="object-cover w-full"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          // ✅ 单张图片：使用单个容器
+          <div className="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <Image
+              src={screenshot}
+              alt={`${name} screenshot`}
+              width={900}
+              height={500}
+              className="object-cover w-full"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
-interface PageItem {
-  name: string;
-  description: string;
-  screenshot: string;
-}
-
-interface ProjectShowcaseProps {
-    pages: PageItem[];
-}
 
 // ✅ 主页面布局
-export default function ProductDetailsPage({pages}:ProjectShowcaseProps) { 
-
+export default function ProductDetailsPage({
+  appName,
+  description,
+  stack,
+  skills,
+  thumbnail,
+  pages,
+  
+}: ProductDetailsProps){
   return (
     <div className="w-full px-3 md:px-10 pt-20 max-w-screen-xl mx-auto">
       {/* Back Button */}
@@ -139,9 +168,15 @@ export default function ProductDetailsPage({pages}:ProjectShowcaseProps) {
       </div>
 
       {/* 产品信息 */}
-      <div className='mx-5'>
-      <ProductHeader />
-              {/* 分割线 */}
+      <div className="mx-5">
+        <ProductHeader
+          appName={appName}
+          description={description}
+          stack={stack}
+          skills={skills}
+          thumbnail={thumbnail}
+        />
+        {/* 分割线 */}
         <div className="flex items-center justify-center my-20">
           <div className="flex-grow h-px bg-gradient-to-r from-transparent via-white/30 to-white/50" />
           <span className="flex items-center gap-2 px-6 text-lg font-semibold">
@@ -151,18 +186,18 @@ export default function ProductDetailsPage({pages}:ProjectShowcaseProps) {
           <div className="flex-grow h-px bg-gradient-to-r from-white/50 via-white/30 to-transparent" />
         </div>
 
-      {/* 页面展示区 */}
-      <div className="space-y-20">
-        {pages.map((page, i) => (
-          <PageSection
-            key={i}
-            name={page.name}
-            description={page.description}
-            screenshot={page.screenshot}
-            reverse={i % 2 === 1} // 偶数行反转
-          />
-        ))}
-      </div>
+        {/* 页面展示区 */}
+        <div className="space-y-20">
+          {pages.map((page, i) => (
+            <PageSection
+              key={i}
+              name={page.name}
+              description={page.description}
+              screenshot={page.screenshot}
+              reverse={i % 2 === 1} // 偶数行反转
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
