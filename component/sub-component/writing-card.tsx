@@ -19,40 +19,38 @@ export default function WritingCard({
   return (
     <div>
       <a href={href} target="_self" rel="ellielok_home">
-    <div
-      className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-6 p-3 md:p-6 
+        <div
+          className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-6 p-3 md:p-6 
                     group
                     hover:bg-gradient-to-b hover:from-white/5 hover:via-white/3 hover:to-white/0"
-    >
-      <div>
-        <div className="text-tiny/6 font-semibold">{timeRange}</div>
-        <div className="my-8 w-full aspect-[16/9] overflow-hidden rounded-xl">
-        <Image
-          src={screenshot}
-          alt="Image of the project"
-          width={400}
-          height={200}
-          className="object-cover [object-position:70%_10%]"
-        />
-        </div>
-      </div>
-      <div>
-        
-          <div
-            className="w-full flex gap-1 justify-between items-center pb-2
+        >
+          <div>
+            <div className="text-tiny/6 font-semibold">{timeRange}</div>
+            <div className="my-8 w-full aspect-[16/9] overflow-hidden rounded-xl">
+              <Image
+                src={screenshot}
+                alt="Image of the project"
+                width={400}
+                height={200}
+                className="object-cover [object-position:70%_10%]"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              className="w-full flex gap-1 justify-between items-center pb-2
                         font-bold text-white/90 
                       group-hover:text-[#93f5fa] transition-colors duration-100"
-          >
-            <span>{projectName}</span>
-            <span className=" items-center gap-1 group-hover:gap-2 mr-2 group-hover:translate-x-0.5">
-              <ArrowRight className="w-4 h-4" />
-            </span>
+            >
+              <span>{projectName}</span>
+              <span className=" items-center gap-1 group-hover:gap-2 mr-2 group-hover:translate-x-0.5">
+                <ArrowRight className="w-4 h-4" />
+              </span>
+            </div>
+            <div>{description}</div>
           </div>
-          <div>{description}</div>
-        
-      </div>
-    </div>
-    </a>
+        </div>
+      </a>
     </div>
   );
 }

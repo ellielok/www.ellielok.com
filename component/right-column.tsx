@@ -49,7 +49,8 @@ export function ProjectSection() {
       company: 'Fastlane',
       description:
         'Managed and optimised multi-channel digital advertising campaigns across Google, Meta, and programmatic platforms. Ensured alignment with overall brand strategy, conducted performance analytics, and improved ROI through A/B testing and audience segmentation.',
-      skills: 'Google Ads, Meta Ads, Google Analytics, Programmatic, Figma, Data Studio',
+      skills:
+        'Google Ads, Meta Ads, Google Analytics, Programmatic, Figma, Data Studio',
     },
   ];
 

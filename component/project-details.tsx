@@ -11,7 +11,7 @@ interface ProjectProps {
   description?: string;
   stack?: string;
   skills?: string;
-  thumbnail?:string;
+  thumbnail: string;
 }
 
 interface PageItem {
@@ -24,11 +24,15 @@ interface ProjectShowcaseProps {
   pages: PageItem[];
 }
 
-// ✅ 合并类型
 type ProductDetailsProps = ProjectProps & ProjectShowcaseProps;
 
-// ✅ 顶部产品信息
-function ProductHeader({ appName, description, stack, skills, thumbnail }: ProjectProps) {
+function ProductHeader({
+  appName,
+  description,
+  stack,
+  skills,
+  thumbnail,
+}: ProjectProps) {
   const skillList =
     typeof skills === 'string'
       ? skills.split(',').map((s) => s.trim())
@@ -81,7 +85,6 @@ function ProductHeader({ appName, description, stack, skills, thumbnail }: Proje
   );
 }
 
-// ✅ 单个页面展示区（左右交替）
 function PageSection({
   name,
   description,
@@ -99,17 +102,13 @@ function PageSection({
         reverse ? 'lg:flex-row-reverse' : ''
       } items-center gap-10 mb-20`}
     >
-      {/* 文本区 */}
       <div className="flex-1 space-y-3 text-white">
         <h3 className="text-2xl font-semibold ">{name}</h3>
         <p className="text-gray-300 text-base leading-relaxed">{description}</p>
       </div>
 
-      {/* 图片区 */}
       <div className="flex-1 w-full">
-        {/* 判断 screenshot 是数组还是单张 */}
         {Array.isArray(screenshot) ? (
-          // ✅ 多张图片：使用 grid
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
             {screenshot.map((src, i) => (
               <div
@@ -127,7 +126,6 @@ function PageSection({
             ))}
           </div>
         ) : (
-          // ✅ 单张图片：使用单个容器
           <div className="rounded-xl overflow-hidden border border-white/10 shadow-lg">
             <Image
               src={screenshot}
@@ -143,8 +141,6 @@ function PageSection({
   );
 }
 
-
-// ✅ 主页面布局
 export default function ProductDetailsPage({
   appName,
   description,
@@ -152,8 +148,7 @@ export default function ProductDetailsPage({
   skills,
   thumbnail,
   pages,
-  
-}: ProductDetailsProps){
+}: ProductDetailsProps) {
   return (
     <div className="w-full px-3 md:px-10 pt-20 max-w-screen-xl mx-auto">
       {/* Back Button */}
@@ -167,7 +162,6 @@ export default function ProductDetailsPage({
         </Link>
       </div>
 
-      {/* 产品信息 */}
       <div className="mx-5">
         <ProductHeader
           appName={appName}
@@ -176,7 +170,7 @@ export default function ProductDetailsPage({
           skills={skills}
           thumbnail={thumbnail}
         />
-        {/* 分割线 */}
+
         <div className="flex items-center justify-center my-20">
           <div className="flex-grow h-px bg-gradient-to-r from-transparent via-white/30 to-white/50" />
           <span className="flex items-center gap-2 px-6 text-lg font-semibold">
@@ -186,7 +180,6 @@ export default function ProductDetailsPage({
           <div className="flex-grow h-px bg-gradient-to-r from-white/50 via-white/30 to-transparent" />
         </div>
 
-        {/* 页面展示区 */}
         <div className="space-y-20">
           {pages.map((page, i) => (
             <PageSection
@@ -194,7 +187,7 @@ export default function ProductDetailsPage({
               name={page.name}
               description={page.description}
               screenshot={page.screenshot}
-              reverse={i % 2 === 1} // 偶数行反转
+              reverse={i % 2 === 1}
             />
           ))}
         </div>

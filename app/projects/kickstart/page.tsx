@@ -1,7 +1,6 @@
 'use client';
 import ProductDetailsPage from '@/component/project-details';
 
-// ✅ 主页面布局
 export default function Page() {
   return (
     <ProductDetailsPage

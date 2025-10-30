@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import EnvFooter from "./env-footer";
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import EnvFooter from './env-footer';
 
 export default function FooterWrapper() {
   const pathname = usePathname();
@@ -11,7 +11,7 @@ export default function FooterWrapper() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return <EnvFooter />;
-  if (pathname === "/") return  null;
+  if (pathname === '/') return null;
 
   return <EnvFooter />;
 }

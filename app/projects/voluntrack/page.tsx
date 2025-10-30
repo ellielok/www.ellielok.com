@@ -1,7 +1,6 @@
 'use client';
 import ProductDetailsPage from '@/component/project-details';
 
-// ✅ 主页面布局
 export default function Page() {
   return (
     <ProductDetailsPage
@@ -11,44 +10,47 @@ export default function Page() {
       skills="Mobile UI design, Real-time data synchronization, Authentication, Cloud messaging, RESTful API integration, Data visualization"
       thumbnail="/projects/volun/volun-thumbnail.png"
       pages={[
-    {
-      name: 'Smart Volunteer Management',
-      description:
-        'VolunTrack is an Android application built with Kotlin and Jetpack Compose. It integrates third-party login and calendar access to recommend suitable volunteer opportunities for each user.',
-      screenshot: [
-        '/projects/volun/wel.png',
-        '/projects/volun/signup.png',
-        '/projects/volun/cal.png',
-      ],
-    },
+        {
+          name: 'Smart Volunteer Management',
+          description:
+            'VolunTrack is an Android application built with Kotlin and Jetpack Compose. It integrates third-party login and calendar access to recommend suitable volunteer opportunities for each user.',
+          screenshot: [
+            '/projects/volun/wel.png',
+            '/projects/volun/signup.png',
+            '/projects/volun/cal.png',
+          ],
+        },
 
-    {
-      name: 'Event Discovery and Management',
-      description:
-        'Connects to open data source APIs to help users explore volunteer opportunities from verified organizations. Users can search by category, and view detailed event information.',
-      screenshot: [
-        '/projects/volun/event-cus.png',
-        '/projects/volun/search.png',
-        '/projects/volun/details.png',
-      ],
-    },
+        {
+          name: 'Event Discovery and Management',
+          description:
+            'Connects to open data source APIs to help users explore volunteer opportunities from verified organizations. Users can search by category, and view detailed event information.',
+          screenshot: [
+            '/projects/volun/event-cus.png',
+            '/projects/volun/search.png',
+            '/projects/volun/details.png',
+          ],
+        },
 
-    {
-      name: 'Dashboard and Profile',
-      description:
-        'VolunTrack provides volunteers with a personalized dashboard to track their participation, set goals, and monitor progress across activity categories. ',
-      screenshot: [
-        '/projects/volun/dashboard.png',
-        '/projects/volun/progress.png',
-      ],
-    },
-    {
-      name: 'Dark and Light Mode Support',
-      description:
-        'VolunTrack features both dark and light mode options, allowing users to switch seamlessly based on their preference or environment. This enhances readability, reduces eye strain, and provides a comfortable, modern user experience across all devices.',
-      screenshot: ['/projects/volun/profile.png', '/projects/volun/dark.png'],
-    },
-  ]}
+        {
+          name: 'Dashboard and Profile',
+          description:
+            'VolunTrack provides volunteers with a personalized dashboard to track their participation, set goals, and monitor progress across activity categories. ',
+          screenshot: [
+            '/projects/volun/dashboard.png',
+            '/projects/volun/progress.png',
+          ],
+        },
+        {
+          name: 'Dark and Light Mode Support',
+          description:
+            'VolunTrack features both dark and light mode options, allowing users to switch seamlessly based on their preference or environment. This enhances readability, reduces eye strain, and provides a comfortable, modern user experience across all devices.',
+          screenshot: [
+            '/projects/volun/profile.png',
+            '/projects/volun/dark.png',
+          ],
+        },
+      ]}
     />
   );
 }

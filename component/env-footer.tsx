@@ -9,7 +9,7 @@ export default function EnvFooter() {
 
   const email = 'ellielo2021@gmail.com';
 
-  const copyToClipboard = async (text: string, type: 'email' ) => {
+  const copyToClipboard = async (text: string, type: 'email') => {
     try {
       await navigator.clipboard.writeText(text);
       if (type === 'email') {
@@ -44,17 +44,18 @@ export default function EnvFooter() {
         {/* Phone & Fax */}
         <div>
           <p className="font-semibold mb-1">Email:</p>
-          <a className="text-white/60">{email}</a><button
-                                  onClick={() => copyToClipboard(email, 'email')}
-                                  className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
-                                  aria-label="Copy email"
-                              >
-                                  {copiedEmail ? (
-                                      <Check className="w-6 h-6 md:w-8 md:h-5 text-green-200" />
-                                  ) : (
-                                      <Copy className="w-6 h-6 md:w-8 md:h-5 text-white/60 group-hover:text-white/90" />
-                                  )}
-                              </button>
+          <a className="text-white/60">{email}</a>
+          <button
+            onClick={() => copyToClipboard(email, 'email')}
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
+            aria-label="Copy email"
+          >
+            {copiedEmail ? (
+              <Check className="w-6 h-6 md:w-8 md:h-5 text-green-200" />
+            ) : (
+              <Copy className="w-6 h-6 md:w-8 md:h-5 text-white/60 group-hover:text-white/90" />
+            )}
+          </button>
           <p className="font-semibold mt-3 mb-1">Contact Me</p>
           <div className="flex items-center gap-4">
             <a
@@ -89,18 +90,21 @@ export default function EnvFooter() {
         <div>
           <p className="font-semibold mb-1">Projects</p>
           <div className="space-y-2">
-            
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="/projects/kickstart">KickStart Soccer</a></p>
-            
-            
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="/projects/tipsytrack">TipsyTrack</a></p>
-            
-            
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="/projects/birdtag">BirdTag</a></p>
-            
-            
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors"><a href="/projects/voluntrack">VolunTrack</a></p>
-            
+            <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
+              <a href="/projects/kickstart">KickStart Soccer</a>
+            </p>
+
+            <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
+              <a href="/projects/tipsytrack">TipsyTrack</a>
+            </p>
+
+            <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
+              <a href="/projects/birdtag">BirdTag</a>
+            </p>
+
+            <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
+              <a href="/projects/voluntrack">VolunTrack</a>
+            </p>
           </div>
         </div>
 
