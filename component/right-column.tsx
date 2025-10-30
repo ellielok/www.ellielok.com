@@ -117,7 +117,7 @@ export function WritingSection() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-3 md:space-y-6">
       {writings.map((p, i) => (
         <div
           key={i}

@@ -20,7 +20,7 @@ export default function WritingCard({
     <div>
       <a href={href} target="_self" rel="ellielok_home">
     <div
-      className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-6 p-6 
+      className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-6 p-3 md:p-6 
                     group
                     hover:bg-gradient-to-b hover:from-white/5 hover:via-white/3 hover:to-white/0"
     >
