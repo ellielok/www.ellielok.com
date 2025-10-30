@@ -17,7 +17,7 @@ export function LeftColumn() {
                       lg:pt-25
                       lg:px-10 xl:px-0"
     >
-      <h1 className=" text-2xl font-bold text-white/100 sm:text-3xl md:text-4xl lg:text-5xl ">
+      <h1 className=" text-4xl font-bold text-white/100 md:text-5xl lg:text-5xl ">
         Ellie Lok
       </h1>
       <h2 className=" mt-5 mb-5 font-semibold  text-white/95 text-base md:text-xl">
@@ -32,7 +32,7 @@ export function LeftColumn() {
           target="_blank"
           className="underline-offset-2 hover:underline"
         >
-          {hl('send email and say hello')}
+          {hl('send email and say hello!')}
         </a>
       </div>
 

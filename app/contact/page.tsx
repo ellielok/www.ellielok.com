@@ -10,7 +10,7 @@ export default function IntroSection() {
     <section className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 px-6 md:px-10 max-w-screen-xl mx-auto">
       {/* 左侧文本区域 */}
       <div className="flex-2 text-left space-y-6">
-        <h1 className="text-5xl font-bold text-white/90 tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-bold text-white/90 tracking-tight">
           Hi, I’m <span className="">Ellie Lok</span>
         </h1>
 
@@ -86,13 +86,13 @@ export default function IntroSection() {
       {/* 右侧照片区域 */}
       <div className="flex-1 flex justify-center lg:justify-center">
         {/* 主图 */}
-        <div className="relative rounded-full overflow-hidden w-60 h-60 ">
+        <div className="relative rounded-full overflow-hidden w-60 h-60">
           <Image
             src="/profile/ellie.png"
-            alt="Ellie Lok Graduation"
+            alt="Ellie Lok"
             width={400}
             height={400}
-            className="object-cover [object-position:70%_10%] w-full h-full"
+            className="object-cover [object-position:70%_10%] w-full h-full z-25"
           />
         </div>
       </div>
