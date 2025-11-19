@@ -73,7 +73,7 @@ export default function IntroSection() {
               <Linkedin className="w-6 h-6 hover:text-[#93f5fa] transition-colors" />
             </Link>
             <Link
-              href="mailto:ellielo2021@gmail.com"
+              href="mailto:ellielokit@gmail.com"
               target="_blank"
               rel="noreferrer"
             >

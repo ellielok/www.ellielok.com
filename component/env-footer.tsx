@@ -7,7 +7,7 @@ import { FaLinkedin, FaWeixin } from 'react-icons/fa';
 export default function EnvFooter() {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const email = 'ellielo2021@gmail.com';
+  const email = 'ellielokit@gmail.com';
 
   const copyToClipboard = async (text: string, type: 'email') => {
     try {
