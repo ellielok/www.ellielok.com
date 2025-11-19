@@ -28,7 +28,7 @@ export function LeftColumn() {
       <div>
         Feel free to{' '}
         <a
-          href="mailto:ellielo2021@gmail.com?subject=hello,Ellie"
+          href="mailto:ellielokit@gmail.com?subject=hello,Ellie"
           target="_blank"
           className="underline-offset-2 hover:underline"
         >
