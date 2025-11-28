@@ -20,4 +20,4 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap location
-# Sitemap: https://www.ellielok.com/sitemap.xml
+Sitemap: https://www.ellielok.com/sitemap.xml
