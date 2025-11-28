@@ -12,12 +12,22 @@ Disallow: /api/
 Disallow: /*.json$
 Disallow: /cv/
 
+# Disallow crawling of all images
+Disallow: /*.png$
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.webp$
+Disallow: /*.gif$
+Disallow: /*.svg$
+
 # Common bot-specific rules
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
+
+
 
 # Sitemap location
 Sitemap: https://www.ellielok.com/sitemap.xml
