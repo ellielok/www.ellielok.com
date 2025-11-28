@@ -15,8 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ellie Lok',
-  description: 'Aspiring Full-stack Developer',
+  title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
+  description: 'I am an aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. Passionate about creating responsive, user-friendly web applications, I focus on combining thoughtful design with solid engineering for performance and accessibility.',
 };
 
 export default function RootLayout({
