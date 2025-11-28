@@ -1,5 +1,16 @@
-'use client';
 import ProductDetailsPage from '@/component/project-details';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "VolunTrack - Volunteer Management App",
+  description: "A volunteer management Android app built with Kotlin and Jetpack Compose. Empowers organizations to monitor volunteer progress, manage activities, and visualize engagement data through real-time dashboards.",
+  keywords: ["Kotlin", "Jetpack Compose", "Firebase", "Android", "Volunteer Management", "Mobile App"],
+  openGraph: {
+    title: "VolunTrack - Volunteer Management App | Ellie Lok",
+    description: "Android volunteer management app with real-time dashboards and analytics built with Kotlin and Jetpack Compose.",
+    images: ["/projects/volun/volun-thumbnail.png"],
+  }
+};
 
 export default function Page() {
   return (

@@ -1,5 +1,16 @@
-'use client';
 import ProductDetailsPage from '@/component/project-details';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "KickStart - Soccer Event Management Platform",
+  description: "A community-driven web app that simplifies street soccer event management. Connects players, volunteers, and organizers through an interactive booking and scheduling platform built with Vue 3.",
+  keywords: ["Vue 3", "TypeScript", "Firebase", "FullCalendar", "Tailwind CSS", "Event Management"],
+  openGraph: {
+    title: "KickStart - Soccer Event Management Platform | Ellie Lok",
+    description: "Community-driven soccer event management web app with real-time booking and scheduling.",
+    images: ["/projects/kick/kick_thumbnail.png"],
+  }
+};
 
 export default function Page() {
   return (
