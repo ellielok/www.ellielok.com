@@ -1,5 +1,16 @@
-'use client';
 import ProductDetailsPage from '@/component/project-details';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TipsyTrack - Alcohol Tracking Web App",
+  description: "Award-winning web application for alcohol harm reduction. Best Project at Monash IE Expo. Track drinking habits, visualize patterns, and set health goals with AI-powered features.",
+  keywords: ["Next.js", "TypeScript", "Tailwind CSS", "Neon Postgres", "Health Tech", "AI", "Award-winning"],
+  openGraph: {
+    title: "TipsyTrack - Alcohol Tracking Web App | Ellie Lok",
+    description: "Award-winning alcohol tracking app with AI-powered drink scanner and health insights.",
+    images: ["/projects/tipsy/tipsy-thumbnail.png"],
+  }
+};
 
 export default function Page() {
   return (

@@ -1,4 +1,14 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Me",
+  description: "Learn more about Ellie Lok, an aspiring full-stack developer passionate about creating responsive, user-friendly web applications with modern technologies.",
+  openGraph: {
+    title: "About Me | Ellie Lok",
+    description: "Learn more about Ellie Lok, an aspiring full-stack developer passionate about creating responsive, user-friendly web applications.",
+  }
+};
 
 export default function Home() {
   return (

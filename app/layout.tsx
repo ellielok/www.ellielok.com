@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Particles } from '@/components/ui/shadcn-io/particles';
@@ -13,11 +12,6 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
-
-export const metadata: Metadata = {
-  title: 'Ellie Lok',
-  description: 'Aspiring Full-stack Developer',
-};
 
 export default function RootLayout({
   children,

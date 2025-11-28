@@ -1,5 +1,16 @@
-'use client';
 import ProductDetailsPage from '@/component/project-details';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BirdTag - AI Bird Identification Platform",
+  description: "AI-powered bird identification web application using serverless AWS architecture. Automatically recognizes bird species from photos with intelligent tagging and real-time notifications.",
+  keywords: ["AWS Lambda", "API Gateway", "S3", "DynamoDB", "AI", "Image Recognition", "React", "Serverless"],
+  openGraph: {
+    title: "BirdTag - AI Bird Identification Platform | Ellie Lok",
+    description: "Serverless AI bird identification platform with automatic species recognition and smart tagging.",
+    images: ["/projects/bird/bird-thumbnail.png"],
+  }
+};
 
 export default function Page() {
   return (

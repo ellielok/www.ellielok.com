@@ -1,9 +1,18 @@
-'use client';
 import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, Mail, Github, Linkedin, Briefcase, Sprout } from 'lucide-react';
 import hl from '@/utils/highLight';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Me",
+  description: "Get in touch with Ellie Lok. Available for full-stack developer opportunities in Melbourne, Australia. Connect via email, GitHub, or LinkedIn.",
+  openGraph: {
+    title: "Contact Me | Ellie Lok",
+    description: "Get in touch with Ellie Lok. Available for full-stack developer opportunities in Melbourne, Australia.",
+  }
+};
 
 export default function IntroSection() {
   return (
