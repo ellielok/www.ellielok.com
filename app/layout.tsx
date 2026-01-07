@@ -29,21 +29,32 @@ export default function RootLayout({
     min-h-screen
         `}
       >
-
-
-        {/* Google tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-GF2SM1M8Y2"
-          strategy="afterInteractive"
+        <Header></Header>
+        <Particles
+          className="
+          fixed inset-0 -z-10
+          hidden md:block
+          h-1/"
+          quantity={60}
+          ease={10}
+          staticity={100}
+          color="E57C3D"
+          size={2.0}
+          vx={0.2}
+          vy={0.2}
+          refresh
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-GF2SM1M8Y2');
-          `}
-        </Script>
+
+        <BackgroundWrapper />
+
+        <HalloweenIconToggle />
+
+        <HistoryButton />
+
+        {children}
+        <FooterWrapper />
+
+        
       </body>
     </html>
   );
