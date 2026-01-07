@@ -22,7 +22,7 @@ export default function HistoryButton() {
           transition-all duration-300
           border border-purple-400/30
         ">
-          <span className="text-xl">📜</span>
+          <span className="text-xl">ICON</span>
           <span className="font-medium text-sm">History</span>
         </div>
       </motion.div>
