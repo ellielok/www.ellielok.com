@@ -1,4 +1,4 @@
-import Tag from '../component/sub-component/tag';
+import Tag from './tag';
 
 interface ProjectCardProps {
   timeRange?: string;

@@ -19,13 +19,13 @@ export default function HalloweenIconToggle() {
     <div>
 <div className="fixed md:hidden right-0 bottom-0 mb-10 mr-10">
   <motion.div
-    whileTap={{ scale: 0.88 }} // 点击时轻微缩放反馈
+    whileTap={{ scale: 0.88 }} // Slight scaling feedback when clicking
     onClick={() => {
       if (window.scrollY === 0) {
-        // 当前在首屏 → 滚动到底部
+        // Currently on the homepage -> Scroll to the bottom
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
       } else {
-        // 否则 → 滚动到顶部
+        // Otherwise -> Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
       setShowIcons(!showIcons);
