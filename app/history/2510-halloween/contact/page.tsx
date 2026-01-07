@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 export default function IntroSection() {
   return (
     <section className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 px-6 md:px-10 max-w-screen-xl mx-auto">
-      {/* 左侧文本区域 */}
+
       <div className="flex-2 text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-white/90 tracking-tight">
-          Hi, I’m <span className="">Ellie Lok</span>
+          Hi, I&#8217;m <span className="">Ellie Lok</span>
         </h1>
 
         <div className="flex items-center gap-5 pt-4 ">
@@ -50,7 +50,6 @@ export default function IntroSection() {
           I hope this {hl('Halloween edition')} brings you a bit of fun! If you have any suggestions, I'd love to hear from you. 🎃
         </p>
 
-        {/* 位置信息与状态 */}
         <div className="space-y-4 text-white">
           <div className="flex items-center gap-3 ">
             <MapPin className="w-6 h-6 min-w-[1.5rem]" />
@@ -64,7 +63,7 @@ export default function IntroSection() {
           </div>
         </div>
 
-        {/* 按钮与社交链接 */}
+
         <div className="flex items-center gap-5 pt-4">
           <div className="flex items-center gap-4 text-white/90">
             <Link
@@ -92,9 +91,9 @@ export default function IntroSection() {
         </div>
       </div>
 
-      {/* 右侧照片区域 */}
+
       <div className="flex-1 flex justify-center lg:justify-center">
-        {/* 主图 */}
+
         <div className="relative rounded-full overflow-hidden w-60 h-60">
           <Image
             src="/profile/ellie.png"
