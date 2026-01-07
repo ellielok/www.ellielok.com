@@ -1,4 +1,4 @@
-import ProductDetailsPage from '@/component/project-details';
+import ProductDetailsPage from '@/app/history/2510-halloween/component/project-details';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

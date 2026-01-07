@@ -1,4 +1,4 @@
-import Tag from '@/app/history/2510-halloween/component/sub-component/tag';
+import Tag from '../component/sub-component/tag';
 
 interface ProjectCardProps {
   timeRange?: string;
