@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import './globals.css';
+import './halloween-theme.css';
 import { Particles } from '@/app/history/2510-halloween/components/ui/shadcn-io/particles';
 import HalloweenIconToggle from '@/app/history/2510-halloween/components/HalloweenIconToggle';
 import HistoryButton from '@/app/history/2510-halloween/components/HistoryButton';
