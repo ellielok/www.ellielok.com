@@ -1,7 +1,5 @@
-import { ReactNode } from 'react';
-import RightColumn from '@/app/history/2510-halloween/component/right-column';
-import { LeftColumn } from '@/app/history/2510-halloween/component/left-column';
 import { Metadata } from 'next';
+import HistoryButton from '@/app/component/HistoryButton';
 
 export const metadata: Metadata = {
   title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
@@ -16,6 +14,8 @@ export default function Home() {
   return (
     <div className="w-full px-6 md:px-10 py-25 lg:py-0">
       <div className="flex flex-col lg:flex-row mx-auto max-w-screen-xl gap-3">
+
+                <HistoryButton />
 
 
 
