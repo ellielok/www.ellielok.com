@@ -47,7 +47,7 @@ export default function IntroSection() {
         </p>
 
         <p className="text-white/90 leading-relaxed max-w-2xl">
-          I hope this {hl('Halloween edition')} brings you a bit of fun! If you have any suggestions, I'd love to hear from you. 🎃
+          I hope this {hl('Halloween edition')} brings you a bit of fun! If you have any suggestions, I'd love to hear from you. 
         </p>
 
         <div className="space-y-4 text-white">
