@@ -1,12 +1,5 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Particles } from '@/app/history/2510-halloween/components/ui/shadcn-io/particles';
-import HalloweenIconToggle from '@/app/history/2510-halloween/components/HalloweenIconToggle';
-import HistoryButton from '@/app/history/2510-halloween/components/HistoryButton';
-import Header from '@/app/history/2510-halloween/component/header';
-import BackgroundWrapper from '@/app/history/2510-halloween/component/background-wrapper';
-import FooterWrapper from '@/app/history/2510-halloween/component/env-footer-wrapper';
-import Script from "next/script";
 
 const inter = Inter({
   variable: '--font-inter',
@@ -29,30 +22,11 @@ export default function RootLayout({
     min-h-screen
         `}
       >
-        <Header></Header>
-        <Particles
-          className="
-          fixed inset-0 -z-10
-          hidden md:block
-          h-1/"
-          quantity={60}
-          ease={10}
-          staticity={100}
-          color="E57C3D"
-          size={2.0}
-          vx={0.2}
-          vy={0.2}
-          refresh
-        />
 
-        <BackgroundWrapper />
 
-        <HalloweenIconToggle />
-
-        <HistoryButton />
 
         {children}
-        <FooterWrapper />
+
 
         
       </body>
