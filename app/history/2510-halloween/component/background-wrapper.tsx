@@ -11,7 +11,7 @@ export default function BackgroundWrapper() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
-  if (pathname === '/history/2510-halloween' || '/') return <Background /> ;
+  if (pathname === '/history/2510-halloween') return <Background /> ;
 
   return null;
 }

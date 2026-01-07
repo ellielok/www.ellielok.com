@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function FloatingMenu() {
   const headerItems = [
-    { label: 'Portfolio', href: '/' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Portfolio', href: '/history/2510-halloween' },
+    { label: 'Contact', href: '/history/2510-halloween/contact' },
   ];
 
   const [isVisible, setIsVisible] = useState(true);
