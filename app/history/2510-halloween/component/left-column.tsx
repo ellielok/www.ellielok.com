@@ -1,4 +1,4 @@
-import Menu from '@/app/history/2510-halloween/component/menu';
+import Menu from '../component/menu';
 import hl from '@/utils/highLight';
 import {
   FaGithub,

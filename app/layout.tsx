@@ -1,10 +1,11 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Particles } from '@/components/ui/shadcn-io/particles';
-import HalloweenIconToggle from '@/components/HalloweenIconToggle';
-import Header from '@/component/header';
-import BackgroundWrapper from '@/component/background-wrapper';
-import FooterWrapper from '@/component/env-footer-wrapper';
+import { Particles } from '@/app/history/2510-halloween/components/ui/shadcn-io/particles';
+import HalloweenIconToggle from '@/app/history/2510-halloween/components/HalloweenIconToggle';
+import HistoryButton from '@/app/history/2510-halloween/components/HistoryButton';
+import Header from '@/app/history/2510-halloween/component/header';
+import BackgroundWrapper from '@/app/history/2510-halloween/component/background-wrapper';
+import FooterWrapper from '@/app/history/2510-halloween/component/env-footer-wrapper';
 import Script from "next/script";
 
 const inter = Inter({
@@ -47,6 +48,8 @@ export default function RootLayout({
         <BackgroundWrapper />
 
         <HalloweenIconToggle />
+
+        <HistoryButton />
 
         {children}
         <FooterWrapper />

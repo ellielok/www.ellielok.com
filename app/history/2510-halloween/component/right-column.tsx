@@ -2,8 +2,8 @@
 import hl from '@/utils/highLight';
 import { useState } from 'react';
 import ProjectCard from './sub-component/project-card';
-import WritingCard from '@/app/history/2510-halloween/component/sub-component/writing-card';
-import Footer from '@/app/history/2510-halloween/component/footer';
+import WritingCard from './sub-component/writing-card';
+import Footer from '../component/footer';
 import { ExternalLink } from 'lucide-react';
 
 export function Intro() {
