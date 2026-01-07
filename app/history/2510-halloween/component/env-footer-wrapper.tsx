@@ -11,7 +11,7 @@ export default function FooterWrapper() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return <EnvFooter />;
-  if (pathname === '/') return null;
+  if (pathname === '/history/2510-halloween' || '/') return null;
 
   return <EnvFooter />;
 }
