@@ -3,7 +3,7 @@ import hl from '@/utils/highLight';
 import { useState } from 'react';
 import ProjectCard from './sub-component/project-card';
 import WritingCard from './sub-component/writing-card';
-import Footer from '../component/footer';
+import Footer from './footer';
 import { ExternalLink } from 'lucide-react';
 
 export function Intro() {

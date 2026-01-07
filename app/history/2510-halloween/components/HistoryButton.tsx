@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function HistoryButton() {
   return (
-    <Link href="/2510-halloween">
+    <Link href="/history/2510-halloween">
       <motion.div
         className="fixed right-6 bottom-6 z-50 cursor-pointer"
         whileHover={{ scale: 1.1 }}

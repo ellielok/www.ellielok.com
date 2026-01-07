@@ -1,4 +1,4 @@
-import Menu from '../component/menu';
+import Menu from './menu';
 import hl from '@/utils/highLight';
 import {
   FaGithub,

@@ -1,5 +1,5 @@
 'use client';
-import Tag from '../component/sub-component/tag';
+import Tag from './sub-component/tag';
 
 import Image from 'next/image';
 import Link from 'next/link';

@@ -18,12 +18,7 @@ export default function Home() {
       <div className="flex flex-col lg:flex-row mx-auto max-w-screen-xl gap-3">
 
 
-      {/* Left Column  */}
-      <LeftColumn></LeftColumn>
 
-      {/* Right Column */}
-      <RightColumn></RightColumn>
-      
 
     </div>
     </div>
