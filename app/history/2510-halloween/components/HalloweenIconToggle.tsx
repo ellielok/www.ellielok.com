@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import halloweenLight from '@/app/history/2510-halloween/images/halloween-light.png';
+import halloweenLightSm from '@/app/history/2510-halloween/images/halloween-light-sm.png';
 
 
 export default function HalloweenIconToggle() {
@@ -33,7 +35,7 @@ export default function HalloweenIconToggle() {
     className="cursor-pointer select-none"
   >
     <Image
-      src="/halloween-light-sm.png"
+      src={halloweenLightSm}
       alt="Halloween light"
       width={120}
       height={120}
@@ -61,11 +63,11 @@ export default function HalloweenIconToggle() {
   className="cursor-pointer select-none"
 >
         <Image
-          src="/halloween-light.png"
+          src={halloweenLight}
           alt="Halloween light"
           width={120}
           height={120}
-          className="w-7/10 2xl:w-10/10 h-auto md:-translate-y-55 md:translate-x-20 
+          className="w-7/10 2xl:w-10/10 h-auto md:-translate-y-55 md:translate-x-20
           2xl:translate-x-0
           2xl:-translate-y-75
           pointer-events-auto z-30"

@@ -1,15 +1,18 @@
 import Image from 'next/image';
+import halloweenMoonLight from '@/app/history/2510-halloween/images/halloween-moon-light.png';
+import halloweenBgMin from '@/app/history/2510-halloween/images/halloween-bg-min.png';
+import halloweenWitch from '@/app/history/2510-halloween/images/halloween-witch.png';
 
 export default function Background() {
   return (
     <div>
       <Image
-        src="/halloween-moon-light.png"
+        src={halloweenMoonLight}
         alt="Halloween background"
         width={600}
         height={600}
         className="
-            fixed left-1/8 bottom-[10%] 
+            fixed left-1/8 bottom-[10%]
             translate-y-0
             hidden sm:hidden lg:block
             w-auto h-2/5
@@ -21,7 +24,7 @@ export default function Background() {
       />
 
       <Image
-        src="/halloween-bg-min.png"
+        src={halloweenBgMin}
         alt="background"
         width={600}
         height={600}
@@ -38,7 +41,7 @@ export default function Background() {
 
 
       <Image
-        src="/halloween-witch.png"
+        src={halloweenWitch}
         alt="Halloween background"
         width={600}
         height={600}
