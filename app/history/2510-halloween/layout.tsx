@@ -14,21 +14,14 @@ const inter = Inter({
   display: 'swap',
 });
 
-export default function RootLayout({
+export default function HalloweenLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} font-sans antialiased
-        bg-gradient-to-br
-        from-[#030205] via-[#2e1e37] to-[#13072B]
-        bg-fixed
-    min-h-screen
-        `}
-      >
+    <div>
+
         <Header></Header>
         <Particles
           className="
@@ -54,8 +47,7 @@ export default function RootLayout({
         {children}
         <FooterWrapper />
 
-        
-      </body>
-    </html>
+        </div>
+
   );
 }
