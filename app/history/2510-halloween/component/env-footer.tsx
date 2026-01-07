@@ -91,19 +91,19 @@ export default function EnvFooter() {
           <p className="font-semibold mb-1">Projects</p>
           <div className="space-y-2">
             <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
-              <a href="/projects/kickstart">KickStart Soccer</a>
+              <a href="/history/2510-halloween/projects/kickstart">KickStart Soccer</a>
             </p>
 
             <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
-              <a href="/projects/tipsytrack">TipsyTrack</a>
+              <a href="/history/2510-halloween/projects/tipsytrack">TipsyTrack</a>
             </p>
 
             <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
-              <a href="/projects/birdtag">BirdTag</a>
+              <a href="/history/2510-halloween/projects/birdtag">BirdTag</a>
             </p>
 
             <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
-              <a href="/projects/voluntrack">VolunTrack</a>
+              <a href="/history/2510-halloween/projects/voluntrack">VolunTrack</a>
             </p>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function EnvFooter() {
         {/* Find Sessions & Contact */}
         <div>
           <p className="font-semibold mb-1">Others</p>
-          <a href="/contact">
+          <a href="/history/2510-halloween/contact">
             <p className="text-white/60 cursor-pointer hover:text-[#93f5fa] transition-colors">
               About Me
             </p>

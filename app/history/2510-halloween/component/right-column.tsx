@@ -87,7 +87,7 @@ export function WritingSection() {
       timeRange: 'Jul - Oct 2025',
       description:
         'Developed a full-stack web application to help adults in Victoria track alcohol consumption and promote safer drinking habits. Built with Next.js (App Router), TypeScript, Tailwind, and Neon Postgres. Implemented Google Vision API for drink label scanning, local storage-based privacy features, and gamified progress tracking. Deployed on Vercel with protected routes and responsive UI components (Shadcn, Radix).',
-      href: '/projects/tipsytrack',
+      href: '/history/2510-halloween/projects/tipsytrack',
       screenshot: '/projects/tipsy/tipsy-thumbnail.png',
     },
     {
@@ -96,7 +96,7 @@ export function WritingSection() {
       description:
         'Co-led development of a Vue.js + Firebase web platform to connect volunteers with community street soccer sessions. Integrated Firebase Authentication (email/Google login), Firestore (session management), and Cloud Functions with SendGrid for automated notifications. Designed interactive admin dashboards and data charts, ensuring accessibility (WCAG 2.1 AA) and responsive user experience.',
 
-      href: '/projects/kickstart',
+      href: '/history/2510-halloween/projects/kickstart',
       screenshot: '/projects/kick/kick_thumbnail.png',
     },
     {
@@ -104,7 +104,7 @@ export function WritingSection() {
       timeRange: 'Mar - Jun 2025',
       description:
         'Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications). Connected AI model for bird classification through serverless architecture; generated prediction projectNames and metadata.',
-      href: '/projects/voluntrack',
+      href: '/history/2510-halloween/projects/voluntrack',
       screenshot: '/projects/volun/volun-thumbnail.png',
     },
     {
@@ -112,7 +112,7 @@ export function WritingSection() {
       timeRange: 'Sep - Nov 2024',
       description:
         'Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications. The platform was fully built and deployed on AWS using a serverless architecture for scalability and cost efficiency.',
-      href: '/projects/birdtag',
+      href: '/history/2510-halloween/projects/birdtag',
       screenshot: '/projects/bird/bird-thumbnail.png',
     },
   ];
