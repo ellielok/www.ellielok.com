@@ -17,15 +17,14 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section
-        className="hero min-h-screen bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center dark:bg-gray-900 relative"
-        style={{ backgroundImage: 'url(/images/bg-light.png)' }}
+        className="hero min-h-screen bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center relative bg-[url('/images/bg-light.png')] dark:bg-[url('/images/bg-dark.png')]"
       >
         <div className="w-full px-6 md:px-10">
           <div className="flex flex-col items-center justify-center mx-auto max-w-screen-xl gap-6">
-            <h1 className="text-5xl md:text-7xl font-bold text-white dark:text-black text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white text-center">
               Welcome to My Portfolio
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 dark:text-black text-center max-w-2xl">
+            <p className="text-xl md:text-2xl text-black/90 dark:text-white text-center max-w-2xl">
               Full-stack Developer | Digital Marketing Enthusiast
             </p>
 
@@ -37,7 +36,7 @@ export default function Home() {
         </div>
 
         {/* Girl illustration on the right */}
-        <div className="absolute right-10 top-1/2  hidden lg:block">
+        <div className="absolute right-10 bottom-0 hidden lg:block">
           <Image
             src="/images/girl-close.png"
             alt="Portfolio illustration"
