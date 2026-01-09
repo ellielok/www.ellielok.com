@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import HistoryButton from '@/app/component/history-button';
 import ThemeToggle from '@/app/component/theme-toggle';
 
@@ -21,10 +22,10 @@ export default function Home() {
       >
         <div className="w-full px-6 md:px-10">
           <div className="flex flex-col items-center justify-center mx-auto max-w-screen-xl gap-6">
-            <h1 className="text-5xl md:text-7xl font-bold text-white dark:text-gray-100 text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white dark:text-black text-center">
               Welcome to My Portfolio
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 dark:text-gray-300 text-center max-w-2xl">
+            <p className="text-xl md:text-2xl text-white/90 dark:text-black text-center max-w-2xl">
               Full-stack Developer | Digital Marketing Enthusiast
             </p>
 
