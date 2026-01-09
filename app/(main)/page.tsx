@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import HistoryButton from '@/app/component/history-button';
 import ThemeToggle from '@/app/component/theme-toggle';
+import ScrollText from '@/app/component/scroll-text';
+import HeroScale from '@/app/component/hero-scale';
 
 export const metadata: Metadata = {
   title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
@@ -15,43 +16,20 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section
-        className="hero min-h-screen bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center relative bg-[url('/images/bg-light.png')] dark:bg-[url('/images/bg-dark.png')]"
-      >
-        <div className="w-full px-6 md:px-10">
-          <div className="flex flex-col items-center justify-center mx-auto max-w-screen-xl gap-6">
-            <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white text-center">
-              Welcome to My Portfolio
-            </h1>
-            <p className="text-xl md:text-2xl text-black/90 dark:text-white text-center max-w-2xl">
-              Full-stack Developer | Digital Marketing Enthusiast
-            </p>
+      {/* Scrolling text */}
+      <ScrollText />
 
-            <div className="flex gap-4 mt-8">
-              <ThemeToggle />
-              <HistoryButton />
-            </div>
-          </div>
-        </div>
-
-        {/* Girl illustration on the right */}
-        <div className="absolute right-10 bottom-0 hidden lg:block">
-          <Image
-            src="/images/girl-close.png"
-            alt="Portfolio illustration"
-            width={400}
-            height={400}
-            priority
-          />
-        </div>
-      </section>
+      {/* Hero Section with Scale Effect */}
+      <HeroScale>
+        <ThemeToggle />
+        <HistoryButton />
+      </HeroScale>
 
       {/* Divider */}
-      <div className="divider h-1 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent"></div>
+      <div className="divider h-1 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent relative z-20"></div>
 
       {/* Content Section */}
-      <section className="content bg-yellow-50 dark:bg-gray-800 min-h-screen transition-colors">
+      <section className="content bg-yellow-50 dark:bg-gray-800 min-h-screen transition-colors relative z-20">
         <div className="w-full px-6 md:px-10 py-20">
           <div className="mx-auto max-w-screen-xl">
             <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
