@@ -1,5 +1,7 @@
 import Header from '@/app/component/header';
 import Footer from '@/app/component/footer';
+import '../globals.css';
+import { Providers } from '../component/providers';
 
 export default function MainLayout({
   children,
@@ -15,10 +17,10 @@ export default function MainLayout({
         bg-fixed
     min-h-screen
         `}
-      >
+      ><Providers>
       <Header />
       {children}
-      <Footer />
+      <Footer /></Providers>
     </div>
 
   );
