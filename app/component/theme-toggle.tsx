@@ -18,7 +18,7 @@ function ToggleTheme() {
 }
 
 function DarkTheme() {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.toggle('dark');
 }
 
 export default ThemeToggle;
