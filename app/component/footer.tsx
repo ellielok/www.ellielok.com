@@ -22,7 +22,7 @@ export default function EnvFooter() {
   };
 
   return (
-    <footer className="bg-[#060409] text-white/90 px-8 md:px-20 py-10 space-y-5">
+    <footer className="bg-gray-100 dark:bg-[#060409] text-gray-900 dark:text-white/90 px-8 md:px-20 py-10 space-y-5 transition-colors">
       {/* ===== Top Section ===== */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-20">
         {/* Logo & Address */}
@@ -36,24 +36,24 @@ export default function EnvFooter() {
           </div>
           <div>
             <p className="font-semibold mb-1">Address:</p>
-            <p className="text-white/60">Monash University</p>
-            <p className="text-white/60">Melbourne VIC</p>
+            <p className="text-gray-600 dark:text-white/60">Monash University</p>
+            <p className="text-gray-600 dark:text-white/60">Melbourne VIC</p>
           </div>
         </div>
 
         {/* Phone & Fax */}
         <div>
           <p className="font-semibold mb-1">Email:</p>
-          <a className="text-white/60">{email}</a>
+          <a className="text-gray-600 dark:text-white/60">{email}</a>
           <button
             onClick={() => copyToClipboard(email, 'email')}
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
+            className="p-2 hover:bg-gray-200 dark:hover:bg-white/10 rounded-lg transition-colors duration-300"
             aria-label="Copy email"
           >
             {copiedEmail ? (
-              <Check className="w-6 h-6 md:w-8 md:h-5 text-green-200" />
+              <Check className="w-6 h-6 md:w-8 md:h-5 text-green-600 dark:text-green-200" />
             ) : (
-              <Copy className="w-6 h-6 md:w-8 md:h-5 text-white/60 group-hover:text-white/90" />
+              <Copy className="w-6 h-6 md:w-8 md:h-5 text-gray-600 dark:text-white/60 group-hover:text-gray-900 dark:group-hover:text-white/90" />
             )}
           </button>
           <p className="font-semibold mt-3 mb-1">Contact Me</p>
@@ -62,26 +62,26 @@ export default function EnvFooter() {
               href="https://github.com/ellieluo"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
+              className="p-2 hover:bg-gray-200 dark:hover:bg-white/10 rounded-lg transition-colors duration-300"
               aria-label="GitHub"
             >
-              <Github className="w-6 h-6 text-white/60 hover:text-white/90 transition-colors" />
+              <Github className="w-6 h-6 text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white/90 transition-colors" />
             </a>
             <a
               href="https://www.linkedin.com/in/ellielok"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
+              className="p-2 hover:bg-gray-200 dark:hover:bg-white/10 rounded-lg transition-colors duration-300"
               aria-label="LinkedIn"
             >
-              <FaLinkedin className="w-6 h-6 text-white/60 hover:text-white/90 transition-colors" />
+              <FaLinkedin className="w-6 h-6 text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white/90 transition-colors" />
             </a>
             <a
               href={`mailto:${email}`}
-              className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
+              className="p-2 hover:bg-gray-200 dark:hover:bg-white/10 rounded-lg transition-colors duration-300"
               aria-label="Email"
             >
-              <Mail className="w-6 h-6 text-white/60 hover:text-white/90 transition-colors" />
+              <Mail className="w-6 h-6 text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white/90 transition-colors" />
             </a>
           </div>
         </div>
@@ -90,19 +90,19 @@ export default function EnvFooter() {
         <div>
           <p className="font-semibold mb-1">Projects</p>
           <div className="space-y-2">
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
+            <p className="text-gray-600 dark:text-white/60 hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors">
               <a href="/history/2510-halloween/projects/kickstart">KickStart Soccer</a>
             </p>
 
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
+            <p className="text-gray-600 dark:text-white/60 hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors">
               <a href="/history/2510-halloween/projects/tipsytrack">TipsyTrack</a>
             </p>
 
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
+            <p className="text-gray-600 dark:text-white/60 hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors">
               <a href="/history/2510-halloween/projects/birdtag">BirdTag</a>
             </p>
 
-            <p className="text-white/60 hover:text-[#93f5fa] transition-colors">
+            <p className="text-gray-600 dark:text-white/60 hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors">
               <a href="/history/2510-halloween/projects/voluntrack">VolunTrack</a>
             </p>
           </div>
@@ -112,7 +112,7 @@ export default function EnvFooter() {
         <div>
           <p className="font-semibold mb-1">Others</p>
           <a href="/history/2510-halloween/contact">
-            <p className="text-white/60 cursor-pointer hover:text-[#93f5fa] transition-colors">
+            <p className="text-gray-600 dark:text-white/60 cursor-pointer hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors">
               About Me
             </p>
           </a>
@@ -120,10 +120,10 @@ export default function EnvFooter() {
       </div>
 
       {/* ===== Divider Line ===== */}
-      <hr className="border-t border-white/10 my-6" />
+      <hr className="border-t border-gray-300 dark:border-white/10 my-6" />
 
       {/* ===== Acknowledgement Section ===== */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between text-white/60 text-sm">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between text-gray-600 dark:text-white/60 text-sm">
         <div className="space-y-2 md:w-3/4 italic">
           <p>
             Built from Melbourne Craft with React, Next.js, Tailwind CSS. Deploy
