@@ -25,10 +25,10 @@ export default function HeroScale({ children }: HeroScaleProps) {
   }, []);
 
   // Scale from 2 to 1
-  const scale = 1.8 - scrollProgress;
+  const scale = 1 + scrollProgress;
 
   // Girl scale: grow from 1 to 2 as we scroll
-  const girlScale = 1 + scrollProgress;
+  const girlScale = 2 - scrollProgress * 0.3
 
   return (
     <>
@@ -37,7 +37,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
         className="hero min-h-screen bg-cover bg-center bg-no-repeat flex items-end justify-center fixed top-0 left-0 w-full bg-[url('/images/bg-light.png')] dark:bg-[url('/images/bg-dark.png')] origin-center"
         style={{
           transform: `scale(${scale})`,
-          transition: 'transform 0.1s linear',
+          transition: 'transform 0.2s linear',
         }}
       >
         {/* Buttons at bottom */}
@@ -47,17 +47,18 @@ export default function HeroScale({ children }: HeroScaleProps) {
 
         {/* Girl illustration */}
         <div
-          className="absolute right-1/4 bottom-0 hidden lg:block origin-bottom"
+          className="absolute right-1/4 -bottom-20 lg:block origin-bottom "
           style={{
             transform: `scale(${girlScale})`,
             transition: 'transform 0.1s linear',
+            
           }}
         >
           <Image
             src="/images/girl-close.png"
             alt="Portfolio illustration"
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             priority
 
           />
