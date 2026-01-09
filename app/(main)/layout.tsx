@@ -7,9 +7,9 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-    <body
-        className={`${inter.variable} font-sans antialiased
+ 
+    <div
+        className={` font-sans antialiased
         bg-gradient-to-br
         from-[#ffffff] via-[#ffffff] to-[#ffffff]
         bg-fixed
@@ -19,7 +19,7 @@ export default function MainLayout({
       <Header />
       {children}
       <Footer />
-    </body>
-    </html>
+    </div>
+
   );
 }
