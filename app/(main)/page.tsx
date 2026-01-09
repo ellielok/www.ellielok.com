@@ -17,7 +17,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section
-        className="hero min-h-screen bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center dark:bg-gray-900"
+        className="hero min-h-screen bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center dark:bg-gray-900 relative"
         style={{ backgroundImage: 'url(/images/bg-light.png)' }}
       >
         <div className="w-full px-6 md:px-10">
@@ -34,6 +34,17 @@ export default function Home() {
               <HistoryButton />
             </div>
           </div>
+        </div>
+
+        {/* Girl illustration on the right */}
+        <div className="absolute right-10 top-1/2  hidden lg:block">
+          <Image
+            src="/images/girl-close.png"
+            alt="Portfolio illustration"
+            width={400}
+            height={400}
+            priority
+          />
         </div>
       </section>
 
