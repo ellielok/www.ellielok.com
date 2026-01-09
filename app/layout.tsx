@@ -17,7 +17,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased
         bg-gradient-to-br
-        from-[#030205] via-[#2e1e37] to-[#13072B]
+        from-[#ffffff] via-[#ffffff] to-[#ffffff]
         bg-fixed
     min-h-screen
         `}

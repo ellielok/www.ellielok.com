@@ -7,13 +7,10 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{ backgroundImage: 'url(/images/bg-light.png)' }}
-    >
+    <>
       <Header />
       {children}
-      
-    </div>
+      <Footer />
+    </>
   );
 }
