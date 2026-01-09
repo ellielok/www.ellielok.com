@@ -22,7 +22,7 @@ export default function EnvFooter() {
   };
 
   return (
-    <footer className="bg-gray-100 dark:bg-[#060409] text-gray-900 dark:text-white/90 px-8 md:px-20 py-10 space-y-5 transition-colors">
+    <footer className="relative z-30 bg-gray-100 dark:bg-[#060409] text-gray-900 dark:text-white/90 px-8 md:px-20 py-10 space-y-5 transition-colors">
       {/* ===== Top Section ===== */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-20">
         {/* Logo & Address */}
