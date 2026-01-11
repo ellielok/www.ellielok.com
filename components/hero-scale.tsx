@@ -80,38 +80,38 @@ export default function HeroScale({ children }: HeroScaleProps) {
         <div className="mb-20 z-20 flex gap-4">
           {children}
         </div>
-
-        {/* Girl illustration */}
-        <div
-          className="absolute right-1/100 -bottom-20 xl:right-1/6 xl:block origin-bottom"
-          style={{
-            transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px)`,
-            transition: 'transform 0.1s ease-out',
-          }}
-        >
-          <div className="relative">
-            {/* Base image - girl with closed eyes */}
-            <Image
-              src="/images/girl-close.png"
-              alt="Portfolio illustration"
-              width={350}
-              height={350}
-              priority
-            />
-            {/* Overlay image - girl with open eyes */}
-            <Image
-              src="/images/eye-open.png"
-              alt="Eyes open"
-              width={350}
-              height={350}
-              className="absolute top-0 left-0 transition-opacity duration-150"
-              style={{
-                opacity: eyesOpen ? 1 : 0,
-              }}
-            />
-          </div>
-        </div>
       </section>
+
+      {/* Girl illustration - separate layer */}
+      <div
+        className="fixed right-1/100 bottom-0 xl:right-1/6 xl:block origin-bottom z-2 pointer-events-none"
+        style={{
+          transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px) translateY(20px)`,
+          transition: 'transform 0.1s ease-out',
+        }}
+      >
+        <div className="relative">
+          {/* Base image - girl with closed eyes */}
+          <Image
+            src="/images/girl-close.png"
+            alt="Portfolio illustration"
+            width={350}
+            height={350}
+            priority
+          />
+          {/* Overlay image - girl with open eyes */}
+          <Image
+            src="/images/eye-open.png"
+            alt="Eyes open"
+            width={350}
+            height={350}
+            className="absolute top-0 left-0 transition-opacity duration-150"
+            style={{
+              opacity: eyesOpen ? 1 : 0,
+            }}
+          />
+        </div>
+      </div>
 
       {/* Spacer to allow scrolling */}
       <div style={{ height: '250vh' }}></div>
