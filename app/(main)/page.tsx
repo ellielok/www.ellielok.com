@@ -4,6 +4,7 @@ import ScrollText from '@/components/scroll-text';
 import HeroScale from '@/components/hero-scale';
 import ParticlesBackground from '@/components/ui/particles';
 
+
 export const metadata: Metadata = {
   title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
   description: 'I am an aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. Passionate about creating responsive, user-friendly web applications, I focus on combining thoughtful design with solid engineering for performance and accessibility.',
@@ -20,6 +21,8 @@ export default function Home() {
       <div className="fixed inset-0 z-1 pointer-events-none">
         <ParticlesBackground />
       </div>
+
+
 
       {/* Scrolling text */}
       <ScrollText />
