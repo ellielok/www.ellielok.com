@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import HistoryButton from '@/components/history-button';
 import ScrollText from '@/components/scroll-text';
 import HeroScale from '@/components/hero-scale';
+import ParticlesBackground from '@/components/ui/particles';
 
 export const metadata: Metadata = {
   title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
@@ -15,6 +16,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      {/* Particles Background */}
+      <div className="fixed inset-0 z-1 pointer-events-none">
+        <ParticlesBackground />
+      </div>
+
       {/* Scrolling text */}
       <ScrollText />
 

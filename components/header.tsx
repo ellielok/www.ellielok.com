@@ -91,6 +91,7 @@ export default function Header() {
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}>
             <Link href="/docs">Docs</Link>
+            
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:block">
@@ -130,9 +131,10 @@ export default function Header() {
 
       </NavigationMenuList>
       </NavigationMenu>
+      
        </div>
        
-       <div className="order-last">
+       <div className="flex flex-row order-last">
         <NavigationMenu>
   <NavigationMenuList className="flex-wrap">
 
@@ -146,6 +148,7 @@ export default function Header() {
 
       </NavigationMenuList>
       </NavigationMenu>
+      <ThemeToggle/>
        </div>
         
 
