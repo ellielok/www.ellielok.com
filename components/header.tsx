@@ -26,7 +26,7 @@ export default function Header() {
   ]
 
   return (
-    <div className="flex flex-col fixed top-2 left-1/40 right-1/40 xl:left-50 xl:right-50 z-50">
+    <div className="flex flex-col fixed top-2 left-5 right-5 xl:left-1/15 xl:right-1/15 z-50">
     <div className="flex flex-row justify-between mb-3">
   <div className="order-first flex flex-row gap-10 ">
     <a

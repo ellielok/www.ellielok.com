@@ -83,7 +83,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
 
         {/* Girl illustration */}
         <div
-          className="absolute right-1/6 -bottom-20 lg:block origin-bottom"
+          className="absolute right-1/100 -bottom-20 xl:right-1/6 xl:block origin-bottom"
           style={{
             transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px)`,
             transition: 'transform 0.1s ease-out',
@@ -94,16 +94,16 @@ export default function HeroScale({ children }: HeroScaleProps) {
             <Image
               src="/images/girl-close.png"
               alt="Portfolio illustration"
-              width={400}
-              height={400}
+              width={350}
+              height={350}
               priority
             />
             {/* Overlay image - girl with open eyes */}
             <Image
               src="/images/eye-open.png"
               alt="Eyes open"
-              width={400}
-              height={400}
+              width={350}
+              height={350}
               className="absolute top-0 left-0 transition-opacity duration-150"
               style={{
                 opacity: eyesOpen ? 1 : 0,
