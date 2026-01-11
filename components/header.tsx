@@ -89,16 +89,16 @@ export default function Header() {
 
 
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent text-black dark:text-white hover:bg-white dark:hover:bg-black`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}>
             <Link href="/docs">Docs</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:block">
-          <NavigationMenuTrigger className="bg-transparent text-black dark:text-white hover:bg-white dark:hover:bg-black">List</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black">List</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-4">
               <li>
-                <NavigationMenuLink asChild className="bg-transparent text-black dark:text-white hover:bg-white dark:hover:bg-black">
+                <NavigationMenuLink asChild className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black">
                   <Link href="#">
                     <div className="font-medium">Components</div>
                     <div className="text-muted-foreground">
@@ -106,7 +106,7 @@ export default function Header() {
                     </div>
                   </Link>
                 </NavigationMenuLink>
-                <NavigationMenuLink asChild className="bg-transparent text-black dark:text-white hover:bg-white dark:hover:bg-black">
+                <NavigationMenuLink asChild className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black">
                   <Link href="#">
                     <div className="font-medium">Documentation</div>
                     <div className="text-muted-foreground">
@@ -114,7 +114,7 @@ export default function Header() {
                     </div>
                   </Link>
                 </NavigationMenuLink>
-                <NavigationMenuLink asChild className="bg-transparent text-black dark:text-white hover:bg-white dark:hover:bg-black">
+                <NavigationMenuLink asChild className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black">
                   <Link href="#">
                     <div className="font-medium">Blog</div>
                     <div className="text-muted-foreground">
@@ -138,7 +138,7 @@ export default function Header() {
 
 
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent text-black dark:text-white hover:bg-white dark:hover:bg-black`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}>
             <Link href="/docs">Docs</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
