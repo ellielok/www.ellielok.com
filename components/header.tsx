@@ -65,10 +65,12 @@ export default function Header() {
   ]
 
   return (
-    <header className="flex flex-row fixed top-5 left-5 right-5 z-50 justify-between 
+    <header className="flex flex-row fixed top-5 left-1/12 right-1/12 z-50 justify-between
  ">
-  <div className="order-first flex flex-row ">
-
+  <div className="order-first flex flex-row gap-10 ">
+    <a
+    href="/"
+    className="flex flex-row items-center gap-3">
   <Image
          src={logo}
           alt="Logo"
@@ -76,6 +78,11 @@ export default function Header() {
           height={40}
           className=""
         />
+        <div className="text-black dark:text-white">Ellie  Studio</div>
+        <div className="text-gray-500 dark:text-white">Art Nouveau</div>
+
+
+        </a>
 
   <NavigationMenu className="">
   <NavigationMenuList className="flex-wrap">
