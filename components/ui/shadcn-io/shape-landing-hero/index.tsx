@@ -47,8 +47,7 @@ export function HeroGeometric({
 
  
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl z-10 mx-10">
           
 
           <motion.div
@@ -78,12 +77,12 @@ export function HeroGeometric({
             initial="hidden"
             animate="visible"
           >
-            <p className="text-base sm:text-lg md:text-xl text-black/80 dark:text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-black/80 dark:text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl ">
               {description}
             </p>
           </motion.div>
         </div>
-      </div>
+
 
       
 
