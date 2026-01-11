@@ -43,13 +43,12 @@ export function HeroGeometric({
   };
 
   return (
-    <div className={cn("relative  flex items-center justify-center overflow-hidden", className)}>
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
+
 
  
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto">
           
 
           <motion.div
@@ -87,7 +86,7 @@ export function HeroGeometric({
       </div>
 
       
-    </div>
+
   );
 }
 

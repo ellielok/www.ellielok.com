@@ -39,9 +39,8 @@ export default function ScrollText() {
         <p className="text-xl md:text-2xl text-black/90 dark:text-white text-center max-w-2xl">
           Full-stack Developer | Digital Marketing Enthusiast
         </p> */}
-        <div className="min-h-screen">
+        <div className="min-h-screen ">
       <HeroGeometric 
-  badge="Beta Launch"
   title1="Revolutionary"
   title2="Analytics Platform"
   description="Get actionable insights from your data with AI-powered analytics that actually make sense."
