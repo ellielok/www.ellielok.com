@@ -19,45 +19,6 @@ import Image from 'next/image';
 import logo from '@/public/logo.png';
 
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-]
-
-
 export default function Header() {
   const headerItems = [
     { label: 'Ellie Lok', href:'/'},
@@ -65,8 +26,8 @@ export default function Header() {
   ]
 
   return (
-    <header className="flex flex-row fixed top-5 left-1/12 right-1/12 z-50 justify-between
- ">
+    <div className="flex flex-col fixed top-2 left-1/40 right-1/40 xl:left-50 xl:right-50 z-50">
+    <div className="flex flex-row justify-between mb-3">
   <div className="order-first flex flex-row gap-10 ">
     <a
     href="/"
@@ -78,8 +39,8 @@ export default function Header() {
           height={40}
           className=""
         />
-        <div className="text-black dark:text-white">Ellie  Studio</div>
-        <div className="text-gray-500 dark:text-white">Art Nouveau</div>
+        <div className="text-black dark:text-white">Ellie  Lok</div>
+        <div className="text-gray-500 dark:text-white">Studio</div>
 
 
         </a>
@@ -150,9 +111,21 @@ export default function Header() {
       </NavigationMenu>
       <ThemeToggle/>
        </div>
+       
+        
         
 
-    </header>
+    </div>
+    <div className="mb-4 px-3">
+            <div className="font-bold text-gray-900 dark:text-white/50 tracking-tight">
+              The
+              <br />
+              ArtNouveau
+              <br />
+              Edition
+            </div>
+          </div>
+    </div>
 
     
   );

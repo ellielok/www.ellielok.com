@@ -19,6 +19,7 @@ export default function MainLayout({
         `}
       ><Providers>
       <Header />
+      
       {children}
       <Footer /></Providers>
     </div>
