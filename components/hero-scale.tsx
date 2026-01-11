@@ -49,10 +49,10 @@ export default function HeroScale({ children }: HeroScaleProps) {
   }, []);
 
   // Scale from 2 to 1
-  const scale = 1 + scrollProgress * 0.1;
+  const scale = 1.03 - scrollProgress * 0.1;
 
   // Girl scale: grow from 1 to 2 as we scroll
-  const girlScale = 1.5 + scrollProgress * 0.1;
+  const girlScale = 1.5 - scrollProgress * 0.1;
 
   // Parallax offset for background (subtle movement)
   const bgOffsetX = mousePosition.x * 5; // 5px max movement
@@ -84,7 +84,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
 
       {/* Girl illustration - separate layer */}
       <div
-        className="fixed right-1/100 bottom-0 xl:right-1/6 xl:block origin-bottom z-2 pointer-events-none"
+        className="fixed -right-10 bottom-0 xl:right-1/6 xl:block origin-bottom z-2 pointer-events-none"
         style={{
           transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px) translateY(20px)`,
           transition: 'transform 0.1s ease-out',
@@ -95,16 +95,16 @@ export default function HeroScale({ children }: HeroScaleProps) {
           <Image
             src="/images/girl-close.png"
             alt="Portfolio illustration"
-            width={350}
-            height={350}
+            width={450}
+            height={450}
             priority
           />
           {/* Overlay image - girl with open eyes */}
           <Image
             src="/images/eye-open.png"
             alt="Eyes open"
-            width={350}
-            height={350}
+            width={450}
+            height={450}
             className="absolute top-0 left-0 transition-opacity duration-150"
             style={{
               opacity: eyesOpen ? 1 : 0,
