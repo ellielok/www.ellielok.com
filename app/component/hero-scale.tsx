@@ -10,6 +10,7 @@ interface HeroScaleProps {
 export default function HeroScale({ children }: HeroScaleProps) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [eyesOpen, setEyesOpen] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,18 @@ export default function HeroScale({ children }: HeroScaleProps) {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Mouse move parallax effect
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2; // -1 to 1
+      const y = (e.clientY / window.innerHeight - 0.5) * 2; // -1 to 1
+      setMousePosition({ x, y });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   // Blinking effect - eyes open every 3 seconds for 1 second
@@ -39,7 +52,19 @@ export default function HeroScale({ children }: HeroScaleProps) {
   const scale = 1 + scrollProgress * 0.1;
 
   // Girl scale: grow from 1 to 2 as we scroll
-  const girlScale = 1.5 + scrollProgress * 0.1
+  const girlScale = 1.5 + scrollProgress * 0.1;
+
+  // Parallax offset for background (subtle movement)
+  const bgOffsetX = mousePosition.x * 5; // 5px max movement
+  const bgOffsetY = mousePosition.y * 5;
+
+  // Parallax offset for girl (more pronounced movement)
+  const girlOffsetX = mousePosition.x * 8; // 15px max movement
+  const girlOffsetY = mousePosition.y * 8;
+
+  // 3D tilt effect (very subtle)
+  const tiltX = mousePosition.y * 1; // Rotate around X axis (minimal)
+  const tiltY = -mousePosition.x * 1; // Rotate around Y axis (minimal)
 
   return (
     <>
@@ -47,8 +72,8 @@ export default function HeroScale({ children }: HeroScaleProps) {
       <section
         className="hero min-h-screen bg-cover bg-center bg-no-repeat flex items-end justify-center fixed top-0 left-0 w-full bg-[url('/images/bg-light.png')] dark:bg-[url('/images/bg-dark.png')] origin-center z-0"
         style={{
-          transform: `scale(${scale})`,
-          transition: 'transform 0.3s linear',
+          transform: `scale(${scale * 1.06}) translate(${bgOffsetX}px, ${bgOffsetY}px) perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`,
+          transition: 'transform 0.1s ease-out',
         }}
       >
         {/* Buttons at bottom */}
@@ -60,8 +85,8 @@ export default function HeroScale({ children }: HeroScaleProps) {
         <div
           className="absolute right-1/6 -bottom-20 lg:block origin-bottom"
           style={{
-            transform: `scale(${girlScale})`,
-            transition: 'transform 0.3s linear',
+            transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px)`,
+            transition: 'transform 0.1s ease-out',
           }}
         >
           <div className="relative">

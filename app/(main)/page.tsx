@@ -20,8 +20,9 @@ export default function Home() {
 
       {/* Hero Section with Scale Effect */}
       <HeroScale>
-        <HistoryButton />
+        
       </HeroScale>
+      <HistoryButton />
 
       {/* Divider */}
       <div className="divider h-1 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent relative z-20"></div>
