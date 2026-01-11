@@ -25,12 +25,12 @@ export default function TableOfContents() {
 
   return (
     <div className=" fixed bottom-8 z-30 ">
-      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+      <h2 className="text-1xl font-bold text-gray-900 dark:text-white mb-4">
         Contents
       </h2>
 
       <nav>
-        <ul className="space-y-3">
+        <ul className="space-y-1">
           {tocItems.map((item) => (
             <li key={item.roman}>
               <a
@@ -38,11 +38,11 @@ export default function TableOfContents() {
                 onClick={(e) => handleClick(e, item.href)}
                 className="flex items-center justify-between gap-4 group cursor-pointer"
               >
-                <span className="text-lg text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+                <span className="text-sm font-semibold text-gray-900 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                   {item.title}
                 </span>
                 <span className="flex-1 border-b border-dotted border-gray-400 dark:border-gray-600 min-w-[40px]"></span>
-                <span className="text-lg text-gray-500 dark:text-gray-400 font-serif">
+                <span className="text-sm font-semibold text-gray-900 dark:text-gray-400 font-serif">
                   {item.roman}
                 </span>
               </a>
@@ -55,7 +55,7 @@ export default function TableOfContents() {
         <p className="text-sm text-gray-900 dark:text-white font-medium mb-2">
           © Ellie Lok
         </p>
-        <div className="flex flex-col gap-1 text-sm text-gray-600 dark:text-gray-400">
+        <div className="flex flex-col gap-1 text-sm text-gray-900 dark:text-gray-400">
           <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
             Privacy Policy
           </a>

@@ -46,7 +46,7 @@ export default function ParticlesBackground() {
       interactivity: {
         events: {
           onClick: {
-            enable: true,
+            enable: false,
             mode: "push",
           },
           onHover: {
@@ -72,7 +72,7 @@ export default function ParticlesBackground() {
           color: "#ffffff",
           distance: 100,
           enable: true,
-          opacity: 0.2,
+          opacity: 0.3,
           width: 1,
         },
         move: {
@@ -82,14 +82,14 @@ export default function ParticlesBackground() {
             default: OutMode.out,
           },
           random: false,
-          speed: 1,
+          speed: 0.5,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 10,
+          value: 15,
         },
         opacity: {
           value: 0.5,
