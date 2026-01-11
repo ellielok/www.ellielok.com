@@ -20,8 +20,8 @@ export default function ScrollText() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Calculate translateY: start at 35vh (near bottom), end at -80vh (moved up)
-  const translateY = 35 - scrollProgress * 115;
+  // Calculate translateY: start at 15vh (higher position), end at -100vh (moved up)
+  const translateY = 10 - scrollProgress * 115 * 10;
 
   return (
     <div
@@ -32,13 +32,11 @@ export default function ScrollText() {
       }}
     >
       <div className="flex flex-col items-center justify-center gap-6 px-6 md:px-10">
-        <div className="min-h-screen flex  items-center justify-start">
-      <HeroGeometric 
-  title1="Revolutionary"
-  title2="Analytics Platform"
-  description="Get actionable insights from your data with AI-powered analytics that actually make sense."
-/>
-    </div>
+        <HeroGeometric
+          title1="Revolutionary"
+          title2="Analytics Platform"
+          description="Get actionable insights from your data with AI-powered analytics that actually make sense."
+        />
       </div>
     </div>
   );

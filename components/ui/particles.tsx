@@ -82,7 +82,7 @@ export default function ParticlesBackground() {
             default: OutMode.out,
           },
           random: false,
-          speed: 3,
+          speed: 1,
           straight: false,
         },
         number: {
