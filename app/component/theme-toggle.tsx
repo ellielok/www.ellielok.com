@@ -1,7 +1,7 @@
   'use client'
 
 function ThemeToggle() {
-    return <button onClick={ToggleTheme}>Theme Toggle</button>;}
+    return <button onClick={ToggleTheme} className="text-gray-700 dark:text-gray-300">Theme Toggle</button>;}
 
 
 

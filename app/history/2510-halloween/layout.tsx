@@ -20,12 +20,18 @@ export default function HalloweenLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <div className='bg-gradient-to-br
+        from-[#030205] via-[#2e1e37] to-[#13072B]
+        bg-fixed
+    min-h-screen'>
 
-        <Header></Header>
+        <div className="relative z-10">
+          <Header></Header>
+        </div>
+
         <Particles
           className="
-          fixed inset-0 -z-10
+          fixed inset-0 z-0
           hidden md:block
           h-1/"
           quantity={60}
@@ -42,10 +48,13 @@ export default function HalloweenLayout({
 
         <HalloweenIconToggle />
 
+        <div className="relative z-10">
+          {children}
+        </div>
 
-
-        {children}
-        <FooterWrapper />
+        <div className="relative z-10">
+          <FooterWrapper />
+        </div>
 
         </div>
 
