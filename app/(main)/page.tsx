@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import HistoryButton from '@/app/component/history-button';
-import ScrollText from '@/app/component/scroll-text';
-import HeroScale from '@/app/component/hero-scale';
+import HistoryButton from '@/components/history-button';
+import ScrollText from '@/components/scroll-text';
+import HeroScale from '@/components/hero-scale';
 
 export const metadata: Metadata = {
   title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
