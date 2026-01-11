@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import HistoryButton from '@/app/component/history-button';
-import ThemeToggle from '@/app/component/theme-toggle';
 import ScrollText from '@/app/component/scroll-text';
 import HeroScale from '@/app/component/hero-scale';
 
@@ -21,7 +20,6 @@ export default function Home() {
 
       {/* Hero Section with Scale Effect */}
       <HeroScale>
-        <ThemeToggle />
         <HistoryButton />
       </HeroScale>
 
