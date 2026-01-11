@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
+import { HeroGeometric } from "@/components/ui/shadcn-io/shape-landing-hero";
 
 export default function ScrollText() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -31,12 +32,21 @@ export default function ScrollText() {
       }}
     >
       <div className="flex flex-col items-center justify-center gap-6 px-6 md:px-10">
-        <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white text-center">
+        {/* <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white text-center">
           Welcome to My Portfolio
         </h1>
+        
         <p className="text-xl md:text-2xl text-black/90 dark:text-white text-center max-w-2xl">
           Full-stack Developer | Digital Marketing Enthusiast
-        </p>
+        </p> */}
+        <div className="min-h-screen">
+      <HeroGeometric 
+  badge="Beta Launch"
+  title1="Revolutionary"
+  title2="Analytics Platform"
+  description="Get actionable insights from your data with AI-powered analytics that actually make sense."
+/>
+    </div>
       </div>
     </div>
   );
