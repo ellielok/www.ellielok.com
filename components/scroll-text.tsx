@@ -32,14 +32,7 @@ export default function ScrollText() {
       }}
     >
       <div className="flex flex-col items-center justify-center gap-6 px-6 md:px-10">
-        {/* <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white text-center">
-          Welcome to My Portfolio
-        </h1>
-        
-        <p className="text-xl md:text-2xl text-black/90 dark:text-white text-center max-w-2xl">
-          Full-stack Developer | Digital Marketing Enthusiast
-        </p> */}
-        <div className="min-h-screen ">
+        <div className="min-h-screen flex  items-center justify-start">
       <HeroGeometric 
   title1="Revolutionary"
   title2="Analytics Platform"
