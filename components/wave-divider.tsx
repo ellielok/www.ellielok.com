@@ -65,7 +65,47 @@ export default function WaveDivider({ className = '' }: WaveDividerProps) {
         </div>
       </div>
 
-      
+      <style jsx>{`
+        /* Floating animations with prominent horizontal movement */
+        @keyframes float-1 {
+          0%, 100% {
+            transform: translateY(0) translateX(0);
+          }
+          25% {
+            transform: translateY(-15px) translateX(30px);
+          }
+          50% {
+            transform: translateY(-25px) translateX(15px);
+          }
+          75% {
+            transform: translateY(-10px) translateX(-20px);
+          }
+        }
+
+        @keyframes float-2 {
+          0%, 100% {
+            transform: translateY(0) translateX(0);
+          }
+          25% {
+            transform: translateY(-10px) translateX(-25px);
+          }
+          50% {
+            transform: translateY(-20px) translateX(-35px);
+          }
+          75% {
+            transform: translateY(-12px) translateX(15px);
+          }
+        }
+
+        .cloud-float-1 {
+          animation: float-1 20s ease-in-out infinite;
+        }
+
+        .cloud-float-2 {
+          animation: float-2 25s ease-in-out infinite;
+          animation-delay: -10s;
+        }
+      `}</style>
     </div>
   );
 }
