@@ -31,13 +31,13 @@ export default function ScrollText() {
         transition: 'transform 0.1s linear',
       }}
     >
-      <div className="flex flex-col items-center justify-center gap-6 px-6 md:px-10">
+      {/* <div className="flex flex-col items-center justify-center gap-6 px-6 md:px-10">
         <HeroGeometric
           title1="Revolutionary"
           title2="Analytics Platform"
           description="Get actionable insights from your data with AI-powered analytics that actually make sense."
         />
-      </div>
+      </div> */}
     </div>
   );
 }

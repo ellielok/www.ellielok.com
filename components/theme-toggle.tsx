@@ -1,9 +1,32 @@
-  'use client'
+'use client'
+
+import { useEffect, useState } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
 function ThemeToggle() {
-    return <button onClick={ToggleTheme} className="text-gray-700 dark:text-gray-300">Theme Toggle</button>;}
+    const [isDark, setIsDark] = useState(false);
 
+    useEffect(() => {
+        // Check initial theme
+        setIsDark(document.documentElement.classList.contains('dark'));
+    }, []);
 
+    const handleToggle = () => {
+        ToggleTheme();
+        setIsDark(!isDark);
+    };
+
+    return (
+        <button
+            onClick={handleToggle}
+            className="text-black dark:text-white  transition-opacity p-2 
+               hover:bg-white dark:hover:bg-black rounded-sm"
+            aria-label="Toggle theme"
+        >
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+    );
+}
 
 function ToggleTheme() {
     if (!document.startViewTransition) {
