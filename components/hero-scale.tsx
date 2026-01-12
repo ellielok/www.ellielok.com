@@ -52,7 +52,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
   const scale = 1.03 - scrollProgress * 0.1;
 
   // Girl scale: grow from 1 to 2 as we scroll
-  const girlScale = 1.5 - scrollProgress * 0.1;
+  const girlScale = 2.2 - scrollProgress;
 
   // Parallax offset for background (subtle movement)
   const bgOffsetX = mousePosition.x * 5; // 5px max movement
@@ -84,9 +84,9 @@ export default function HeroScale({ children }: HeroScaleProps) {
 
       {/* Girl illustration - separate layer */}
       <div
-        className="fixed -right-10 -bottom-40 xl:right-1/10 xl:block origin-bottom z-2 pointer-events-none"
+        className="fixed -right-10 top-0 xl:right-1/10 xl:block origin-top z-2 pointer-events-none"
         style={{
-          transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px) translateY(20px)`,
+          transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px)`,
           transition: 'transform 0.1s ease-out',
         }}
       >
