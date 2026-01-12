@@ -5,6 +5,7 @@ import HeroScale from '@/components/hero-scale';
 import ParticlesBackground from '@/components/ui/particles';
 import TableOfContents from '@/components/table-of-contents';
 import WaveDivider from '@/components/wave-divider';
+import RevealOnScroll from '@/components/reveal-on-scroll';
 
 
 export const metadata: Metadata = {
@@ -58,46 +59,54 @@ export default function Home() {
 
             {/* About Section */}
             <div id="about" className="scroll-mt-80 mt-30">
-              
-              <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
-                About Me
-              </h2>
-              
+
+              <RevealOnScroll>
+                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                  About Me
+                </h2>
+              </RevealOnScroll>
+
 
               <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>
-                  I am an aspiring <span className="font-semibold text-gray-900 dark:text-white">full-stack developer</span> skilled in React,
-                  TypeScript, and modern CSS frameworks. Passionate about creating
-                  responsive, user-friendly web applications, I focus on combining
-                  thoughtful design with solid engineering for performance and
-                  accessibility. Currently completing my Master of Information Technology
-                  at Monash University, I plan to reside in <span className="font-semibold text-gray-900 dark:text-white">Melbourne, Australia</span>.
-                </p>
+                <RevealOnScroll delay={200}>
+                  <p>
+                    I am an aspiring <span className="font-semibold text-gray-900 dark:text-white">full-stack developer</span> skilled in React,
+                    TypeScript, and modern CSS frameworks. Passionate about creating
+                    responsive, user-friendly web applications, I focus on combining
+                    thoughtful design with solid engineering for performance and
+                    accessibility. Currently completing my Master of Information Technology
+                    at Monash University, I plan to reside in <span className="font-semibold text-gray-900 dark:text-white">Melbourne, Australia</span>.
+                  </p>
+                </RevealOnScroll>
 
-                <p>
-                  Previously, I worked as a <span className="font-semibold text-gray-900 dark:text-white">Senior Advertising Specialist</span> at{' '}
-                  <a href="https://fstln.io/en" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900 dark:hover:text-white transition-colors">
-                    Fastlane
-                  </a>, where I gained deep experience
-                  in digital marketing and user analytics. This background helps me design
-                  products that are both data-informed and user-centered. Outside of
-                  coding, I enjoy traveling, hiking, and exploring virtual worlds from
-                  Summoner's Rift to Hyrule.
-                </p>
+                <RevealOnScroll delay={400}>
+                  <p>
+                    Previously, I worked as a <span className="font-semibold text-gray-900 dark:text-white">Senior Advertising Specialist</span> at{' '}
+                    <a href="https://fstln.io/en" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900 dark:hover:text-white transition-colors">
+                      Fastlane
+                    </a>, where I gained deep experience
+                    in digital marketing and user analytics. This background helps me design
+                    products that are both data-informed and user-centered. Outside of
+                    coding, I enjoy traveling, hiking, and exploring virtual worlds from
+                    Summoner's Rift to Hyrule.
+                  </p>
+                </RevealOnScroll>
 
-                <div className="mt-8">
-                  <a
-                    href="/cv/ellie-cv.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-semibold text-gray-900 dark:text-white hover:underline transition-all"
-                  >
-                    View Full Résumé
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
+                <RevealOnScroll delay={600}>
+                  <div className="mt-8">
+                    <a
+                      href="/cv/ellie-cv.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-semibold text-gray-900 dark:text-white hover:underline transition-all"
+                    >
+                      View Full Résumé
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                </RevealOnScroll>
               </div>
             </div>
 
