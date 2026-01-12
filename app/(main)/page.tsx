@@ -4,6 +4,7 @@ import ScrollText from '@/components/scroll-text';
 import HeroScale from '@/components/hero-scale';
 import ParticlesBackground from '@/components/ui/particles';
 import TableOfContents from '@/components/table-of-contents';
+import WaveDivider from '@/components/wave-divider';
 
 
 export const metadata: Metadata = {
@@ -32,8 +33,8 @@ export default function Home() {
       </HeroScale>
       <HistoryButton />
 
-      {/* Divider */}
-      <div className="divider h-1 bg-gradient-to-r from-transparent via-gray-400 dark:via-gray-600 to-transparent relative z-20"></div>
+      {/* Divider with Clouds */}
+      <WaveDivider className="relative z-20" />
 
       {/* Content Section */}
       <section className="content bg-yellow-50 dark:bg-gray-800 min-h-screen transition-colors relative z-20">
