@@ -10,8 +10,9 @@ interface TOCItem {
 
 const tocItems: TOCItem[] = [
   { title: 'About', roman: 'I', href: '#about' },
-  { title: 'Experience', roman: 'II', href: '#experience' },
-  { title: 'Projects', roman: 'III', href: '#projects' },
+  { title: 'Skills', roman: 'II', href: '#skills' },
+  { title: 'Experience', roman: 'III', href: '#experience' },
+  { title: 'Projects', roman: 'IV', href: '#projects' },
 ]
 
 function computeScrolled(scrollY: number, viewportHeight: number) {

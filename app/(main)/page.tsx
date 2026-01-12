@@ -6,6 +6,7 @@ import ParticlesBackground from '@/components/ui/particles';
 import TableOfContents from '@/components/table-of-contents';
 import WaveDivider from '@/components/wave-divider';
 import RevealOnScroll from '@/components/reveal-on-scroll';
+import SkillsCloud from '@/components/skills-cloud';
 
 
 export const metadata: Metadata = {
@@ -108,6 +109,19 @@ export default function Home() {
                   </div>
                 </RevealOnScroll>
               </div>
+            </div>
+
+            {/* Skills Section */}
+            <div id="skills" className="scroll-mt-20">
+              <RevealOnScroll>
+                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                  Skills
+                </h2>
+              </RevealOnScroll>
+
+              <RevealOnScroll delay={200}>
+                <SkillsCloud />
+              </RevealOnScroll>
             </div>
 
             {/* Experience Section */}
