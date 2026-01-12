@@ -95,13 +95,7 @@ const skills: Skill[] = [
 ];
 
 export default function SkillsCloud() {
-  const [hoveredSkill, setHoveredSkill] = useState<Skill | null>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: React.MouseEvent, skill: Skill) => {
-    setHoveredSkill(skill);
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   const getLevelGlow = (level: string) => {
     switch (level) {
@@ -170,48 +164,45 @@ export default function SkillsCloud() {
         DevOps & Tools
       </div>
 
-      {skills.map((skill, index) => (
-        <div
-          key={skill.name}
-          className="absolute group cursor-pointer"
-          style={{
-            top: skill.position.top,
-            left: skill.position.left,
-            animation: `float ${3 + index * 0.5}s ease-in-out infinite`,
-            animationDelay: `${index * 0.2}s`
-          }}
-          onMouseEnter={(e) => handleMouseMove(e, skill)}
-          onMouseMove={(e) => handleMouseMove(e, skill)}
-          onMouseLeave={() => setHoveredSkill(null)}
-        >
-          <div className={`px-4 py-2 bg-white dark:bg-gray-800 rounded-full transition-all hover:scale-110 ${getLevelGlow(skill.level)}`}>
-            <span className="text-sm font-medium text-gray-900 dark:text-white">
-              {skill.name}
-            </span>
-          </div>
-        </div>
-      ))}
+      {skills.map((skill, index) => {
+        const isHovered = hoveredSkill === skill.name;
+        return (
+          <div
+            key={skill.name}
+            className="absolute group"
+            style={{
+              top: skill.position.top,
+              left: skill.position.left,
+              animation: `float ${3 + index * 0.5}s ease-in-out infinite`,
+              animationDelay: `${index * 0.2}s`,
+              zIndex: isHovered ? 20 : 10
+            }}
+            onMouseEnter={() => setHoveredSkill(skill.name)}
+            onMouseLeave={() => setHoveredSkill(null)}
+          >
+            <div className="flex flex-col items-start">
+              {/* Skill tag */}
+              <div className={`px-4 py-2 bg-white dark:bg-gray-800 rounded-full transition-all ${isHovered ? 'scale-110' : ''} ${getLevelGlow(skill.level)}`}>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">
+                  {skill.name}
+                </span>
+              </div>
 
-      {/* Hover tooltip - positioned to bottom right */}
-      {hoveredSkill && (
-        <div
-          className="fixed z-50 pointer-events-none"
-          style={{
-            left: `${mousePosition.x}px`,
-            top: `${mousePosition.y}px`,
-          }}
-        >
-          <div className="bg-gray-900 dark:bg-gray-800 text-white p-4 rounded-lg shadow-2xl max-w-xs">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-lg font-bold">{hoveredSkill.name}</span>
-              <span className={`text-xs px-2 py-1 rounded-full ${getLevelBadgeColor(hoveredSkill.level)} text-white`}>
-                {hoveredSkill.level}
-              </span>
+              {/* Expanded content on hover */}
+              {isHovered && (
+                <div className="mt-2 p-3 bg-gray-900 dark:bg-gray-800 text-white rounded-lg shadow-2xl max-w-xs animate-fadeIn">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className={`text-xs px-2 py-1 rounded-full ${getLevelBadgeColor(skill.level)} text-white`}>
+                      {skill.level}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-300">{skill.description}</p>
+                </div>
+              )}
             </div>
-            <p className="text-sm text-gray-300">{hoveredSkill.description}</p>
           </div>
-        </div>
-      )}
+        );
+      })}
 
       <style jsx>{`
         @keyframes float {
@@ -221,6 +212,19 @@ export default function SkillsCloud() {
           50% {
             transform: translateY(-20px);
           }
+        }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out;
         }
       `}</style>
     </div>
