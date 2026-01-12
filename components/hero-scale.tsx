@@ -84,7 +84,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
 
       {/* Girl illustration - separate layer */}
       <div
-        className="fixed -right-10 bottom-0 xl:right-1/6 xl:block origin-bottom z-2 pointer-events-none"
+        className="fixed -right-10 -bottom-40 xl:right-1/10 xl:block origin-bottom z-2 pointer-events-none"
         style={{
           transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px) translateY(20px)`,
           transition: 'transform 0.1s ease-out',

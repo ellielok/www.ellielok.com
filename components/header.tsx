@@ -11,7 +11,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import TableOfContents from '@/components/table-of-contents';
 
 import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -117,10 +116,6 @@ export default function Header() {
           <br />
           Edition
         </div>
-      </div>
-      {/* Table of Contents */}
-      <div>
-      <TableOfContents />
       </div>
     </div>
   );

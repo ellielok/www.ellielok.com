@@ -8,10 +8,8 @@ interface TOCItem {
 
 const tocItems: TOCItem[] = [
   { title: 'About', roman: 'I', href: '#about' },
-  { title: 'Skills', roman: 'II', href: '#skills' },
+  { title: 'Experience', roman: 'II', href: '#experience' },
   { title: 'Projects', roman: 'III', href: '#projects' },
-  { title: 'Experience', roman: 'IV', href: '#experience' },
-  { title: 'Contact', roman: 'V', href: '#contact' },
 ];
 
 export default function TableOfContents() {
