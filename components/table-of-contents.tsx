@@ -48,10 +48,10 @@ export default function TableOfContents() {
 
       {/* Edition Title - moves to top left */}
       <div
-        className="fixed z-30 pointer-events-auto transition-all duration-700 ease-out"
+        className={`fixed z-50 pointer-events-auto transition-all duration-700 ease-out ${scrolled ? 'top-20 left-5 xl:left-1/15' : ''}`}
         style={{
-          left: scrolled ? '2rem' : 'calc(50vw - 140px + 1.5rem)',
-          top: scrolled ? '2rem' : 'calc(50vh - 200px + 1.5rem)',
+          left: scrolled ? undefined : 'calc(50vw - 140px + 1.5rem)',
+          top: scrolled ? undefined : 'calc(50vh - 200px + 1.5rem)',
         }}
       >
         <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-700 ${scrolled ? 'text-base' : 'text-lg'} `}>
@@ -82,10 +82,10 @@ export default function TableOfContents() {
             {tocItems.map((item, index) => (
               <li
                 key={item.roman}
-                className={`flex items-center gap-8 ${scrolled ? 'justify-between' : 'justify-start'}`}
+                className={`flex items-center gap-8 ${scrolled ? 'justify-between left-5 xl:left-1/15' : 'justify-start'}`}
                 style={{
                   position: 'fixed',
-                  left: scrolled ? '2rem' : 'calc(50vw - 140px + 1.5rem)',
+                  left: scrolled ? undefined : 'calc(50vw - 140px + 1.5rem)',
                   bottom: scrolled
                     ? `calc(2rem + ${(tocItems.length - 1 - index) * 1.5}rem)`
                     : `calc(50vh - 200px + 1.5rem + ${(tocItems.length - 1 - index) * 1.5}rem)`,
