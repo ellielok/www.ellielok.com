@@ -34,13 +34,14 @@ export default function Home() {
       <HistoryButton />
 
       {/* Static text after TOC animation */}
-      <div className="absolute left-1/2 xl:left-62 z-[100] pointer-events-none" style={{ top: '100vh' }}>
-        <div className="flex flex-col gap-4">
-          <h2 className="text-6xl md:text-8xl font-bold text-black dark:text-white">
+      <div className="absolute left-1/2 -translate-x-1/2 md:left-2/5 z-[100] pointer-events-none" style={{ top: '90vh' }}>
+        <div className="flex flex-col gap-60">
+          <h2 className="text-6xl md:text-9xl font-bold text-black dark:text-white">
             Welcome
           </h2>
-          <p className="text-xl md:text-2xl text-black dark:text-white">
-            to my portfolio
+          {/* 这里需要加入容器 */}
+          <p className=" text-xl md:text-2xl text-black dark:text-white">
+            Aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. 
           </p>
         </div>
       </div>
