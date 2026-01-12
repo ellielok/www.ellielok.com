@@ -1,48 +1,60 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react'
 
 interface TOCItem {
-  title: string;
-  roman: string;
-  href: string;
+  title: string
+  roman: string
+  href: string
 }
 
 const tocItems: TOCItem[] = [
   { title: 'About', roman: 'I', href: '#about' },
   { title: 'Experience', roman: 'II', href: '#experience' },
   { title: 'Projects', roman: 'III', href: '#projects' },
-];
+]
+
+function computeScrolled(scrollY: number, viewportHeight: number) {
+  return scrollY > viewportHeight * 0.2
+}
 
 export default function TableOfContents() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   // Border box configuration - adjust these values to reposition everything
-  const BORDER_LEFT = '26vw';
-  const BORDER_TOP = 'calc(50vh - 200px)';
-  const BORDER_WIDTH = '300px';
-  const BORDER_HEIGHT = '400px';
-  const CONTENT_PADDING = '1.5rem';
+  const BORDER_LEFT = '26vw'
+  const BORDER_TOP = 'calc(50vh - 200px)'
+  const BORDER_WIDTH = '300px'
+  const BORDER_HEIGHT = '400px'
+  const CONTENT_PADDING = '1.5rem'
+
+  // Run before paint on the client to avoid showing the wrong layout.
+  useLayoutEffect(() => {
+    setMounted(true)
+    setScrolled(computeScrolled(window.scrollY, window.innerHeight))
+  }, [])
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      // Trigger transformation after scrolling 20% of viewport
-      setScrolled(scrollY > viewportHeight * 0.2);
-    };
+    if (!mounted) return
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = () => {
+      setScrolled(computeScrolled(window.scrollY, window.innerHeight))
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [mounted])
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+    e.preventDefault()
+    const element = document.querySelector(href)
+    if (element) element.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  // Avoid hydration mismatch and avoid flashing the "top" layout.
+  // This component is fixed-position UI, so deferring render is usually safe.
+  if (!mounted) return null
 
   return (
     <>
@@ -71,7 +83,7 @@ export default function TableOfContents() {
           top: scrolled ? undefined : `calc(${BORDER_TOP} + ${CONTENT_PADDING})`,
         }}
       >
-        <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-700 ${scrolled ? 'text-base' : 'text-lg'} `}>
+        <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-700 ${scrolled ? 'text-base' : 'text-lg'}`}>
           The<br />
           <span className="italic">Art</span>Nouveau<br />
           Edition
@@ -125,5 +137,5 @@ export default function TableOfContents() {
         </nav>
       </div>
     </>
-  );
+  )
 }
