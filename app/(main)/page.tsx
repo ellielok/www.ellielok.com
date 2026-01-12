@@ -34,7 +34,7 @@ export default function Home() {
       <HistoryButton />
 
       {/* Static text after TOC animation */}
-      <div className="absolute left-1/2 -translate-x-1/2 md:left-2/5 z-[100] pointer-events-none" style={{ top: '90vh' }}>
+      <div className="absolute left-1/2 -translate-x-1/2 md:left-5/11 z-[100] pointer-events-none" style={{ top: '90vh' }}>
         <div className="flex flex-col gap-60">
           <h2 className="text-6xl md:text-9xl font-bold text-black dark:text-white">
             Welcome
@@ -57,7 +57,7 @@ export default function Home() {
 
 
             {/* About Section */}
-            <div id="about" className="scroll-mt-20">
+            <div id="about" className="scroll-mt-80 mt-30">
               
               <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
                 About Me
