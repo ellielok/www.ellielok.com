@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect, useState } from 'react';
+
 interface TOCItem {
   title: string;
   roman: string;
@@ -13,6 +15,20 @@ const tocItems: TOCItem[] = [
 ];
 
 export default function TableOfContents() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      // Trigger transformation after scrolling 20% of viewport
+      setScrolled(scrollY > viewportHeight * 0.2);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -22,46 +38,75 @@ export default function TableOfContents() {
   };
 
   return (
-    <div className=" fixed bottom-8 z-30 ">
-      <h2 className="text-1xl font-bold text-gray-900 dark:text-white mb-4">
-        Contents
-      </h2>
+    <>
+      {/* Border Frame - fades out when scrolled */}
+      <div
+        className={`fixed inset-0 flex items-center justify-center z-10 pointer-events-none transition-opacity duration-700 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
+      >
+        <div className="relative w-[280px] h-[400px] border border-black/60 dark:border-white/40 pointer-events-none" />
+      </div>
 
-      <nav>
-        <ul className="space-y-1">
-          {tocItems.map((item) => (
-            <li key={item.roman}>
-              <a
-                href={item.href}
-                onClick={(e) => handleClick(e, item.href)}
-                className="flex items-center justify-between gap-4 group cursor-pointer"
-              >
-                <span className="text-sm font-semibold text-gray-900 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
-                  {item.title}
-                </span>
-                <span className="flex-1 border-b border-dotted border-gray-400 dark:border-gray-600 min-w-[40px]"></span>
-                <span className="text-sm font-semibold text-gray-900 dark:text-gray-400 font-serif">
-                  {item.roman}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {/* Edition Title - moves to top left */}
+      <div
+        className="fixed z-30 pointer-events-auto transition-all duration-700 ease-out"
+        style={{
+          left: scrolled ? '2rem' : 'calc(50vw - 140px + 1.5rem)',
+          top: scrolled ? '2rem' : 'calc(50vh - 200px + 1.5rem)',
+        }}
+      >
+        <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-700 ${scrolled ? 'text-base' : 'text-lg'} `}>
+          The<br />
+          <span className="italic">Art</span>Nouveau<br />
+          Edition
+        </h1>
+      </div>
 
-      <div className="mt-8 pt-6 border-t border-gray-300 dark:border-gray-700">
-        <p className="text-sm text-gray-900 dark:text-white font-medium mb-2">
-          © Ellie Lok
-        </p>
-        <div className="flex flex-col gap-1 text-sm text-gray-900 dark:text-gray-400">
-          <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-            Privacy Policy
-          </a>
-          <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-            Terms of Service
-          </a>
+      {/* Description - fades out when scrolled */}
+      <div
+        className={`fixed z-30 transition-all duration-700 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+        style={{
+          left: 'calc(50vw - 140px + 1.5rem)',
+          top: 'calc(50vh - 40px)',
+        }}
+      >
+        <div className="text-black dark:text-white text-xs font-light leading-relaxed">
+          A new portfolio experience.<br />
+          Built with modern web technologies.
         </div>
       </div>
-    </div>
+
+      {/* TOC List - each item moves independently with stagger */}
+      <div className="fixed z-30 pointer-events-auto">
+        <nav>
+          <ul className="space-y-0">
+            {tocItems.map((item, index) => (
+              <li
+                key={item.roman}
+                className={`flex items-center gap-8 ${scrolled ? 'justify-between' : 'justify-start'}`}
+                style={{
+                  position: 'fixed',
+                  left: scrolled ? '2rem' : 'calc(50vw - 140px + 1.5rem)',
+                  bottom: scrolled
+                    ? `calc(2rem + ${(tocItems.length - 1 - index) * 1.5}rem)`
+                    : `calc(50vh - 200px + 1.5rem + ${(tocItems.length - 1 - index) * 1.5}rem)`,
+                  transition: `all 0.7s ease-out ${index * 120}ms`,
+                }}
+              >
+                <a
+                  href={item.href}
+                  onClick={(e) => handleClick(e, item.href)}
+                  className="text-black dark:text-white text-sm font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed"
+                >
+                  {item.title}
+                </a>
+                <span className="text-black dark:text-white text-xs font-serif leading-relaxed">
+                  {item.roman}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 }

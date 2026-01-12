@@ -25,7 +25,7 @@ export default function ScrollText() {
 
   return (
     <div
-      className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-10"
+      className="fixed top-0 left-0 w-full h-screen flex items-center justify-center pointer-events-none z-30"
       style={{
         transform: `translateY(${translateY}vh)`,
         transition: 'transform 0.1s linear',

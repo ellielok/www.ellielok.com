@@ -23,13 +23,8 @@ export default function Home() {
         <ParticlesBackground />
       </div>
 
-      {/* Table of Contents */}
-      <div className='fixed bottom left-5 right-5 xl:left-1/15 xl:right-1/15 z-50'>
+      {/* Table of Contents - Full Screen */}
       <TableOfContents />
-      </div>
-
-      {/* Scrolling text */}
-      <ScrollText />
 
       {/* Hero Section with Scale Effect */}
       <HeroScale>
@@ -45,11 +40,15 @@ export default function Home() {
         <div className="w-full px-6 md:px-10 py-20">
           <div className="mx-auto max-w-4xl space-y-20">
 
+
+
             {/* About Section */}
             <div id="about" className="scroll-mt-20">
+              
               <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
                 About Me
               </h2>
+              
 
               <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                 <p>
@@ -246,6 +245,7 @@ export default function Home() {
                       <a href="/history/2510-halloween/projects/birdtag" className="text-gray-900 dark:text-white font-semibold hover:underline">
                         View Project →
                       </a>
+                      
                     </div>
                   </div>
                 </div>

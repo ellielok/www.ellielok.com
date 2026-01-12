@@ -108,15 +108,7 @@ export default function Header() {
           <ThemeToggle />
         </div>
       </div>
-      <div className="mb-4">
-        <div className="font-bold text-gray-900 dark:text-white/50 tracking-tight">
-          The
-          <br />
-          ArtNouveau
-          <br />
-          Edition
-        </div>
-      </div>
+
     </div>
   );
 }
