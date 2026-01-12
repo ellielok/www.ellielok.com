@@ -29,9 +29,21 @@ export default function Home() {
 
       {/* Hero Section with Scale Effect */}
       <HeroScale>
-        
+
       </HeroScale>
       <HistoryButton />
+
+      {/* Static text after TOC animation */}
+      <div className="absolute left-1/2 xl:left-62 z-[100] pointer-events-none" style={{ top: '100vh' }}>
+        <div className="flex flex-col gap-4">
+          <h2 className="text-6xl md:text-8xl font-bold text-black dark:text-white">
+            Welcome
+          </h2>
+          <p className="text-xl md:text-2xl text-black dark:text-white">
+            to my portfolio
+          </p>
+        </div>
+      </div>
 
       {/* Divider with Clouds */}
       <WaveDivider className="relative z-20" />
