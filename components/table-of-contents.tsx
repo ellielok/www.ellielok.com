@@ -17,6 +17,13 @@ const tocItems: TOCItem[] = [
 export default function TableOfContents() {
   const [scrolled, setScrolled] = useState(false);
 
+  // Border box configuration - adjust these values to reposition everything
+  const BORDER_LEFT = '26vw';
+  const BORDER_TOP = 'calc(50vh - 200px)';
+  const BORDER_WIDTH = '300px';
+  const BORDER_HEIGHT = '400px';
+  const CONTENT_PADDING = '1.5rem';
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -41,17 +48,27 @@ export default function TableOfContents() {
     <>
       {/* Border Frame - fades out when scrolled */}
       <div
-        className={`fixed inset-0 flex items-center justify-center z-10 pointer-events-none transition-opacity duration-700 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
+        className={`fixed z-10 pointer-events-none transition-opacity duration-700 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
+        style={{
+          left: BORDER_LEFT,
+          top: BORDER_TOP,
+        }}
       >
-        <div className="relative w-[280px] h-[400px] border border-black/60 dark:border-white/40 pointer-events-none" />
+        <div
+          className="relative border border-black/60 dark:border-white/40 pointer-events-none"
+          style={{
+            width: BORDER_WIDTH,
+            height: BORDER_HEIGHT,
+          }}
+        />
       </div>
 
       {/* Edition Title - moves to top left */}
       <div
         className={`fixed z-50 pointer-events-auto transition-all duration-700 ease-out ${scrolled ? 'top-20 left-5 xl:left-1/15' : ''}`}
         style={{
-          left: scrolled ? undefined : 'calc(50vw - 140px + 1.5rem)',
-          top: scrolled ? undefined : 'calc(50vh - 200px + 1.5rem)',
+          left: scrolled ? undefined : `calc(${BORDER_LEFT} + ${CONTENT_PADDING})`,
+          top: scrolled ? undefined : `calc(${BORDER_TOP} + ${CONTENT_PADDING})`,
         }}
       >
         <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-700 ${scrolled ? 'text-base' : 'text-lg'} `}>
@@ -65,8 +82,8 @@ export default function TableOfContents() {
       <div
         className={`fixed z-30 transition-all duration-700 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         style={{
-          left: 'calc(50vw - 140px + 1.5rem)',
-          top: 'calc(50vh - 40px)',
+          left: `calc(${BORDER_LEFT} + ${CONTENT_PADDING})`,
+          top: `calc(${BORDER_TOP} + 160px)`,
         }}
       >
         <div className="text-black dark:text-white text-xs font-light leading-relaxed">
@@ -85,10 +102,10 @@ export default function TableOfContents() {
                 className={`flex items-center gap-8 ${scrolled ? 'justify-between left-5 xl:left-1/15' : 'justify-start'}`}
                 style={{
                   position: 'fixed',
-                  left: scrolled ? undefined : 'calc(50vw - 140px + 1.5rem)',
+                  left: scrolled ? undefined : `calc(${BORDER_LEFT} + ${CONTENT_PADDING})`,
                   bottom: scrolled
                     ? `calc(2rem + ${(tocItems.length - 1 - index) * 1.5}rem)`
-                    : `calc(50vh - 200px + 1.5rem + ${(tocItems.length - 1 - index) * 1.5}rem)`,
+                    : `calc(${BORDER_TOP} + ${CONTENT_PADDING} + ${(tocItems.length - 1 - index) * 1.5}rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
                 }}
               >
