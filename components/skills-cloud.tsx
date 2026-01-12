@@ -10,65 +10,87 @@ interface Skill {
 }
 
 const skills: Skill[] = [
+  // FRONT-END (top-left quadrant)
   {
     name: 'React',
     level: 'Advanced',
     description: 'Building interactive UIs with hooks, context, and modern patterns',
-    position: { top: '15%', left: '20%' }
+    position: { top: '15%', left: '15%' }
   },
   {
     name: 'TypeScript',
     level: 'Advanced',
     description: 'Type-safe development with strong typing and interfaces',
-    position: { top: '45%', left: '15%' }
+    position: { top: '30%', left: '25%' }
   },
   {
     name: 'Next.js',
     level: 'Intermediate',
     description: 'Server-side rendering and modern React framework',
-    position: { top: '25%', left: '75%' }
+    position: { top: '35%', left: '8%' }
   },
   {
     name: 'Tailwind CSS',
     level: 'Advanced',
     description: 'Utility-first CSS framework for rapid UI development',
-    position: { top: '60%', left: '70%' }
+    position: { top: '20%', left: '35%' }
   },
-  {
-    name: 'PostgreSQL',
-    level: 'Intermediate',
-    description: 'Relational database design and query optimization',
-    position: { top: '70%', left: '25%' }
-  },
-  {
-    name: 'Docker',
-    level: 'Intermediate',
-    description: 'Containerization and deployment workflows',
-    position: { top: '35%', left: '50%' }
-  },
-  {
-    name: 'Git',
-    level: 'Advanced',
-    description: 'Version control and collaborative development',
-    position: { top: '80%', left: '55%' }
-  },
+  // BACK-END (top-right quadrant)
   {
     name: 'Node.js',
     level: 'Intermediate',
     description: 'Backend development with JavaScript runtime',
-    position: { top: '50%', left: '85%' }
+    position: { top: '15%', left: '65%' }
   },
   {
     name: 'Firebase',
     level: 'Intermediate',
     description: 'Cloud services for authentication and real-time databases',
-    position: { top: '20%', left: '45%' }
+    position: { top: '30%', left: '75%' }
   },
   {
     name: 'AWS',
     level: 'Beginner',
     description: 'Cloud infrastructure with Lambda, S3, and DynamoDB',
-    position: { top: '85%', left: '35%' }
+    position: { top: '35%', left: '85%' }
+  },
+  // DATABASES (bottom-left quadrant)
+  {
+    name: 'PostgreSQL',
+    level: 'Intermediate',
+    description: 'Relational database design and query optimization',
+    position: { top: '65%', left: '15%' }
+  },
+  {
+    name: 'MongoDB',
+    level: 'Intermediate',
+    description: 'NoSQL database for flexible data structures',
+    position: { top: '75%', left: '28%' }
+  },
+  {
+    name: 'Redis',
+    level: 'Beginner',
+    description: 'In-memory data structure store for caching',
+    position: { top: '85%', left: '20%' }
+  },
+  // DEVOPS & TOOLS (bottom-right quadrant)
+  {
+    name: 'Docker',
+    level: 'Intermediate',
+    description: 'Containerization and deployment workflows',
+    position: { top: '65%', left: '65%' }
+  },
+  {
+    name: 'Git',
+    level: 'Advanced',
+    description: 'Version control and collaborative development',
+    position: { top: '75%', left: '80%' }
+  },
+  {
+    name: 'CI/CD',
+    level: 'Intermediate',
+    description: 'Automated testing and deployment pipelines',
+    position: { top: '85%', left: '70%' }
   }
 ];
 
@@ -109,6 +131,26 @@ export default function SkillsCloud() {
 
   return (
     <div className="relative w-full h-[600px] rounded-lg overflow-visible">
+      {/* Cross axes */}
+      {/* Vertical line */}
+      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-300 dark:bg-gray-600"></div>
+      {/* Horizontal line */}
+      <div className="absolute top-1/2 left-0 right-0 h-px bg-gray-300 dark:bg-gray-600"></div>
+
+      {/* Quadrant labels */}
+      <div className="absolute top-2 left-4 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+        Front-End
+      </div>
+      <div className="absolute top-2 right-4 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+        Back-End
+      </div>
+      <div className="absolute bottom-2 left-4 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+        Databases
+      </div>
+      <div className="absolute bottom-2 right-4 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+        DevOps & Tools
+      </div>
+
       {skills.map((skill, index) => (
         <div
           key={skill.name}
@@ -136,8 +178,8 @@ export default function SkillsCloud() {
         <div
           className="fixed z-50 pointer-events-none"
           style={{
-            left: `${mousePosition.x + 10}px`,
-            top: `${mousePosition.y + 10}px`,
+            left: `${mousePosition.x}px`,
+            top: `${mousePosition.y}px`,
           }}
         >
           <div className="bg-gray-900 dark:bg-gray-800 text-white p-4 rounded-lg shadow-2xl max-w-xs">
