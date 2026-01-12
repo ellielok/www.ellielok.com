@@ -131,11 +131,30 @@ export default function SkillsCloud() {
 
   return (
     <div className="relative w-full h-[600px] rounded-lg overflow-visible">
+      {/* SVG for elliptical lines */}
+      <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
+        <defs>
+          <linearGradient id="ellipseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="rgb(168, 85, 247)" stopOpacity="0.3" />
+            <stop offset="50%" stopColor="rgb(59, 130, 246)" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.3" />
+          </linearGradient>
+        </defs>
+
+        {/* Concentric ellipses centered at the cross point */}
+        <ellipse cx="50%" cy="50%" rx="15%" ry="12%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.5" />
+        <ellipse cx="50%" cy="50%" rx="30%" ry="24%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.4" />
+        <ellipse cx="50%" cy="50%" rx="45%" ry="36%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.3" />
+
+        {/* Center point */}
+        <circle cx="50%" cy="50%" r="3" fill="rgb(168, 85, 247)" opacity="0.6" />
+      </svg>
+
       {/* Cross axes */}
       {/* Vertical line */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-300 dark:bg-gray-600"></div>
+      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-purple-400 dark:bg-purple-500 z-0"></div>
       {/* Horizontal line */}
-      <div className="absolute top-1/2 left-0 right-0 h-px bg-gray-300 dark:bg-gray-600"></div>
+      <div className="absolute top-1/2 left-0 right-0 h-px bg-purple-400 dark:bg-purple-500 z-0"></div>
 
       {/* Quadrant labels */}
       <div className="absolute top-2 left-4 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
