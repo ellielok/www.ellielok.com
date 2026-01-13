@@ -37,15 +37,20 @@ export default function Home() {
 
 
       {/* Static text after TOC animation */}
-      <div className="absolute left-1/2 -translate-x-1/2 md:left-5/11 z-[100] pointer-events-none" style={{ top: '90vh' }}>
+      <div className="absolute left-1/2 -translate-x-1/2 md:left-5/11 z-40 pointer-events-none" style={{ top: '88vh' }}>
         <div className="flex flex-col gap-60">
           <h2 className="text-6xl md:text-9xl font-bold text-black dark:text-white">
-            Welcome
+            Begin here
           </h2>
           {/* 这里需要加入容器 */}
+          <div className='space-y-6 md:space-y-5 text-start'>
           <p className=" text-xl md:text-2xl text-black dark:text-white">
-            Aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. 
+            A personal site by Ellie
           </p>
+          <p className=" text-xl md:text-2xl text-black dark:text-white">
+            Portfolio, tech blog, and moments from life
+          </p>
+          </div>
         </div>
       </div>
 

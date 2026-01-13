@@ -22,7 +22,7 @@ export default function RevealOnScroll({ children, delay = 0 }: RevealOnScrollPr
           }, delay);
         }
       },
-      { threshold: 0.1 } // 当元素10%可见时触发
+      { threshold: 0.4 } // 当元素10%可见时触发
     );
 
     if (ref.current) {

@@ -8,12 +8,12 @@ interface WaveDividerProps {
 
 export default function WaveDivider({ className = '' }: WaveDividerProps) {
   return (
-    <div className={`relative w-full ${className}`} style={{ height: '300px', zIndex: 50 }}>
+    <div className={`relative w-full ${className}`} style={{ height: '300px', zIndex: 30 }}>
       {/* Background gradient for smooth transition */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/10 dark:via-blue-900/5 to-yellow-50 dark:to-gray-800" />
 
       {/* Cloud Layer 1 - Back layer */}
-      <div className="absolute inset-0" style={{ zIndex: 51 }}>
+      <div className="absolute inset-0" style={{ zIndex: 30 }}>
         <div className="cloud-float-1" style={{ position: 'absolute', top: '5%', left: '8%', width: '1080px', height: '150px' }}>
           <Image
             src="/images/cloud/cloud-1.png"
@@ -44,7 +44,7 @@ export default function WaveDivider({ className = '' }: WaveDividerProps) {
       </div>
 
       {/* Cloud Layer 2 - Front layer */}
-      <div className="absolute inset-0" style={{ zIndex: 52 }}>
+      <div className="absolute inset-0" style={{ zIndex: 30 }}>
         <div className="cloud-float-2" style={{ position: 'absolute', top: '25%', left: '55%', width: '1080px', height: '170px' }}>
           <Image
             src="/images/cloud/cloud-1.png"

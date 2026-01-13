@@ -61,7 +61,7 @@ export default function TableOfContents() {
     <>
       {/* Border Frame - fades out when scrolled */}
       <div
-        className={`fixed z-10 pointer-events-none transition-opacity duration-700 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
+        className={`fixed z-50 pointer-events-none transition-opacity duration-700 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
         style={{
           left: BORDER_LEFT,
           top: BORDER_TOP,
@@ -93,7 +93,7 @@ export default function TableOfContents() {
 
       {/* Description - fades out when scrolled */}
       <div
-        className={`fixed z-30 transition-all duration-700 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+        className={`fixed z-50 transition-all duration-700 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         style={{
           left: `calc(${BORDER_LEFT} + ${CONTENT_PADDING})`,
           top: `calc(${BORDER_TOP} + 160px)`,
@@ -106,7 +106,7 @@ export default function TableOfContents() {
       </div>
 
       {/* TOC List - each item moves independently with stagger */}
-      <div className="fixed z-30 pointer-events-auto">
+      <div className="fixed z-50 pointer-events-auto">
         <nav>
           <ul className="space-y-0">
             {tocItems.map((item, index) => (
