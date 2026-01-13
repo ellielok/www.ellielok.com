@@ -61,8 +61,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
               alt={selectedPhoto.alt}
               width={1200}
               height={1600}
-              className="h-auto max-h-[100vh] w-auto object-contain"
-              onClick={(e) => e.stopPropagation()}
+              className="h-auto max-h-[100vh] w-auto object-contain cursor-pointer"
               onError={() => setSelectedPhoto(null)}
               priority
               quality={90}
