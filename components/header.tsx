@@ -25,8 +25,13 @@ export default function Header() {
   ];
 
   return (
-    <div className="flex flex-col fixed top-2 left-5 right-5 xl:left-1/15 xl:right-1/15 z-50">
-      <div className="flex flex-row justify-between mb-3">
+    <>
+      {/* Gradient background overlay */}
+      <div className="fixed top-0 left-0 right-0 h-32 bg-gradient-to-b from-white/90 via-white/50 to-transparent dark:from-gray-900/90 dark:via-gray-900/50 dark:to-transparent z-40 pointer-events-none" />
+
+      {/* Header content */}
+      <div className="flex flex-col fixed top-2 left-5 right-5 xl:left-1/15 xl:right-1/15 z-50">
+        <div className="flex flex-row justify-between mb-3">
         <div className="order-first flex flex-row gap-10 ">
           <a href="/" className="flex flex-row items-center gap-3">
             <Image src={logo} alt="Logo" width={30} height={30} className="" />
@@ -108,7 +113,7 @@ export default function Header() {
           <ThemeToggle />
         </div>
       </div>
-
-    </div>
+      </div>
+    </>
   );
 }
