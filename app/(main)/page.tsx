@@ -67,7 +67,7 @@ export default function Home() {
       {/* Content Section */}
       <section className="content bg-[#FEFCE8] dark:bg-[#1E2939] min-h-screen transition-colors relative z-20">
         <div className="w-full px-6 md:px-10 py-20">
-          <div className="md:ml-40 md:mr-5 xl:ml-100 xl:mr-40 space-y-20">
+          <div className="md:ml-40 md:mr-5 xl:ml-100 xl:mr-40 space-y-30">
 
 
 
