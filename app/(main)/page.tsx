@@ -6,6 +6,12 @@ import TableOfContents from '@/components/table-of-contents';
 import WaveDivider from '@/components/wave-divider';
 import RevealOnScroll from '@/components/reveal-on-scroll';
 import SkillsCloud from '@/components/skills-cloud';
+import Image from 'next/image';
+import Link from 'next/link';
+import tipsyThumbnail from '@/app/history/2510-halloween/images/projects/tipsy/tipsy-thumbnail.png';
+import kickThumbnail from '@/app/history/2510-halloween/images/projects/kick/kick_thumbnail.png';
+import volunThumbnail from '@/app/history/2510-halloween/images/projects/volun/volun-thumbnail.png';
+import birdThumbnail from '@/app/history/2510-halloween/images/projects/bird/bird-thumbnail.png';
 
 
 export const metadata: Metadata = {
@@ -216,103 +222,110 @@ export default function Home() {
               <div className="space-y-8">
                 {/* Project 1 */}
                 <RevealOnScroll delay={200}>
-                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-1/3">
-                      <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
-                        <img src="/projects/tipsy/tipsy-thumbnail.png" alt="TipsyTrack" className="w-full h-full object-cover" />
+                  <Link href="/projects/tipsytrack">
+                    <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all cursor-pointer">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        <div className="md:w-1/3">
+                          <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
+                            <Image src={tipsyThumbnail} alt="TipsyTrack" className="w-full h-full object-cover" />
+                          </div>
+                        </div>
+                        <div className="md:w-2/3">
+                          <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Jul - Oct 2025</div>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            TipsyTrack - Alcohol Harm-Reduction Web App
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-400 mb-4">
+                            Developed a full-stack web application to help adults in Victoria track alcohol consumption and promote safer drinking habits. Built with Next.js (App Router), TypeScript, Tailwind, and Neon Postgres. Implemented Google Vision API for drink label scanning, local storage-based privacy features, and gamified progress tracking.
+                          </p>
+                          <span className="text-gray-900 dark:text-white font-semibold group-hover:underline">
+                            View Project →
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="md:w-2/3">
-                      <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Jul - Oct 2025</div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                        TipsyTrack - Alcohol Harm-Reduction Web App
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
-                        Developed a full-stack web application to help adults in Victoria track alcohol consumption and promote safer drinking habits. Built with Next.js (App Router), TypeScript, Tailwind, and Neon Postgres. Implemented Google Vision API for drink label scanning, local storage-based privacy features, and gamified progress tracking.
-                      </p>
-                      <a href="/history/2510-halloween/projects/tipsytrack" className="text-gray-900 dark:text-white font-semibold hover:underline">
-                        View Project →
-                      </a>
-                    </div>
-                  </div>
-                  </div>
+                  </Link>
                 </RevealOnScroll>
 
                 {/* Project 2 */}
                 <RevealOnScroll delay={400}>
-                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-1/3">
-                      <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
-                        <img src="/projects/kick/kick_thumbnail.png" alt="KickStart" className="w-full h-full object-cover" />
+                  <Link href="/projects/kickstart">
+                    <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all cursor-pointer">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        <div className="md:w-1/3">
+                          <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
+                            <Image src={kickThumbnail} alt="KickStart" className="w-full h-full object-cover" />
+                          </div>
+                        </div>
+                        <div className="md:w-2/3">
+                          <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Apr - Jul 2025</div>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            KickStart - Community Street Soccer Volunteer Platform
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-400 mb-4">
+                            Co-led development of a Vue.js + Firebase web platform to connect volunteers with community street soccer sessions. Integrated Firebase Authentication (email/Google login), Firestore (session management), and Cloud Functions with SendGrid for automated notifications.
+                          </p>
+                          <span className="text-gray-900 dark:text-white font-semibold group-hover:underline">
+                            View Project →
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="md:w-2/3">
-                      <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Apr - Jul 2025</div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                        KickStart - Community Street Soccer Volunteer Platform
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
-                        Co-led development of a Vue.js + Firebase web platform to connect volunteers with community street soccer sessions. Integrated Firebase Authentication (email/Google login), Firestore (session management), and Cloud Functions with SendGrid for automated notifications.
-                      </p>
-                      <a href="/history/2510-halloween/projects/kickstart" className="text-gray-900 dark:text-white font-semibold hover:underline">
-                        View Project →
-                      </a>
-                    </div>
-                  </div>
-                  </div>
+                  </Link>
                 </RevealOnScroll>
 
                 {/* Project 3 */}
                 <RevealOnScroll delay={600}>
-                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-1/3">
-                      <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
-                        <img src="/projects/volun/volun-thumbnail.png" alt="VolunTrack" className="w-full h-full object-cover" />
+                  <Link href="/projects/voluntrack">
+                    <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all cursor-pointer">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        <div className="md:w-1/3">
+                          <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
+                            <Image src={volunThumbnail} alt="VolunTrack" className="w-full h-full object-cover" />
+                          </div>
+                        </div>
+                        <div className="md:w-2/3">
+                          <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Mar - Jun 2025</div>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            VolunTrack - Volunteer Management Android App
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-400 mb-4">
+                            Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications).
+                          </p>
+                          <span className="text-gray-900 dark:text-white font-semibold group-hover:underline">
+                            View Project →
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="md:w-2/3">
-                      <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Mar - Jun 2025</div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                        VolunTrack - Volunteer Management Android App
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
-                        Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications).
-                      </p>
-                      <a href="/history/2510-halloween/projects/voluntrack" className="text-gray-900 dark:text-white font-semibold hover:underline">
-                        View Project →
-                      </a>
-                    </div>
-                  </div>
-                  </div>
+                  </Link>
                 </RevealOnScroll>
 
                 {/* Project 4 */}
                 <RevealOnScroll delay={800}>
-                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="md:w-1/3">
-                      <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
-                        <img src="/projects/bird/bird-thumbnail.png" alt="BirdTag" className="w-full h-full object-cover" />
+                  <Link href="/projects/birdtag">
+                    <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all cursor-pointer">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        <div className="md:w-1/3">
+                          <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
+                            <Image src={birdThumbnail} alt="BirdTag" className="w-full h-full object-cover" />
+                          </div>
+                        </div>
+                        <div className="md:w-2/3">
+                          <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Sep - Nov 2024</div>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            BirdTag - AI-Powered Bird Identification Web App
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-400 mb-4">
+                            Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications.
+                          </p>
+                          <span className="text-gray-900 dark:text-white font-semibold group-hover:underline">
+                            View Project →
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="md:w-2/3">
-                      <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Sep - Nov 2024</div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                        BirdTag - AI-Powered Bird Identification Web App
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
-                        Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications.
-                      </p>
-                      <a href="/history/2510-halloween/projects/birdtag" className="text-gray-900 dark:text-white font-semibold hover:underline">
-                        View Project →
-                      </a>
-
-                    </div>
-                  </div>
-                  </div>
+                  </Link>
                 </RevealOnScroll>
               </div>
             </div>
