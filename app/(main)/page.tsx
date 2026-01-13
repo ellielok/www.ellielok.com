@@ -125,13 +125,16 @@ export default function Home() {
 
             {/* Experience Section */}
             <div id="experience" className="scroll-mt-20">
-              <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
-                Experience
-              </h2>
+              <RevealOnScroll>
+                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                  Experience
+                </h2>
+              </RevealOnScroll>
 
               <div className="space-y-8">
                 {/* Experience Item 1 */}
-                <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
+                <RevealOnScroll delay={200}>
+                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
                     <div className="md:w-1/4 flex flex-col gap-3">
                       <div className="text-sm text-gray-600 dark:text-gray-400">
@@ -158,10 +161,12 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </RevealOnScroll>
 
                 {/* Experience Item 2 */}
-                <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
+                <RevealOnScroll delay={400}>
+                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
                     <div className="md:w-1/4 flex flex-col gap-3">
                       <div className="text-sm text-gray-600 dark:text-gray-400">
@@ -189,19 +194,23 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </RevealOnScroll>
               </div>
             </div>
 
             {/* Projects Section */}
             <div id="projects" className="scroll-mt-20">
-              <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
-                Projects
-              </h2>
+              <RevealOnScroll>
+                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                  Projects
+                </h2>
+              </RevealOnScroll>
 
               <div className="space-y-8">
                 {/* Project 1 */}
-                <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
+                <RevealOnScroll delay={200}>
+                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
                       <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
@@ -221,10 +230,12 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </RevealOnScroll>
 
                 {/* Project 2 */}
-                <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
+                <RevealOnScroll delay={400}>
+                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
                       <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
@@ -244,10 +255,12 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </RevealOnScroll>
 
                 {/* Project 3 */}
-                <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
+                <RevealOnScroll delay={600}>
+                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
                       <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
@@ -267,10 +280,12 @@ export default function Home() {
                       </a>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </RevealOnScroll>
 
                 {/* Project 4 */}
-                <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
+                <RevealOnScroll delay={800}>
+                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3">
                       <div className="aspect-video bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden">
@@ -288,10 +303,11 @@ export default function Home() {
                       <a href="/history/2510-halloween/projects/birdtag" className="text-gray-900 dark:text-white font-semibold hover:underline">
                         View Project →
                       </a>
-                      
+
                     </div>
                   </div>
-                </div>
+                  </div>
+                </RevealOnScroll>
               </div>
             </div>
 
