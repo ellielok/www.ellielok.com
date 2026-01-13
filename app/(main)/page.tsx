@@ -48,11 +48,13 @@ export default function Home() {
             Begin here
           </h2>
           {/* 这里需要加入容器 */}
-          <div className='space-y-6 md:space-y-5 text-start'>
-          <p className=" text-xl md:text-2xl text-black dark:text-white">
+          <div className='space-y-6 md:space-y-5 text-start
+          text-xl md:text-2xl
+          text-black dark:text-gray-800'>
+          <p className=" ">
             A personal site by Ellie
           </p>
-          <p className=" text-xl md:text-2xl text-black dark:text-white">
+          <p className=" text-xl md:text-2xl">
             Portfolio, tech blog, and moments from life
           </p>
           </div>
