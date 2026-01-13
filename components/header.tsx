@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from 'lucide-react';
+import { Mail, Phone, Copy, Check, Github } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -88,18 +89,35 @@ export default function Header() {
 
         <div className="flex flex-row order-last">
           <NavigationMenu>
-            <NavigationMenuList className="flex-wrap">
-              <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
                   className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}
                 >
                   <Link href="/docs">Snapshots</Link>
                 </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
           </NavigationMenu>
+          <a
+              href="https://github.com/ellielok"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity p-2 
+               hover:bg-white dark:hover:bg-black rounded-sm"
+              aria-label="GitHub"
+            >
+              <Github className="w-6 h-6 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white transition-colors" />
+            </a>
+            <a
+              href="https://github.com/ellielok"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity p-2 
+               hover:bg-white dark:hover:bg-black rounded-sm"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin className="w-6 h-6 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white transition-colors" />
+            </a>
           <ThemeToggle />
+
         </div>
       </div>
       </div>
