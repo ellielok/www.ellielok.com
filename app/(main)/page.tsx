@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import HistoryButton from '@/components/history-button';
 import ScrollText from '@/components/scroll-text';
 import HeroScale from '@/components/hero-scale';
 import ParticlesBackground from '@/components/ui/particles';
@@ -33,7 +32,7 @@ export default function Home() {
       <HeroScale>
 
       </HeroScale>
-      <HistoryButton />
+
 
       {/* Static text after TOC animation */}
       <div className="absolute left-1/2 -translate-x-1/2 md:left-5/11 z-[100] pointer-events-none" style={{ top: '90vh' }}>

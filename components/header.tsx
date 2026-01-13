@@ -46,7 +46,7 @@ export default function Header() {
               </NavigationMenuItem>
               <NavigationMenuItem className="hidden md:block">
                 <NavigationMenuTrigger className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black">
-                  List
+                  Editions
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[300px] gap-4">
@@ -55,10 +55,10 @@ export default function Header() {
                         asChild
                         className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
                       >
-                        <Link href="#">
-                          <div className="font-medium">Components</div>
+                        <Link href="/history/2510-halloween">
+                          <div className="font-medium">Halloween</div>
                           <div className="text-muted-foreground">
-                            Browse all components in the library.
+                            🎃 Made for the spooky season.
                           </div>
                         </Link>
                       </NavigationMenuLink>
