@@ -100,7 +100,7 @@ function PageSection({
     <div
       className={`flex flex-col lg:flex-row ${
         reverse ? 'lg:flex-row-reverse' : ''
-      } items-center gap-10 mb-20`}
+      } items-center gap-10`}
     >
       <div className="flex-1 space-y-3 text-gray-900 dark:text-white">
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{name}</h3>
@@ -151,7 +151,7 @@ export default function ProductDetailsPage({
 }: ProductDetailsProps) {
   return (
     <div className="min-h-screen bg-[#FEFCE8] dark:bg-[#1E2939] transition-colors">
-      <div className="w-full px-3 md:px-10 pt-20 max-w-screen-xl mx-auto">
+      <div className="w-full px-3 md:px-10 pt-20 pb-20 max-w-screen-xl mx-auto">
       {/* Back Button */}
       <div className="mb-10 font-semi">
         <Link
