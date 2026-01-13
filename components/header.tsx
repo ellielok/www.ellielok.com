@@ -61,7 +61,7 @@ export default function Header() {
                         className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
                       >
                         <Link href="/history/2510-halloween">
-                          <div className="font-medium">Halloween</div>
+                          <div className="font-medium">Halloween '25</div>
                           <div className="text-muted-foreground">
                             🎃 Made for the spooky season.
                           </div>
@@ -72,20 +72,9 @@ export default function Header() {
                         className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
                       >
                         <Link href="#">
-                          <div className="font-medium">Documentation</div>
+                          <div className="font-medium">Art Nouveau '26</div>
                           <div className="text-muted-foreground">
-                            Learn how to use the library.
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink
-                        asChild
-                        className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
-                      >
-                        <Link href="#">
-                          <div className="font-medium">Blog</div>
-                          <div className="text-muted-foreground">
-                            Read our latest blog posts.
+                            💐 Story behind the edition
                           </div>
                         </Link>
                       </NavigationMenuLink>
