@@ -93,7 +93,7 @@ export default function Header() {
                   asChild
                   className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}
                 >
-                  <Link href="/docs">Snapshots</Link>
+                  <Link href="/snapshots">Snapshots</Link>
                 </NavigationMenuLink>
           </NavigationMenu>
           <a

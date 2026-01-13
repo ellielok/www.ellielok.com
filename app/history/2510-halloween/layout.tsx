@@ -2,7 +2,6 @@ import { Inter } from 'next/font/google';
 import './halloween-theme.css';
 import { Particles } from '@/app/history/2510-halloween/component/ui/shadcn-io/particles';
 import HalloweenIconToggle from '@/app/history/2510-halloween/component/HalloweenIconToggle';
-import HistoryButton from '@/components/history-button';
 import Header from '@/app/history/2510-halloween/component/header';
 import BackgroundWrapper from '@/app/history/2510-halloween/component/background-wrapper';
 import FooterWrapper from '@/app/history/2510-halloween/component/env-footer-wrapper';

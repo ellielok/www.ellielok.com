@@ -93,7 +93,7 @@ function PageSection({
 }: {
   name: string;
   description: string;
-  screenshot: string | string[];
+  screenshot: string | string[] | StaticImageData | StaticImageData[];
   reverse?: boolean;
 }) {
   return (
