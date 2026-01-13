@@ -133,8 +133,11 @@ export default function Home() {
                 {/* Experience Item 1 */}
                 <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
-                    <div className="md:w-1/4 text-sm text-gray-600 dark:text-gray-400">
-                      Jul 2025 - Present
+                    <div className="md:w-1/4 flex flex-col gap-3">
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                        Jul 2025 - Present
+                      </div>
+                      <img src="/images/experience/Monash-logo.png" alt="Monash University" className="w-full pt-10 pr-10 h-auto" />
                     </div>
                     <div className="md:w-3/4">
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -160,8 +163,11 @@ export default function Home() {
                 {/* Experience Item 2 */}
                 <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
-                    <div className="md:w-1/4 text-sm text-gray-600 dark:text-gray-400">
-                      Aug 2022 - Jan 2024
+                    <div className="md:w-1/4 flex flex-col gap-3">
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                        Aug 2022 - Jan 2024
+                      </div>
+                      <img src="/images/experience/Fastlane-logo.png" alt="Fastlane" className="w-full pt-10 pr-10 h-auto" />
                     </div>
                     <div className="md:w-3/4">
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
