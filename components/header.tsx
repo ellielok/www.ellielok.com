@@ -46,7 +46,7 @@ export default function Header() {
                   asChild
                   className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}
                 >
-                  <Link href="/docs">Docs</Link>
+                  <Link href="/docs">Blog</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem className="hidden md:block">
@@ -94,7 +94,7 @@ export default function Header() {
                   asChild
                   className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}
                 >
-                  <Link href="/docs">Docs</Link>
+                  <Link href="/docs">Snapshots</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>

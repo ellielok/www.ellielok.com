@@ -59,7 +59,7 @@ export default function EnvFooter() {
           <p className="font-semibold mt-3 mb-1">Contact Me</p>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/ellieluo"
+              href="https://github.com/ellielok"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 hover:bg-gray-200 dark:hover:bg-white/10 rounded-lg transition-colors duration-300"

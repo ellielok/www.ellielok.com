@@ -59,7 +59,7 @@ export default function EnvFooter() {
           <p className="font-semibold mt-3 mb-1">Contact Me</p>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/ellieluo"
+              href="https://github.com/ellielok"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
@@ -138,7 +138,7 @@ export default function EnvFooter() {
         {/* Social Icons */}
         {/* <div className="flex gap-4 mt-6 md:mt-0">
           <a
-            href="https://github.com/ellieluo"
+            href="https://github.com/ellielok"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
