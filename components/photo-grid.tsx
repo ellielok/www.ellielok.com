@@ -52,10 +52,10 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
       {/* Lightbox Modal */}
       {selectedPhoto && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4 animate-in fade-in duration-300"
           onClick={() => setSelectedPhoto(null)}
         >
-          <div className="relative max-h-[100vh] max-w-[90vw]">
+          <div className="relative max-h-[100vh] max-w-[90vw] animate-in fade-in zoom-in-95 duration-300">
             <Image
               src={selectedPhoto.src}
               alt={selectedPhoto.alt}
