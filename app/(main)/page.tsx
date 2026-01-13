@@ -26,9 +26,8 @@ export default function Home() {
       </div>
 
       {/* Table of Contents - Full Screen */}
-      <div className='hidden md:block'>
       <TableOfContents />
-      </div>
+      
 
       {/* Hero Section with Scale Effect */}
       <HeroScale>

@@ -1,12 +1,12 @@
 import { ArrowRight, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface WritingCardProps {
   projectName?: string | React.ReactNode;
   timeRange?: string;
   description?: string;
   href?: string;
-  screenshot: string;
+  screenshot: string | StaticImageData;
 }
 
 export default function WritingCard({
