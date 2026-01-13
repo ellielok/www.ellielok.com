@@ -137,7 +137,7 @@ export default function Home() {
                       <div className="text-sm text-gray-600 dark:text-gray-400">
                         Jul 2025 - Present
                       </div>
-                      <img src="/images/experience/Monash-logo.png" alt="Monash University" className="w-full pt-10 pr-10 h-auto" />
+                      <img src="/images/experience/Monash-logo.png" alt="Monash University" className="w-full pt-10 pr-10 h-auto dark:invert" />
                     </div>
                     <div className="md:w-3/4">
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -167,7 +167,7 @@ export default function Home() {
                       <div className="text-sm text-gray-600 dark:text-gray-400">
                         Aug 2022 - Jan 2024
                       </div>
-                      <img src="/images/experience/Fastlane-logo.png" alt="Fastlane" className="w-full pt-10 pr-10 h-auto" />
+                      <img src="/images/experience/Fastlane-logo.png" alt="Fastlane" className="w-full pt-10 pr-10 h-auto " />
                     </div>
                     <div className="md:w-3/4">
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
