@@ -61,7 +61,7 @@ export default function TableOfContents() {
     <>
       {/* Border Frame - fades out when scrolled */}
       <div
-        className={`fixed z-50 pointer-events-none transition-opacity duration-700 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
+        className={`fixed z-50 pointer-events-none transition-opacity duration-300 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
         style={{
           left: BORDER_LEFT,
           top: BORDER_TOP,
@@ -78,13 +78,13 @@ export default function TableOfContents() {
 
       {/* Edition Title - moves to top left */}
       <div
-        className={`fixed z-50 pointer-events-auto transition-all duration-700 ease-out ${scrolled ? 'top-20 left-5 xl:left-1/15' : ''}`}
+        className={`fixed z-50 pointer-events-auto transition-all duration-300 ease-out ${scrolled ? 'top-20 left-5 xl:left-1/15' : ''}`}
         style={{
           left: scrolled ? undefined : `calc(${BORDER_LEFT} + ${CONTENT_PADDING})`,
           top: scrolled ? undefined : `calc(${BORDER_TOP} + ${CONTENT_PADDING})`,
         }}
       >
-        <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-700 ${scrolled ? 'text-base' : 'text-lg'}`}>
+        <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-300 ${scrolled ? 'text-base' : 'text-lg'}`}>
           The<br />
           <span className="italic">Art</span>Nouveau<br />
           Edition
@@ -93,7 +93,7 @@ export default function TableOfContents() {
 
       {/* Description - fades out when scrolled */}
       <div
-        className={`fixed z-50 transition-all duration-700 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+        className={`fixed z-50 transition-all duration-300 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         style={{
           left: `calc(${BORDER_LEFT} + ${CONTENT_PADDING})`,
           top: `calc(${BORDER_TOP} + 160px)`,
