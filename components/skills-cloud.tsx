@@ -136,9 +136,9 @@ export default function SkillsCloud() {
         </defs>
 
         {/* Concentric ellipses centered at the cross point */}
-        <ellipse cx="50%" cy="50%" rx="15%" ry="12%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.5" />
-        <ellipse cx="50%" cy="50%" rx="30%" ry="24%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.4" />
-        <ellipse cx="50%" cy="50%" rx="45%" ry="36%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.3" />
+        <ellipse cx="50%" cy="50%" rx="13%" ry="12%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.5" />
+        <ellipse cx="50%" cy="50%" rx="26%" ry="24%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.4" />
+        <ellipse cx="50%" cy="50%" rx="39%" ry="36%" fill="none" stroke="url(#ellipseGradient)" strokeWidth="1" opacity="0.3" />
 
         {/* Center point */}
         <circle cx="50%" cy="50%" r="3" fill="rgb(168, 85, 247)" opacity="0.6" />
@@ -204,7 +204,7 @@ export default function SkillsCloud() {
         );
       })}
 
-      <style jsx>{`
+      <style jsx global>{`
         @keyframes float {
           0%, 100% {
             transform: translateY(0px);
