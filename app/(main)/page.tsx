@@ -42,7 +42,7 @@ export default function Home() {
 
 
       {/* Static text after TOC animation */}
-      <div className="absolute left-1/2 -translate-x-1/2 md:left-5/11 z-40 pointer-events-none" style={{ top: '88vh' }}>
+      <div className="absolute left-1/2 -translate-x-1/2 md:left-1/3 xl:left-7/17 z-40 pointer-events-none" style={{ top: '88vh' }}>
         <div className="flex flex-col gap-60">
           <h2 className="text-6xl md:text-9xl font-bold text-black dark:text-white">
             Begin here
@@ -50,7 +50,7 @@ export default function Home() {
           {/* 这里需要加入容器 */}
           <div className='space-y-6 md:space-y-5 text-start
           text-xl md:text-2xl
-          text-black dark:text-gray-800'>
+          text-black dark:text-gray-800 md:translate-x-10'>
           <p className=" ">
             A personal site by Ellie
           </p>
