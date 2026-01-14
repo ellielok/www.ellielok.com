@@ -45,7 +45,7 @@ export default async function BlogPage() {
                     </span>
                   {/* Title */}
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors mb-2">
+                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors mb-2" style={{ fontFamily: 'var(--font-playfair)' }}>
                       {post.title}
                     </h2>
 

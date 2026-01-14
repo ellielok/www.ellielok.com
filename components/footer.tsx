@@ -28,14 +28,14 @@ export default function EnvFooter() {
         {/* Logo & Address */}
         <div>
           <div className="mb-4">
-            <div className="font-extrabold text-3xl tracking-tight">
+            <div className="font-extrabold text-3xl tracking-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
               ELLIE
               <br />
               LOK
             </div>
           </div>
           <div>
-            <p className="font-semibold mb-1">Address:</p>
+            <p className="font-semibold mb-1" style={{ fontFamily: 'var(--font-playfair)' }}>Address:</p>
             <p className="text-gray-600 dark:text-white/60">Monash University</p>
             <p className="text-gray-600 dark:text-white/60">Melbourne VIC</p>
           </div>
@@ -43,7 +43,7 @@ export default function EnvFooter() {
 
         {/* Phone & Fax */}
         <div>
-          <p className="font-semibold mb-1">Email:</p>
+          <p className="font-semibold mb-1" style={{ fontFamily: 'var(--font-playfair)' }}>Email:</p>
           <a className="text-gray-600 dark:text-white/60">{email}</a>
           <button
             onClick={() => copyToClipboard(email, 'email')}
@@ -56,7 +56,7 @@ export default function EnvFooter() {
               <Copy className="w-6 h-6 md:w-8 md:h-5 text-gray-600 dark:text-white/60 group-hover:text-gray-900 dark:group-hover:text-white/90" />
             )}
           </button>
-          <p className="font-semibold mt-3 mb-1">Contact Me</p>
+          <p className="font-semibold mt-3 mb-1" style={{ fontFamily: 'var(--font-playfair)' }}>Contact Me</p>
           <div className="flex items-center gap-4">
             <a
               href="https://github.com/ellielok"
@@ -88,7 +88,7 @@ export default function EnvFooter() {
 
         {/* Mailing & ABN */}
         <div>
-          <p className="font-semibold mb-1">Projects</p>
+          <p className="font-semibold mb-1" style={{ fontFamily: 'var(--font-playfair)' }}>Projects</p>
           <div className="space-y-2">
             <p className="text-gray-600 dark:text-white/60 hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors">
               <a href="/projects/tipsytrack">TipsyTrack</a>
@@ -110,7 +110,7 @@ export default function EnvFooter() {
 
         {/* Find Sessions & Contact */}
         <div>
-          <p className="font-semibold mb-1">Others</p>
+          <p className="font-semibold mb-1" style={{ fontFamily: 'var(--font-playfair)' }}>Others</p>
           <a href="/history/2510-halloween/contact">
             <p className="text-gray-600 dark:text-white/60 cursor-pointer hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors">
               About Me

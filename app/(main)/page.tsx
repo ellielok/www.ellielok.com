@@ -52,7 +52,7 @@ export default function Home() {
           {/* 这里需要加入容器 */}
           <div className='space-y-6 md:space-y-5 text-start
           text-xl md:text-2xl
-          text-black dark:text-gray-800 md:translate-x-10'>
+          text-black dark:text-gray-800 md:translate-x-10 ' style={{ fontFamily: 'var(--font-playfair)' }}>
           <p className=" ">
             A personal site by Ellie
           </p>

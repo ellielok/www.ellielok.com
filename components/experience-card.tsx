@@ -36,7 +36,7 @@ export default function ExperienceCard({
             />
           </div>
           <div className="md:w-3/4">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-teal-400 transition-colors mb-2">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-teal-400 transition-colors mb-2" style={{ fontFamily: 'var(--font-playfair)' }}>
               {title}
             </h3>
             <p className="text-gray-500 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-100 transition-colors mb-2">

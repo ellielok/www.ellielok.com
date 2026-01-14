@@ -11,7 +11,7 @@ export default function BlogPostLayout({ title, date, tags, children }: BlogPost
       <div className="max-w-3xl mx-auto px-6 md:px-10 py-10">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4" style={{ fontFamily: 'var(--font-playfair)' }}>
             {title}
           </h1>
           <div className="flex items-center gap-4">

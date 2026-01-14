@@ -32,7 +32,7 @@ export default function ProjectCard({
             </div>
             <div className="md:w-3/4">
               <div className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors mb-2">{date}</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-teal-400 transition-colors inline-flex items-center gap-2">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-teal-400 transition-colors inline-flex items-center gap-2" style={{ fontFamily: 'var(--font-playfair)' }}>
                 {title}
                 <ArrowUpRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </h3>
