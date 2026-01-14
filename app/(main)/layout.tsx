@@ -4,6 +4,12 @@ import '../globals.css';
 import { Providers } from '../../components/providers';
 import FooterWrapper from '@/components/env-footer-wrapper';
 import { CursorGlow } from '@/components/cursor-glow';
+import { Playfair_Display } from 'next/font/google';
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+});
 
 
 export default function MainLayout({
@@ -18,7 +24,7 @@ export default function MainLayout({
         transition-colors
         bg-fixed
     min-h-screen
-        `}
+        ${playfair.variable}`}
     >
       <CursorGlow />
       <Providers>

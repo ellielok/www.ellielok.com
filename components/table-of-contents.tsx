@@ -84,7 +84,7 @@ export default function TableOfContents() {
           top: scrolled ? undefined : `calc(${BORDER_TOP} + ${CONTENT_PADDING})`,
         }}
       >
-        <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-300 ${scrolled ? 'text-base' : 'text-lg'}`}>
+        <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-300 ${scrolled ? 'text-base' : 'text-lg'}`} style={{ fontFamily: 'var(--font-playfair)' }}>
           The<br />
           <span className="italic">Art</span>Nouveau<br />
           Edition

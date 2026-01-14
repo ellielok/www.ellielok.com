@@ -46,7 +46,7 @@ export default function Home() {
       {/* Static text after TOC animation */}
       <div className="absolute left-1/2 -translate-x-1/2 md:left-1/3 xl:left-7/17 z-40 pointer-events-none" style={{ top: '88vh' }}>
         <div className="flex flex-col gap-60">
-          <h2 className="text-6xl md:text-9xl font-bold text-black dark:text-white">
+          <h2 className="text-6xl md:text-9xl font-bold text-black dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
             Begin here
           </h2>
           {/* 这里需要加入容器 */}
@@ -77,7 +77,7 @@ export default function Home() {
             <div id="about" className="scroll-mt-80 mt-30">
 
               <RevealOnScroll>
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
                   About Me
                 </h2>
               </RevealOnScroll>
@@ -129,7 +129,7 @@ export default function Home() {
             {/* Skills Section */}
             <div id="skills" className="scroll-mt-20">
               <RevealOnScroll>
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
                   Skills
                 </h2>
               </RevealOnScroll>
@@ -142,7 +142,7 @@ export default function Home() {
             {/* Experience Section */}
             <div id="experience" className="scroll-mt-20">
               <RevealOnScroll>
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
                   Experience
                 </h2>
               </RevealOnScroll>
@@ -173,7 +173,7 @@ export default function Home() {
             {/* Projects Section */}
             <div id="projects" className="scroll-mt-20">
               <RevealOnScroll>
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
                   Projects
                 </h2>
               </RevealOnScroll>
