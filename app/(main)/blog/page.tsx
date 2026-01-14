@@ -13,7 +13,7 @@ export default async function BlogPage() {
   return (
     <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-6 md:px-10 py-10">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-10">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-10" style={{ fontFamily: 'var(--font-playfair)' }}>
           Blog
         </h1>
 

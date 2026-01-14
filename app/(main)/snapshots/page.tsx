@@ -36,7 +36,7 @@ export default function SnapshotsPage() {
     <div className="min-h-screen pt-30">
       
         <div className="px-6 md:px-10 pb-10 text-center space-y-2">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
             Snapshots
           </h1>
           <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed ">

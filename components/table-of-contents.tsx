@@ -99,7 +99,7 @@ export default function TableOfContents() {
           top: `calc(${BORDER_TOP} + 160px)`,
         }}
       >
-        <div className="text-black dark:text-white text-xs font-light leading-relaxed">
+        <div className="text-black dark:text-white text-xs font-light leading-relaxed" style={{ fontFamily: 'var(--font-playfair)' }}>
           A new portfolio experience.<br />
           Built with modern web technologies.
         </div>
@@ -126,10 +126,11 @@ export default function TableOfContents() {
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
                   className="text-black dark:text-white text-sm font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed"
+                  style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.title}
                 </a>
-                <span className="text-black dark:text-white text-xs font-serif leading-relaxed">
+                <span className="text-black dark:text-white text-xs font-serif leading-relaxed" style={{ fontFamily: 'var(--font-playfair)' }}>
                   {item.roman}
                 </span>
               </li>
