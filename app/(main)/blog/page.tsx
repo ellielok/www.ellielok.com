@@ -40,6 +40,9 @@ export default async function BlogPage() {
 
                 {/* Right: Content */}
                 <div className="flex-1 flex flex-col justify-between">
+                  <span className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+                      {formatDate(post.date)}
+                    </span>
                   {/* Title */}
                   <div>
                     <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors mb-2">
@@ -56,9 +59,7 @@ export default async function BlogPage() {
 
                   {/* Meta: Date and Tags */}
                   <div className="flex items-center gap-3 flex-wrap">
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
-                      {formatDate(post.date)}
-                    </span>
+                    
                     {post.tags.map((tag, index) => (
                       <span
                         key={index}
