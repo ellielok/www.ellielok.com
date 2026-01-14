@@ -27,9 +27,9 @@ export default function Home() {
   return (
     <>
       {/* Particles Background */}
-      <div className="fixed inset-0 z-1 pointer-events-none">
+      {/* <div className="fixed inset-0 z-1 pointer-events-none">
         <ParticlesBackground />
-      </div>
+      </div> */}
 
       {/* Table of Contents - Full Screen */}
       <TableOfContents />
