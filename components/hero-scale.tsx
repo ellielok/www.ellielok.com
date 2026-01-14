@@ -90,23 +90,41 @@ export default function HeroScale({ children }: HeroScaleProps) {
           transition: 'transform 0.1s ease-out',
         }}
       >
-        {/* 手机光照 */}
+        {/* Lightbeam -1 */}
         <div
           className="
-    absolute w-15 h-15 rounded-full blur-md pointer-events-none z-3
+    absolute w-45 h-45 rounded-full blur-md pointer-events-none z-3
     opacity-0 dark:opacity-90
     transition-opacity duration-700 ease-in-out
   "
           style={{
             top: '15%',
-            left: '53%',
+            left: '57%',
             background:
-              'radial-gradient(circle, rgba(255,255,255,0.8) 60%, rgba(255,255,255,0.5) 80%, rgba(255,255,255,0.2) 100%, transparent 100%)',
+              'radial-gradient(circle, rgba(255,255,255,0.8) 00%, rgba(255,255,255,0.5) 30%, rgba(255,255,255,0.2) 60%, transparent 100%)',
             mixBlendMode: 'overlay',
             transform: 'translate(-60%, -50%)',
           }}
         />
-        <div className="relative dark:brightness-50 dark:contrast-105 transition-opacity">
+        {/* Lightbeam -2 */}
+        <div
+          className="
+    absolute w-15 h-15 rounded-full blur-md pointer-events-none z-3
+    hidden dark:block
+     duration-700 ease-in-out
+  "
+          style={{
+            top: '15%',
+            left: '53%',
+            background:
+              'radial-gradient(circle, rgba(255,255,255,0.8) 100%, rgba(255,255,255,0.5) 100%, rgba(255,255,255,0.2) 100%, transparent 100%)',
+            mixBlendMode: 'overlay',
+            transform: 'translate(-60%, -50%)',
+          }}
+        />
+        
+        {/* Container for girl image */}
+        <div className="relative dark:brightness-30 dark:contrast-105 transition-opacity">
           {/* Base image - girl with closed eyes */}
           <Image
             src="/images/girl-close.png"
