@@ -67,7 +67,7 @@ export default function Home() {
       <WaveDivider className="relative z-20" />
 
       {/* Content Section */}
-      <section className="content bg-[#FEFCE8] dark:bg-[#1E2939] min-h-screen transition-colors relative z-20">
+      <section className="content bg-[#faf8f5] dark:bg-[#0e1218] min-h-screen transition-colors relative z-20">
         <div className="w-full px-6 md:px-10 py-20">
           <div className="md:ml-40 md:mr-5 xl:ml-100 xl:mr-40 space-y-30">
 

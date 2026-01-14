@@ -150,7 +150,7 @@ export default function ProductDetailsPage({
   pages,
 }: ProductDetailsProps) {
   return (
-    <div className="min-h-screen bg-[#FEFCE8] dark:bg-[#1E2939] transition-colors">
+    <div className="min-h-screen bg-[#faf8f5] dark:bg-[#0e1218] transition-colors">
       <div className="w-full px-3 md:px-10 pt-20 pb-20 max-w-screen-xl mx-auto">
       {/* Back Button */}
       <div className="mb-10 font-semi">

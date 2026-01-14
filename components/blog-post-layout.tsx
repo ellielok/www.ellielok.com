@@ -7,7 +7,7 @@ interface BlogPostLayoutProps {
 
 export default function BlogPostLayout({ title, date, tags, children }: BlogPostLayoutProps) {
   return (
-    <div className="min-h-screen bg-[#FEFCE8] dark:bg-[#1E2939] transition-colors pt-20">
+    <div className="min-h-screen bg-[#faf8f5] dark:bg-[#0e1218] transition-colors pt-20">
       <div className="max-w-3xl mx-auto px-6 md:px-10 py-10">
         {/* Header */}
         <div className="mb-8">

@@ -14,7 +14,7 @@ export default function MainLayout({
   return (
     <div
       className={` font-sans antialiased
-        bg-[#FEFCE8] dark:bg-[#1E2939]
+        bg-[#faf8f5] dark:bg-[#0e1218]
         transition-colors
         bg-fixed
     min-h-screen
