@@ -24,10 +24,10 @@ export default async function BlogPage() {
               href={`/blog/${post.folder}/${post.slug}`}
               className="block group"
             >
-              <div className="flex gap-6 p-6 rounded-xl transition-all hover:shadow-lg">
+              <div className="flex gap-6 p-6 rounded-xl transition-all">
                 {/* Left: Image */}
                 {post.image && (
-                  <div className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
+                  <div className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700 transition-shadow group-hover:shadow-xl">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -40,7 +40,7 @@ export default async function BlogPage() {
 
                 {/* Right: Content */}
                 <div className="flex-1 flex flex-col justify-between">
-                  <span className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+                  <span className="text-sm font-semibold text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
                       {formatDate(post.date)}
                     </span>
                   {/* Title */}
@@ -51,7 +51,7 @@ export default async function BlogPage() {
 
                     {/* Description */}
                     {post.description && (
-                      <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 mb-3">
+                      <p className="text-sm text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-200 line-clamp-2 mb-3 transition-colors">
                         {post.description}
                       </p>
                     )}
@@ -59,11 +59,11 @@ export default async function BlogPage() {
 
                   {/* Meta: Date and Tags */}
                   <div className="flex items-center gap-3 flex-wrap">
-                    
+
                     {post.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="text-xs px-2 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
+                        className="text-xs px-2 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 group-hover:bg-gray-300 dark:group-hover:bg-gray-600 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors"
                       >
                         {tag}
                       </span>
