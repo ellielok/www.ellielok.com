@@ -70,7 +70,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
     <>
       {/* Hero Section with scaling background */}
       <section
-        className="hero min-h-screen bg-cover bg-center bg-no-repeat flex items-end justify-center fixed top-0 left-0 w-full bg-[url('/images/bg-light.png')] dark:bg-[url('/images/bg-dark.png')] origin-center z-0"
+        className="hero min-h-screen bg-cover bg-center bg-no-repeat flex items-end justify-center fixed top-0 left-0 w-full bg-[url('/images/bg-light.png')] dark:bg-[url('/images/bg-dark.png')] origin-center z-0 dark:brightness-80"
         style={{
           transform: `scale(${
             scale * 1.06
