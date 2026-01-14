@@ -9,6 +9,7 @@ import SkillsCloud from '@/components/skills-cloud';
 import Image from 'next/image';
 import Link from 'next/link';
 import ProjectCard from '@/components/project-card';
+import ExperienceCard from '@/components/experience-card';
 import tipsyThumbnail from '@/app/history/2510-halloween/images/projects/tipsy/tipsy-thumbnail.png';
 import kickThumbnail from '@/app/history/2510-halloween/images/projects/kick/kick_thumbnail.png';
 import volunThumbnail from '@/app/history/2510-halloween/images/projects/volun/volun-thumbnail.png';
@@ -147,70 +148,25 @@ export default function Home() {
               </RevealOnScroll>
 
               <div className="space-y-8">
-                {/* Experience Item 1 */}
-                <RevealOnScroll >
-                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
-                  <div className="flex flex-col md:flex-row md:items-start gap-4">
-                    <div className="md:w-1/4 flex flex-col gap-3">
-                      <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Jul 2025 - Present
-                      </div>
-                      <img src="/images/experience/Monash-logo.png" alt="Monash University" className="w-full pt-10 pr-10 h-auto dark:invert" />
-                    </div>
-                    <div className="md:w-3/4">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                        Teaching Associate (TA)
-                      </h3>
-                      <p className="text-gray-700 dark:text-gray-300 mb-2">
-                        Advanced Database • Monash University
-                      </p>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
-                        Facilitated postgraduate lab sessions by guiding practical exercises in database technologies (StarSchema, PostGIS, SQL queries).
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {['DBeaver', 'PostGIS', 'PostgreSQL', 'Docker'].map((skill) => (
-                          <span key={skill} className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full">
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                </RevealOnScroll>
-
-                {/* Experience Item 2 */}
-                <RevealOnScroll >
-                  <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
-                  <div className="flex flex-col md:flex-row md:items-start gap-4">
-                    <div className="md:w-1/4 flex flex-col gap-3">
-                      <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Aug 2022 - Jan 2024
-                      </div>
-                      <img src="/images/experience/Fastlane-logo-light.png" alt="Fastlane" className="w-full pt-10 pr-10 h-auto dark:block" />
-                      <img src="/images/experience/Fastlane-logo-light.png" alt="Fastlane" className="w-full pt-10 pr-10 h-auto hidden dark:hidden" />
-                    </div>
-                    <div className="md:w-3/4">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                        Senior Advertising Specialist
-                      </h3>
-                      <p className="text-gray-700 dark:text-gray-300 mb-2">
-                        Digital Marketing • Fastlane
-                      </p>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
-                        Managed and optimised multi-channel digital advertising campaigns across Google, Meta, and programmatic platforms. Ensured alignment with overall brand strategy, conducted performance analytics, and improved ROI through A/B testing and audience segmentation.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {['Google Ads', 'Meta Ads', 'Google Analytics', 'Programmatic', 'Figma', 'Data Studio'].map((skill) => (
-                          <span key={skill} className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full">
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                </RevealOnScroll>
+                <ExperienceCard
+                  date="Jul 2025 - Present"
+                  logo="/images/experience/Monash-logo.png"
+                  logoAlt="Monash University"
+                  darkInvert
+                  title="Teaching Associate (TA)"
+                  subtitle="Advanced Database • Monash University"
+                  description="Facilitated postgraduate lab sessions by guiding practical exercises in database technologies (StarSchema, PostGIS, SQL queries)."
+                  skills={['DBeaver', 'PostGIS', 'PostgreSQL', 'Docker']}
+                />
+                <ExperienceCard
+                  date="Aug 2022 - Jan 2024"
+                  logo="/images/experience/Fastlane-logo-light.png"
+                  logoAlt="Fastlane"
+                  title="Senior Advertising Specialist"
+                  subtitle="Digital Marketing • Fastlane"
+                  description="Managed and optimised multi-channel digital advertising campaigns across Google, Meta, and programmatic platforms. Ensured alignment with overall brand strategy, conducted performance analytics, and improved ROI through A/B testing and audience segmentation."
+                  skills={['Google Ads', 'Meta Ads', 'Google Analytics', 'Programmatic', 'Figma', 'Data Studio']}
+                />
               </div>
             </div>
 
