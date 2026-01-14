@@ -3,7 +3,7 @@ import Footer from '@/components/footer';
 import '../globals.css';
 import { Providers } from '../../components/providers';
 import FooterWrapper from '@/components/env-footer-wrapper';
-
+import { CursorGlow } from '@/components/cursor-glow';
 
 
 export default function MainLayout({
@@ -20,6 +20,7 @@ export default function MainLayout({
     min-h-screen
         `}
     >
+      <CursorGlow />
       <Providers>
         <Header />
 
