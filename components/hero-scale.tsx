@@ -82,30 +82,31 @@ export default function HeroScale({ children }: HeroScaleProps) {
         <div className="mb-20 z-20 flex gap-4">{children}</div>
       </section>
 
-      
-
       {/* Girl illustration - separate layer */}
       <div
-        className="fixed -right-20 top-0 xl:right-1/10 xl:block origin-top z-2 pointer-events-none dark:brightness-50 dark:contrast-105 transition-opacity"
+        className="fixed -right-20 top-0 xl:right-1/10 xl:block origin-top z-2 pointer-events-none "
         style={{
           transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px)`,
           transition: 'transform 0.1s ease-out',
         }}
       >
-        <div className="relative">
-          {/* 手机光照 - 红色调试块 */}
-          <div
-            className="hidden dark:block absolute w-28 h-28 rounded-full 
-            blur-3xl
-            pointer-events-none z-3"
-            style={{
-              top: '15%',
-              left: '55%',
-              background: 'radial-gradient(circle, rgba(255,255,255,0.4) 100%, rgba(255,255,255,0.1) 100%, transparent 100%',
-              transform: 'translate(-50%, -50%) 150%, transparent 100%',
-              opacity: 0.8,
-            }}
-          />
+        {/* 手机光照 */}
+        <div
+          className="
+    absolute w-15 h-15 rounded-full blur-md pointer-events-none z-3
+    opacity-0 dark:opacity-90
+    transition-opacity duration-700 ease-in-out
+  "
+          style={{
+            top: '15%',
+            left: '53%',
+            background:
+              'radial-gradient(circle, rgba(255,255,255,0.8) 60%, rgba(255,255,255,0.5) 80%, rgba(255,255,255,0.2) 100%, transparent 100%)',
+            mixBlendMode: 'overlay',
+            transform: 'translate(-60%, -50%)',
+          }}
+        />
+        <div className="relative dark:brightness-50 dark:contrast-105 transition-opacity">
           {/* Base image - girl with closed eyes */}
           <Image
             src="/images/girl-close.png"
@@ -114,7 +115,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
             height={430}
             priority
           />
-          
+
           {/* Overlay image - girl with open eyes */}
           <Image
             src="/images/eye-open.png"
