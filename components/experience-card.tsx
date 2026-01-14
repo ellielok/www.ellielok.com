@@ -23,7 +23,7 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <RevealOnScroll>
-      <div className="group p-6 rounded-lg dark:hover:bg-[#1E3A5F] transition-all">
+      <div className="group p-6 rounded-sm border border-transparent dark:hover:bg-white/3 dark:hover:backdrop-blur-sm dark:hover:border-white/2 dark:hover:shadow-sm dark:hover:shadow-black/10 transition-all">
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           <div className="md:w-1/4 flex flex-col items-center justify-center gap-3">
             <div className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
