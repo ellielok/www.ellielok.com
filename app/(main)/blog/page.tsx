@@ -11,7 +11,7 @@ export default async function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf8f5] dark:bg-[#0e1218] transition-colors pt-20">
+    <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-6 md:px-10 py-10">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-10">
           Blog
