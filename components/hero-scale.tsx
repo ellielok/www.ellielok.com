@@ -149,7 +149,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
       </div>
 
       {/* Spacer to allow scrolling */}
-      <div style={{ height: '120vh' }}></div>
+      <div style={{ height: '100vh' }}></div>
     </>
   );
 }
