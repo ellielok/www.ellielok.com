@@ -34,7 +34,7 @@ export function CursorGlow() {
   return (
     <div
       ref={elRef}
-      className="fixed pointer-events-none z-[45] rounded-full blur-3xl"
+      className="fixed hidden dark:block pointer-events-none z-[45] rounded-full blur-3xl"
       style={{
         left: 0,
         top: 0,

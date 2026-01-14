@@ -82,7 +82,7 @@ export default function Home() {
 
 
               <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                <RevealOnScroll delay={200}>
+                <RevealOnScroll >
                   <p>
                     I am an aspiring <span className="font-semibold text-gray-900 dark:text-white">full-stack developer</span> skilled in React,
                     TypeScript, and modern CSS frameworks. Passionate about creating
@@ -93,7 +93,7 @@ export default function Home() {
                   </p>
                 </RevealOnScroll>
 
-                <RevealOnScroll delay={400}>
+                <RevealOnScroll >
                   <p>
                     Previously, I worked as a <span className="font-semibold text-gray-900 dark:text-white">Senior Advertising Specialist</span> at{' '}
                     <a href="https://fstln.io/en" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900 dark:hover:text-white transition-colors">
@@ -106,7 +106,7 @@ export default function Home() {
                   </p>
                 </RevealOnScroll>
 
-                <RevealOnScroll delay={600}>
+                <RevealOnScroll >
                   <div className="mt-8">
                     <a
                       href="/cv/ellie-cv.pdf"
@@ -132,7 +132,7 @@ export default function Home() {
                 </h2>
               </RevealOnScroll>
 
-              <RevealOnScroll delay={200}>
+              <RevealOnScroll >
                 <SkillsCloud />
               </RevealOnScroll>
             </div>
@@ -147,7 +147,7 @@ export default function Home() {
 
               <div className="space-y-8">
                 {/* Experience Item 1 */}
-                <RevealOnScroll delay={200}>
+                <RevealOnScroll >
                   <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
                     <div className="md:w-1/4 flex flex-col gap-3">
@@ -179,7 +179,7 @@ export default function Home() {
                 </RevealOnScroll>
 
                 {/* Experience Item 2 */}
-                <RevealOnScroll delay={400}>
+                <RevealOnScroll >
                   <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all">
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
                     <div className="md:w-1/4 flex flex-col gap-3">
@@ -223,7 +223,7 @@ export default function Home() {
 
               <div className="space-y-8">
                 {/* Project 1 */}
-                <RevealOnScroll delay={200}>
+                <RevealOnScroll>
                   <Link href="/projects/tipsytrack">
                     <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all cursor-pointer">
                       <div className="flex flex-col md:flex-row gap-6">
@@ -250,7 +250,7 @@ export default function Home() {
                 </RevealOnScroll>
 
                 {/* Project 2 */}
-                <RevealOnScroll delay={400}>
+                <RevealOnScroll>
                   <Link href="/projects/kickstart">
                     <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all cursor-pointer">
                       <div className="flex flex-col md:flex-row gap-6">
@@ -277,7 +277,7 @@ export default function Home() {
                 </RevealOnScroll>
 
                 {/* Project 3 */}
-                <RevealOnScroll delay={600}>
+                <RevealOnScroll>
                   <Link href="/projects/voluntrack">
                     <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all cursor-pointer">
                       <div className="flex flex-col md:flex-row gap-6">
@@ -304,7 +304,7 @@ export default function Home() {
                 </RevealOnScroll>
 
                 {/* Project 4 */}
-                <RevealOnScroll delay={800}>
+                <RevealOnScroll>
                   <Link href="/projects/birdtag">
                     <div className="group p-6 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition-all cursor-pointer">
                       <div className="flex flex-col md:flex-row gap-6">
