@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -72,25 +72,40 @@ export default function HeroScale({ children }: HeroScaleProps) {
       <section
         className="hero min-h-screen bg-cover bg-center bg-no-repeat flex items-end justify-center fixed top-0 left-0 w-full bg-[url('/images/bg-light.png')] dark:bg-[url('/images/bg-dark.png')] origin-center z-0"
         style={{
-          transform: `scale(${scale * 1.06}) translate(${bgOffsetX}px, ${bgOffsetY}px) perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`,
+          transform: `scale(${
+            scale * 1.06
+          }) translate(${bgOffsetX}px, ${bgOffsetY}px) perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`,
           transition: 'transform 0.1s ease-out',
         }}
       >
         {/* Buttons at bottom */}
-        <div className="mb-20 z-20 flex gap-4">
-          {children}
-        </div>
+        <div className="mb-20 z-20 flex gap-4">{children}</div>
       </section>
+
+      
 
       {/* Girl illustration - separate layer */}
       <div
-        className="fixed -right-20 top-0 xl:right-1/10 xl:block origin-top z-2 pointer-events-none"
+        className="fixed -right-20 top-0 xl:right-1/10 xl:block origin-top z-2 pointer-events-none dark:brightness-50 dark:contrast-105 transition-opacity"
         style={{
           transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px)`,
           transition: 'transform 0.1s ease-out',
         }}
       >
         <div className="relative">
+          {/* 手机光照 - 红色调试块 */}
+          <div
+            className="hidden dark:block absolute w-28 h-28 rounded-full 
+            blur-3xl
+            pointer-events-none z-3"
+            style={{
+              top: '15%',
+              left: '55%',
+              background: 'radial-gradient(circle, rgba(255,255,255,0.4) 100%, rgba(255,255,255,0.1) 100%, transparent 100%',
+              transform: 'translate(-50%, -50%) 150%, transparent 100%',
+              opacity: 0.8,
+            }}
+          />
           {/* Base image - girl with closed eyes */}
           <Image
             src="/images/girl-close.png"
@@ -99,6 +114,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
             height={430}
             priority
           />
+          
           {/* Overlay image - girl with open eyes */}
           <Image
             src="/images/eye-open.png"
