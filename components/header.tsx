@@ -1,31 +1,14 @@
 'use client';
 import * as React from 'react';
 import Link from 'next/link';
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from 'lucide-react';
-import { Mail, Phone, Copy, Check, Github } from 'lucide-react';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-
-import { useEffect, useState } from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Github } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 import ThemeToggle from './theme-toggle';
+import HeaderButton from './header-button';
 import Image from 'next/image';
 import logo from '@/public/logo.png';
-import { ArrowUpRight } from 'lucide-react';
 
 export default function Header() {
-  const headerItems = [
-    { label: 'Ellie Lok', href: '/' },
-    { label: 'Contact', href: '/contact' },
-  ];
-
   return (
     <>
       {/* Gradient background overlay */}
@@ -41,65 +24,33 @@ export default function Header() {
             <div className="font-semibold text-gray-500 dark:text-gray-400">Developer</div>
           </a>
 
-          <NavigationMenu className="">
-            <NavigationMenuList className="flex-wrap">
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}
-                >
-                  <Link href="/blog">Blog</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem className="hidden md:block">
-                <NavigationMenuTrigger className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black">
-                  Editions
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[300px] gap-4">
-                    <li>
-                      <NavigationMenuLink
-                        asChild
-                        className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
-                      >
-                        <Link href="/history/2510-halloween" target="_blank" rel="noopener noreferrer" className="group">
-                          <div className="inline-flex items-center gap-1 font-semibold group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors">
-                            Halloween '25
-                            <ArrowUpRight className="w-5 h-5 transition-all duration-200 stroke-current group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-blue-600 dark:group-hover:text-[#93f5fa]" />
-                          </div>
-                          <div className="text-muted-foreground group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors">
-                            🎃 Made for the spooky season.
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink
-                        asChild
-                        className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
-                      >
-                        <Link href="#">
-                          <div className="font-medium">Art Nouveau '26</div>
-                          <div className="text-muted-foreground">
-                            💐 Story behind this edition. Under construction.
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>M
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          <div className="flex flex-row items-center gap-2">
+            <HeaderButton label="Blog" href="/blog" />
+            <div className="hidden md:block">
+              <HeaderButton
+                label="Editions"
+                dropdownItems={[
+                  {
+                    title: "Halloween '25",
+                    description: "Made for the spooky season.",
+                    href: "/history/2510-halloween",
+                    icon: "🎃",
+                    external: true
+                  },
+                  {
+                    title: "Art Nouveau '26",
+                    description: "Story behind this edition. Under construction.",
+                    href: "#",
+                    icon: "💐"
+                  }
+                ]}
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-row order-last">
-          <NavigationMenu>
-                <NavigationMenuLink
-                  asChild
-                  className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}
-                >
-                  <Link href="/snapshots">Snapshots</Link>
-                </NavigationMenuLink>
-          </NavigationMenu>
+        <div className="flex flex-row order-last items-center gap-2">
+          <HeaderButton label="Snapshots" href="/snapshots" />
           <a
               href="https://github.com/ellielok"
               target="_blank"
