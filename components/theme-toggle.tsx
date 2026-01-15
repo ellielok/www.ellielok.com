@@ -35,7 +35,7 @@ function ThemeToggle() {
     return (
         <button
             onClick={handleToggle}
-            className="h-10 w-10 inline-flex items-center justify-center text-black dark:text-white hover:bg-white hover:text-black dark:hover:bg-white dark:hover:text-black rounded-md transition-all"
+            className="h-10 w-10 inline-flex items-center justify-center text-black dark:text-white hover:bg-[#101828] hover:text-white dark:hover:bg-white dark:hover:text-black rounded-md transition-all"
             aria-label="Toggle theme"
         >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}

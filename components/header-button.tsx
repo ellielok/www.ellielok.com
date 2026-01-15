@@ -43,7 +43,7 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
     return (
       <Link
         href={href}
-        className="h-10 px-4 inline-flex items-center justify-center text-sm font-medium text-black dark:text-white hover:bg-white hover:text-black dark:hover:bg-white dark:hover:text-black rounded-md transition-colors"
+        className="h-10 px-4 inline-flex items-center justify-center text-sm font-medium text-black dark:text-white hover:bg-[#101828] hover:text-white dark:hover:bg-white dark:hover:text-black rounded-md transition-colors"
       >
         {label}
       </Link>
@@ -59,7 +59,7 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="h-10 px-4 inline-flex items-center justify-center gap-1 text-sm font-medium text-black dark:text-white hover:bg-white hover:text-black dark:hover:bg-white dark:hover:text-black rounded-md transition-colors"
+        className="h-10 px-4 inline-flex items-center justify-center gap-1 text-sm font-medium text-black dark:text-white hover:bg-[#101828] hover:text-white dark:hover:bg-white dark:hover:text-black rounded-md transition-colors"
       >
         {label}
         <svg
@@ -84,9 +84,9 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
                 href={item.href}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className="block px-4 py-2 hover:bg-white dark:hover:bg-gray-200 transition-all group"
+                className="block px-4 py-2 hover:bg-[#101828] dark:hover:bg-gray-200 transition-all group"
               >
-                <div className="inline-flex items-center gap-1 text-sm font-medium text-black dark:text-black">
+                <div className="inline-flex items-center gap-1 text-sm font-medium text-black dark:text-black group-hover:text-white dark:group-hover:text-black">
                   {item.title}
                   {item.external && (
                     <svg className="w-4 h-4 transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +94,7 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
                     </svg>
                   )}
                 </div>
-                <div className="text-sm font-normal text-gray-600 dark:text-gray-600 mt-0.5">
+                <div className="text-sm font-normal text-gray-600 dark:text-gray-600 group-hover:text-white dark:group-hover:text-black mt-0.5">
                   {item.icon} {item.description}
                 </div>
               </Link>
