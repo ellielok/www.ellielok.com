@@ -62,9 +62,12 @@ export default function Header() {
                         asChild
                         className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
                       >
-                        <Link href="/history/2510-halloween" target="_blank" rel="noopener noreferrer">
-                          <div className="inline-flex items-center gap-1 font-semibold hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5">Halloween '25<ArrowUpRight className="w-5 h-5 transition-transform duration-200 stroke-current  group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
-                          <div className="text-muted-foreground">
+                        <Link href="/history/2510-halloween" target="_blank" rel="noopener noreferrer" className="group">
+                          <div className="inline-flex items-center gap-1 font-semibold group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors">
+                            Halloween '25
+                            <ArrowUpRight className="w-5 h-5 transition-all duration-200 stroke-current group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-blue-600 dark:group-hover:text-[#93f5fa]" />
+                          </div>
+                          <div className="text-muted-foreground group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors">
                             🎃 Made for the spooky season.
                           </div>
                         </Link>
@@ -80,7 +83,7 @@ export default function Header() {
                           </div>
                         </Link>
                       </NavigationMenuLink>
-                    </li>
+                    </li>M
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
