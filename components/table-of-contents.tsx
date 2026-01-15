@@ -58,7 +58,7 @@ export default function TableOfContents() {
   if (!mounted) return null
 
   return (
-    <>
+    <div div className="hidden md:block" >
       {/* Border Frame - fades out when scrolled */}
       <div
         className={`fixed z-50 pointer-events-none transition-opacity duration-300 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
@@ -87,7 +87,7 @@ export default function TableOfContents() {
       >
         <h1 className={`font-bold text-black dark:text-white leading-tight transition-all duration-300 ${scrolled ? 'text-base' : 'text-lg'}`} style={{ fontFamily: 'var(--font-playfair)' }}>
           The<br />
-          <span className="italic">Art</span>Nouveau<br />
+          <span className="italic">Art Nouveau</span> <br />
           Edition
         </h1>
       </div>
@@ -139,6 +139,6 @@ export default function TableOfContents() {
           </ul>
         </nav>
       </div>
-    </>
+    </div>
   )
 }
