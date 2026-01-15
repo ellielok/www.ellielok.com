@@ -91,6 +91,7 @@
 
 html {
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 body {
@@ -98,6 +99,7 @@ body {
   /* Transparent effect for all the text */
   @apply text-white/75;
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 /* Custom font sizes */

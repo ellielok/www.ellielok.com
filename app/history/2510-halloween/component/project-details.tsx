@@ -1,7 +1,7 @@
 'use client';
 import Tag from './sub-component/tag';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Code2, Sparkles, Package } from 'lucide-react';
@@ -11,13 +11,13 @@ interface ProjectProps {
   description?: string;
   stack?: string;
   skills?: string;
-  thumbnail: string;
+  thumbnail: string | StaticImageData;
 }
 
 interface PageItem {
   name: string;
   description: string;
-  screenshot: string | string[];
+  screenshot: string | string[] | StaticImageData | StaticImageData[];
 }
 
 interface ProjectShowcaseProps {
@@ -93,7 +93,7 @@ function PageSection({
 }: {
   name: string;
   description: string;
-  screenshot: string | string[];
+  screenshot: string | string[] | StaticImageData | StaticImageData[];
   reverse?: boolean;
 }) {
   return (
