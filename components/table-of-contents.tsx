@@ -143,13 +143,13 @@ export default function TableOfContents() {
             {tocItems.map((item, index) => (
               <li
                 key={item.roman}
-                className={`flex items-center gap-8 ${
+                className={`flex items-center justify-between ${
                   scrolled
-                    ? 'justify-between left-5 xl:left-1/15'
-                    : 'justify-start'
+                    ? 'left-5 xl:left-1/15'
+                    : ''
                 }`}
                 style={{
-                  display: isSm ? 'none' : 'block',
+                  display: isSm ? 'none' : 'flex',
                   position: 'fixed',
                   left: scrolled
                     ? undefined
@@ -160,6 +160,7 @@ export default function TableOfContents() {
                         (tocItems.length - 1 - index) * 1.5
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
+                  width: scrolled ? 'auto' : '252px',
                 }}
               >
                 <a
