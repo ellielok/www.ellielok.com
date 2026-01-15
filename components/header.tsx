@@ -55,21 +55,19 @@ export default function Header() {
               href="https://github.com/ellielok"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-opacity p-2 
-               hover:bg-white dark:hover:bg-black rounded-sm"
+              className="h-10 w-10 inline-flex items-center justify-center hover:bg-white dark:hover:bg-black rounded-md transition-colors"
               aria-label="GitHub"
             >
-              <Github className="w-6 h-6 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white transition-colors" />
+              <Github className="w-5 h-5 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white transition-colors" />
             </a>
             <a
-              href="https://github.com/ellielok"
+              href="https://www.linkedin.com/in/ellielok"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-opacity p-2 
-               hover:bg-white dark:hover:bg-black rounded-sm"
+              className="h-10 w-10 inline-flex items-center justify-center hover:bg-white dark:hover:bg-black rounded-md transition-colors"
               aria-label="LinkedIn"
             >
-              <FaLinkedin className="w-6 h-6 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white transition-colors" />
+              <FaLinkedin className="w-5 h-5 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white transition-colors" />
             </a>
           <ThemeToggle />
 
