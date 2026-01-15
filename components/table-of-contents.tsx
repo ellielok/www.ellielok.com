@@ -194,7 +194,7 @@ export default function TableOfContents() {
                         (tocItems.length - 1 - index) * 1.5
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
-                  width: scrolled ? 'auto' : '252px',
+                  width: scrolled ? '120px' : '252px',
                   opacity: scrolled ? (isActive ? 1 : 0.4) : 1,
                 }}
               >
@@ -206,6 +206,9 @@ export default function TableOfContents() {
                 >
                   {item.title}
                 </a>
+                {scrolled && isActive && (
+                  <div className="flex-1 mx-1 border-b border-dotted border-black dark:border-white max-w-[30px]" />
+                )}
                 <span
                   className="text-black dark:text-white text-xs font-serif leading-relaxed"
                   style={{ fontFamily: 'var(--font-playfair)' }}
