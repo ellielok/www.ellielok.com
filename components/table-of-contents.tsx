@@ -22,6 +22,7 @@ function computeScrolled(scrollY: number, viewportHeight: number) {
 export default function TableOfContents() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   // Border box configuration - adjust these values to reposition everything
   const BORDER_LEFT = '26vw';
@@ -47,6 +48,37 @@ export default function TableOfContents() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, [mounted]);
+
+  // Detect active section using IntersectionObserver
+  useEffect(() => {
+    if (!mounted) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    tocItems.forEach((item) => {
+      const element = document.querySelector(item.href);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
   }, [mounted]);
 
   const handleClick = (
@@ -140,7 +172,9 @@ export default function TableOfContents() {
       <div className="fixed z-50 pointer-events-auto">
         <nav>
           <ul className="space-y-0">
-            {tocItems.map((item, index) => (
+            {tocItems.map((item, index) => {
+              const isActive = activeSection === item.href.substring(1);
+              return (
               <li
                 key={item.roman}
                 className={`flex items-center justify-between ${
@@ -161,6 +195,7 @@ export default function TableOfContents() {
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
                   width: scrolled ? 'auto' : '252px',
+                  opacity: scrolled ? (isActive ? 1 : 0.4) : 1,
                 }}
               >
                 <a
@@ -178,7 +213,8 @@ export default function TableOfContents() {
                   {item.roman}
                 </span>
               </li>
-            ))}
+              );
+            })}
           </ul>
         </nav>
       </div>
