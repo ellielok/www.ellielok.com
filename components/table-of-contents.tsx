@@ -100,9 +100,10 @@ export default function TableOfContents() {
           top: `calc(${BORDER_TOP} + 160px)`,
         }}
       >
-        <div className="text-black dark:text-white text-xs font-light leading-relaxed" style={{ fontFamily: 'var(--font-playfair)' }}>
-          A new portfolio experience.<br />
-          Built with modern web technologies.
+        <div className="text-black dark:text-white text-xs font-light leading-relaxed max-w-[252px]" style={{ fontFamily: 'var(--font-playfair)' }}>
+          This is the personal site of Ellie L.<br />
+          A collection of projects, writing, and life snapshots,<br />
+          serving as a portfolio and living resume.
         </div>
       </div>
 

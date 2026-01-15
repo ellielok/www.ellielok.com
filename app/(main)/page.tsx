@@ -50,7 +50,7 @@ export default function Home() {
             className="text-6xl md:text-9xl font-bold text-black dark:text-white"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
-            Begin here
+            Start Here
           </h2>
           {/* 这里需要加入容器 */}
           <div
@@ -59,9 +59,9 @@ export default function Home() {
           text-black dark:text-gray-800 "
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
-            <p className=" ">A personal site by Ellie</p>
+            <p className=" ">Explore my portfolio.</p>
             <p className=" text-xl md:text-2xl">
-              Portfolio, tech blog, and moments from life
+              A curated starting point into my work and life.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function Home() {
 
       {/* Content Section */}
       <section className="content bg-gradient-to-b from-[#faf8f5] to-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#0a0d15] dark:via-[#1a2332] dark:to-[#0e1218] min-h-screen transition-colors relative z-20">
-        <div className="w-full px-6 md:px-10 py-20">
+        <div className="w-full px-6 py-20">
           <div className="md:ml-40 md:mr-5 xl:ml-100 xl:mr-40 space-y-30">
             {/* About Section */}
             <div id="about" className="scroll-mt-80 mt-30">
