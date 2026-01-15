@@ -13,9 +13,15 @@ export default async function BlogPage() {
   return (
     <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-6 md:px-10 py-10">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-10" style={{ fontFamily: 'var(--font-playfair)' }}>
-          Blog
-        </h1>
+        <div className="px-6 md:px-10 pb-10 text-center space-y-2">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
+            Blog
+          </h1>
+          <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed ">
+            Under construction.
+          </p>
+        </div>
+        
 
         <div className="space-y-8">
           {posts.map((post) => (
@@ -45,7 +51,7 @@ export default async function BlogPage() {
                     </span>
                   {/* Title */}
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors mb-2" style={{ fontFamily: 'var(--font-playfair)' }}>
+                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors mb-2" >
                       {post.title}
                     </h2>
 

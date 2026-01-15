@@ -1,30 +1,14 @@
 'use client';
 import * as React from 'react';
 import Link from 'next/link';
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from 'lucide-react';
-import { Mail, Phone, Copy, Check, Github } from 'lucide-react';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-
-import { useEffect, useState } from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Github } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 import ThemeToggle from './theme-toggle';
+import HeaderButton from './header-button';
 import Image from 'next/image';
 import logo from '@/public/logo.png';
 
 export default function Header() {
-  const headerItems = [
-    { label: 'Ellie Lok', href: '/' },
-    { label: 'Contact', href: '/contact' },
-  ];
-
   return (
     <>
       {/* Gradient background overlay */}
@@ -36,85 +20,54 @@ export default function Header() {
         <div className="order-first flex flex-row gap-10 ">
           <a href="/" className="flex flex-row items-center gap-3">
             <Image src={logo} alt="Logo" width={30} height={30} className="" />
-            <div className="text-black dark:text-white">Ellie L.</div>
-            <div className="text-gray-500 dark:text-white">Developer</div>
+            <div className="font-semibold text-black dark:text-white " >Ellie L.</div>
+            <div className="font-semibold text-gray-500 dark:text-gray-400">Developer</div>
           </a>
 
-          <NavigationMenu className="">
-            <NavigationMenuList className="flex-wrap">
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}
-                >
-                  <Link href="/blog">Blog</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem className="hidden md:block">
-                <NavigationMenuTrigger className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black">
-                  Editions
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[300px] gap-4">
-                    <li>
-                      <NavigationMenuLink
-                        asChild
-                        className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
-                      >
-                        <Link href="/history/2510-halloween">
-                          <div className="font-medium">Halloween '25</div>
-                          <div className="text-muted-foreground">
-                            🎃 Made for the spooky season.
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink
-                        asChild
-                        className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
-                      >
-                        <Link href="#">
-                          <div className="font-medium">Art Nouveau '26</div>
-                          <div className="text-muted-foreground">
-                            💐 Story behind the edition
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          <div className="flex flex-row items-center gap-2">
+            <HeaderButton label="Blog" href="/blog" />
+            <div className="hidden md:block">
+              <HeaderButton
+                label="Editions"
+                dropdownItems={[
+                  {
+                    title: "Halloween '25",
+                    description: "Made for the spooky season.",
+                    href: "/history/2510-halloween",
+                    icon: "🎃",
+                    external: true
+                  },
+                  {
+                    title: "Art Nouveau '26",
+                    description: "Story behind. Under construction.",
+                    href: "#",
+                    icon: "💐"
+                  }
+                ]}
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-row order-last">
-          <NavigationMenu>
-                <NavigationMenuLink
-                  asChild
-                  className={`${navigationMenuTriggerStyle()} !bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black`}
-                >
-                  <Link href="/snapshots">Snapshots</Link>
-                </NavigationMenuLink>
-          </NavigationMenu>
+        <div className="flex flex-row order-last items-center gap-2">
+          <HeaderButton label="Snapshots" href="/snapshots" />
           <a
               href="https://github.com/ellielok"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-opacity p-2 
-               hover:bg-white dark:hover:bg-black rounded-sm"
+              className="h-8 w-8 inline-flex items-center justify-center hover:bg-[#101828] dark:hover:bg-white rounded-md transition-all group"
               aria-label="GitHub"
             >
-              <Github className="w-6 h-6 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white transition-colors" />
+              <Github className="w-6 h-6 text-gray-600 dark:text-white group-hover:text-white dark:group-hover:text-black" />
             </a>
             <a
-              href="https://github.com/ellielok"
+              href="https://www.linkedin.com/in/ellielok"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-opacity p-2 
-               hover:bg-white dark:hover:bg-black rounded-sm"
+              className="h-8 w-8 inline-flex items-center justify-center hover:bg-[#101828] dark:hover:bg-white rounded-md transition-all group"
               aria-label="LinkedIn"
             >
-              <FaLinkedin className="w-6 h-6 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-white transition-colors" />
+              <FaLinkedin className="w-6 h-6 text-gray-600 dark:text-white group-hover:text-white dark:group-hover:text-black" />
             </a>
           <ThemeToggle />
 
