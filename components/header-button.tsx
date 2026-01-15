@@ -59,7 +59,7 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="h-7 px-4 inline-flex items-center justify-center gap-1 text-sm font-medium text-black dark:text-white hover:bg-[#101828] hover:text-white dark:hover:bg-white dark:hover:text-black rounded-md transition-colors"
+        className="h-8 px-4 inline-flex items-center justify-center gap-1 text-sm font-medium text-black dark:text-white hover:bg-[#101828] hover:text-white dark:hover:bg-white dark:hover:text-black rounded-md transition-colors"
       >
         {label}
         <svg
