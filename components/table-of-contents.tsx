@@ -119,7 +119,7 @@ export default function TableOfContents() {
         }}
       >
         <div
-          className="relative border border-black/60 dark:border-white/40 pointer-events-none"
+          className="relative border-1 border-black/60 dark:border-white/40 pointer-events-none"
           style={{
             width: BORDER_WIDTH,
             height: BORDER_HEIGHT,
@@ -164,7 +164,7 @@ export default function TableOfContents() {
           display: isSm ? 'none' : 'block',
 
           left: `calc(${BORDER_LEFT} + ${CONTENT_PADDING})`,
-          top: `calc(${BORDER_TOP} + 160px)`,
+          top: `calc(${BORDER_TOP} + 120px)`,
         }}
       >
         <div
@@ -212,7 +212,7 @@ export default function TableOfContents() {
                 <a
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className="text-black dark:text-white text-sm font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed"
+                  className="text-black dark:text-white text-sm font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed "
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.title}

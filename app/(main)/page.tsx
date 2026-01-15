@@ -343,14 +343,14 @@ export default function Home() {
                       That's All for Now
                     </h2>
                     <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-                      Thank you for exploring my portfolio. If you're curious about the design inspiration behind this site,
-                      feel free to check out the <Link href="/history/2510-halloween" className="underline hover:text-gray-900 dark:hover:text-white transition-colors">previous editions</Link>.
+                      Thank you for exploring my portfolio. If you're interested,
+                      feel free to check out the <Link href="/blog/0115/behind-the-story" className="underline hover:text-gray-900 dark:hover:text-white transition-colors">Story Behind This Edition</Link>.
                     </p>
                   </div>
 
                   <div className="space-y-3">
                     <p className="text-gray-700 dark:text-gray-300">
-                      Let's connect
+                      If your company or project needs a developer, feel free to reach out below
                     </p>
                     <ContactSection />
                   </div>
