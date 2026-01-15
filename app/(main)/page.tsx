@@ -332,6 +332,39 @@ export default function Home() {
                 </div>
               </RevealOnScroll>
             </div>
+
+            {/* Closing Section */}
+            <div id="connect" className="scroll-mt-20 mt-20">
+              <RevealOnScroll>
+                <div className="text-center space-y-8 pt-16 border-t border-gray-300 dark:border-white/20">
+                  <div className="space-y-4">
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
+                      That's All for Now
+                    </h2>
+                    <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+                      Thank you for exploring my portfolio. If you're curious about the design inspiration behind this site,
+                      feel free to check out the <Link href="/history/2510-halloween" className="underline hover:text-gray-900 dark:hover:text-white transition-colors">previous editions</Link>.
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 pt-8">
+                    <p className="text-gray-700 dark:text-gray-300">
+                      Let's connect
+                    </p>
+                    <a
+                      href="mailto:ellieluo519@gmail.com"
+                      className="inline-flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white hover:underline transition-all"
+                      style={{ fontFamily: 'var(--font-playfair)' }}
+                    >
+                      ellielokit@gmail.com
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </RevealOnScroll>
+            </div>
           </div>
         </div>
       </section>

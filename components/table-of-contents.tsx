@@ -14,6 +14,7 @@ const tocItems: TOCItem[] = [
   { title: 'Experience', roman: 'III', href: '#experience' },
   { title: 'Projects', roman: 'IV', href: '#projects' },
   { title: 'Snapshots', roman: 'V', href: '#snapshots' },
+  { title: 'Connect', roman: 'VI', href: '#connect' },
 ];
 
 function computeScrolled(scrollY: number, viewportHeight: number) {
@@ -45,6 +46,15 @@ export default function TableOfContents() {
 
     const handleScroll = () => {
       setScrolled(computeScrolled(window.scrollY, window.innerHeight));
+
+      // Check if scrolled to bottom to activate Connect section
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = document.documentElement.scrollTop;
+      const clientHeight = document.documentElement.clientHeight;
+
+      if (scrollHeight - scrollTop - clientHeight < 100) {
+        setActiveSection('connect');
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -71,8 +81,8 @@ export default function TableOfContents() {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    // Observe all sections
-    tocItems.forEach((item) => {
+    // Observe all sections except Connect (Connect is handled by bottom detection)
+    tocItems.filter(item => item.href !== '#connect').forEach((item) => {
       const element = document.querySelector(item.href);
       if (element) {
         observer.observe(element);
