@@ -15,14 +15,15 @@ import kickThumbnail from '@/app/history/2510-halloween/images/projects/kick/kic
 import volunThumbnail from '@/app/history/2510-halloween/images/projects/volun/volun-thumbnail.png';
 import birdThumbnail from '@/app/history/2510-halloween/images/projects/bird/bird-thumbnail.png';
 
-
 export const metadata: Metadata = {
   title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
-  description: 'I am an aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. Passionate about creating responsive, user-friendly web applications, I focus on combining thoughtful design with solid engineering for performance and accessibility.',
+  description:
+    'I am an aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. Passionate about creating responsive, user-friendly web applications, I focus on combining thoughtful design with solid engineering for performance and accessibility.',
   openGraph: {
     title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
-    description: 'Aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. Creating responsive, user-friendly web applications.',
-  }
+    description:
+      'Aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. Creating responsive, user-friendly web applications.',
+  },
 };
 
 export default function Home() {
@@ -35,30 +36,33 @@ export default function Home() {
 
       {/* Table of Contents - Full Screen */}
       <TableOfContents />
-      
 
       {/* Hero Section with Scale Effect */}
-      <HeroScale>
-
-      </HeroScale>
-
+      <HeroScale></HeroScale>
 
       {/* Static text after TOC animation */}
-      <div className="absolute left-1/2 -translate-x-1/2 md:left-1/3 xl:left-7/17 z-40 pointer-events-none" style={{ top: '88vh' }}>
+      <div
+        className="absolute left-1/2 -translate-x-1/2 md:left-1/3 xl:left-7/17 z-40 pointer-events-none"
+        style={{ top: '88vh' }}
+      >
         <div className="flex flex-col gap-60">
-          <h2 className="text-6xl md:text-9xl font-bold text-black dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
+          <h2
+            className="text-6xl md:text-9xl font-bold text-black dark:text-white"
+            style={{ fontFamily: 'var(--font-playfair)' }}
+          >
             Begin here
           </h2>
           {/* 这里需要加入容器 */}
-          <div className='space-y-6 md:space-y-5 text-start
+          <div
+            className="space-y-6 md:space-y-5 text-start
           text-xl md:text-2xl
-          text-black dark:text-gray-800 md:translate-x-10 ' style={{ fontFamily: 'var(--font-playfair)' }}>
-          <p className=" ">
-            A personal site by Ellie
-          </p>
-          <p className=" text-xl md:text-2xl">
-            Portfolio, tech blog, and moments from life
-          </p>
+          text-black dark:text-gray-800 md:translate-x-10 "
+            style={{ fontFamily: 'var(--font-playfair)' }}
+          >
+            <p className=" ">A personal site by Ellie</p>
+            <p className=" text-xl md:text-2xl">
+              Portfolio, tech blog, and moments from life
+            </p>
           </div>
         </div>
       </div>
@@ -70,45 +74,51 @@ export default function Home() {
       <section className="content bg-gradient-to-b from-[#faf8f5] to-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#0a0d15] dark:via-[#1a2332] dark:to-[#0e1218] min-h-screen transition-colors relative z-20">
         <div className="w-full px-6 md:px-10 py-20">
           <div className="md:ml-40 md:mr-5 xl:ml-100 xl:mr-40 space-y-30">
-
-
-
             {/* About Section */}
             <div id="about" className="scroll-mt-80 mt-30">
-
               <RevealOnScroll>
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
+                <h2
+                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  style={{ fontFamily: 'var(--font-playfair)' }}
+                >
                   About Me
                 </h2>
               </RevealOnScroll>
 
-
               <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                <RevealOnScroll >
+                <RevealOnScroll>
                   <p>
-                    I am an aspiring <span className="font-semibold text-gray-900 dark:text-white">full-stack developer</span> skilled in React,
-                    TypeScript, and modern CSS frameworks. Passionate about creating
-                    responsive, user-friendly web applications, I focus on combining
-                    thoughtful design with solid engineering for performance and
-                    accessibility. Currently completing my Master of Information Technology
-                    at Monash University, I plan to reside in <span className="font-semibold text-gray-900 dark:text-white">Melbourne, Australia</span>.
+                    I am an aspiring{' '}
+                    <span className="font-semibold text-gray-900 dark:text-white">
+                      full-stack developer
+                    </span>{' '}
+                    skilled in React, TypeScript, and modern CSS frameworks. I
+                    have recently completed my <span className="font-semibold text-gray-900 dark:text-white">Master of Information Technology</span> at Monash University. I am currently contributing to open source projects and seeking development opportunities.
                   </p>
                 </RevealOnScroll>
 
-                <RevealOnScroll >
+                <RevealOnScroll>
                   <p>
-                    Previously, I worked as a <span className="font-semibold text-gray-900 dark:text-white">Senior Advertising Specialist</span> at{' '}
-                    <a href="https://fstln.io/en" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900 dark:hover:text-white transition-colors">
+                    Previously, I worked as a{' '}
+                    <span className="font-semibold text-gray-900 dark:text-white">
+                      Senior Advertising Specialist
+                    </span>{' '}
+                    at{' '}
+                    <a
+                      href="https://fstln.io/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-gray-900 dark:hover:text-white transition-colors"
+                    >
                       Fastlane
-                    </a>, where I gained deep experience
-                    in digital marketing and user analytics. This background helps me design
-                    products that are both data-informed and user-centered. Outside of
-                    coding, I enjoy traveling, hiking, and exploring virtual worlds from
-                    Summoner's Rift to Hyrule.
+                    </a>
+                    , where I gained deep experience in digital marketing and
+                    user analytics. This background helps me design products
+                    that are both data-informed and user-centered.
                   </p>
                 </RevealOnScroll>
 
-                <RevealOnScroll >
+                <RevealOnScroll>
                   <div className="mt-8">
                     <a
                       href="/cv/ellie-cv.pdf"
@@ -117,8 +127,18 @@ export default function Home() {
                       className="inline-flex items-center gap-2 font-semibold text-gray-900 dark:text-white hover:underline transition-all"
                     >
                       View Full Résumé
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
                       </svg>
                     </a>
                   </div>
@@ -129,12 +149,15 @@ export default function Home() {
             {/* Skills Section */}
             <div id="skills" className="scroll-mt-20">
               <RevealOnScroll>
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
+                <h2
+                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  style={{ fontFamily: 'var(--font-playfair)' }}
+                >
                   Skills
                 </h2>
               </RevealOnScroll>
 
-              <RevealOnScroll >
+              <RevealOnScroll>
                 <SkillsCloud />
               </RevealOnScroll>
             </div>
@@ -142,7 +165,10 @@ export default function Home() {
             {/* Experience Section */}
             <div id="experience" className="scroll-mt-20">
               <RevealOnScroll>
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
+                <h2
+                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  style={{ fontFamily: 'var(--font-playfair)' }}
+                >
                   Experience
                 </h2>
               </RevealOnScroll>
@@ -165,7 +191,14 @@ export default function Home() {
                   title="Senior Advertising Specialist"
                   subtitle="Digital Marketing • Fastlane"
                   description="Managed and optimised multi-channel digital advertising campaigns across Google, Meta, and programmatic platforms. Ensured alignment with overall brand strategy, conducted performance analytics, and improved ROI through A/B testing and audience segmentation."
-                  skills={['Google Ads', 'Meta Ads', 'Google Analytics', 'Programmatic', 'Figma', 'Data Studio']}
+                  skills={[
+                    'Google Ads',
+                    'Meta Ads',
+                    'Google Analytics',
+                    'Programmatic',
+                    'Figma',
+                    'Data Studio',
+                  ]}
                 />
               </div>
             </div>
@@ -173,7 +206,10 @@ export default function Home() {
             {/* Projects Section */}
             <div id="projects" className="scroll-mt-20">
               <RevealOnScroll>
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
+                <h2
+                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  style={{ fontFamily: 'var(--font-playfair)' }}
+                >
                   Projects
                 </h2>
               </RevealOnScroll>
@@ -214,6 +250,88 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Snapshots Section */}
+            <div id="snapshots" className="scroll-mt-20">
+              <RevealOnScroll>
+                <h2
+                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  style={{ fontFamily: 'var(--font-playfair)' }}
+                >
+                  Snapshots
+                </h2>
+              </RevealOnScroll>
+
+              <RevealOnScroll>
+                <div className="space-y-6">
+                  <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                    A glimpse into my daily life through photos. From scenic
+                    landscapes to everyday moments, these snapshots capture
+                    memories from my journey.
+                  </p>
+
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="relative aspect-square overflow-hidden rounded-lg">
+                      <Image
+                        src="/images/shots/IMG_1130.jpeg"
+                        alt="Snapshot 1"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    </div>
+                    <div className="relative aspect-square overflow-hidden rounded-lg">
+                      <Image
+                        src="/images/shots/IMG_3419.jpeg"
+                        alt="Snapshot 2"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    </div>
+                    <div className="relative aspect-square overflow-hidden rounded-lg">
+                      <Image
+                        src="/images/shots/IMG_6720.jpeg"
+                        alt="Snapshot 3"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    </div>
+                    <div className="relative aspect-square overflow-hidden rounded-lg">
+                      <Image
+                        src="/images/shots/IMG_8938.jpeg"
+                        alt="Snapshot 4"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="text-center mt-6">
+                    <Link
+                      href="/snapshots"
+                      className="inline-flex items-center gap-2 font-semibold text-gray-900 dark:text-white hover:underline transition-all"
+                    >
+                      View more in Snapshots
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </RevealOnScroll>
+            </div>
           </div>
         </div>
       </section>
