@@ -58,7 +58,7 @@ export default function TableOfContents() {
   if (!mounted) return null
 
   return (
-    <div div className="hidden md:block" >
+    < >
       {/* Border Frame - fades out when scrolled */}
       <div
         className={`fixed z-50 pointer-events-none transition-opacity duration-300 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
@@ -140,6 +140,6 @@ export default function TableOfContents() {
           </ul>
         </nav>
       </div>
-    </div>
+    </>
   )
 }
