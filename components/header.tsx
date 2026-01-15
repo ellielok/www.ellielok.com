@@ -18,6 +18,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ThemeToggle from './theme-toggle';
 import Image from 'next/image';
 import logo from '@/public/logo.png';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function Header() {
   const headerItems = [
@@ -36,8 +37,8 @@ export default function Header() {
         <div className="order-first flex flex-row gap-10 ">
           <a href="/" className="flex flex-row items-center gap-3">
             <Image src={logo} alt="Logo" width={30} height={30} className="" />
-            <div className="text-black dark:text-white">Ellie L.</div>
-            <div className="text-gray-500 dark:text-white">Developer</div>
+            <div className="font-semibold text-black dark:text-white " >Ellie L.</div>
+            <div className="font-semibold text-gray-500 dark:text-gray-400">Developer</div>
           </a>
 
           <NavigationMenu className="">
@@ -61,8 +62,8 @@ export default function Header() {
                         asChild
                         className="!bg-transparent !text-black dark:!text-white hover:!bg-white dark:hover:!bg-black focus:!bg-white dark:focus:!bg-black"
                       >
-                        <Link href="/history/2510-halloween">
-                          <div className="font-medium">Halloween '25</div>
+                        <Link href="/history/2510-halloween" target="_blank" rel="noopener noreferrer">
+                          <div className="inline-flex items-center gap-1 font-semibold hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5">Halloween '25<ArrowUpRight className="w-5 h-5 transition-transform duration-200 stroke-current  group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
                           <div className="text-muted-foreground">
                             🎃 Made for the spooky season.
                           </div>
@@ -75,7 +76,7 @@ export default function Header() {
                         <Link href="#">
                           <div className="font-medium">Art Nouveau '26</div>
                           <div className="text-muted-foreground">
-                            💐 Story behind the edition
+                            💐 Story behind this edition. Under construction.
                           </div>
                         </Link>
                       </NavigationMenuLink>

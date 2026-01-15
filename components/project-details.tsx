@@ -41,7 +41,7 @@ function ProductHeader({
   return (
     <div className="flex flex-col md:flex-row text-gray-900 dark:text-white text-left  space-y-8 mb-16">
       <div className="md:w-8/10 space-y-6 max-w-3xl">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{appName}</h1>
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>{appName}</h1>
         <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">{description}</p>
 
         <div className="text-left space-y-8">
@@ -103,7 +103,7 @@ function PageSection({
       } items-center gap-10`}
     >
       <div className="flex-1 space-y-3 text-gray-900 dark:text-white">
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{name}</h3>
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>{name}</h3>
         <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">{description}</p>
       </div>
 
@@ -154,13 +154,13 @@ export default function ProductDetailsPage({
       <div className="w-full px-3 md:px-10 pt-20 pb-20 max-w-screen-xl mx-auto">
       {/* Back Button */}
       <div className="mb-10 font-semi">
-        <Link
+        {/* <Link
           href="/"
           className="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-white/40 hover:border-blue-600 dark:hover:border-[#93f5fa]/60 px-2 py-1 rounded-xl text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors hover:-translate-x-0.5 font-semibold"
         >
           <ArrowLeft className="w-5 h-5" />
           Back
-        </Link>
+        </Link> */}
       </div>
 
       <div className="mx-5">
@@ -176,7 +176,9 @@ export default function ProductDetailsPage({
           <div className="flex-grow h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/30 to-gray-400 dark:to-white/50" />
           <span className="flex items-center gap-2 px-6 text-lg font-semibold text-gray-900 dark:text-white">
             <Package className="w-5 h-5" />
+            <div style={{ fontFamily: 'var(--font-playfair)' }}>
             Product Introduction
+            </div>
           </span>
           <div className="flex-grow h-px bg-gradient-to-r from-gray-400 dark:from-white/50 via-gray-300 dark:via-white/30 to-transparent" />
         </div>

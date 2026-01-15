@@ -22,7 +22,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <RevealOnScroll>
-      <Link href={href}>
+      <Link href={href} target="_blank" rel="noopener noreferrer">
         <div className="group p-6 rounded-sm border border-transparent dark:hover:bg-white/3 dark:hover:backdrop-blur-sm dark:hover:border-white/2 dark:hover:shadow-sm dark:hover:shadow-black/10 transition-all cursor-pointer">
           <div className="flex flex-col md:flex-row gap-6 items-center">
             <div className="md:w-1/4 flex items-center justify-center">
