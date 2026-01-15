@@ -2,7 +2,7 @@ import BlogPostLayout from '@/components/blog-post-layout';
 import ContactSection from '@/components/contact-section';
 
 export const metadata = {
-  title: 'Story Behind This Edition',
+  title: 'Story Behind The Art Nouveau Edition',
   date: '2026-01-15',
   tags: ['Design', 'Inspiration'],
   image: '/images/shots/IMG_8938.jpeg',
@@ -51,20 +51,30 @@ who is one of the most representative figures of the Art Nouveau movement.
 </p>
 
 <p>
-The female figure on the homepage is an AI-generated interpretation inspired by Mucha&apos;s works{' '}
-<em>The Seasons</em> and <em>Slovanská epopej</em>,
-translated into a contemporary digital visual language rather than a direct reproduction.
+The female figure and background image on the homepage is an AI-generated interpretation inspired by Mucha&apos;s works{' '}
+<em>The Seasons</em> and <em>Slovanská epopej</em>.
 </p>
+
+<div className="grid grid-cols-2 gap-6 my-8">
+  <figure>
+    <img src="/images/blog/The seasons.jpg" alt="The Seasons by Alphonse Mucha" className="rounded-lg w-full h-48 object-cover" />
+    <figcaption className="text-center text-sm text-gray-500 mt-2">The Seasons (1896)</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/blog/Slovane_pravlasti.jpg" alt="Slovanská epopej by Alphonse Mucha" className="rounded-lg w-full h-48 object-cover" />
+    <figcaption className="text-center text-sm text-gray-500 mt-2">Slovanská epopej (1912)</figcaption>
+  </figure>
+</div>
 
 <p>
 From a technical perspective, this site is built with a modern front-end stack:
 </p>
 
 <ul className="list-disc pl-10 space-y-2">
-  <li><strong>Next.js 15</strong> for server-side rendering and static generation optimizations</li>
-  <li><strong>TypeScript</strong> to improve code reliability and long-term maintainability</li>
-  <li><strong>Tailwind CSS</strong> for highly customizable utility-first styling</li>
-  <li><strong>Framer Motion</strong> to enable smooth motion transitions and more complex interactions</li>
+  <li><strong>Next.js 15</strong> for SSR and static generation</li>
+  <li><strong>TypeScript</strong> for type safety</li>
+  <li><strong>Tailwind CSS</strong> for utility-first styling</li>
+  <li><strong>Framer Motion</strong> for animations</li>
 </ul>
 
 <p>
@@ -74,8 +84,7 @@ I am also actively experimenting with modern CSS techniques, including{' '}
   target="_blank"
   rel="noopener noreferrer"
   className="font-semibold underline underline-offset-4 hover:opacity-80"
->CSS transitions</a>,
-such as using <strong>next-themes</strong> to support light and dark mode switching and theme transition effects.
+>CSS transitions</a> to support light and dark mode switching and theme transition effects.
 Some of these features are currently only fully supported in the latest browsers, but exploring these limitations has helped me better understand modern CSS animation and theming systems.
 </p>
 
