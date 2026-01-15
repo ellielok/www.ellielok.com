@@ -32,7 +32,7 @@ export default function BlogPostLayout({ title, date, tags, children }: BlogPost
         </div>
 
         {/* Content */}
-        <article className="prose dark:prose-invert max-w-none">
+        <article className="drop-cap prose dark:prose-invert max-w-none">
           {children}
         </article>
       </div>

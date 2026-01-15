@@ -149,3 +149,22 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Drop cap style for blog posts */
+.drop-cap > p:first-of-type::first-letter {
+  font-family: var(--font-playfair);
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+/* Increase spacing in blog posts */
+.drop-cap > p,
+.drop-cap > ul,
+.drop-cap > ol {
+  margin-bottom: 1.75rem;
+}
