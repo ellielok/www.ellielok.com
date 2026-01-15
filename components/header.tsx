@@ -39,7 +39,7 @@ export default function Header() {
                   },
                   {
                     title: "Art Nouveau '26",
-                    description: "Story behind this edition. Under construction.",
+                    description: "Story behind. Under construction.",
                     href: "#",
                     icon: "💐"
                   }

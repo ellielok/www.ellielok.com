@@ -77,16 +77,16 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
           {/* Invisible bridge to prevent hover gap */}
           <div className="absolute top-full left-1/2 -translate-x-1/2 h-2 w-[300px]" />
 
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[300px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg py-1 z-50">
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[300px] bg-white dark:bg-white border border-gray-200 dark:border-gray-300 rounded-sm shadow-lg py-1 z-50">
             {dropdownItems.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group"
+                className="block px-4 py-2 hover:bg-white dark:hover:bg-gray-200 transition-all group"
               >
-                <div className="inline-flex items-center gap-1 text-sm font-medium group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors">
+                <div className="inline-flex items-center gap-1 text-sm font-medium text-black dark:text-black">
                   {item.title}
                   {item.external && (
                     <svg className="w-4 h-4 transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +94,7 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
                     </svg>
                   )}
                 </div>
-                <div className="text-sm font-normal text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-[#93f5fa] transition-colors mt-0.5">
+                <div className="text-sm font-normal text-gray-600 dark:text-gray-600 mt-0.5">
                   {item.icon} {item.description}
                 </div>
               </Link>
