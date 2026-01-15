@@ -43,7 +43,7 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
     return (
       <Link
         href={href}
-        className="h-10 px-4 inline-flex items-center justify-center text-sm font-medium text-black dark:text-white hover:bg-white dark:hover:bg-black rounded-md transition-colors"
+        className="h-10 px-4 inline-flex items-center justify-center text-sm font-medium text-black dark:text-white hover:bg-white hover:text-black dark:hover:bg-white dark:hover:text-black rounded-md transition-colors"
       >
         {label}
       </Link>
@@ -59,7 +59,7 @@ export default function HeaderButton({ label, href, dropdownItems }: HeaderButto
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="h-10 px-4 inline-flex items-center justify-center gap-1 text-sm font-medium text-black dark:text-white hover:bg-white dark:hover:bg-black rounded-md transition-colors"
+        className="h-10 px-4 inline-flex items-center justify-center gap-1 text-sm font-medium text-black dark:text-white hover:bg-white hover:text-black dark:hover:bg-white dark:hover:text-black rounded-md transition-colors"
       >
         {label}
         <svg
