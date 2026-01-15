@@ -65,6 +65,7 @@ export default function TableOfContents() {
         style={{
           left: BORDER_LEFT,
           top: BORDER_TOP,
+          
         }}
       >
         <div

@@ -36,8 +36,8 @@ export default function Header() {
         <div className="order-first flex flex-row gap-10 ">
           <a href="/" className="flex flex-row items-center gap-3">
             <Image src={logo} alt="Logo" width={30} height={30} className="" />
-            <div className="text-black dark:text-white">Ellie Lok</div>
-            <div className="text-gray-500 dark:text-white">Studio</div>
+            <div className="text-black dark:text-white">Ellie L.</div>
+            <div className="text-gray-500 dark:text-white">Developer</div>
           </a>
 
           <NavigationMenu className="">
