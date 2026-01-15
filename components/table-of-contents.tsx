@@ -13,6 +13,7 @@ const tocItems: TOCItem[] = [
   { title: 'Skills', roman: 'II', href: '#skills' },
   { title: 'Experience', roman: 'III', href: '#experience' },
   { title: 'Projects', roman: 'IV', href: '#projects' },
+  { title: 'Snapshots', roman: 'V', href: '#snapshots' },
 ];
 
 function computeScrolled(scrollY: number, viewportHeight: number) {
