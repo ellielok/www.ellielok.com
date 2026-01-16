@@ -11,6 +11,7 @@ import Link from 'next/link';
 import ProjectCard from '@/components/project-card';
 import ExperienceCard from '@/components/experience-card';
 import ContactSection from '@/components/contact-section';
+import LoadingScreen from '@/components/loading-screen';
 import tipsyThumbnail from '@/app/history/2510-halloween/images/projects/tipsy/tipsy-thumbnail.png';
 import kickThumbnail from '@/app/history/2510-halloween/images/projects/kick/kick_thumbnail.png';
 import volunThumbnail from '@/app/history/2510-halloween/images/projects/volun/volun-thumbnail.png';
@@ -30,6 +31,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      {/* Loading Screen */}
+      <LoadingScreen />
+
       {/* Particles Background */}
       {/* <div className="fixed inset-0 z-1 pointer-events-none">
         <ParticlesBackground />
