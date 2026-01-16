@@ -8,6 +8,14 @@ export function CursorGlow() {
   const targetRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
+    // Disable on touch devices or when no fine pointer (mobile/tablet)
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+    // Optional: also require hover capability
+    if (!window.matchMedia('(hover: hover)').matches) return;
+    
+    // Disable on small screens (match Tailwind sm < 640px)
+    // if (window.matchMedia('(max-width: 639px)').matches) return;
+
     const el = elRef.current;
     if (!el) return;
 

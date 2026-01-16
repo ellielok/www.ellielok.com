@@ -33,7 +33,7 @@ export default function TableOfContents() {
   const BORDER_HEIGHT = '400px';
   const CONTENT_PADDING = '1.5rem';
 
-  const isSm = typeof window !== 'undefined' && window.innerWidth < 640;
+  const isSm = typeof window !== 'undefined' && window.innerWidth < 768;
 
   // Run before paint on the client to avoid showing the wrong layout.
   useLayoutEffect(() => {
@@ -119,7 +119,7 @@ export default function TableOfContents() {
         }}
       >
         <div
-          className="relative border-1 border-black/60 dark:border-white/40 pointer-events-none"
+          className="relative border-1 border-[#101828]/60 dark:border-white/40 pointer-events-none"
           style={{
             width: BORDER_WIDTH,
             height: BORDER_HEIGHT,
@@ -143,7 +143,7 @@ export default function TableOfContents() {
         }}
       >
         <h1
-          className={`font-bold text-black dark:text-white leading-tight transition-all duration-300 ${
+          className={`font-bold text-[#101828] dark:text-white leading-tight transition-all duration-300 ${
             scrolled ? 'text-base' : 'text-lg'
           }`}
           style={{ fontFamily: 'var(--font-playfair)' }}
@@ -168,7 +168,7 @@ export default function TableOfContents() {
         }}
       >
         <div
-          className="text-black dark:text-white text-xs font-light leading-relaxed max-w-[252px]"
+          className="text-[#101828] dark:text-white text-xs font-light leading-relaxed max-w-[252px]"
           style={{ fontFamily: 'var(--font-playfair)' }}
         >
           This is the personal site of Ellie L.
@@ -212,16 +212,16 @@ export default function TableOfContents() {
                 <a
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className="text-black dark:text-white text-sm font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed "
+                  className="text-[#101828] dark:text-white text-sm font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed "
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.title}
                 </a>
                 {scrolled && isActive && (
-                  <div className="flex-1 mx-1 border-b border-dotted border-black dark:border-white max-w-[30px]" />
+                  <div className="flex-1 mx-1 border-b border-dotted border-[#101828] dark:border-white max-w-[30px]" />
                 )}
                 <span
-                  className="text-black dark:text-white text-xs font-serif leading-relaxed"
+                  className="text-[#101828] dark:text-white text-xs font-serif leading-relaxed"
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.roman}

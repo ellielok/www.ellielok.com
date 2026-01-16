@@ -93,7 +93,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
         {/* Lightbeam -1 */}
         <div
           className="
-    absolute w-45 h-45 rounded-full blur-md pointer-events-none z-3
+    absolute w-35 h-40 rounded-full blur-md pointer-events-none z-3
     opacity-0 dark:opacity-90
     transition-opacity duration-700 ease-in-out
   "
@@ -103,26 +103,10 @@ export default function HeroScale({ children }: HeroScaleProps) {
             background:
               'radial-gradient(circle, rgba(255,255,255,0.8) 00%, rgba(255,255,255,0.5) 30%, rgba(255,255,255,0.2) 60%, transparent 100%)',
             mixBlendMode: 'overlay',
-            transform: 'translate(-60%, -50%)',
+            transform: 'translate(-57%, -50%)',
           }}
         />
-        {/* Lightbeam -2 */}
-        <div
-          className="
-    absolute w-15 h-15 rounded-full blur-md pointer-events-none z-3
-    hidden dark:block
-     duration-700 ease-in-out
-  "
-          style={{
-            top: '15%',
-            left: '53%',
-            background:
-              'radial-gradient(circle, rgba(255,255,255,0.8) 100%, rgba(255,255,255,0.5) 100%, rgba(255,255,255,0.2) 100%, transparent 100%)',
-            mixBlendMode: 'overlay',
-            transform: 'translate(-60%, -50%)',
-          }}
-        />
-        
+
         {/* Container for girl image */}
         <div className="relative dark:brightness-30 dark:contrast-105 transition-opacity">
           {/* Base image - girl with closed eyes */}

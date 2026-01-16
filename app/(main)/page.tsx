@@ -43,27 +43,23 @@ export default function Home() {
 
       {/* Static text after TOC animation */}
       <div
-        className="absolute  z-40 pointer-events-none"
+        className="absolute left-0 w-full overflow-hidden z-40 pointer-events-none"
         style={{ top: '88vh' }}
       >
-        <div className="flex flex-col gap-60 translate-x-1/5 md:translate-x-1/3 xl:translate-x-8/12">
+        <div className="flex px-6 flex-col gap-50 ml-6 md:ml-40 xl:ml-100">
           <h2
-            className="text-6xl md:text-9xl font-bold text-black dark:text-white"
+            className="text-6xl md:text-9xl font-bold text-[#101828] dark:text-white"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
             Start Here
           </h2>
           {/* 这里需要加入容器 */}
           <div
-            className="space-y-6 md:space-y-5 text-start
-          text-xl md:text-2xl
-          text-black dark:text-gray-800 "
+            className="space-y-6 md:space-y-5 text-start text-xl md:text-2xl text-[#101828] dark:text-gray-800 max-w-[calc(100vw-4rem)] break-words"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
-            <p className=" ">Explore my portfolio.</p>
-            <p className=" text-xl md:text-2xl">
-              A curated starting point into my work and life.
-            </p>
+            <p>Explore my portfolio.</p>
+            <p>A curated starting point into my work and life.</p>
           </div>
         </div>
       </div>
@@ -94,7 +90,12 @@ export default function Home() {
                       full-stack developer
                     </span>{' '}
                     skilled in React, TypeScript, and modern CSS frameworks. I
-                    have recently completed my <span className="font-semibold text-gray-900 dark:text-white">Master of Information Technology</span> at Monash University. I am currently contributing to open source projects and seeking development opportunities.
+                    have recently completed my{' '}
+                    <span className="font-semibold text-gray-900 dark:text-white">
+                      Master of Information Technology
+                    </span>{' '}
+                    at Monash University. I am currently contributing to open
+                    source projects and seeking development opportunities.
                   </p>
                 </RevealOnScroll>
 
@@ -339,18 +340,29 @@ export default function Home() {
               <RevealOnScroll>
                 <div className="text-center space-y-8 pt-16 border-t border-gray-300 dark:border-white/20">
                   <div className="space-y-4">
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-playfair)' }}>
+                    <h2
+                      className="text-3xl font-bold text-gray-900 dark:text-white"
+                      style={{ fontFamily: 'var(--font-playfair)' }}
+                    >
                       That's All for Now
                     </h2>
                     <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-                      Thank you for exploring my portfolio. If you're interested,
-                      feel free to check out the <Link href="/blog/0115/behind-the-story" className="underline hover:text-gray-900 dark:hover:text-white transition-colors">Story Behind This Edition</Link>.
+                      Thank you for exploring my portfolio. If you're
+                      interested, feel free to check out the{' '}
+                      <Link
+                        href="/blog/0115/behind-the-story"
+                        className="underline hover:text-gray-900 dark:hover:text-white transition-colors"
+                      >
+                        Story Behind This Edition
+                      </Link>
+                      .
                     </p>
                   </div>
 
                   <div className="space-y-3">
                     <p className="text-gray-700 dark:text-gray-300">
-                      If your company or project needs a developer, feel free to reach out below
+                      If your company or project needs a developer, feel free to
+                      reach out below
                     </p>
                     <ContactSection />
                   </div>
