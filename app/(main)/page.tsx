@@ -41,9 +41,25 @@ export default function Home() {
       {/* Hero Section with Scale Effect */}
       <HeroScale></HeroScale>
 
-      {/* Static text after TOC animation */}
+      {/* Mobile hero text - only visible on sm */}
       <div
-        className="absolute left-0 w-full overflow-hidden z-40 pointer-events-none"
+        className="md:hidden absolute left-0 w-full z-40 pointer-events-none px-6"
+        style={{ top: '50vh', transform: 'translateY(-50%)' }}
+      >
+        <h2
+          className="text-3xl md:text-4xl font-bold text-[#101828] dark:text-white mb-3"
+          style={{ fontFamily: 'var(--font-playfair)' }}
+        >
+          Ellie L.&apos;s personal site.
+        </h2>
+        <p className="text-base md:text-lg text-[#101828]/80 dark:text-white/80">
+          Featuring portfolio work, blog posts, and snapshots of life.
+        </p>
+      </div>
+
+      {/* Static text after TOC animation - hidden on sm */}
+      <div
+        className="hidden md:block absolute left-0 w-full overflow-hidden z-40 pointer-events-none"
         style={{ top: '88vh' }}
       >
         <div className="flex px-6 flex-col gap-50 ml-6 md:ml-40 xl:ml-100">

@@ -1,5 +1,5 @@
 import BlogPostLayout from '@/components/blog-post-layout';
-import ContactSection from '@/components/contact-section';
+
 
 export const metadata = {
   title: 'Story Behind The Art Nouveau Edition',
@@ -89,11 +89,8 @@ Some of these features are currently only fully supported in the latest browsers
 </p>
 
 <p>
-Thank you for taking the time to explore my website. I am currently contributing to several open-source projects and actively looking for a full-time role.
-If your company is looking for a developer, I would be happy to connect.
+Thank you for taking the time to explore my website. I hope you enjoy the design and technical details as much as I enjoyed creating them!
 </p>
-<ContactSection />
-
     </BlogPostLayout>
   );
   
