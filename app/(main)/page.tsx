@@ -43,10 +43,10 @@ export default function Home() {
 
       {/* Static text after TOC animation */}
       <div
-        className="absolute overflow-hidden z-40 pointer-events-none"
+        className="absolute left-0 w-full overflow-hidden z-40 pointer-events-none"
         style={{ top: '88vh' }}
       >
-        <div className="flex flex-col gap-60 translate-x-1/5 md:translate-x-1/3 xl:translate-x-8/12">
+        <div className="flex flex-col gap-60 ml-6 md:ml-40 xl:ml-100">
           <h2
             className="text-6xl md:text-9xl font-bold text-black dark:text-white"
             style={{ fontFamily: 'var(--font-playfair)' }}
@@ -55,15 +55,11 @@ export default function Home() {
           </h2>
           {/* 这里需要加入容器 */}
           <div
-            className="space-y-6 md:space-y-5 text-start
-          text-xl md:text-2xl
-          text-black dark:text-gray-800 "
+            className="space-y-6 md:space-y-5 text-start text-xl md:text-2xl text-black dark:text-gray-800 max-w-[calc(100vw-4rem)] break-words"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
-            <p className=" ">Explore my portfolio.</p>
-            <p className=" text-xl md:text-2xl">
-              A curated starting point into my work and life.
-            </p>
+            <p>Explore my portfolio.</p>
+            <p>A curated starting point into my work and life.</p>
           </div>
         </div>
       </div>
