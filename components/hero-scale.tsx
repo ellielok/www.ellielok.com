@@ -93,7 +93,7 @@ export default function HeroScale({ children }: HeroScaleProps) {
         {/* Lightbeam -1 */}
         <div
           className="
-    absolute w-45 h-45 rounded-full blur-md pointer-events-none z-3
+    absolute hidden md:block w-45 h-45 rounded-full blur-md pointer-events-none z-3
     opacity-0 dark:opacity-90
     transition-opacity duration-700 ease-in-out
   "
@@ -109,8 +109,8 @@ export default function HeroScale({ children }: HeroScaleProps) {
         {/* Lightbeam -2 */}
         <div
           className="
-    absolute w-15 h-15 rounded-full blur-md pointer-events-none z-3
-    hidden dark:block
+    absolute hidden md:block w-15 h-15 rounded-full blur-md pointer-events-none z-3
+     dark:block
      duration-700 ease-in-out
   "
           style={{
