@@ -182,7 +182,7 @@ export default function SkillsCloud() {
           >
             <div className="flex flex-col items-start">
               {/* Skill tag */}
-              <div className={`px-4 py-2 bg-white dark:bg-gray-800 rounded-full transition-all ${isHovered ? 'scale-110' : ''} ${getLevelGlow(skill.level)}`}>
+              <div className={`relative z-10 px-4 py-2 bg-white dark:bg-gray-800 rounded-full transition-all ${isHovered ? 'scale-110' : ''} ${getLevelGlow(skill.level)}`}>
                 <span className="text-sm font-medium text-gray-900 dark:text-white">
                   {skill.name}
                 </span>
@@ -190,7 +190,7 @@ export default function SkillsCloud() {
 
               {/* Expanded content on hover */}
               {isHovered && (
-                <div className="mt-2 p-3 bg-gray-900 dark:bg-gray-800 text-white rounded-lg shadow-2xl max-w-xs animate-fadeIn">
+                <div className="relative z-30 mt-2 p-3 bg-gray-900 dark:bg-gray-800 text-white rounded-lg shadow-2xl max-w-xs animate-fadeIn">
                   <div className="flex items-center gap-2 mb-2">
                     <span className={`text-xs px-2 py-1 rounded-full ${getLevelBadgeColor(skill.level)} text-white`}>
                       {skill.level}
