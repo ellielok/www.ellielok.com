@@ -7,8 +7,8 @@ interface BlogPostLayoutProps {
 
 export default function BlogPostLayout({ title, date, tags, children }: BlogPostLayoutProps) {
   return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-3xl mx-auto px-6 md:px-10 py-10">
+    <div className="min-h-screen pt-20 bg-white dark:bg-gray-900">
+      <div className="max-w-3xl mx-auto px-6 md:px-10 py-10 text-gray-800 dark:text-gray-200">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4" style={{ fontFamily: 'var(--font-playfair)' }}>
