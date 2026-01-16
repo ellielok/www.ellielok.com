@@ -48,14 +48,14 @@ export default function Home() {
       >
         <div className="flex px-6 flex-col gap-50 ml-6 md:ml-40 xl:ml-100">
           <h2
-            className="text-6xl md:text-9xl font-bold text-black dark:text-white"
+            className="text-6xl md:text-9xl font-bold text-[#101828] dark:text-white"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
             Start Here
           </h2>
           {/* 这里需要加入容器 */}
           <div
-            className="space-y-6 md:space-y-5 text-start text-xl md:text-2xl text-black dark:text-gray-800 max-w-[calc(100vw-4rem)] break-words"
+            className="space-y-6 md:space-y-5 text-start text-xl md:text-2xl text-[#101828] dark:text-gray-800 max-w-[calc(100vw-4rem)] break-words"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
             <p>Explore my portfolio.</p>
