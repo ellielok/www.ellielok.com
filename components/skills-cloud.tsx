@@ -271,7 +271,7 @@ export default function SkillsCloud() {
         return (
           <div
             key={skill.name}
-            className="absolute group"
+            className="absolute group skill-float"
             style={{
               top: skill.position.top,
               left: skill.position.left,
@@ -284,16 +284,16 @@ export default function SkillsCloud() {
           >
             <div className="flex flex-col items-start">
               {/* Skill tag with icon */}
-              <div className={`relative z-10 px-3 py-2 bg-white dark:bg-gray-800 rounded-full transition-all flex items-center gap-2 ${isHovered ? 'scale-110' : ''} ${getLevelGlow(skill.level)}`}>
+              <div className={`relative z-10 p-2 md:px-3 md:py-2 bg-white dark:bg-gray-800 rounded-full transition-all flex items-center gap-2 md:hover:scale-110 ${getLevelGlow(skill.level)}`}>
                 <IconComponent className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                <span className="text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                <span className="hidden md:inline text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">
                   {skill.name}
                 </span>
               </div>
 
-              {/* Expanded content on hover */}
+              {/* Expanded content on hover - hidden on mobile */}
               {isHovered && (
-                <div className="relative z-30 mt-2 p-3 bg-gray-900 dark:bg-gray-800 text-white rounded-lg shadow-2xl max-w-xs animate-fadeIn">
+                <div className="hidden md:block relative z-30 mt-2 p-3 bg-gray-900 dark:bg-gray-800 text-white rounded-lg shadow-2xl max-w-xs animate-fadeIn">
                   <div className="flex items-center gap-2 mb-2">
                     <span className={`text-xs px-2 py-1 rounded-full ${getLevelBadgeColor(skill.level)} text-white`}>
                       {skill.level}
@@ -328,6 +328,12 @@ export default function SkillsCloud() {
         }
         .animate-fadeIn {
           animation: fadeIn 0.3s ease-out;
+        }
+        /* Disable float animation on small screens */
+        @media (max-width: 767px) {
+          .skill-float {
+            animation: none !important;
+          }
         }
       `}</style>
     </div>
