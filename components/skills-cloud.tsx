@@ -1,96 +1,197 @@
 'use client'
 
 import { useState } from 'react';
+import {
+  SiReact,
+  SiVuedotjs,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiBootstrap,
+  SiNodedotjs,
+  SiPython,
+  SiOracle,
+  SiPostgresql,
+  SiMongodb,
+  SiFirebase,
+  SiAmazonwebservices,
+  SiDocker,
+  SiKubernetes,
+  SiVercel,
+  SiGit
+} from 'react-icons/si';
+import { FaJava, FaDatabase } from 'react-icons/fa';
+import { IconType } from 'react-icons';
 
 interface Skill {
   name: string;
   level: string;
   description: string;
   position: { top: string; left: string };
+  icon: IconType;
 }
 
 const skills: Skill[] = [
-  // FRONT-END (top-left quadrant)
+  // FRONT-END (top-left quadrant) - more compact layout
   {
     name: 'React',
     level: 'Advanced',
     description: 'Building interactive UIs with hooks, context, and modern patterns',
-    position: { top: '15%', left: '15%' }
+    position: { top: '6%', left: '3%' },
+    icon: SiReact
   },
   {
-    name: 'TypeScript',
-    level: 'Advanced',
-    description: 'Type-safe development with strong typing and interfaces',
-    position: { top: '30%', left: '25%' }
+    name: 'Vue.js',
+    level: 'Intermediate',
+    description: 'Progressive framework for building user interfaces',
+    position: { top: '6%', left: '22%' },
+    icon: SiVuedotjs
   },
   {
     name: 'Next.js',
     level: 'Intermediate',
     description: 'Server-side rendering and modern React framework',
-    position: { top: '35%', left: '8%' }
+    position: { top: '18%', left: '8%' },
+    icon: SiNextdotjs
+  },
+  {
+    name: 'TypeScript',
+    level: 'Advanced',
+    description: 'Type-safe development with strong typing and interfaces',
+    position: { top: '18%', left: '28%' },
+    icon: SiTypescript
+  },
+  {
+    name: 'JavaScript',
+    level: 'Advanced',
+    description: 'Core language for web development and interactivity',
+    position: { top: '30%', left: '3%' },
+    icon: SiJavascript
+  },
+  {
+    name: 'HTML5',
+    level: 'Advanced',
+    description: 'Semantic markup and modern web standards',
+    position: { top: '30%', left: '22%' },
+    icon: SiHtml5
+  },
+  {
+    name: 'CSS3',
+    level: 'Advanced',
+    description: 'Styling, animations, and responsive layouts',
+    position: { top: '42%', left: '8%' },
+    icon: SiCss3
   },
   {
     name: 'Tailwind CSS',
     level: 'Advanced',
     description: 'Utility-first CSS framework for rapid UI development',
-    position: { top: '20%', left: '35%' }
+    position: { top: '42%', left: '28%' },
+    icon: SiTailwindcss
+  },
+  {
+    name: 'Bootstrap',
+    level: 'Intermediate',
+    description: 'Popular CSS framework for responsive design',
+    position: { top: '6%', left: '38%' },
+    icon: SiBootstrap
   },
   // BACK-END (top-right quadrant)
   {
     name: 'Node.js',
     level: 'Intermediate',
     description: 'Backend development with JavaScript runtime',
-    position: { top: '15%', left: '65%' }
+    position: { top: '8%', left: '58%' },
+    icon: SiNodedotjs
   },
   {
-    name: 'Firebase',
+    name: 'Python',
     level: 'Intermediate',
-    description: 'Cloud services for authentication and real-time databases',
-    position: { top: '30%', left: '75%' }
+    description: 'Versatile language for backend and data processing',
+    position: { top: '20%', left: '72%' },
+    icon: SiPython
   },
   {
-    name: 'AWS',
-    level: 'Beginner',
-    description: 'Cloud infrastructure with Lambda, S3, and DynamoDB',
-    position: { top: '35%', left: '85%' }
+    name: 'Java',
+    level: 'Intermediate',
+    description: 'Object-oriented programming for enterprise applications',
+    position: { top: '8%', left: '85%' },
+    icon: FaJava
   },
   // DATABASES (bottom-left quadrant)
+  {
+    name: 'Oracle DB',
+    level: 'Intermediate',
+    description: 'Enterprise relational database management',
+    position: { top: '56%', left: '5%' },
+    icon: SiOracle
+  },
   {
     name: 'PostgreSQL',
     level: 'Intermediate',
     description: 'Relational database design and query optimization',
-    position: { top: '65%', left: '15%' }
+    position: { top: '68%', left: '18%' },
+    icon: SiPostgresql
   },
   {
     name: 'MongoDB',
     level: 'Intermediate',
     description: 'NoSQL database for flexible data structures',
-    position: { top: '75%', left: '28%' }
+    position: { top: '80%', left: '5%' },
+    icon: SiMongodb
   },
+  // CLOUD & DEVOPS (bottom-right quadrant)
   {
-    name: 'Redis',
+    name: 'AWS',
     level: 'Beginner',
-    description: 'In-memory data structure store for caching',
-    position: { top: '85%', left: '20%' }
+    description: 'Cloud infrastructure with Lambda, S3, and DynamoDB',
+    position: { top: '56%', left: '58%' },
+    icon: SiAmazonwebservices
   },
-  // DEVOPS & TOOLS (bottom-right quadrant)
   {
     name: 'Docker',
     level: 'Intermediate',
     description: 'Containerization and deployment workflows',
-    position: { top: '65%', left: '65%' }
+    position: { top: '56%', left: '78%' },
+    icon: SiDocker
+  },
+  {
+    name: 'Kubernetes',
+    level: 'Beginner',
+    description: 'Container orchestration and scaling',
+    position: { top: '68%', left: '65%' },
+    icon: SiKubernetes
+  },
+  {
+    name: 'Firebase',
+    level: 'Intermediate',
+    description: 'Cloud services for authentication and real-time databases',
+    position: { top: '68%', left: '88%' },
+    icon: SiFirebase
+  },
+  {
+    name: 'Neon',
+    level: 'Intermediate',
+    description: 'Serverless Postgres for modern applications',
+    position: { top: '80%', left: '55%' },
+    icon: FaDatabase
+  },
+  {
+    name: 'Vercel',
+    level: 'Intermediate',
+    description: 'Frontend deployment and edge functions',
+    position: { top: '80%', left: '72%' },
+    icon: SiVercel
   },
   {
     name: 'Git',
     level: 'Advanced',
     description: 'Version control and collaborative development',
-    position: { top: '75%', left: '80%' }
-  },
-  {
-    name: 'CI/CD',
-    level: 'Intermediate',
-    description: 'Automated testing and deployment pipelines',
-    position: { top: '85%', left: '70%' }
+    position: { top: '80%', left: '88%' },
+    icon: SiGit
   }
 ];
 
@@ -161,11 +262,12 @@ export default function SkillsCloud() {
         Databases
       </div>
       <div className="absolute bottom-2 right-4 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-        DevOps & Tools
+        Cloud & DevOps
       </div>
 
       {skills.map((skill, index) => {
         const isHovered = hoveredSkill === skill.name;
+        const IconComponent = skill.icon;
         return (
           <div
             key={skill.name}
@@ -173,17 +275,18 @@ export default function SkillsCloud() {
             style={{
               top: skill.position.top,
               left: skill.position.left,
-              animation: `float ${3 + index * 0.5}s ease-in-out infinite`,
-              animationDelay: `${index * 0.2}s`,
-              zIndex: isHovered ? 20 : 10
+              animation: `float ${3 + index * 0.3}s ease-in-out infinite`,
+              animationDelay: `${index * 0.15}s`,
+              zIndex: isHovered ? 50 : 'auto'
             }}
             onMouseEnter={() => setHoveredSkill(skill.name)}
             onMouseLeave={() => setHoveredSkill(null)}
           >
             <div className="flex flex-col items-start">
-              {/* Skill tag */}
-              <div className={`relative z-10 px-4 py-2 bg-white dark:bg-gray-800 rounded-full transition-all ${isHovered ? 'scale-110' : ''} ${getLevelGlow(skill.level)}`}>
-                <span className="text-sm font-medium text-gray-900 dark:text-white">
+              {/* Skill tag with icon */}
+              <div className={`relative z-10 px-3 py-2 bg-white dark:bg-gray-800 rounded-full transition-all flex items-center gap-2 ${isHovered ? 'scale-110' : ''} ${getLevelGlow(skill.level)}`}>
+                <IconComponent className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                <span className="text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">
                   {skill.name}
                 </span>
               </div>
@@ -210,7 +313,7 @@ export default function SkillsCloud() {
             transform: translateY(0px);
           }
           50% {
-            transform: translateY(-20px);
+            transform: translateY(-15px);
           }
         }
         @keyframes fadeIn {
