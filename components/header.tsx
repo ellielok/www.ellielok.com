@@ -25,7 +25,7 @@ export default function Header() {
             <a href="/" className="flex flex-row items-center gap-3">
               <Image src={logo} alt="Logo" width={30} height={30} />
               <div className="font-semibold text-black dark:text-white whitespace-nowrap">Ellie L.</div>
-              <div className="font-semibold text-gray-500 dark:text-gray-400 hidden sm:block">Developer</div>
+              <div className="font-semibold text-gray-500 dark:text-gray-400">Developer</div>
             </a>
 
             {/* Desktop nav buttons - hidden on mobile */}
