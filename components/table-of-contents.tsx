@@ -33,7 +33,7 @@ export default function TableOfContents() {
   const BORDER_HEIGHT = '400px';
   const CONTENT_PADDING = '1.5rem';
 
-  const isSm = typeof window !== 'undefined' && window.innerWidth < 640;
+  const isSm = typeof window !== 'undefined' && window.innerWidth < 768;
 
   // Run before paint on the client to avoid showing the wrong layout.
   useLayoutEffect(() => {
