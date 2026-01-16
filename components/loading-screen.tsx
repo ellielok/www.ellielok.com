@@ -47,7 +47,7 @@ export default function LoadingScreen() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-white dark:bg-[#0a0d15] flex items-center justify-center transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[100] bg-[#faf8f5] dark:bg-[#0a0d15] flex items-center justify-center transition-opacity duration-500 ${
         phase === 'exiting' ? 'opacity-0 delay-500' : 'opacity-100'
       }`}
     >
