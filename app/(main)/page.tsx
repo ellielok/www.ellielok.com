@@ -43,7 +43,7 @@ export default function Home() {
 
       {/* Static text after TOC animation */}
       <div
-        className="absolute  z-40 pointer-events-none"
+        className="absolute overflow-hidden z-40 pointer-events-none"
         style={{ top: '88vh' }}
       >
         <div className="flex flex-col gap-60 translate-x-1/5 md:translate-x-1/3 xl:translate-x-8/12">
