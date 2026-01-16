@@ -41,9 +41,9 @@ export default function Home() {
       {/* Hero Section with Scale Effect */}
       <HeroScale></HeroScale>
 
-      {/* Mobile hero text - only visible on sm/md */}
+      {/* Mobile hero text - only visible on sm */}
       <div
-        className="lg:hidden absolute left-0 w-full z-40 pointer-events-none px-6"
+        className="md:hidden absolute left-0 w-full z-40 pointer-events-none px-6"
         style={{ top: '50vh', transform: 'translateY(-50%)' }}
       >
         <h2
@@ -57,9 +57,9 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Static text after TOC animation - hidden on sm/md */}
+      {/* Static text after TOC animation - hidden on sm */}
       <div
-        className="hidden lg:block absolute left-0 w-full overflow-hidden z-40 pointer-events-none"
+        className="hidden md:block absolute left-0 w-full overflow-hidden z-40 pointer-events-none"
         style={{ top: '88vh' }}
       >
         <div className="flex px-6 flex-col gap-50 ml-6 md:ml-40 xl:ml-100">

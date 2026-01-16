@@ -25,7 +25,7 @@ export default function TableOfContents() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [isSm, setIsSm] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false); // < 768px (md breakpoint)
 
   // Border box configuration - adjust these values to reposition everything
   const BORDER_LEFT = '26vw';
@@ -38,15 +38,15 @@ export default function TableOfContents() {
   useLayoutEffect(() => {
     setMounted(true);
     setScrolled(computeScrolled(window.scrollY, window.innerHeight));
-    setIsSm(window.innerWidth < 768);
+    setIsSmallScreen(window.innerWidth < 768);
   }, []);
 
-  // Listen for window resize to update isSm
+  // Listen for window resize to update isSmallScreen
   useEffect(() => {
     if (!mounted) return;
 
     const handleResize = () => {
-      setIsSm(window.innerWidth < 768);
+      setIsSmallScreen(window.innerWidth < 768);
     };
 
     window.addEventListener('resize', handleResize);
@@ -125,7 +125,7 @@ export default function TableOfContents() {
           scrolled ? 'opacity-0' : 'opacity-100'
         }`}
         style={{
-          display: isSm ? 'none' : 'block',
+          display: isSmallScreen ? 'none' : 'block',
           left: BORDER_LEFT,
           top: BORDER_TOP,
         }}
@@ -144,7 +144,7 @@ export default function TableOfContents() {
         className={`fixed z-50 pointer-events-auto transition-all duration-300 ease-out
                    ${scrolled ? 'top-20 left-5 xl:left-1/15' : ''}`}
         style={{
-          display: isSm ? 'none' : 'block',
+          display: isSmallScreen ? 'none' : 'block',
 
           left: scrolled
             ? undefined
@@ -173,7 +173,7 @@ export default function TableOfContents() {
           scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
         }`}
         style={{
-          display: isSm ? 'none' : 'block',
+          display: isSmallScreen ? 'none' : 'block',
 
           left: `calc(${BORDER_LEFT} + ${CONTENT_PADDING})`,
           top: `calc(${BORDER_TOP} + 120px)`,
@@ -206,7 +206,7 @@ export default function TableOfContents() {
                     : ''
                 }`}
                 style={{
-                  display: isSm ? 'none' : 'flex',
+                  display: isSmallScreen ? 'none' : 'flex',
                   position: 'fixed',
                   left: scrolled
                     ? undefined
