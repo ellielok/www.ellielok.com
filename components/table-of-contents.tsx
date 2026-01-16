@@ -25,6 +25,7 @@ export default function TableOfContents() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [isSm, setIsSm] = useState(false);
 
   // Border box configuration - adjust these values to reposition everything
   const BORDER_LEFT = '26vw';
@@ -33,13 +34,24 @@ export default function TableOfContents() {
   const BORDER_HEIGHT = '400px';
   const CONTENT_PADDING = '1.5rem';
 
-  const isSm = typeof window !== 'undefined' && window.innerWidth < 768;
-
   // Run before paint on the client to avoid showing the wrong layout.
   useLayoutEffect(() => {
     setMounted(true);
     setScrolled(computeScrolled(window.scrollY, window.innerHeight));
+    setIsSm(window.innerWidth < 768);
   }, []);
+
+  // Listen for window resize to update isSm
+  useEffect(() => {
+    if (!mounted) return;
+
+    const handleResize = () => {
+      setIsSm(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [mounted]);
 
   useEffect(() => {
     if (!mounted) return;

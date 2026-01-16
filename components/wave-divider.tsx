@@ -10,7 +10,7 @@ export default function WaveDivider({ className = '' }: WaveDividerProps) {
   return (
     <div className={`relative w-full ${className}`} style={{ height: '300px', zIndex: 30 }}>
       {/* Background gradient for smooth transition */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/10 dark:via-blue-900/5 to-yellow-50 dark:to-gray-800" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#faf8f5]/30 to-[#faf8f5] dark:via-[#0a0d15]/30 dark:to-[#0a0d15]" />
 
       {/* Cloud Layer 1 - Back layer */}
       <div className="absolute inset-0" style={{ zIndex: 30 }}>
