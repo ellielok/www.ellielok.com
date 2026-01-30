@@ -57,9 +57,9 @@ export default function HeroAbout() {
         scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
       } ${isSmallScreen ? 'left-6 right-6 top-1/2 -translate-y-1/2' : ''}`}
       style={isSmallScreen ? {} : {
-        right: isXlScreen ? '20vw' : '12vw',
+        right: '10vw',
         top: 'calc(50vh - 200px)',
-        width: isXlScreen ? '400px' : 'min(300px, 30vw)',
+        width: 'calc((100vw - 20vw - 6vw) * 2 / 3)', // 2/3 of available space (excluding margins and gap)
       }}
     >
       {/* Header with name and photo */}

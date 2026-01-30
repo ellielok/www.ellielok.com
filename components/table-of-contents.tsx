@@ -39,9 +39,11 @@ export default function TableOfContents() {
   const isXlScreen = screenSize === 'xl';
 
   // Border box configuration - adjust these values to reposition everything
-  const BORDER_LEFT = isXlScreen ? '20vw' : '12vw';
+  // Layout: 10vw margin on each side, 6vw gap in middle
+  // TOC gets 1/3 of available space, About gets 2/3
+  const BORDER_LEFT = '10vw';
   const BORDER_TOP = 'calc(50vh - 200px)';
-  const BORDER_WIDTH = isXlScreen ? '350px' : 'min(300px, 30vw)';
+  const BORDER_WIDTH = 'calc((100vw - 20vw - 6vw) / 3)'; // 1/3 of available space
   const BORDER_HEIGHT = '400px';
   const CONTENT_PADDING = '1.5rem';
 
@@ -192,7 +194,7 @@ export default function TableOfContents() {
       >
         <div
           className={`text-[#101828] dark:text-white font-light leading-relaxed ${isXlScreen ? 'text-sm' : 'text-xs'}`}
-          style={{ maxWidth: isXlScreen ? '302px' : 'min(252px, calc(30vw - 3rem))', fontFamily: 'var(--font-playfair)' }}
+          style={{ maxWidth: 'calc((100vw - 20vw - 6vw) / 3 - 3rem)', fontFamily: 'var(--font-playfair)' }}
         >
           This is the personal site of Ellie L.
           <br />
@@ -228,7 +230,7 @@ export default function TableOfContents() {
                         (tocItems.length - 1 - index) * 1.5
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
-                  width: scrolled ? '120px' : (isXlScreen ? '302px' : 'min(252px, calc(30vw - 3rem))'),
+                  width: scrolled ? '120px' : 'calc((100vw - 20vw - 6vw) / 3 - 3rem)',
                   opacity: scrolled ? (isActive ? 1 : 0.4) : 1,
                 }}
               >
