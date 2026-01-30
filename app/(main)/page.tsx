@@ -61,29 +61,6 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Static text after TOC animation - hidden on sm */}
-      <div
-        className="hidden md:block absolute left-0 w-full overflow-hidden z-40 pointer-events-none"
-        style={{ top: '88vh' }}
-      >
-        <div className="flex px-6 flex-col gap-50 ml-6 md:ml-40 xl:ml-100">
-          <h2
-            className="text-6xl md:text-9xl font-bold text-[#101828] dark:text-white"
-            style={{ fontFamily: 'var(--font-playfair)' }}
-          >
-            Start Here
-          </h2>
-          {/* 这里需要加入容器 */}
-          <div
-            className="space-y-6 md:space-y-5 text-start text-xl md:text-2xl text-[#101828] dark:text-gray-800 max-w-[calc(100vw-4rem)] break-words"
-            style={{ fontFamily: 'var(--font-playfair)' }}
-          >
-            <p>Explore my portfolio.</p>
-            <p>A curated starting point into my work and life.</p>
-          </div>
-        </div>
-      </div>
-
       {/* Divider with Clouds */}
       <WaveDivider className="relative z-20" />
 

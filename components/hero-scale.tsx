@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 
 interface HeroScaleProps {
   children?: React.ReactNode;
@@ -9,7 +8,6 @@ interface HeroScaleProps {
 
 export default function HeroScale({ children }: HeroScaleProps) {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [eyesOpen, setEyesOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -38,29 +36,12 @@ export default function HeroScale({ children }: HeroScaleProps) {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Blinking effect - eyes open every 3 seconds for 1 second
-  useEffect(() => {
-    const blinkInterval = setInterval(() => {
-      setEyesOpen(true); // Open eyes
-      setTimeout(() => setEyesOpen(false), 1000); // Close eyes after 1 second
-    }, 3000); // Repeat every 3 seconds
-
-    return () => clearInterval(blinkInterval);
-  }, []);
-
   // Scale from 2 to 1
   const scale = 1.03 - scrollProgress * 0.1;
-
-  // Girl scale: grow from 1 to 2 as we scroll
-  const girlScale = 2.2 - scrollProgress;
 
   // Parallax offset for background (subtle movement)
   const bgOffsetX = mousePosition.x * 5; // 5px max movement
   const bgOffsetY = mousePosition.y * 5;
-
-  // Parallax offset for girl (more pronounced movement)
-  const girlOffsetX = mousePosition.x * 8; // 15px max movement
-  const girlOffsetY = mousePosition.y * 8;
 
   // 3D tilt effect (very subtle)
   const tiltX = mousePosition.y * 1; // Rotate around X axis (minimal)
@@ -81,56 +62,6 @@ export default function HeroScale({ children }: HeroScaleProps) {
         {/* Buttons at bottom */}
         <div className="mb-20 z-20 flex gap-4">{children}</div>
       </section>
-
-      {/* Girl illustration - separate layer */}
-      <div
-        className="fixed -right-20 top-0 xl:right-1/10 xl:block origin-top z-2 pointer-events-none "
-        style={{
-          transform: `scale(${girlScale}) translate(${girlOffsetX}px, ${girlOffsetY}px)`,
-          transition: 'transform 0.1s ease-out',
-        }}
-      >
-        {/* Lightbeam -1 */}
-        <div
-          className="
-    absolute w-35 h-40 rounded-full blur-md pointer-events-none z-3
-    opacity-0 dark:opacity-90
-    transition-opacity duration-700 ease-in-out
-  "
-          style={{
-            top: '15%',
-            left: '57%',
-            background:
-              'radial-gradient(circle, rgba(255,255,255,0.8) 00%, rgba(255,255,255,0.5) 30%, rgba(255,255,255,0.2) 60%, transparent 100%)',
-            mixBlendMode: 'overlay',
-            transform: 'translate(-57%, -50%)',
-          }}
-        />
-
-        {/* Container for girl image */}
-        <div className="relative dark:brightness-30 dark:contrast-105 transition-opacity">
-          {/* Base image - girl with closed eyes */}
-          <Image
-            src="/images/girl-close.png"
-            alt="Portfolio illustration"
-            width={430}
-            height={430}
-            priority
-          />
-
-          {/* Overlay image - girl with open eyes */}
-          <Image
-            src="/images/eye-open.png"
-            alt="Eyes open"
-            width={430}
-            height={430}
-            className="absolute top-0 left-0 transition-opacity duration-150"
-            style={{
-              opacity: eyesOpen ? 1 : 0,
-            }}
-          />
-        </div>
-      </div>
 
       {/* Spacer to allow scrolling */}
       <div style={{ height: '100vh' }}></div>
