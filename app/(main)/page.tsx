@@ -50,7 +50,7 @@ export default function Home() {
       <HeroScale></HeroScale>
 
       {/* Mobile hero text - only visible on sm */}
-      <div
+      {/* <div
         className="md:hidden absolute left-0 w-full z-40 pointer-events-none px-6"
         style={{ top: '50vh', transform: 'translateY(-50%)' }}
       >
@@ -63,7 +63,7 @@ export default function Home() {
         <p className="text-base md:text-lg text-[#101828]/80 dark:text-white/80">
           Featuring portfolio work, blog posts, and snapshots of life.
         </p>
-      </div>
+      </div> */}
 
       {/* Divider with Clouds */}
       {/* <WaveDivider className="relative z-20" /> */}

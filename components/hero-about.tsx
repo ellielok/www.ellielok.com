@@ -36,14 +36,14 @@ export default function HeroAbout() {
     };
   }, [mounted]);
 
-  if (!mounted || isSmallScreen) return null;
+  if (!mounted) return null;
 
   return (
     <div
       className={`fixed z-40 transition-opacity duration-500 ${
         scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      }`}
-      style={{
+      } ${isSmallScreen ? 'left-6 right-6 top-1/2 -translate-y-1/2' : ''}`}
+      style={isSmallScreen ? {} : {
         left: '55vw',
         top: 'calc(50vh - 180px)',
         maxWidth: '400px',
