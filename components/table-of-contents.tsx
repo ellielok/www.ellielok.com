@@ -9,7 +9,7 @@ interface TOCItem {
 }
 
 const tocItems: TOCItem[] = [
-  { title: 'About', roman: 'I', href: '#about' },
+  { title: 'About Me', roman: 'I', href: '#about' },
   { title: 'Skills', roman: 'II', href: '#skills' },
   { title: 'Experience', roman: 'III', href: '#experience' },
   { title: 'Projects', roman: 'IV', href: '#projects' },
@@ -217,7 +217,10 @@ export default function TableOfContents() {
         <nav>
           <ul className="space-y-0">
             {tocItems.map((item, index) => {
-              const isActive = activeSection === item.href.substring(1);
+              // When at hero (not scrolled), About is always active
+              const isActive = !scrolled
+                ? item.href === '#about'
+                : activeSection === item.href.substring(1);
               return (
               <li
                 key={item.roman}
