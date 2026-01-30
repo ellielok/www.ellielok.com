@@ -62,7 +62,7 @@ export default function Home() {
       </div>
 
       {/* Divider with Clouds */}
-      <WaveDivider className="relative z-20" />
+      {/* <WaveDivider className="relative z-20" /> */}
 
       {/* Content Section */}
       <section className="content bg-gradient-to-b from-[#faf8f5] to-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#0a0d15] dark:via-[#1a2332] dark:to-[#0e1218] min-h-screen transition-colors relative z-20">
