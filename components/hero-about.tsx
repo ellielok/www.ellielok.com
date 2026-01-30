@@ -57,9 +57,11 @@ export default function HeroAbout() {
         scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
       } ${isSmallScreen ? 'left-6 right-6 top-1/2 -translate-y-1/2' : ''}`}
       style={isSmallScreen ? {} : {
-        right: '10vw',
+        right: isXlScreen ? '15vw' : '10vw',
         top: 'calc(50vh - 200px)',
-        width: 'calc((100vw - 20vw - 6vw) * 2 / 3)', // 2/3 of available space (excluding margins and gap)
+        width: isXlScreen
+          ? 'calc((100vw - 30vw - 6vw) * 2 / 3)' // xl: 15vw margins, 2/3 of available space
+          : 'calc((100vw - 20vw - 6vw) * 2 / 3)', // md: 10vw margins, 2/3 of available space
       }}
     >
       {/* Header with name and photo */}
