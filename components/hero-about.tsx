@@ -77,7 +77,7 @@ export default function HeroAbout() {
             Full-stack Developer | Digital Marketing
           </p>
         </div>
-        <div className={`relative rounded-full overflow-hidden flex-shrink-0 ${isXlScreen ? 'w-20 h-20' : 'w-16 h-16'}`}>
+        <div className={`relative rounded-full overflow-hidden flex-shrink-0 mx-14 ${isXlScreen ? 'w-40 h-40' : 'w-30 h-30'}`}>
           <Image
             src="/images/profile.png"
             alt="Ellie Lok"
