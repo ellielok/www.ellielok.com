@@ -6,15 +6,23 @@ function computeScrolled(scrollY: number, viewportHeight: number) {
   return scrollY > viewportHeight * 0.2;
 }
 
+type ScreenSize = 'sm' | 'md' | 'xl';
+
+function getScreenSize(width: number): ScreenSize {
+  if (width < 768) return 'sm';
+  if (width < 1280) return 'md';
+  return 'xl';
+}
+
 export default function HeroAbout() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [screenSize, setScreenSize] = useState<ScreenSize>('md');
 
   useLayoutEffect(() => {
     setMounted(true);
     setScrolled(computeScrolled(window.scrollY, window.innerHeight));
-    setIsSmallScreen(window.innerWidth < 768);
+    setScreenSize(getScreenSize(window.innerWidth));
   }, []);
 
   useEffect(() => {
@@ -25,7 +33,7 @@ export default function HeroAbout() {
     };
 
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
+      setScreenSize(getScreenSize(window.innerWidth));
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -38,25 +46,28 @@ export default function HeroAbout() {
 
   if (!mounted) return null;
 
+  const isSmallScreen = screenSize === 'sm';
+  const isXlScreen = screenSize === 'xl';
+
   return (
     <div
       className={`fixed z-40 transition-opacity duration-500 ${
         scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
       } ${isSmallScreen ? 'left-6 right-6 top-1/2 -translate-y-1/2' : ''}`}
       style={isSmallScreen ? {} : {
-        left: '55vw',
-        top: 'calc(50vh - 180px)',
-        maxWidth: '400px',
+        right: isXlScreen ? '20vw' : '12vw',
+        top: 'calc(50vh - 200px)',
+        width: isXlScreen ? '400px' : 'min(300px, 30vw)',
       }}
     >
       <h2
-        className="text-3xl font-bold mb-6 text-[#101828] dark:text-white"
+        className={`font-bold mb-6 text-[#101828] dark:text-white ${isXlScreen ? 'text-4xl' : 'text-3xl'}`}
         style={{ fontFamily: 'var(--font-playfair)' }}
       >
         About Me
       </h2>
 
-      <div className="space-y-4 text-sm leading-relaxed text-[#101828]/80 dark:text-white/70">
+      <div className={`space-y-4 leading-relaxed text-[#101828]/80 dark:text-white/70 ${isXlScreen ? 'text-base' : 'text-sm'}`}>
         <p>
           I am an aspiring{' '}
           <span className="font-semibold text-[#101828] dark:text-white">
@@ -91,7 +102,7 @@ export default function HeroAbout() {
             href="/cv/ellie-cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-semibold text-[#101828] dark:text-white hover:underline transition-all text-sm"
+            className={`inline-flex items-center gap-2 font-semibold text-[#101828] dark:text-white hover:underline transition-all ${isXlScreen ? 'text-base' : 'text-sm'}`}
           >
             View Full Résumé
             <svg

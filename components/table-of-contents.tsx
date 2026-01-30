@@ -21,16 +21,27 @@ function computeScrolled(scrollY: number, viewportHeight: number) {
   return scrollY > viewportHeight * 0.2;
 }
 
+type ScreenSize = 'sm' | 'md' | 'xl';
+
+function getScreenSize(width: number): ScreenSize {
+  if (width < 768) return 'sm';
+  if (width < 1280) return 'md';
+  return 'xl';
+}
+
 export default function TableOfContents() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [isSmallScreen, setIsSmallScreen] = useState(false); // < 768px (md breakpoint)
+  const [screenSize, setScreenSize] = useState<ScreenSize>('md');
+
+  const isSmallScreen = screenSize === 'sm';
+  const isXlScreen = screenSize === 'xl';
 
   // Border box configuration - adjust these values to reposition everything
-  const BORDER_LEFT = '26vw';
+  const BORDER_LEFT = isXlScreen ? '20vw' : '12vw';
   const BORDER_TOP = 'calc(50vh - 200px)';
-  const BORDER_WIDTH = '300px';
+  const BORDER_WIDTH = isXlScreen ? '350px' : 'min(300px, 30vw)';
   const BORDER_HEIGHT = '400px';
   const CONTENT_PADDING = '1.5rem';
 
@@ -38,15 +49,15 @@ export default function TableOfContents() {
   useLayoutEffect(() => {
     setMounted(true);
     setScrolled(computeScrolled(window.scrollY, window.innerHeight));
-    setIsSmallScreen(window.innerWidth < 768);
+    setScreenSize(getScreenSize(window.innerWidth));
   }, []);
 
-  // Listen for window resize to update isSmallScreen
+  // Listen for window resize to update screen size
   useEffect(() => {
     if (!mounted) return;
 
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
+      setScreenSize(getScreenSize(window.innerWidth));
     };
 
     window.addEventListener('resize', handleResize);
@@ -156,7 +167,7 @@ export default function TableOfContents() {
       >
         <h1
           className={`font-bold text-[#101828] dark:text-white leading-tight transition-all duration-300 ${
-            scrolled ? 'text-base' : 'text-lg'
+            scrolled ? 'text-base' : (isXlScreen ? 'text-xl' : 'text-lg')
           }`}
           style={{ fontFamily: 'var(--font-playfair)' }}
         >
@@ -180,12 +191,12 @@ export default function TableOfContents() {
         }}
       >
         <div
-          className="text-[#101828] dark:text-white text-xs font-light leading-relaxed max-w-[252px]"
-          style={{ fontFamily: 'var(--font-playfair)' }}
+          className={`text-[#101828] dark:text-white font-light leading-relaxed ${isXlScreen ? 'text-sm' : 'text-xs'}`}
+          style={{ maxWidth: isXlScreen ? '302px' : 'min(252px, calc(30vw - 3rem))', fontFamily: 'var(--font-playfair)' }}
         >
           This is the personal site of Ellie L.
           <br />
-          A collection of projects, writing, and life snapshots,
+          A collection of projects, writing, and snapshots,
           <br />
           serving as a portfolio and living resume.
         </div>
@@ -217,14 +228,14 @@ export default function TableOfContents() {
                         (tocItems.length - 1 - index) * 1.5
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
-                  width: scrolled ? '120px' : '252px',
+                  width: scrolled ? '120px' : (isXlScreen ? '302px' : 'min(252px, calc(30vw - 3rem))'),
                   opacity: scrolled ? (isActive ? 1 : 0.4) : 1,
                 }}
               >
                 <a
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className="text-[#101828] dark:text-white text-sm font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed "
+                  className={`text-[#101828] dark:text-white font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed ${isXlScreen ? 'text-base' : 'text-sm'}`}
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.title}
@@ -233,7 +244,7 @@ export default function TableOfContents() {
                   <div className="flex-1 mx-1 border-b border-dotted border-[#101828] dark:border-white max-w-[30px]" />
                 )}
                 <span
-                  className="text-[#101828] dark:text-white text-xs font-serif leading-relaxed"
+                  className={`text-[#101828] dark:text-white font-serif leading-relaxed ${isXlScreen ? 'text-sm' : 'text-xs'}`}
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.roman}
