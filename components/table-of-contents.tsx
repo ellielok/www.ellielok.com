@@ -32,7 +32,7 @@ function getScreenSize(width: number): ScreenSize {
 export default function TableOfContents() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState('about');
   const [screenSize, setScreenSize] = useState<ScreenSize>('md');
 
   const isSmallScreen = screenSize === 'sm';
@@ -239,7 +239,7 @@ export default function TableOfContents() {
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
                   width: scrolled ? '120px' : (isXlScreen ? 'calc((100vw - 30vw - 6vw) / 3 - 3rem)' : 'calc((100vw - 20vw - 6vw) / 3 - 3rem)'),
-                  opacity: scrolled ? (isActive ? 1 : 0.4) : 1,
+                  opacity: isActive ? 1 : 0.4,
                 }}
               >
                 <a
@@ -250,7 +250,7 @@ export default function TableOfContents() {
                 >
                   {item.title}
                 </a>
-                {scrolled && isActive && (
+                {isActive && (
                   <div className="flex-1 mx-1 border-b border-dotted border-[#101828] dark:border-white max-w-[30px]" />
                 )}
                 <span
