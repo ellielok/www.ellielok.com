@@ -71,7 +71,7 @@ export default function Home() {
       {/* Content Section */}
       <section className="content bg-gradient-to-b from-[#faf8f5] to-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#0a0d15] dark:via-[#1a2332] dark:to-[#0e1218] min-h-screen transition-colors relative z-20">
         <div className="w-full px-6 py-20">
-          <div className="md:ml-40 md:mr-5 xl:ml-100 xl:mr-40 space-y-30">
+          <div className="md:ml-40 md:mr-5 xl:ml-100 xl:mr-40 2xl:ml-130 2xl:mr-90 space-y-30">
             {/* Skills Section */}
             <div id="skills" className="scroll-mt-20">
               <RevealOnScroll>
