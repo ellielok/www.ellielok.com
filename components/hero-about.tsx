@@ -68,12 +68,12 @@ export default function HeroAbout() {
       <div className="flex items-start justify-between gap-4 mb-3">
         <div>
           <h2
-            className={`font-bold text-[#101828] dark:text-white ${isXlScreen ? 'text-3xl' : 'text-2xl'}`}
+            className={`font-bold text-[#101828] dark:text-white ${isXlScreen ? 'text-5xl' : 'text-4xl'}`}
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
             Hi, I'm Ellie Lok
           </h2>
-          <p className={`text-[#101828]/60 dark:text-white/60 font-medium mt-1 ${isXlScreen ? 'text-base' : 'text-sm'}`}>
+          <p className={`text-[#101828]/60 dark:text-white/60 font-medium mt-2 ${isXlScreen ? 'text-xl' : 'text-lg'}`}>
             Full-stack Developer | Digital Marketing
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function HeroAbout() {
         </div>
       </div>
 
-      <div className={`space-y-4 leading-relaxed text-[#101828]/80 dark:text-white/70 ${isXlScreen ? 'text-base' : 'text-sm'}`}>
+      <div className={`space-y-4 leading-relaxed text-[#101828]/80 dark:text-white/70 ${isXlScreen ? 'text-lg' : 'text-base'}`}>
         <p>
           I am an aspiring{' '}
           <span className="font-semibold text-[#101828] dark:text-white">
@@ -122,7 +122,7 @@ export default function HeroAbout() {
             href="/cv/ellie-cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 font-semibold text-[#101828] dark:text-white hover:underline transition-all ${isXlScreen ? 'text-base' : 'text-sm'}`}
+            className={`inline-flex items-center gap-2 font-semibold text-[#101828] dark:text-white hover:underline transition-all ${isXlScreen ? 'text-lg' : 'text-base'}`}
           >
             View Full Résumé
             <svg
