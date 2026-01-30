@@ -239,13 +239,13 @@ export default function TableOfContents() {
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
                   width: scrolled ? '120px' : (isXlScreen ? 'calc((100vw - 30vw - 6vw) / 3 - 3rem)' : 'calc((100vw - 20vw - 6vw) / 3 - 3rem)'),
-                  opacity: isActive ? 1 : 0.4,
+                  opacity: isActive ? 1 : 0.7,
                 }}
               >
                 <a
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className={`text-[#101828] dark:text-white font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed ${isXlScreen ? 'text-base' : 'text-sm'}`}
+                  className={`text-[#101828] dark:text-white font-semibold hover:text-white transition-opacity cursor-pointer leading-relaxed ${isXlScreen ? 'text-base' : 'text-sm'}`}
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.title}
