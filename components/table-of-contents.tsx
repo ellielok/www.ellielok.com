@@ -125,6 +125,11 @@ export default function TableOfContents() {
     href: string,
   ) => {
     e.preventDefault();
+    // Special case: About section is in the hero (fixed position), scroll to top
+    if (href === '#about') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const element = document.querySelector(href);
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
