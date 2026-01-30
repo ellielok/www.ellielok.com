@@ -51,6 +51,7 @@ export default function HeroAbout() {
 
   return (
     <div
+      id="about"
       className={`fixed z-40 transition-opacity duration-500 ${
         scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
       } ${isSmallScreen ? 'left-6 right-6 top-1/2 -translate-y-1/2' : ''}`}
