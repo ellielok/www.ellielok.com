@@ -239,13 +239,12 @@ export default function TableOfContents() {
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
                   width: scrolled ? '120px' : (isXlScreen ? 'calc((100vw - 30vw - 6vw) / 3 - 3rem)' : 'calc((100vw - 20vw - 6vw) / 3 - 3rem)'),
-                  opacity: isActive ? 1 : 0.7,
                 }}
               >
                 <a
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className={`text-[#101828] dark:text-white font-semibold hover:text-white transition-opacity cursor-pointer leading-relaxed ${isXlScreen ? 'text-base' : 'text-sm'}`}
+                  className={`font-semibold hover:text-blue-600 dark:hover:text-teal-400 transition-colors cursor-pointer leading-relaxed ${isXlScreen ? 'text-base' : 'text-sm'} ${isActive ? 'text-[#101828] dark:text-white' : 'text-gray-700 dark:text-gray-200'}`}
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.title}
@@ -254,7 +253,7 @@ export default function TableOfContents() {
                   <div className="flex-1 mx-1 border-b border-dotted border-[#101828] dark:border-white max-w-[30px]" />
                 )}
                 <span
-                  className={`text-[#101828] dark:text-white font-serif leading-relaxed ${isXlScreen ? 'text-sm' : 'text-xs'}`}
+                  className={`font-serif leading-relaxed ${isXlScreen ? 'text-sm' : 'text-xs'} ${isActive ? 'text-[#101828] dark:text-white' : 'text-gray-700 dark:text-gray-200'}`}
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.roman}
