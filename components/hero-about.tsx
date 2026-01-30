@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useLayoutEffect, useState } from 'react';
+import Image from 'next/image';
 
 function computeScrolled(scrollY: number, viewportHeight: number) {
   return scrollY > viewportHeight * 0.2;
@@ -61,12 +62,28 @@ export default function HeroAbout() {
         width: isXlScreen ? '400px' : 'min(300px, 30vw)',
       }}
     >
-      <h2
-        className={`font-bold mb-6 text-[#101828] dark:text-white ${isXlScreen ? 'text-4xl' : 'text-3xl'}`}
-        style={{ fontFamily: 'var(--font-playfair)' }}
-      >
-        About Me
-      </h2>
+      {/* Header with name and photo */}
+      <div className="flex items-start justify-between gap-4 mb-3">
+        <div>
+          <h2
+            className={`font-bold text-[#101828] dark:text-white ${isXlScreen ? 'text-3xl' : 'text-2xl'}`}
+            style={{ fontFamily: 'var(--font-playfair)' }}
+          >
+            Hi, I'm Ellie Lok
+          </h2>
+          <p className={`text-[#101828]/60 dark:text-white/60 font-medium mt-1 ${isXlScreen ? 'text-base' : 'text-sm'}`}>
+            Full-stack Developer | Digital Marketing
+          </p>
+        </div>
+        <div className={`relative rounded-full overflow-hidden flex-shrink-0 ${isXlScreen ? 'w-20 h-20' : 'w-16 h-16'}`}>
+          <Image
+            src="/images/profile.png"
+            alt="Ellie Lok"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
 
       <div className={`space-y-4 leading-relaxed text-[#101828]/80 dark:text-white/70 ${isXlScreen ? 'text-base' : 'text-sm'}`}>
         <p>
