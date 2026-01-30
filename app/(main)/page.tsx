@@ -12,6 +12,7 @@ import ProjectCard from '@/components/project-card';
 import ExperienceCard from '@/components/experience-card';
 import ContactSection from '@/components/contact-section';
 import LoadingScreen from '@/components/loading-screen';
+import HeroAbout from '@/components/hero-about';
 import tipsyThumbnail from '@/app/history/2510-halloween/images/projects/tipsy/tipsy-thumbnail.png';
 import kickThumbnail from '@/app/history/2510-halloween/images/projects/kick/kick_thumbnail.png';
 import volunThumbnail from '@/app/history/2510-halloween/images/projects/volun/volun-thumbnail.png';
@@ -41,6 +42,9 @@ export default function Home() {
 
       {/* Table of Contents - Full Screen */}
       <TableOfContents />
+
+      {/* Hero About - appears next to TOC on desktop */}
+      <HeroAbout />
 
       {/* Hero Section with Scale Effect */}
       <HeroScale></HeroScale>
