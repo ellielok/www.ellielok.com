@@ -9,7 +9,7 @@ interface TOCItem {
 }
 
 const tocItems: TOCItem[] = [
-  { title: 'About', roman: 'I', href: '#about' },
+  { title: 'About Me', roman: 'I', href: '#about' },
   { title: 'Skills', roman: 'II', href: '#skills' },
   { title: 'Experience', roman: 'III', href: '#experience' },
   { title: 'Projects', roman: 'IV', href: '#projects' },
@@ -21,16 +21,32 @@ function computeScrolled(scrollY: number, viewportHeight: number) {
   return scrollY > viewportHeight * 0.2;
 }
 
+type ScreenSize = 'sm' | 'md' | 'xl';
+
+function getScreenSize(width: number): ScreenSize {
+  if (width < 768) return 'sm';
+  if (width < 1280) return 'md';
+  return 'xl';
+}
+
 export default function TableOfContents() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
-  const [isSmallScreen, setIsSmallScreen] = useState(false); // < 768px (md breakpoint)
+  const [activeSection, setActiveSection] = useState('about');
+  const [screenSize, setScreenSize] = useState<ScreenSize>('md');
+
+  const isSmallScreen = screenSize === 'sm';
+  const isXlScreen = screenSize === 'xl';
 
   // Border box configuration - adjust these values to reposition everything
-  const BORDER_LEFT = '26vw';
+  // Layout: margin on each side, 6vw gap in middle
+  // TOC gets 1/3 of available space, About gets 2/3
+  const MARGIN = isXlScreen ? '15vw' : '10vw';
+  const BORDER_LEFT = MARGIN;
   const BORDER_TOP = 'calc(50vh - 200px)';
-  const BORDER_WIDTH = '300px';
+  const BORDER_WIDTH = isXlScreen
+    ? 'calc((100vw - 30vw - 6vw) / 3)' // xl: 15vw margins
+    : 'calc((100vw - 20vw - 6vw) / 3)'; // md: 10vw margins
   const BORDER_HEIGHT = '400px';
   const CONTENT_PADDING = '1.5rem';
 
@@ -38,15 +54,15 @@ export default function TableOfContents() {
   useLayoutEffect(() => {
     setMounted(true);
     setScrolled(computeScrolled(window.scrollY, window.innerHeight));
-    setIsSmallScreen(window.innerWidth < 768);
+    setScreenSize(getScreenSize(window.innerWidth));
   }, []);
 
-  // Listen for window resize to update isSmallScreen
+  // Listen for window resize to update screen size
   useEffect(() => {
     if (!mounted) return;
 
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
+      setScreenSize(getScreenSize(window.innerWidth));
     };
 
     window.addEventListener('resize', handleResize);
@@ -109,6 +125,11 @@ export default function TableOfContents() {
     href: string,
   ) => {
     e.preventDefault();
+    // Special case: About section is in the hero (fixed position), scroll to top
+    if (href === '#about') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const element = document.querySelector(href);
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
@@ -156,7 +177,7 @@ export default function TableOfContents() {
       >
         <h1
           className={`font-bold text-[#101828] dark:text-white leading-tight transition-all duration-300 ${
-            scrolled ? 'text-base' : 'text-lg'
+            scrolled ? 'text-base' : (isXlScreen ? 'text-xl' : 'text-lg')
           }`}
           style={{ fontFamily: 'var(--font-playfair)' }}
         >
@@ -180,12 +201,12 @@ export default function TableOfContents() {
         }}
       >
         <div
-          className="text-[#101828] dark:text-white text-xs font-light leading-relaxed max-w-[252px]"
-          style={{ fontFamily: 'var(--font-playfair)' }}
+          className={`text-[#101828] dark:text-white font-light leading-relaxed ${isXlScreen ? 'text-sm' : 'text-xs'}`}
+          style={{ maxWidth: isXlScreen ? 'calc((100vw - 30vw - 6vw) / 3 - 3rem)' : 'calc((100vw - 20vw - 6vw) / 3 - 3rem)', fontFamily: 'var(--font-playfair)' }}
         >
           This is the personal site of Ellie L.
           <br />
-          A collection of projects, writing, and life snapshots,
+          A collection of projects, writing, and snapshots,
           <br />
           serving as a portfolio and living resume.
         </div>
@@ -196,7 +217,10 @@ export default function TableOfContents() {
         <nav>
           <ul className="space-y-0">
             {tocItems.map((item, index) => {
-              const isActive = activeSection === item.href.substring(1);
+              // When at hero (not scrolled), About is always active
+              const isActive = !scrolled
+                ? item.href === '#about'
+                : activeSection === item.href.substring(1);
               return (
               <li
                 key={item.roman}
@@ -217,23 +241,22 @@ export default function TableOfContents() {
                         (tocItems.length - 1 - index) * 1.5
                       }rem)`,
                   transition: `all 0.7s ease-out ${index * 120}ms`,
-                  width: scrolled ? '120px' : '252px',
-                  opacity: scrolled ? (isActive ? 1 : 0.4) : 1,
+                  width: scrolled ? '120px' : (isXlScreen ? 'calc((100vw - 30vw - 6vw) / 3 - 3rem)' : 'calc((100vw - 20vw - 6vw) / 3 - 3rem)'),
                 }}
               >
                 <a
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className="text-[#101828] dark:text-white text-sm font-semibold hover:opacity-70 transition-opacity cursor-pointer leading-relaxed "
+                  className={`font-semibold hover:text-blue-600 dark:hover:text-teal-400 transition-colors cursor-pointer leading-relaxed ${isXlScreen ? 'text-base' : 'text-sm'} ${isActive ? 'text-[#101828] dark:text-white' : 'text-gray-700 dark:text-gray-200'}`}
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.title}
                 </a>
-                {scrolled && isActive && (
+                {isActive && (
                   <div className="flex-1 mx-1 border-b border-dotted border-[#101828] dark:border-white max-w-[30px]" />
                 )}
                 <span
-                  className="text-[#101828] dark:text-white text-xs font-serif leading-relaxed"
+                  className={`font-serif leading-relaxed ${isXlScreen ? 'text-sm' : 'text-xs'} ${isActive ? 'text-[#101828] dark:text-white' : 'text-gray-700 dark:text-gray-200'}`}
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {item.roman}

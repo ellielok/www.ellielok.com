@@ -12,6 +12,7 @@ import ProjectCard from '@/components/project-card';
 import ExperienceCard from '@/components/experience-card';
 import ContactSection from '@/components/contact-section';
 import LoadingScreen from '@/components/loading-screen';
+import HeroAbout from '@/components/hero-about';
 import tipsyThumbnail from '@/app/history/2510-halloween/images/projects/tipsy/tipsy-thumbnail.png';
 import kickThumbnail from '@/app/history/2510-halloween/images/projects/kick/kick_thumbnail.png';
 import volunThumbnail from '@/app/history/2510-halloween/images/projects/volun/volun-thumbnail.png';
@@ -42,11 +43,14 @@ export default function Home() {
       {/* Table of Contents - Full Screen */}
       <TableOfContents />
 
+      {/* Hero About - appears next to TOC on desktop */}
+      <HeroAbout />
+
       {/* Hero Section with Scale Effect */}
       <HeroScale></HeroScale>
 
       {/* Mobile hero text - only visible on sm */}
-      <div
+      {/* <div
         className="md:hidden absolute left-0 w-full z-40 pointer-events-none px-6"
         style={{ top: '50vh', transform: 'translateY(-50%)' }}
       >
@@ -59,115 +63,15 @@ export default function Home() {
         <p className="text-base md:text-lg text-[#101828]/80 dark:text-white/80">
           Featuring portfolio work, blog posts, and snapshots of life.
         </p>
-      </div>
-
-      {/* Static text after TOC animation - hidden on sm */}
-      <div
-        className="hidden md:block absolute left-0 w-full overflow-hidden z-40 pointer-events-none"
-        style={{ top: '88vh' }}
-      >
-        <div className="flex px-6 flex-col gap-50 ml-6 md:ml-40 xl:ml-100">
-          <h2
-            className="text-6xl md:text-9xl font-bold text-[#101828] dark:text-white"
-            style={{ fontFamily: 'var(--font-playfair)' }}
-          >
-            Start Here
-          </h2>
-          {/* 这里需要加入容器 */}
-          <div
-            className="space-y-6 md:space-y-5 text-start text-xl md:text-2xl text-[#101828] dark:text-gray-800 max-w-[calc(100vw-4rem)] break-words"
-            style={{ fontFamily: 'var(--font-playfair)' }}
-          >
-            <p>Explore my portfolio.</p>
-            <p>A curated starting point into my work and life.</p>
-          </div>
-        </div>
-      </div>
+      </div> */}
 
       {/* Divider with Clouds */}
-      <WaveDivider className="relative z-20" />
+      {/* <WaveDivider className="relative z-20" /> */}
 
       {/* Content Section */}
       <section className="content bg-gradient-to-b from-[#faf8f5] to-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#0a0d15] dark:via-[#1a2332] dark:to-[#0e1218] min-h-screen transition-colors relative z-20">
         <div className="w-full px-6 py-20">
-          <div className="md:ml-40 md:mr-5 xl:ml-100 xl:mr-40 space-y-30">
-            {/* About Section */}
-            <div id="about" className="scroll-mt-80 mt-30">
-              <RevealOnScroll>
-                <h2
-                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
-                  style={{ fontFamily: 'var(--font-playfair)' }}
-                >
-                  About Me
-                </h2>
-              </RevealOnScroll>
-
-              <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                <RevealOnScroll>
-                  <p>
-                    I am an aspiring{' '}
-                    <span className="font-semibold text-gray-900 dark:text-white">
-                      full-stack developer
-                    </span>{' '}
-                    skilled in React, TypeScript, and modern CSS frameworks. I
-                    have recently completed my{' '}
-                    <span className="font-semibold text-gray-900 dark:text-white">
-                      Master of Information Technology
-                    </span>{' '}
-                    at Monash University. I am currently contributing to open
-                    source projects and seeking development opportunities.
-                  </p>
-                </RevealOnScroll>
-
-                <RevealOnScroll>
-                  <p>
-                    Previously, I worked as a{' '}
-                    <span className="font-semibold text-gray-900 dark:text-white">
-                      Senior Advertising Specialist
-                    </span>{' '}
-                    at{' '}
-                    <a
-                      href="https://fstln.io/en"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-gray-900 dark:hover:text-white transition-colors"
-                    >
-                      Fastlane
-                    </a>
-                    , where I gained deep experience in digital marketing and
-                    user analytics. This background helps me design products
-                    that are both data-informed and user-centered.
-                  </p>
-                </RevealOnScroll>
-
-                <RevealOnScroll>
-                  <div className="mt-8">
-                    <a
-                      href="/cv/ellie-cv.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 font-semibold text-gray-900 dark:text-white hover:underline transition-all"
-                    >
-                      View Full Résumé
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </RevealOnScroll>
-              </div>
-            </div>
-
+          <div className="md:ml-40 md:mr-5 lg:ml-60 lg:mr-20 xl:max-w-4xl xl:mx-auto xl:ml-auto xl:mr-auto space-y-30">
             {/* Skills Section */}
             <div id="skills" className="scroll-mt-20">
               <RevealOnScroll>
