@@ -25,12 +25,12 @@ export default function Header() {
             <a href="/" className="flex flex-row items-center gap-3">
               <Image src={logo} alt="Logo" width={30} height={30} />
               <div className="font-semibold text-black dark:text-white whitespace-nowrap">Ellie L.</div>
-              <div className="font-semibold text-gray-500 dark:text-gray-400">Developer</div>
+              <div className="font-semibold text-gray-500 dark:text-gray-400">Developer Profile</div>
             </a>
 
             {/* Desktop nav buttons - hidden on mobile */}
             <div className="hidden md:flex flex-row items-center gap-2">
-              <HeaderButton label="Blog" href="/blog" />
+              
               <HeaderButton
                 label="Editions"
                 dropdownItems={[
@@ -49,6 +49,7 @@ export default function Header() {
                   }
                 ]}
               />
+              <HeaderButton label="Blog" href="/blog" />
             </div>
           </div>
 
