@@ -40,7 +40,7 @@ export default function SnapshotsPage() {
             Snapshots
           </h1>
           <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed ">
-            A collection of moments captured through my phones.
+            A collection of moments captured through my lens.
           </p>
         </div>
 

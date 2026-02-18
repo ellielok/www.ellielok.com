@@ -294,11 +294,6 @@ export default function SkillsCloud() {
               {/* Expanded content on hover - hidden on mobile */}
               {isHovered && (
                 <div className="hidden md:block relative z-30 mt-2 p-3 bg-gray-900 dark:bg-gray-800 text-white rounded-lg shadow-2xl max-w-xs animate-fadeIn">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className={`text-xs px-2 py-1 rounded-full ${getLevelBadgeColor(skill.level)} text-white`}>
-                      {skill.level}
-                    </span>
-                  </div>
                   <p className="text-sm text-gray-300">{skill.description}</p>
                 </div>
               )}

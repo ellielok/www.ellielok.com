@@ -68,16 +68,16 @@ export default function HeroAbout() {
       <div className="flex items-start justify-between gap-4 mb-3">
         <div>
           <h2
-            className={`font-bold text-[#101828] dark:text-white ${isXlScreen ? 'text-5xl' : 'text-4xl'}`}
+            className={`font-bold text-[#101828] dark:text-white whitespace-nowrap ${isXlScreen ? 'text-5xl' : 'text-4xl'}`}
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
             Hi, I'm Ellie Lok
           </h2>
-          <p className={`text-[#101828]/60 dark:text-white/60 font-medium mt-2 ${isXlScreen ? 'text-xl' : 'text-lg'}`}>
+          <p className={`text-[#101828]/60 dark:text-white/60 font-medium mt-2 whitespace-nowrap ${isXlScreen ? 'text-xl' : 'text-lg'}`}>
             Full-stack Developer | Digital Marketing
           </p>
         </div>
-        <div className={`relative rounded-full overflow-hidden flex-shrink-0 mx-14 ${isXlScreen ? 'w-40 h-40' : 'w-30 h-30'}`}>
+        <div className={`hidden md:block relative rounded-full overflow-hidden flex-shrink-0 mx-14 ${isXlScreen ? 'w-40 h-40' : 'w-30 h-30'}`}>
           <Image
             src="/images/profile.png"
             alt="Ellie Lok"

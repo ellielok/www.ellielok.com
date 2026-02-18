@@ -27,12 +27,7 @@ export default function Page() {
       skills="Frontend development, RESTful APIs, Cloud deployment, Local Storage"
       thumbnail={tipsyThumbnail}
       pages={[
-        {
-          name: 'Monash IE Expo Winner',
-          description:
-            'Awarded Best Project at the Monash Postgraduate Industry Experience Expo, TipsyTrack is a personal alcohol tracking web app that empowers users to monitor their drinking habits, visualize behavioral patterns through interactive data insights, and set personalized health goals.',
-          screenshot: te11,
-        },
+
         {
           name: 'Drink Scanner',
           description:

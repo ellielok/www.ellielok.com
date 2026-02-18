@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
-import { Github, Menu, X } from 'lucide-react';
+import { Github, Menu, X, Camera } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import ThemeToggle from './theme-toggle';
 import HeaderButton from './header-button';
@@ -25,12 +25,12 @@ export default function Header() {
             <a href="/" className="flex flex-row items-center gap-3">
               <Image src={logo} alt="Logo" width={30} height={30} />
               <div className="font-semibold text-black dark:text-white whitespace-nowrap">Ellie L.</div>
-              <div className="font-semibold text-gray-500 dark:text-gray-400">Developer</div>
+              <div className="font-semibold text-gray-500 dark:text-gray-400">Developer Profile</div>
             </a>
 
             {/* Desktop nav buttons - hidden on mobile */}
             <div className="hidden md:flex flex-row items-center gap-2">
-              <HeaderButton label="Blog" href="/blog" />
+              
               <HeaderButton
                 label="Editions"
                 dropdownItems={[
@@ -49,12 +49,19 @@ export default function Header() {
                   }
                 ]}
               />
+              <HeaderButton label="Blog" href="/blog" />
             </div>
           </div>
 
           {/* Right side - desktop */}
           <div className="hidden md:flex flex-row items-center gap-2">
-            <HeaderButton label="Snapshots" href="/snapshots" />
+            <Link
+              href="/snapshots"
+              className="h-8 w-8 inline-flex items-center justify-center hover:bg-[#101828] dark:hover:bg-white rounded-md transition-all group"
+              aria-label="Snapshots"
+            >
+              <Camera className="w-6 h-6 text-gray-600 dark:text-white group-hover:text-white dark:group-hover:text-black" />
+            </Link>
             <a
               href="https://github.com/ellielok"
               target="_blank"

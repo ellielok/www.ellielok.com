@@ -9,11 +9,11 @@ import deleteImg from '@/app/history/2510-halloween/images/projects/bird/delete.
 import subscribe from '@/app/history/2510-halloween/images/projects/bird/subscribe.png';
 
 export const metadata: Metadata = {
-  title: "BirdTag - AI Bird Identification Platform | Ellie Lok",
+  title: "Birdy Snap - AI Bird Identification Platform | Ellie Lok",
   description: "AI-powered bird identification web application using serverless AWS architecture. Automatically recognizes bird species from photos with intelligent tagging and real-time notifications.",
   keywords: ["AWS Lambda", "API Gateway", "S3", "DynamoDB", "AI", "Image Recognition", "React", "Serverless"],
   openGraph: {
-    title: "BirdTag - AI Bird Identification Platform | Ellie Lok",
+    title: "Birdy Snap - AI Bird Identification Platform | Ellie Lok",
     description: "Serverless AI bird identification platform with automatic species recognition and smart tagging.",
     images: [{ url: birdThumbnail.src }],
   }
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ProductDetailsPage
-      appName="BirdTag"
+      appName="Birdy Snap"
       description="An AI-powered bird identification web application that automatically recognizes bird species from uploaded photos using a fully serverless AWS architecture. The platform integrates intelligent tagging, DynamoDB data management, and real-time notification services."
       stack="AWS Lambda, API Gateway, S3, DynamoDB, Amplify, Cognito, Python, React"
       skills="Serverless architecture, Image recognition, Data synchronization, User authentication, Cloud automation, Full-stack development"
@@ -31,7 +31,7 @@ export default function Page() {
         {
           name: 'User Access & Authentication',
           description:
-            'Users can sign up or log in securely using Amazon Cognito. BirdTag supports both traditional email registration (username, email, password) and Google account login for convenience.',
+            'Users can sign up or log in securely using Amazon Cognito. Birdy Snap supports both traditional email registration (username, email, password) and Google account login for convenience.',
           screenshot: signupImg,
         },
         {
@@ -56,7 +56,7 @@ export default function Page() {
         {
           name: 'Delete & Bulk Operations',
           description:
-            'BirdTag allows users to delete single or multiple files at once. The bulk delete function includes checkbox selection and batch removal through DynamoDB and S3 synchronization.',
+            'Birdy Snap allows users to delete single or multiple files at once. The bulk delete function includes checkbox selection and batch removal through DynamoDB and S3 synchronization.',
           screenshot: deleteImg,
         },
         {
