@@ -10,9 +10,9 @@ interface TOCItem {
 
 const tocItems: TOCItem[] = [
   { title: 'About Me', roman: 'I', href: '#about' },
-  { title: 'Skills', roman: 'II', href: '#skills' },
-  { title: 'Experience', roman: 'III', href: '#experience' },
-  { title: 'Projects', roman: 'IV', href: '#projects' },
+  { title: 'Projects', roman: 'II', href: '#projects' },
+  { title: 'Skills', roman: 'III', href: '#skills' },
+  { title: 'Experience', roman: 'IV', href: '#experience' },
   { title: 'Snapshots', roman: 'V', href: '#snapshots' },
   { title: 'Connect', roman: 'VI', href: '#connect' },
 ];

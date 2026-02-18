@@ -72,6 +72,53 @@ export default function Home() {
       <section className="content bg-gradient-to-b from-[#faf8f5] to-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#0a0d15] dark:via-[#1a2332] dark:to-[#0e1218] min-h-screen transition-colors relative z-20">
         <div className="w-full px-6 py-20">
           <div className="md:ml-40 md:mr-5 lg:ml-60 lg:mr-20 xl:max-w-4xl xl:mx-auto xl:ml-auto xl:mr-auto space-y-30">
+            {/* Projects Section */}
+            <div id="projects" className="scroll-mt-20">
+              <RevealOnScroll>
+                <h2
+                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  style={{ fontFamily: 'var(--font-playfair)' }}
+                >
+                  Projects
+                </h2>
+              </RevealOnScroll>
+
+              <div className="space-y-8">
+                <ProjectCard
+                  href="/projects/tipsytrack"
+                  thumbnail={tipsyThumbnail}
+                  alt="TipsyTrack"
+                  date="Jul - Oct 2025"
+                  title="TipsyTrack - Alcohol Harm-Reduction Web App"
+                  description="Developed a full-stack web application to help adults in Victoria track alcohol consumption and promote safer drinking habits. Built with Next.js (App Router), TypeScript, Tailwind, and Neon Postgres. Implemented Google Vision API for drink label scanning, local storage-based privacy features, and gamified progress tracking."
+                />
+                <ProjectCard
+                  href="/projects/kickstart"
+                  thumbnail={kickThumbnail}
+                  alt="KickStart"
+                  date="Apr - Jul 2025"
+                  title="KickStart - Community Street Soccer Volunteer Platform"
+                  description="Co-led development of a Vue.js + Firebase web platform to connect volunteers with community street soccer sessions. Integrated Firebase Authentication (email/Google login), Firestore (session management), and Cloud Functions with SendGrid for automated notifications."
+                />
+                <ProjectCard
+                  href="/projects/voluntrack"
+                  thumbnail={volunThumbnail}
+                  alt="VolunTrack"
+                  date="Mar - Jun 2025"
+                  title="VolunTrack - Volunteer Management Android App"
+                  description="Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications)."
+                />
+                <ProjectCard
+                  href="/projects/birdtag"
+                  thumbnail={birdThumbnail}
+                  alt="Bird Snap"
+                  date="Sep - Nov 2024"
+                  title="Bird Snap - AI-Powered Bird Identification Web App"
+                  description="Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications."
+                />
+              </div>
+            </div>
+
             {/* Skills Section */}
             <div id="skills" className="scroll-mt-20">
               <RevealOnScroll>
@@ -125,53 +172,6 @@ export default function Home() {
                     'Figma',
                     'Data Studio',
                   ]}
-                />
-              </div>
-            </div>
-
-            {/* Projects Section */}
-            <div id="projects" className="scroll-mt-20">
-              <RevealOnScroll>
-                <h2
-                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
-                  style={{ fontFamily: 'var(--font-playfair)' }}
-                >
-                  Projects
-                </h2>
-              </RevealOnScroll>
-
-              <div className="space-y-8">
-                <ProjectCard
-                  href="/projects/tipsytrack"
-                  thumbnail={tipsyThumbnail}
-                  alt="TipsyTrack"
-                  date="Jul - Oct 2025"
-                  title="TipsyTrack - Alcohol Harm-Reduction Web App"
-                  description="Developed a full-stack web application to help adults in Victoria track alcohol consumption and promote safer drinking habits. Built with Next.js (App Router), TypeScript, Tailwind, and Neon Postgres. Implemented Google Vision API for drink label scanning, local storage-based privacy features, and gamified progress tracking."
-                />
-                <ProjectCard
-                  href="/projects/kickstart"
-                  thumbnail={kickThumbnail}
-                  alt="KickStart"
-                  date="Apr - Jul 2025"
-                  title="KickStart - Community Street Soccer Volunteer Platform"
-                  description="Co-led development of a Vue.js + Firebase web platform to connect volunteers with community street soccer sessions. Integrated Firebase Authentication (email/Google login), Firestore (session management), and Cloud Functions with SendGrid for automated notifications."
-                />
-                <ProjectCard
-                  href="/projects/voluntrack"
-                  thumbnail={volunThumbnail}
-                  alt="VolunTrack"
-                  date="Mar - Jun 2025"
-                  title="VolunTrack - Volunteer Management Android App"
-                  description="Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications)."
-                />
-                <ProjectCard
-                  href="/projects/birdtag"
-                  thumbnail={birdThumbnail}
-                  alt="Bird Snap"
-                  date="Sep - Nov 2024"
-                  title="Bird Snap - AI-Powered Bird Identification Web App"
-                  description="Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications."
                 />
               </div>
             </div>
