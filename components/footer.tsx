@@ -103,7 +103,7 @@ export default function EnvFooter() {
             </p>
 
             <p className="text-gray-600 dark:text-white/60 hover:text-blue-600 dark:hover:text-[#93f5fa] transition-colors">
-              <a href="/projects/birdtag">BirdTag</a>
+              <a href="/projects/birdtag">Bird Snap</a>
             </p>
           </div>
         </div>

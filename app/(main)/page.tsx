@@ -168,9 +168,9 @@ export default function Home() {
                 <ProjectCard
                   href="/projects/birdtag"
                   thumbnail={birdThumbnail}
-                  alt="BirdTag"
+                  alt="Bird Snap"
                   date="Sep - Nov 2024"
-                  title="BirdTag - AI-Powered Bird Identification Web App"
+                  title="Bird Snap - AI-Powered Bird Identification Web App"
                   description="Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications."
                 />
               </div>
