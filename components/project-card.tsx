@@ -31,14 +31,14 @@ export default function ProjectCard({
     <RevealOnScroll>
       <div className="group p-4 rounded-sm border border-transparent dark:hover:bg-white/3 dark:hover:backdrop-blur-sm dark:hover:border-white/2 dark:hover:shadow-sm dark:hover:shadow-black/10 transition-all">
         <div className="flex flex-col md:flex-row gap-4 items-start">
-          <Link href={href} className="md:w-1/4 w-full flex items-center justify-center cursor-pointer">
+          <Link href={href} target="_blank" rel="noopener noreferrer" className="md:w-1/4 w-full flex items-center justify-center cursor-pointer">
             <div className="aspect-video w-full bg-gray-200 dark:bg-gray-600 rounded-lg overflow-hidden transition-shadow group-hover:shadow-xl">
               <Image src={thumbnail} alt={alt} className="w-full h-full object-cover" />
             </div>
           </Link>
 
           <div className="md:w-3/4 flex flex-col">
-            <Link href={href} className="cursor-pointer block">
+            <Link href={href} target="_blank" rel="noopener noreferrer" className="cursor-pointer block">
               <div className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors mb-1">{date}</div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-teal-400 transition-colors inline-flex items-center gap-2" style={{ fontFamily: 'var(--font-playfair)' }}>
                 {title}

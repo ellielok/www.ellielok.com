@@ -95,6 +95,16 @@ export default function Home() {
                   domain="tipsytrack.vercel.app"
                 />
                 <ProjectCard
+                  href="/projects/birdtag"
+                  thumbnail={birdThumbnail}
+                  alt="Birdy Snap"
+                  date="Sep - Nov 2024"
+                  title="Birdy Snap - AI-Powered Bird Identification Web App"
+                  description="Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications."
+                  websiteUrl="https://birdysnap.info/"
+                  domain="birdysnap.info"
+                />
+                <ProjectCard
                   href="/projects/kickstart"
                   thumbnail={kickThumbnail}
                   alt="KickStart"
@@ -113,16 +123,6 @@ export default function Home() {
                   description="Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications)."
                   repoUrl="https://github.com/ellieluk/Android-App-VolunTrack"
                   domain="github.com/ellielok/volun-track"
-                />
-                <ProjectCard
-                  href="/projects/birdtag"
-                  thumbnail={birdThumbnail}
-                  alt="Birdy Snap"
-                  date="Sep - Nov 2024"
-                  title="Birdy Snap - AI-Powered Bird Identification Web App"
-                  description="Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications."
-                  websiteUrl="https://birdysnap.info/"
-                  domain="birdysnap.info"
                 />
               </div>
             </div>
