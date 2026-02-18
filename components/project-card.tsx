@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import { Globe, Github } from 'lucide-react';
+
 import RevealOnScroll from '@/components/reveal-on-scroll';
 
 interface ProjectCardProps {
@@ -60,7 +60,7 @@ export default function ProjectCard({
         </Link>
 
         {(websiteUrl || repoUrl) && (
-          <div className="flex items-center justify-between mt-5 md:ml-[calc(25%+1.5rem)]">
+          <div className="flex items-end justify-between mt-1 md:ml-[calc(25%+1.5rem)]">
             <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">
               {domain}
             </span>
@@ -70,9 +70,8 @@ export default function ProjectCard({
                   href={websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-blue-600 hover:bg-blue-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white transition-colors"
+                  className="px-4 py-1.5 text-xs font-semibold rounded-full border border-gray-800 dark:border-white/70 text-gray-900 dark:text-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-colors"
                 >
-                  <Globe className="w-3.5 h-3.5" />
                   View Website
                 </a>
               )}
@@ -81,9 +80,8 @@ export default function ProjectCard({
                   href={repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-gray-800 hover:bg-gray-900 dark:bg-gray-600 dark:hover:bg-gray-500 text-white transition-colors"
+                  className="px-4 py-1.5 text-xs font-semibold rounded-full border border-gray-800 dark:border-white/70 text-gray-900 dark:text-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-colors"
                 >
-                  <Github className="w-3.5 h-3.5" />
                   View Repo
                 </a>
               )}
