@@ -92,6 +92,7 @@ export default function Home() {
                   title="TipsyTrack - Alcohol Harm-Reduction Web App"
                   description="Developed a full-stack web application to help adults in Victoria track alcohol consumption and promote safer drinking habits. Built with Next.js (App Router), TypeScript, Tailwind, and Neon Postgres. Implemented Google Vision API for drink label scanning, local storage-based privacy features, and gamified progress tracking."
                   websiteUrl="https://tipsytrack.vercel.app/"
+                  domain="tipsytrack.vercel.app"
                 />
                 <ProjectCard
                   href="/projects/kickstart"
@@ -101,6 +102,7 @@ export default function Home() {
                   title="KickStart - Community Street Soccer Volunteer Platform"
                   description="Co-led development of a Vue.js + Firebase web platform to connect volunteers with community street soccer sessions. Integrated Firebase Authentication (email/Google login), Firestore (session management), and Cloud Functions with SendGrid for automated notifications."
                   websiteUrl="https://starterkick.vercel.app/"
+                  domain="starterkick.vercel.app"
                 />
                 <ProjectCard
                   href="/projects/voluntrack"
@@ -109,7 +111,8 @@ export default function Home() {
                   date="Mar - Jun 2025"
                   title="VolunTrack - Volunteer Management Android App"
                   description="Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications)."
-                  repoUrl="https://github.com/ellielok/Android-App-VolunTrack"
+                  repoUrl="https://github.com/ellieluk/Android-App-VolunTrack"
+                  domain="github.com/ellielok/volun-track"
                 />
                 <ProjectCard
                   href="/projects/birdtag"
@@ -119,6 +122,7 @@ export default function Home() {
                   title="Birdy Snap - AI-Powered Bird Identification Web App"
                   description="Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications."
                   websiteUrl="https://birdysnap.info/"
+                  domain="birdysnap.info"
                 />
               </div>
             </div>
