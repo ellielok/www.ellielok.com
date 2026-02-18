@@ -70,8 +70,8 @@ export default function Home() {
 
       {/* Content Section */}
       <section className="content bg-gradient-to-b from-[#faf8f5] to-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#0a0d15] dark:via-[#1a2332] dark:to-[#0e1218] min-h-screen transition-colors relative z-20">
-        <div className="w-full px-6 py-20">
-          <div className="md:ml-40 md:mr-5 lg:ml-60 lg:mr-20 xl:max-w-4xl xl:mx-auto xl:ml-auto xl:mr-auto space-y-30">
+        <div className="w-full py-20 px-6 md:pl-40 xl:pl-[calc(100vw/15+9rem)]">
+          <div className="max-w-4xl mx-auto space-y-30">
             {/* Projects Section */}
             <div id="projects" className="scroll-mt-20">
               <RevealOnScroll>
