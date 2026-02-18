@@ -21,11 +21,17 @@ import birdThumbnail from '@/app/history/2510-halloween/images/projects/bird/bir
 export const metadata: Metadata = {
   title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
   description:
-    'I am an aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. Passionate about creating responsive, user-friendly web applications, I focus on combining thoughtful design with solid engineering for performance and accessibility.',
+    'Full-stack developer skilled in React, Next.js, TypeScript, and cloud technologies. Building responsive, user-friendly web and mobile applications with a focus on clean design and solid engineering.',
+  keywords: [
+    'Ellie Lok', 'full-stack developer', 'React', 'Next.js', 'TypeScript',
+    'web developer', 'digital marketing', 'AWS', 'Firebase', 'portfolio',
+  ],
   openGraph: {
     title: 'Ellie Lok | Full-stack Developer | Digital Marketing Enthusiast',
     description:
-      'Aspiring full-stack developer skilled in React, TypeScript, and modern CSS frameworks. Creating responsive, user-friendly web applications.',
+      'Full-stack developer skilled in React, Next.js, TypeScript, and cloud technologies. Building responsive, user-friendly applications.',
+    url: 'https://www.ellielok.com',
+    type: 'website',
   },
 };
 
