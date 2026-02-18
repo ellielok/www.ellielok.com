@@ -14,6 +14,14 @@ interface ProjectCardProps {
   repoUrl?: string;
 }
 
+function getDomain(url: string) {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return url;
+  }
+}
+
 export default function ProjectCard({
   href,
   thumbnail,
@@ -24,6 +32,8 @@ export default function ProjectCard({
   websiteUrl,
   repoUrl,
 }: ProjectCardProps) {
+  const domain = websiteUrl ? getDomain(websiteUrl) : repoUrl ? getDomain(repoUrl) : null;
+
   return (
     <RevealOnScroll>
       <div className="group p-6 rounded-sm border border-transparent dark:hover:bg-white/3 dark:hover:backdrop-blur-sm dark:hover:border-white/2 dark:hover:shadow-sm dark:hover:shadow-black/10 transition-all">
@@ -50,29 +60,34 @@ export default function ProjectCard({
         </Link>
 
         {(websiteUrl || repoUrl) && (
-          <div className="flex gap-2 mt-4 md:ml-[calc(25%+1.5rem)]">
-            {websiteUrl && (
-              <a
-                href={websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full border border-gray-300 dark:border-white/25 text-gray-500 dark:text-gray-400 hover:border-blue-500 dark:hover:border-teal-400 hover:text-blue-600 dark:hover:text-teal-400 transition-all"
-              >
-                <Globe className="w-3 h-3" />
-                View Website
-              </a>
-            )}
-            {repoUrl && (
-              <a
-                href={repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full border border-gray-300 dark:border-white/25 text-gray-500 dark:text-gray-400 hover:border-gray-500 dark:hover:border-white/60 hover:text-gray-700 dark:hover:text-white transition-all"
-              >
-                <Github className="w-3 h-3" />
-                View Repo
-              </a>
-            )}
+          <div className="flex items-center justify-between mt-5 md:ml-[calc(25%+1.5rem)]">
+            <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">
+              {domain}
+            </span>
+            <div className="flex gap-2">
+              {websiteUrl && (
+                <a
+                  href={websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-blue-600 hover:bg-blue-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white transition-colors"
+                >
+                  <Globe className="w-3.5 h-3.5" />
+                  View Website
+                </a>
+              )}
+              {repoUrl && (
+                <a
+                  href={repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-gray-800 hover:bg-gray-900 dark:bg-gray-600 dark:hover:bg-gray-500 text-white transition-colors"
+                >
+                  <Github className="w-3.5 h-3.5" />
+                  View Repo
+                </a>
+              )}
+            </div>
           </div>
         )}
       </div>
