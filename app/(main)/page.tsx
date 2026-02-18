@@ -70,20 +70,20 @@ export default function Home() {
 
       {/* Content Section */}
       <section className="content bg-gradient-to-b from-[#faf8f5] to-[#f5f3f0] dark:bg-gradient-to-br dark:from-[#0a0d15] dark:via-[#1a2332] dark:to-[#0e1218] min-h-screen transition-colors relative z-20">
-        <div className="w-full py-20 px-6 md:pl-40 xl:pl-[calc(100vw/15+9rem)]">
-          <div className="max-w-4xl mx-auto space-y-30">
+        <div className="w-full py-12 px-6 md:pl-40 xl:pl-[calc(100vw/15+9rem)]">
+          <div className="max-w-4xl mx-auto space-y-16">
             {/* Projects Section */}
             <div id="projects" className="scroll-mt-20">
               <RevealOnScroll>
                 <h2
-                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  className="text-4xl font-bold mb-5 text-gray-900 dark:text-white"
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   Projects
                 </h2>
               </RevealOnScroll>
 
-              <div className="space-y-8">
+              <div className="space-y-3">
                 <ProjectCard
                   href="/projects/tipsytrack"
                   thumbnail={tipsyThumbnail}
@@ -131,7 +131,7 @@ export default function Home() {
             <div id="skills" className="scroll-mt-20">
               <RevealOnScroll>
                 <h2
-                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  className="text-4xl font-bold mb-5 text-gray-900 dark:text-white"
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   Skills
@@ -147,14 +147,14 @@ export default function Home() {
             <div id="experience" className="scroll-mt-20">
               <RevealOnScroll>
                 <h2
-                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  className="text-4xl font-bold mb-5 text-gray-900 dark:text-white"
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   Experience
                 </h2>
               </RevealOnScroll>
 
-              <div className="space-y-8">
+              <div className="space-y-3">
                 <ExperienceCard
                   date="Jul 2025 - Present"
                   logo="/images/experience/Monash-logo.png"
@@ -188,7 +188,7 @@ export default function Home() {
             <div id="snapshots" className="scroll-mt-20">
               <RevealOnScroll>
                 <h2
-                  className="text-4xl font-bold mb-8 text-gray-900 dark:text-white"
+                  className="text-4xl font-bold mb-5 text-gray-900 dark:text-white"
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   Snapshots
