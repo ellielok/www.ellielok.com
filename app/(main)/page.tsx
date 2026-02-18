@@ -91,6 +91,7 @@ export default function Home() {
                   date="Jul - Oct 2025"
                   title="TipsyTrack - Alcohol Harm-Reduction Web App"
                   description="Developed a full-stack web application to help adults in Victoria track alcohol consumption and promote safer drinking habits. Built with Next.js (App Router), TypeScript, Tailwind, and Neon Postgres. Implemented Google Vision API for drink label scanning, local storage-based privacy features, and gamified progress tracking."
+                  websiteUrl="https://tipsytrack.vercel.app/"
                 />
                 <ProjectCard
                   href="/projects/kickstart"
@@ -99,6 +100,7 @@ export default function Home() {
                   date="Apr - Jul 2025"
                   title="KickStart - Community Street Soccer Volunteer Platform"
                   description="Co-led development of a Vue.js + Firebase web platform to connect volunteers with community street soccer sessions. Integrated Firebase Authentication (email/Google login), Firestore (session management), and Cloud Functions with SendGrid for automated notifications."
+                  websiteUrl="https://starterkick.vercel.app/"
                 />
                 <ProjectCard
                   href="/projects/voluntrack"
@@ -107,14 +109,16 @@ export default function Home() {
                   date="Mar - Jun 2025"
                   title="VolunTrack - Volunteer Management Android App"
                   description="Led development of a serverless platform to upload and classify bird species using image recognition. Integrated AWS services including Cognito (access management), S3 (image storage), Lambda (image processing), DynamoDB (tag storage), and SNS (notifications)."
+                  repoUrl="https://github.com/ellielok/Android-App-VolunTrack"
                 />
                 <ProjectCard
                   href="/projects/birdtag"
                   thumbnail={birdThumbnail}
-                  alt="Bird Snap"
+                  alt="Birdy Snap"
                   date="Sep - Nov 2024"
-                  title="Bird Snap - AI-Powered Bird Identification Web App"
+                  title="Birdy Snap - AI-Powered Bird Identification Web App"
                   description="Spearheaded the development of a full-featured web app for managing bird identification and volunteer data. Integrated an AI model to analyze uploaded bird images and generate classification results. Implemented a subscription feature for users to receive analysis updates and notifications."
+                  websiteUrl="https://birdysnap.info/"
                 />
               </div>
             </div>
